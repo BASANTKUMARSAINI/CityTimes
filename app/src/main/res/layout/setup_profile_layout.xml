@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingTop="20dp"
+    android:paddingBottom="50dp"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_setup_profile"
+        android:layout_width="wrap_content"
+        android:layout_alignParentTop="true"
+
+        android:layout_marginTop="80dp"
+        android:src="@drawable/awesome_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_awesome"
+        android:text="Awesome!"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/img_setup_profile"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_setup_profile"
+        android:text="@string/setup_profile"
+        android:textSize="16sp"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv_awesome"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn_lets_go"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_setup_profile"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/button_background"
+        android:text="Let's Go"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

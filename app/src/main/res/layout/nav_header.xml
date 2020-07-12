@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/background_color_yellow"
+
+    android:layout_height="200dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_centerVertical="true"
+        android:id="@+id/header_view"
+        android:layout_height="wrap_content">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/nav_img_user"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:background="@drawable/circuler_image_background"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/store"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/nav_store_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/nav_img_user"
+        android:text="Setup your Store!"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+</RelativeLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background_color_yellow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="seller.HandleProductPhotosActivity">
+    <LinearLayout
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/linera_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_add_collection"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:onClick="addCollection"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/circuler_image_background"
+            android:src="@drawable/add"/>
+        <TextView
+            android:text="Add new collection"
+            android:textSize="18sp"
+            android:textColor="@color/selver"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_centerHorizontal="true"
+         android:layout_below="@id/linera_layout"
+         android:layout_marginStart="5dp"
+         android:layout_marginEnd="5dp"
+         android:layout_marginTop="20dp"
+         android:background="@drawable/lower_background_white"
+         >
+         <androidx.recyclerview.widget.RecyclerView
+             android:id="@+id/recycler_view_main"
+             android:layout_width="match_parent"
+             android:layout_marginStart="10dp"
+             android:layout_marginEnd="10dp"
+
+             android:layout_height="wrap_content"/>
+
+     </LinearLayout>
+
+
+</RelativeLayout>

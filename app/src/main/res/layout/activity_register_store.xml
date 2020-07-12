@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:scrollbars="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        tools:context="seller.RegisterStoreActivity">
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:onClick="goToBack"
+            android:src="@drawable/back"/>
+        <TextView
+            android:id="@+id/tv_register_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_back"
+            android:text="Register your store!"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:paddingStart="10dp"
+            android:textSize="25dp"/>
+        <EditText
+            android:id="@+id/et_store_name"
+            android:layout_width="match_parent"
+            android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_register_line"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="15dp"
+            android:hint= "Store Name"
+            android:textSize="18sp"
+
+            android:layout_marginEnd="10dp"/>
+        <EditText
+            android:id="@+id/et_owner_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:layout_below="@+id/et_store_name"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="15dp"
+            android:hint= "Owner's Name"
+            android:textSize="18sp"
+            android:layout_marginEnd="10dp"/>
+        <EditText
+            android:id="@+id/et_seller_phone_1"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_owner_name"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="15dp"
+            android:hint= "Mobile Number1"
+            android:textSize="18sp"
+
+            android:layout_marginEnd="10dp"/>
+        <EditText
+            android:id="@+id/et_seller_phone_2"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_seller_phone_1"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="15dp"
+            android:hint= "Mobile Number2(optional)"
+            android:textSize="18sp"
+
+            android:layout_marginEnd="10dp"/>
+        <EditText
+            android:id="@+id/et_store_address"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_seller_phone_2"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="15dp"
+            android:hint= "Store Address"
+            android:textSize="18sp"
+            android:layout_marginEnd="10dp"/>
+        <LinearLayout
+            android:id="@+id/linera_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/et_store_address"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_store_country"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:background="@drawable/pop_up_botton_background"
+                android:text="Select Country"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:gravity="center_horizontal"
+                android:textSize="16sp"
+                android:onClick="getCountry"
+                 />
+            <TextView
+                android:id="@+id/tv_store_state"
+                android:layout_marginStart="5dp"
+                android:layout_width="0dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:background="@drawable/pop_up_botton_background"
+                android:text="Select State"
+                android:layout_marginEnd="5dp"
+                android:gravity="center_horizontal"
+                android:textSize="16sp"
+                android:onClick="getState"
+                />
+            <TextView
+                android:id="@+id/tv_store_city"
+                android:layout_width="0dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_weight="2"
+                android:layout_marginStart="5dp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:background="@drawable/pop_up_botton_background"
+                android:text="Select City"
+                android:textSize="16sp"
+                android:onClick="getCity"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linera_layout_2"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/linera_layout"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_store_category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="5dp"
+                android:gravity="center_horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/pop_up_botton_background"
+                android:onClick="getCategory"
+                android:text="Store Category"
+                android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tv_store_sub_category"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pop_up_botton_background"
+            android:text="Store Sub-Category"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="5dp"
+            android:textSize="16sp"
+            android:onClick="getSubCategory"
+            />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:textSize="18sp"
+            android:background="@drawable/button_background"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:onClick="storeRegistration"
+            android:text="Register"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/linera_layout_2"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_height="wrap_content"/>
+<!--        <LinearLayout-->
+<!--            android:id="@+id/linera_layout3"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:layout_below="@+id/btn_register">-->
+<!--            <TextView-->
+<!--                android:id="@+id/tv_terms_and_conditions1"-->
+<!--                android:text="By registering you agree to "-->
+<!--                android:textSize="12sp"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_marginBottom="50dp"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/tv_terms_and_conditions2"-->
+<!--                android:text="Terms-Conditions"-->
+<!--                android:textSize="12sp"-->
+<!--                android:textColor="@color/button_color"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:layout_below="@+id/linera_layout3">-->
+<!--            <TextView-->
+
+<!--                android:text="By registering you agree to "-->
+<!--                android:textSize="12sp"-->
+<!--                android:layout_below="@id/btn_register"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_marginBottom="50dp"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--            <TextView-->
+
+<!--                android:text="Terms-Conditions"-->
+<!--                android:textSize="12sp"-->
+<!--                android:layout_below="@id/btn_register"-->
+<!--                android:textColor="@color/button_color"-->
+<!--                android:layout_marginTop="20dp"-->
+
+
+
+<!--                android:gravity="center_horizontal"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_marginBottom="50dp"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+<!--        </LinearLayout>-->
+
+<LinearLayout
+    android:id="@+id/relative_layout3"
+    android:layout_centerHorizontal="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/btn_register"
+    android:gravity="center_horizontal"
+    android:layout_marginTop="20dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="By registering you agree to "/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/button_color"
+        android:text="Term and Conditions"/>
+
+</LinearLayout>
+        <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relative_layout3"
+            android:layout_marginBottom="50dp"
+            android:gravity="center_horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="and"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_color"
+                android:text="Privacy Policy"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="of the My City"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

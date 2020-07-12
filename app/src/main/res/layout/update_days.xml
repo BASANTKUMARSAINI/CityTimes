@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update Store Opening days"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+
+
+                android:text="Days:"
+                android:layout_gravity="center_vertical"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="10"
+                android:orientation="horizontal">
+
+                <ToggleButton
+                    android:id="@+id/tSunday"
+                    style="@style/toggleButton"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+
+                    android:textOff="S"
+                    android:textOn="S"
+                    android:textSize="18sp" />
+
+                <ToggleButton
+                    android:id="@+id/tMonday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    style="@style/toggleButton"
+
+                    android:textOff="M"
+                    android:textOn="M"
+                    android:textSize="18sp" />
+
+                <ToggleButton
+                    android:id="@+id/tTuseday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    style="@style/toggleButton"
+
+
+                    android:textOff="T"
+                    android:textOn="T"
+                    android:textSize="18dp" />
+
+                <ToggleButton
+                    android:id="@+id/tWednesday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    style="@style/toggleButton"
+
+                    android:textOff="W"
+                    android:textOn="W"
+                    android:textSize="18dp" />
+
+                <ToggleButton
+                    android:id="@+id/tThursday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    style="@style/toggleButton"
+
+                    android:textOff="T"
+                    android:textOn="T"
+                    android:textSize="18dp" />
+
+                <ToggleButton
+                    android:id="@+id/tFriday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    style="@style/toggleButton"
+
+                    android:textOff="F"
+                    android:textOn="F"
+                    android:textSize="18dp" />
+
+                <ToggleButton
+                    android:id="@+id/tSaturday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    style="@style/toggleButton"
+
+                    android:textOff="S"
+                    android:textOn="S"
+                    android:textSize="18dp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="CANCEL"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/button_background"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Update"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/button_background"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,179 @@
+<resources>
+
+    <string name="app_name">MyCity</string>
+    <string name="shopping">Shopping</string>
+    <string name="food">Food</string>
+    <string name="gym_sports">Gym-Sports</string>
+    <string name="beauty">Beauty</string>
+    <string name="electronics">Electronics</string>
+    <string name="health">Health</string>
+    <string name="travel">Travel</string>
+    <string name="movies">Movies</string>
+    <string name="education">Education</string>
+    <string name="catering">Catering</string>
+    <string name="rentals">Rentals</string>
+    <string name="sell_buy">Sell and Buy</string>
+    <string name="agriculture">Agriculture</string>
+    <string name="machanice">Machanice</string>
+    <string name="other">Other</string>
+
+    <string-array name="Category">
+        <item>Shopping</item>
+        <item>Food</item>
+        <item>Gym-Sports</item>
+        <item>Beauty</item>
+        <item>Electronics</item>
+        <item>Health</item>
+        <item>Travel</item>
+        <item>Movies</item>
+        <item>Education</item>
+        <item>Catering</item>
+        <item>Sell and Buy</item>
+        <item>Agriculture</item>
+        <item>Machanice</item>
+        <item>Rentals</item>
+        <item>Other</item>
+
+
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="check_mail">We have sent you a verification link on your registerd email </string>
+    <string name="facebook_app_id">2618037285122683</string>
+    <string name="fb_login_protocol_scheme">fb2618037285122683</string>
+    <string name="navigation_drawer_open">Drawer Open</string>
+    <string name="navigation_drawer_close">Drawer Closed</string>
+    <string name="setup_profile">Now let\s setup your store profile.\n Your store is not visible on MyCity as of yet </string>
+    <string name="let_go">Let\n Go!</string>
+
+
+    <string-array name="shopping">
+        <item>Shopping Malls</item>
+        <item>Superbazars</item>
+        <item>Clothes store</item>
+        <item>Footwear</item>
+        <item>Gift Store</item>
+        <item>Furniture</item>
+        <item>Daily household</item>
+        <item>General store</item>
+
+    </string-array>
+    <string-array name="Country">
+        <item>India</item>
+        <item>Pakistan</item>
+        <item>China</item>
+        <item>India</item>
+        <item>India</item>
+        <item>India</item>
+        <item>India</item>
+        <item>India</item>
+        <item>India</item>
+    </string-array>
+    <string-array name="State">
+        <item>Uttar Pradesh</item>
+        <item>Haryana</item>
+        <item>Delhi</item>
+        <item>Uttar Pradesh</item>
+        <item>Uttar Pradesh</item>
+        <item>Uttar Pradesh</item>
+        <item>Uttar Pradesh</item>
+        <item>Uttar Pradesh</item>
+        <item>Uttar Pradesh</item>
+    </string-array>
+
+    <string-array name="City">
+        <item>ThanaBhawan</item>
+        <item>Shamli</item>
+        <item>Manti hasnpur</item>
+        <item>ThanaBhawan</item>
+        <item>ThanaBhawan</item>
+        <item>ThanaBhawan</item>
+        <item>ThanaBhawan</item>
+    </string-array>
+
+    <string-array name="food">
+        <item>Restaurants</item>
+        <item>Bar</item>
+        <item>Juice Corners</item>
+        <item>Dhabha</item>
+    </string-array>
+
+    <string-array name="gym_sport">
+        <item>Gym</item>
+        <item>Sports Club</item>
+    </string-array>
+
+    <string-array name="beauty">
+        <item>Parlour</item>
+        <item>Saloon</item>
+    </string-array>
+
+    <string-array name="electronics">
+        <item>Mobile</item>
+        <item>Electronics</item>
+    </string-array>
+
+    <string-array name="health">
+        <item>Hospitals</item>
+        <item>Clinics</item>
+        <item>Specialists</item>
+        <item>Medical Stores</item>
+    </string-array>
+
+    <string-array name="travel">
+        <item>Airways</item>
+        <item>Train</item>
+        <item>Roadways</item>
+        <item>Taxi Car</item>
+        <item>Auto</item>
+
+    </string-array>
+
+    <string-array name="movies">
+
+        <item>Movie</item>
+    </string-array>
+
+    <string-array name="education">
+        <item>School</item>
+        <item>Coaching Center</item>
+        <item>Academy</item>
+        <item>Tuition</item>
+    </string-array>
+
+    <string-array name="catering">
+        <item>Gym</item>
+        <item>Sports Club</item>
+    </string-array>
+
+    <string-array name="rentals">
+        <item>House</item>
+        <item>Shops</item>
+        <item>Goldam</item>
+    </string-array>
+
+    <string-array name="sell_buy">
+        <item>Vehicles</item>
+        <item>Plot</item>
+        <item>Shops</item>
+        <item>House</item>
+        <item>Electronics</item>
+        <item>Furniture</item>
+    </string-array>
+
+    <string-array name="agriculture">
+        <item>Seeds Shop</item>
+        <item>Khad Shop</item>
+    </string-array>
+    <string-array name="machanice">
+        <item>Two Wheelers</item>
+        <item>Car</item>
+        <item>Truck</item>
+        <item>Tractor</item>
+    </string-array>
+    <string-array name="other">
+        <item>others</item>
+
+    </string-array>
+</resources>

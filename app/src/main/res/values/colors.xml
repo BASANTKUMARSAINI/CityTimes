@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="background_color">#eceff1</color>
+    <color name="black">#212121</color>
+    <color name="white">#ffffff</color>
+    <color name="blue">#3f51b5</color>
+    <color name="green">#388e3c</color>
+    <color name="light_green">#a5d6a7</color>
+    <color name="red">#d50000</color>
+    <color name="light_red">#ff6e40</color>
+    <color name="selver"> #ffc400</color>
+    <color name="light_selver"> #ffd740</color>
+    <color name="button_color">#ffb367</color>
+
+
+    <color name="background_color_yellow">#fff3e2</color>
+    <color name="rectangle_864_color">#ffffff</color>
+    <color name="boder_color">#ffb367</color>
+    <color name="rectangle_color">#ffffff</color>
+    <color name="border_color">#fafafa</color>
+    <color name="capacity_color">#000000</color>
+    <color name="time_color">#000000</color>
+    <color name="register_to_vermo_color">#1d2029</color>
+    <color name="light">#d9dde2</color>
+    <color name="light_text_color">#abb4bd</color>
+    <color name="image_background_color">#f6f4ef</color>
+</resources>

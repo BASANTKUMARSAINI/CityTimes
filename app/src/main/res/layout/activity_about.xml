@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color_yellow"
+    tools:context="users.AboutActivity">
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+
+        android:background="@drawable/upper_background"
+        android:layout_marginStart="5dp"
+
+        android:layout_marginEnd="5dp"
+        android:layout_height="80dp">
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:onClick="goToBack"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/back"/>
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/btn_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About City"
+            android:layout_marginStart="5dp"
+            android:textSize="20sp"
+
+            />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tv_general"
+                android:text="General"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"/>
+            <View
+                android:id="@+id/view_general"
+                android:layout_width="60dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/black"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tv_history"
+                android:text="History"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+android:textColor="@color/light_text_color"
+                android:textSize="18sp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"/>
+            <View
+                android:id="@+id/view_history"
+                android:layout_width="60dp"
+                android:layout_height="1dp"
+                android:visibility="gone"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/black"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tv_tourism"
+                android:text="Tourism"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:textColor="@color/light_text_color"
+                android:textSize="18sp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"/>
+            <View
+                android:id="@+id/view_tourism"
+                android:layout_width="60dp"
+                android:visibility="gone"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/black"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@+id/fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+</LinearLayout>
