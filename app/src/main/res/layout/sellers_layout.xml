@@ -12,6 +12,7 @@
     android:layout_marginBottom="5dp">
     <LinearLayout
         android:layout_width="match_parent"
+        android:id="@+id/linera_layout_view"
         android:orientation="horizontal"
         android:padding="5dp"
         android:layout_height="wrap_content">
@@ -25,14 +26,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
-                android:text="Shop name"
+                android:text="@string/shop_name"
                 android:textColor="@color/black"/>
             <TextView
                 android:id="@+id/tv_shop_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
-                android:text="Shop name"
+                android:text="@string/shop_name"
                 />
             <LinearLayout
                 android:layout_width="match_parent"
@@ -44,7 +45,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
-                    android:text="4.5"
+                    android:text="@string/rating"
                      />
                 <ImageView
                     android:src="@drawable/star"
@@ -58,7 +59,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
                     android:layout_marginStart="5dp"
-                    android:text="103 Rantings"
+                    android:text="@string/no_of_ratings"
                     />
                 <View
                     android:background="@color/black"
@@ -72,7 +73,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
                     android:layout_marginStart="5dp"
-                    android:text="103 km"
+                    android:text="@string/km"
                     />
 
             </LinearLayout>
@@ -96,7 +97,7 @@
                 android:layout_marginEnd="10dp"
                 android:paddingEnd="10dp"
                 android:paddingBottom="2dp"
-                android:text="open"
+                android:text="@string/open"
                 android:textSize="16sp"
 
                 />
@@ -113,7 +114,7 @@
                 android:paddingTop="2dp"
                 android:paddingEnd="10dp"
                 android:paddingBottom="2dp"
-                android:text="Avaliable"
+                android:text="@string/avaliable"
                 android:textSize="16sp"
 
                 />

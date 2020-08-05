@@ -4,8 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/other_background"
+    android:layout_gravity="center_horizontal"
     tools:context=".SplashActivity">
     <com.agrawalsuneet.dotsloader.loaders.TrailingCircularDotsLoader
+        android:id="@+id/rood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:trailingcircular_animDelay="200"
@@ -16,5 +19,55 @@
         app:trailingcircular_dotsColor="@color/selver"
         app:trailingcircular_dotsRadius="11dp"
         app:trailingcircular_noOfTrailingDots="5" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rood"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/selver"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:text="@string/welcome_to"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="@color/button_color"
+            android:textStyle="bold"
+            android:text="@string/c"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/selver"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:text="@string/ity"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/button_color"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="@string/t"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:textColor="@color/selver"
+            android:text="@string/imes"
+            />
+    </LinearLayout>
+
 
 </RelativeLayout>

@@ -4,15 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_color"
+
     tools:context=".MainActivity">
-    <FrameLayout
-    android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
 
-        android:id="@+id/fragment"
+    <EditText
+        android:id="@+id/et_text"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
 
-
+/>
+    <Button
+        android:id="@+id/btn_set"
+        android:text="set"
+        android:layout_below="@id/et_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn_get"
+        android:text="get"
+        android:layout_below="@id/btn_set"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 </RelativeLayout>

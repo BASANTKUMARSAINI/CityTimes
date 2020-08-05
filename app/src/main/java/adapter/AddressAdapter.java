@@ -19,7 +19,7 @@ public class AddressAdapter  extends RecyclerView.Adapter<AddressAdapter.MyViewH
     Context context;
     String []list;
     RecyclerViewInterface recyclerViewInterface;
-    String where="";
+    String where;
 
     public AddressAdapter(Context context,RecyclerViewInterface recyclerViewInterface,String []list,String  where)
     {
@@ -43,7 +43,7 @@ public class AddressAdapter  extends RecyclerView.Adapter<AddressAdapter.MyViewH
         holder.tvSubCategory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                recyclerViewInterface.onItemClicked(list[position],where);
+                recyclerViewInterface.onItemClicked(list[position],position,where);
             }
         });
     }

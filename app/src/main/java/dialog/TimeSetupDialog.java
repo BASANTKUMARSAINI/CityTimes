@@ -111,9 +111,9 @@ public class TimeSetupDialog  {
 
                 days.put("sunday",false);
                 days.put("monday",false);
-                days.put("tuseday",false);
+                days.put("tuesday",false);
                 days.put("wednesday",false);
-                days.put("thrusday",false);
+                days.put("thursday",false);
                 days.put("friday",false);
                 days.put("saturday",false);
 
@@ -122,11 +122,11 @@ public class TimeSetupDialog  {
                 if(tMonday.isChecked())
                     days.put("monday",true);
                 if(tTuseday.isChecked())
-                    days.put("tuseday",true);
+                    days.put("tuesday",true);
                 if(tWednesday.isChecked())
                     days.put("wednesday",true);
                 if(tThrusday.isChecked())
-                    days.put("thrusday",true);
+                    days.put("thursday",true);
                 if(tFriday.isChecked())
                     days.put("friday",true);
                 if(tSaturday.isChecked())

@@ -48,6 +48,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:19.3.1'
     implementation 'com.google.firebase:firebase-storage:19.1.1'
     implementation 'com.firebaseui:firebase-ui-firestore:6.2.1'
+    implementation 'com.google.firebase:firebase-ml-natural-language:22.0.0'
+    implementation 'com.google.firebase:firebase-ml-natural-language-language-id-model:20.0.7'
+    implementation 'com.google.firebase:firebase-ml-natural-language-translate-model:20.0.7'
 
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta7'
 
@@ -66,5 +69,11 @@ dependencies {
     implementation 'com.facebook.android:facebook-login:5.15.3'
     implementation 'com.facebook.android:facebook-android-sdk:5.15.3'
     implementation 'com.agrawalsuneet.androidlibs:dotsloader:1.4'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.github.chintan369:Geo-FireStore-Query:1.1.0'
+    implementation files('geohash')
+    implementation 'ch.hsr:geohash:1.4.0'
+    implementation 'io.paperdb:paperdb:2.5'
+
 
 }

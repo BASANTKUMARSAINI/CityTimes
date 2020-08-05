@@ -11,7 +11,7 @@
             android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Update Store Opening days"
+            android:text="@string/update_store_opening_days"
             android:textColor="@color/black"
             android:textSize="20sp"/>
 
@@ -28,7 +28,7 @@
                 android:layout_weight="2"
 
 
-                android:text="Days:"
+                android:text="@string/days"
                 android:layout_gravity="center_vertical"
                 android:textSize="20sp" />
 
@@ -48,8 +48,8 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
 
-                    android:textOff="S"
-                    android:textOn="S"
+                    android:textOff="@string/s"
+                    android:textOn="@string/s"
                     android:textSize="18sp" />
 
                 <ToggleButton
@@ -60,8 +60,8 @@
                     android:layout_weight="1"
                     style="@style/toggleButton"
 
-                    android:textOff="M"
-                    android:textOn="M"
+                    android:textOff="@string/m"
+                    android:textOn="@string/m"
                     android:textSize="18sp" />
 
                 <ToggleButton
@@ -73,8 +73,8 @@
                     style="@style/toggleButton"
 
 
-                    android:textOff="T"
-                    android:textOn="T"
+                    android:textOff="@string/t"
+                    android:textOn="@string/t"
                     android:textSize="18dp" />
 
                 <ToggleButton
@@ -85,8 +85,8 @@
                     android:layout_weight="1"
                     style="@style/toggleButton"
 
-                    android:textOff="W"
-                    android:textOn="W"
+                    android:textOff="@string/w"
+                    android:textOn="@string/w"
                     android:textSize="18dp" />
 
                 <ToggleButton
@@ -97,8 +97,8 @@
                     android:layout_weight="1"
                     style="@style/toggleButton"
 
-                    android:textOff="T"
-                    android:textOn="T"
+                    android:textOff="@string/t"
+                    android:textOn="@string/t"
                     android:textSize="18dp" />
 
                 <ToggleButton
@@ -109,8 +109,8 @@
                     android:layout_weight="1"
                     style="@style/toggleButton"
 
-                    android:textOff="F"
-                    android:textOn="F"
+                    android:textOff="@string/f"
+                    android:textOn="@string/f"
                     android:textSize="18dp" />
 
                 <ToggleButton
@@ -121,8 +121,8 @@
                     android:layout_weight="1"
                     style="@style/toggleButton"
 
-                    android:textOff="S"
-                    android:textOn="S"
+                    android:textOff="@string/s"
+                    android:textOn="@string/s"
                     android:textSize="18dp" />
 
 
@@ -142,7 +142,7 @@
                 android:id="@+id/btn_cancel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="CANCEL"
+                android:text="@string/cancel"
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/button_background"
                 android:layout_weight="1"/>
@@ -150,7 +150,7 @@
                 android:id="@+id/btn_update"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Update"
+                android:text="@string/update"
                 android:layout_marginStart="10dp"
                 android:background="@drawable/button_background"
                 android:layout_weight="1"/>

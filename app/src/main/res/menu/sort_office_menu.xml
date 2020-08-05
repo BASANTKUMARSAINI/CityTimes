@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/all"
+        android:title="@string/all"/>
+    <item android:id="@+id/police"
+        android:title="@string/police_station"/>
+    <item android:id="@+id/fire"
+        android:title="@string/fire_brigade"/>
+
+    <item android:id="@+id/hospital"
+        android:title="@string/hospital"/>
+    <item android:id="@+id/college"
+        android:title="@string/college"/>
+    <item android:id="@+id/court"
+        android:title="@string/court"/>
+    <item android:id="@+id/bdo_office"
+        android:title="@string/bdo_office"/>
+    <item android:id="@+id/post_office"
+        android:title="@string/post_office"/>
+    <item android:id="@+id/beo_office"
+        android:title="@string/beo_office"/>
+    <item android:id="@+id/deo_office"
+        android:title="@string/deo_office"/>
+    <item android:id="@+id/panchayat"
+        android:title="@string/panchayat_bhawan"/>
+</menu>

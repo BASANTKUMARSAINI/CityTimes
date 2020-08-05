@@ -23,6 +23,7 @@ import java.util.List;
 import java.util.Locale;
 
 import interfaces.UpdateInterface;
+import model.ApplicationClass;
 import seller.RegisterStoreActivity;
 
 public class UpdateStoreAddress extends Dialog {
@@ -47,6 +48,7 @@ public class UpdateStoreAddress extends Dialog {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ApplicationClass.loadLocale(context);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.update_store_address);
 
@@ -60,6 +62,7 @@ public class UpdateStoreAddress extends Dialog {
 
         if(!STORE_ADDRESS.equals(""))
            etStoreAddress.setText(STORE_ADDRESS);
+            //ApplicationClass.setTranslatedText(etStoreAddress,STORE_ADDRESS);
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

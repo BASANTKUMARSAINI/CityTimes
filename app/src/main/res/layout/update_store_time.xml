@@ -16,7 +16,7 @@
             android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Update Store Timings"
+            android:text="@string/update_store_timing"
             android:textColor="@color/black"
             android:textSize="20sp"/>
 
@@ -34,7 +34,7 @@
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
 
-            android:text="From:"
+            android:text="@string/from"
             android:textSize="20sp" />
 
         <LinearLayout
@@ -94,8 +94,8 @@
                 android:layout_gravity="center_vertical"
                 android:checked="true"
                 style="@style/toggleButton"
-                android:textOff="AM"
-                android:textOn="AM"
+                android:textOff="@string/am"
+                android:textOn="@string/am"
                 android:textSize="14dp" />
 
             <ToggleButton
@@ -104,8 +104,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 style="@style/toggleButton"
-                android:textOff="PM"
-                android:textOn="PM"
+                android:textOff="@string/pm"
+                android:textOn="@string/pm"
                 android:textSize="14dp" />
 
         </LinearLayout>
@@ -127,7 +127,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
-            android:text="To:"
+            android:text="@string/to"
             android:textSize="20sp" />
 
         <LinearLayout
@@ -187,8 +187,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 style="@style/toggleButton"
-                android:textOff="AM"
-                android:textOn="AM"
+                android:textOff="@string/am"
+                android:textOn="@string/am"
                 android:textSize="14dp" />
 
             <ToggleButton
@@ -197,9 +197,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 style="@style/toggleButton"
-                android:textOff="PM"
+                android:textOff="@string/pm"
                 android:checked="true"
-                android:textOn="PM"
+                android:textOn="@string/pm"
                 android:textSize="14dp" />
 
         </LinearLayout>
@@ -216,7 +216,7 @@
                 android:id="@+id/btn_cancel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="CANCEL"
+                android:text="@string/cancel"
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/button_background"
                 android:layout_weight="1"/>
@@ -224,7 +224,7 @@
                 android:id="@+id/btn_update"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Update"
+                android:text="@string/update"
                 android:layout_marginStart="10dp"
                 android:background="@drawable/button_background"
                 android:layout_weight="1"/>

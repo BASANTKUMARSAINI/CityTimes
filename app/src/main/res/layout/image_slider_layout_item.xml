@@ -14,7 +14,7 @@
         android:id="@+id/tv_image_des"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:text="Image discription"
+        android:text="@string/image_discription"
         android:textColor="@color/black"
         android:textStyle="italic"
         android:textSize="20sp"

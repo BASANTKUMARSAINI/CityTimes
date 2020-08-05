@@ -30,6 +30,7 @@ import java.util.List;
 import authantication.UserLoginActivity;
 import dialog.CustumProgressDialog;
 import interfaces.UpdateInterface;
+import model.ApplicationClass;
 
 public class PhoneNumberUpdateDialog extends Dialog {
     public Context context;
@@ -53,6 +54,7 @@ public class PhoneNumberUpdateDialog extends Dialog {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ApplicationClass.loadLocale(context);
 
 
 

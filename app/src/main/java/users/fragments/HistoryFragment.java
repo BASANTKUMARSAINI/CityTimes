@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 
 import com.example.mycity.R;
 
+import model.ApplicationClass;
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -24,6 +26,7 @@ public class HistoryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        ApplicationClass.loadLocale(getContext());
         return inflater.inflate(R.layout.fragment_history, container, false);
     }
 }

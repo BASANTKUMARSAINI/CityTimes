@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_color_yellow"
+    android:background="@color/main_background"
     tools:context="users.StorePhotosActivity">
     <RelativeLayout
         android:id="@+id/relative_layout"
@@ -28,9 +28,9 @@
             android:layout_toEndOf="@id/btn_back"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="All Photos"
+            android:text="@string/all_photos"
             android:textStyle="bold"
-            android:textColor="@color/black"
+            android:textColor="@color/text_dark"
             android:layout_marginStart="5dp"
             android:textSize="20sp"
 

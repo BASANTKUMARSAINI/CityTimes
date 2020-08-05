@@ -16,6 +16,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
+import model.ApplicationClass;
+
 public class ResetPasswordDialog
 {
     Activity activity;
@@ -26,6 +28,7 @@ public class ResetPasswordDialog
     }
     public  void startProgressBar()
     {
+        ApplicationClass.loadLocale(activity);
         AlertDialog.Builder builder=new AlertDialog.Builder(activity);
         LayoutInflater inflater=activity.getLayoutInflater();
         builder.setCancelable(false);

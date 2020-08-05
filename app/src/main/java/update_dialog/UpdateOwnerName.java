@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -16,10 +17,13 @@ import com.example.mycity.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import interfaces.UpdateInterface;
+import model.ApplicationClass;
 
 public class UpdateOwnerName extends Dialog {
     public Context context;
@@ -42,6 +46,7 @@ public class UpdateOwnerName extends Dialog {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ApplicationClass.loadLocale(context);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.update_owner_name);
 
@@ -54,6 +59,7 @@ public class UpdateOwnerName extends Dialog {
         db=FirebaseFirestore.getInstance();
 
         if(!OWNER_NAME.equals(""))
+            //ApplicationClass.setTranslatedText( etOwnerName,OWNER_NAME);
             etOwnerName.setText(OWNER_NAME);
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override

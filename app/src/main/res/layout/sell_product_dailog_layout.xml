@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent">
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingTop="20dp"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sell_your_product"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+         android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="100dp"
+            android:id="@+id/img_product"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@color/button_color"/>
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="@string/add_more"
+            android:textOff="@string/add_more"
+            android:id="@+id/tv_add_more"
+             android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/background_white"
+            android:textSize="20sp"
+            android:layout_gravity="center_vertical"
+
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_height="150dp">
+            <ImageView
+                android:id="@+id/img_product1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@color/button_color"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/img_product2"
+                android:layout_width="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_height="match_parent"
+                android:src="@color/button_color"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_height="150dp">
+            <ImageView
+                android:id="@+id/img_product3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@color/button_color"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/img_product4"
+                android:layout_width="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_height="match_parent"
+                android:src="@color/button_color"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+    <EditText
+        android:id="@+id/et_product_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/product_title_name"
+        android:inputType="text"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:id="@+id/et_product_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/product_price"
+        android:inputType="number"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"/>
+    <EditText
+        android:id="@+id/et_seller_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/seller_phone_number"
+        android:inputType="number"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/et_seller_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/seller_city"
+        android:inputType="text"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/tv_product_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pop_up_botton_background"
+        android:text="@string/select_product_type"
+        android:layout_margin="10dp"
+        android:textSize="20sp"
+        android:padding="10dp"
+
+        />
+    <EditText
+        android:id="@+id/et_other_name"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:inputType="text"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_product_type_name"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"/>
+    <EditText
+        android:id="@+id/et_product_des"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="@string/product_description"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp">
+        <Button
+
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:onClick="setVisibilityGone"
+            android:background="@drawable/button_background"
+            android:text="@string/cancel"
+            android:textColor="@color/white" />
+        <Button
+
+            android:id="@+id/btn_apply"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:onClick="applyAllChanges"
+            android:background="@drawable/button_background"
+            android:text="@string/sell"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
+</ScrollView>

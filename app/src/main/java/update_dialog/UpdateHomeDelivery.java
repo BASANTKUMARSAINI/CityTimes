@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import interfaces.UpdateInterface;
+import model.ApplicationClass;
 
 public class UpdateHomeDelivery extends Dialog {
     public Context context;
@@ -44,6 +45,7 @@ public class UpdateHomeDelivery extends Dialog {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ApplicationClass.loadLocale(context);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.update_home_delivery);
         imgNo=findViewById(R.id.img_no);

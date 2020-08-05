@@ -18,15 +18,11 @@
 
     <style name="AppTheme.AppBarOverlay"></style>
 
-
-
-
-
-
-
     <style name="toggleButton" parent="AppTheme">
         <item name="android:textColor">@drawable/toggle_text_color</item>
         <item name="android:background">@drawable/toggle_button_background</item>
 
     </style>
+
+
 </resources>

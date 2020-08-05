@@ -1,0 +1,1920 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CityTimes</string>
+
+    <string name="shopping">Shopping</string>
+    <string name="food">Food</string>
+    <string name="gym_sports">Gym Sports</string>
+    <string name="parlourl_saloon">Parlour Saloon</string>
+    <string name="electronics">Electronics</string>
+    <string name="health">Health</string>
+    <string name="travel">Travel</string>
+    <string name="movies">Movies</string>
+    <string name="education">Education</string>
+    <string name="catering">Catering</string>
+    <string name="rentals">Rentals</string>
+    <string name="sell_buy">Sell and Buy</string>
+    <string name="agriculture">Agriculture</string>
+    <string name="machanice">Mechanic</string>
+    <string name="other">Other</string>
+    <string name="text">Light Mode</string>
+    <string name="open">open</string>
+    <string name="close">closed</string>
+    <string name="country">Country</string>
+    <string name="state">State</string>
+    <string name="sub_category">SubCategory</string>
+    <string name="city">City</string>
+
+    <string name="stores">Stores</string>
+
+    <string-array name="Category">
+        <item>Shopping</item>
+        <item>Food</item>
+        <item>Stay</item>
+        <item>Parlour Saloon</item>
+        <item>Gym Sports</item>
+        <item>Shows and Cinema</item>
+        <item>Education</item>
+        <item>Health</item>
+        <item>Cyber</item>
+        <item>Electronics</item>
+        <item>Travel</item>
+        <item>Vehicles and Workshop</item>
+        <item>Booking</item>
+        <item>Rentals</item>
+        <item>Sell and Buy</item>
+        <item>Building Material</item>
+        <item>Agriculture</item>
+        <item>Factories</item>
+        <item>NGO and Club</item>
+        <item>Bank and Atm</item>
+        <item>Pentrol Pump</item>
+    </string-array>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="check_mail">We have sent you a verification link on your registered email </string>
+    <string name="facebook_app_id">2618037285122683</string>
+    <string name="fb_login_protocol_scheme">fb2618037285122683</string>
+    <string name="navigation_drawer_open">Drawer Open</string>
+    <string name="navigation_drawer_close">Drawer Closed</string>
+    <string name="setup_profile">Now let\s setup your store profile.\n Your store is not visible on CityTimes as of yet </string>
+    <string name="let_go">Let\n Go!</string>
+    <string name="settings">Settings</string>
+    <string name="personalize">Personalize</string>
+    <string name="english">English</string>
+    <string name="change_languange_of_the_app">Change language of the app</string>
+    <string name="delhi">Delhi</string>
+    <string name="default_city_for_news_alerts_and_more">Default city</string>
+    <string name="change">CHANGE</string>
+    <string name="categories">Categories</string>
+    <string name="all_services">All Services</string>
+    <string name="government">Government</string>
+    <string name="setup_your_store">Setup your service!</string>
+    <string name="we_are_indiain">We are INDIAN</string>
+    <string name="about_city">About City</string>
+
+
+
+
+
+
+    <string name="movies_shows">Movie Shows</string>
+    <string name="new_show">New Show</string>
+
+    <string name="enter_these_details">Enter these details</string>
+
+
+    <string name="procced">proceed</string>
+    <string name="favourite_stores">Favourite</string>
+
+    <string name="add_new_collection">Add new folder</string>
+    <string name="my_product">My Product</string>
+    <string name="products">Products</string>
+    <string name="government_offices">Government Offices</string>
+    <string name="offices">Offices</string>
+    <string name="sort">Sort</string>
+    <string name="plots">Plots</string>
+    <string name="plot_for_selling">Plot for selling</string>
+
+    <string name="price">Price:</string>
+
+
+    <string name="opeing_closing_time">opening-closing time</string>
+    <string name="contact_number">contact number</string>
+
+    <string name="register_your_service">Register your Service!</string>
+    <string name="service_name">Service Name</string>
+    <string name="owner_s_name">Owner\'s Name</string>
+    <string name="mobile_number1">Mobile Number1</string>
+    <string name="mobile_number2_optional">Mobile Number2(optional)</string>
+    <string name="current_location">current location</string>
+
+    <string name="store_category">Service Category</string>
+    <string name="store_sub_category">Service Sub-Category</string>
+
+    <string name="sell_products">Sell Products</string>
+    <string name="products_for_selling">Products for selling</string>
+    <string name="dark_theme">Dark theme</string>
+    <string name="clear_app_cache">Clear app cache</string>
+    <string name="support">Support</string>
+    <string name="rate_us">Rate us!</string>
+    <string name="share_this_app">share this app</string>
+    <string name="feedback">Feedback</string>
+
+    <string name="privacy">Privacy</string>
+    <string name="terms_of_use">Terms of use</string>
+
+    <string name="board_name">Board name</string>
+    <string name="rating">rating</string>
+
+    <string name="hostel_facility">Hostel facility!</string>
+    <string name="transport_facility">Transport facility!</string>
+
+    <string name="description_not_added">Description not added</string>
+
+    <string name="welcome_to">Welcome to</string>
+    <string name="c">C</string>
+    <string name="ity">ity</string>
+
+    <string name="imes">imes</string>
+
+    <string name="seller_name">Seller Name</string>
+
+    <string name="home_delivery_not_available">Home Delivery is Not Available</string>
+    <string name="workers_required">Workers required!</string>
+    <string name="transport_servics_avilable">Transport servics avilable</string>
+    <string name="hostel_servics_avilable">Hostel servics avilable</string>
+    <string name="see_all_photos">See all photos</string>
+    <string name="shows">Shows</string>
+    <string name="service_description">Service Description</string>
+
+
+    <string name="apply">Apply</string>
+    <string name="all_photos">All Photos</string>
+    <string name="category_store">Category Service</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="email_address">Email Address</string>
+
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="register_now">Register Now</string>
+    <string name="register_to_citytimes">Register to CityTimes</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="select_country">Select Country</string>
+    <string name="select_state">Select State</string>
+    <string name="select_city">Select City</string>
+    <string name="register">Register</string>
+    <string name="by_registering_you_agree_to">By registering you agree to</string>
+    <string name="term_and_conditions">Terms of use</string>
+    <string name="and">and</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="of_the_my_city">of the CityTimes</string>
+    <string name="add_collection">Add folder</string>
+    <string name="collection_name">Folder name</string>
+
+    <string name="add">ADD</string>
+    <string name="show_time">Show Time:</string>
+
+    <string name="movie_name">movie name</string>
+    <string name="tickit_price">ticket price</string>
+
+    <string name="sub_category_name">Sub Category Name</string>
+    <string name="category_name">category name</string>
+    <string name="explore">Explore</string>
+    <string name="city_name">City Name</string>
+    <string name="sell_and_buy">Sell and Buy</string>
+    <string name="information">Information</string>
+    <string name="about_us">About Us</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="version">Version</string>
+    <string name="logout">Logout</string>
+    <string name="loading">loading...</string>
+
+    <string name="product_title">Product title</string>
+
+    <string name="seller_phone">Seller phone</string>
+    <string name="define_search">Define Search</string>
+    <string name="store_name">Service Name</string>
+    <string name="store_address">Service Address</string>
+    <string name="principal_director_name">Principal name</string>
+    <string name="school_board">School board</string>
+
+    <string name="check_your_email">Check your Email</string>
+    <string name="go_to_login">Go to Login</string>
+    <string name="send_feedback">Send feedback</string>
+    <string name="type_message">Type message</string>
+
+    <string name="send">SEND</string>
+    <string name="general">General</string>
+    <string name="history">History</string>
+
+    <string name="no_such_store_exist">No such service exist</string>
+    <string name="tourism">Tourism</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="enter_email">enter email</string>
+
+    <string name="sumbit">SUMBIT</string>
+    <string name="image_discription">Image discription</string>
+    <string name="back">back</string>
+    <string name="office_type">office type</string>
+    <string name="address">address</string>
+    <string name="your_data_safe">your data safe</string>
+
+    <string name="rename">Rename</string>
+    <string name="add_photo">Add Photo</string>
+    <string name="upload">upload</string>
+    <string name="store">Service</string>
+    <string name="rate_now">Rate Now!</string>
+    <string name="rename_collection">Rename folder</string>
+    <string name="new_collection_name">new folder name</string>
+
+    <string name="product_name">Product name</string>
+    <string name="product_type">Product type</string>
+
+    <string name="sell_your_product">Sell your product</string>
+
+    <string name="add_more">add more</string>
+    <string name="product_title_name">Product title/name</string>
+    <string name="product_price">Product price</string>
+    <string name="seller_phone_number">Seller phone number</string>
+    <string name="seller_city">Seller city</string>
+    <string name="select_product_type">select product type</string>
+    <string name="enter_product_type_name">Enter product type name</string>
+
+
+    <string name="sell">SELL</string>
+
+    <string name="shop_name">Service name</string>
+    <string name="no_of_ratings">no_of_ratings</string>
+
+    <string name="avaliable">Available</string>
+    <string name="home_delivery_service">Home Delivery Service</string>
+    <string name="next">NEXT</string>
+    <string name="setup_your_service_profile">Setup your Service profile</string>
+    <string name="upload_a_cover_photo">Upload a cover photo</string>
+    <string name="upload_owner_s_photo">Upload owner\'s photo</string>
+    <string name="timings">Timings</string>
+    <string name="setup_other_details">Setup Other details</string>
+    <string name="awesome">Awesome!</string>
+    <string name="let_s_go">Let\'s Go</string>
+
+    <string name="sort_by">Sort By</string>
+    <string name="distance">Distance</string>
+    <string name="km">km</string>
+    <string name="set_default">Set Default</string>
+    <string name="no_terms">No Terms</string>
+    <string name="store_timings">Service timings</string>
+    <string name="from">From:</string>
+
+
+    <string name="update_store_opening_days">Update Service Opening days</string>
+    <string name="days">Days:</string>
+
+    <string name="s">S</string>
+    <string name="m">M</string>
+
+
+    <string name="update_home_delivery_status">Update Home Delivery Status</string>
+
+    <string name="is_hostel_facility">Is Hostel facility?</string>
+
+    <string name="update_owner_name">Update Owner name</string>
+    <string name="owner_name">Owner name</string>
+
+    <string name="update_phone_number">Update phone number</string>
+    <string name="phone_number">phone number</string>
+    <string name="other_phone_number_optional">Other phone number(optional)</string>
+
+    <string name="is_shop_open">Is service available?</string>
+    <string name="cancel">Cancel</string>
+    <string name="update">Update</string>
+    <string name="update_store_local_address">Update Service local address</string>
+    <string-array name="vehicle_workshop">
+        <item>Showroom</item>
+        <item>Workshop</item>
+        <item>JCB and Crane</item>
+        <item>Two wheeler misthri</item>
+        <item>Four wheeler misthri</item>
+    </string-array>
+
+    //
+    <string name="vehicles_0">Showroom</string>
+    <string name="vehicles_1">Workshop</string>
+    <string name="vehicles_2">JCB and Crane</string>
+    <string name="vehicles_3">Two wheller misthri</string>
+    <string name="vehicles_4">Four wheeler misthri</string>
+
+    <string-array name="shopping">
+        <item>Mall</item>
+        <item>Superbazar</item>
+        <item>Clothes</item>
+        <item>Footwear</item>
+        <item>Furniture</item>
+        <item>General store</item>
+        <item>Daily household</item>
+
+    </string-array>
+
+
+    //
+    <string name="shopping_0">Mall</string>
+    <string name="shopping_1">Superbazar</string>
+    <string name="shopping_2">Clothes</string>
+    <string name="shopping_3">Footwear</string>
+    <string name="shopping_4">Furniture</string>
+    <string name="shopping_5">General store</string>
+    <string name="shopping_6">Daily household</string>
+
+
+
+
+
+
+
+
+
+
+    <string name="t">T</string>
+    <string name="w">W</string>
+    <string name="product_description">Product description</string>
+
+    <string name="f">F</string>
+    <string name="hh">hh</string>
+    <string name="pm">pm</string>
+    <string name="am">am</string>
+    <string name="mm">mm</string>
+    <string name="to">To</string>
+    <string name="update_store_name">Update Service Name</string>
+    <string name="update_store_timing">Update service timing</string>
+    <string name="worker_are_required_or_not">Worker are required or not</string>
+    <!--    <string name="store_name">Store Name</string>-->
+    <string-array name="Country">
+        <item>India</item>
+    </string-array>
+
+    //
+    <string name="country_0">India</string>
+    <string-array name="State">
+        <item>Haryana</item>
+        <item>Uttar Pradesh</item>
+    </string-array>
+
+    //
+    <string name="state_0">Haryana</string>
+    <string name="state_1">Uttar Pradesh</string>
+    <string-array name="City">
+        <item>Narnaul</item>
+        <item>ThanaBhawan</item>
+    </string-array>
+
+    //
+    <string name="city_0">Narnaul</string>
+    <string name="city_1">ThanaBhawan</string>
+    <string-array name="food">
+        <item>Restaurants</item>
+        <item>Juice Corners</item>
+        <item>Fast Food</item>
+        <item>Dhaba</item>
+        <item>Bar</item>
+    </string-array>
+    //
+    <string name="food_0">Restaurants</string>
+    <string name="food_1">Juice Corners</string>
+    <string name="food_2">Fast Food</string>
+    <string name="food_3">Dhaba</string>
+    <string name="food_4">Bar</string>
+    <string-array name="gym_sport">
+        <item>Gym</item>
+        <item>Waterpark</item>
+        <item>Sports Store</item>
+        <item>Swimming pool</item>
+        <item>Sports Acedamy</item>
+    </string-array>
+    //
+    <string name="gym_0">Gym</string>
+    <string name="gym_1">Waterpark</string>
+    <string name="gym_2">Sports Store</string>
+    <string name="gym_3">Swimming pool</string>
+    <string name="gym_4">Sports Acedamy</string>
+    <string-array name="parlour_saloon">
+        <item>Only Ladies</item>
+        <item>Only Men</item>
+        <item>Both</item>
+        <item>Spa</item>
+    </string-array>
+
+    //
+    <string name="parlourl_0">Only Ladies</string>
+    <string name="parlourl_1">Only Men</string>
+    <string name="parlourl_2">Both</string>
+    <string name="parlourl_3">Spa</string>
+    <string-array name="electronics">
+        <item>Mobiles</item>
+        <item>Electronics</item>
+        <item>Computer and laptops</item>
+    </string-array>
+    //
+    <string name="electronics_0">Mobiles</string>
+    <string name="electronics_1">Electronics</string>
+    <string name="electronics_2">Computer and laptops</string>
+    <string-array name="health">
+        <item>Hospitals</item>
+        <item>Health Clinics</item>
+        <item>Medical Stores</item>
+        <item>Pet care</item>
+    </string-array>
+
+    //
+    <string name="health_0">Hospitals</string>
+    <string name="health_1">Health Clinics</string>
+    <string name="health_2">Medical Stores</string>
+    <string name="health_3">Pet care</string>
+    <string-array name="travel">
+        <item>Auto</item>
+        <item>Taxi Car</item>
+        <item>Airways</item>
+        <item>Railways</item>
+        <item>Roadways</item>
+    </string-array>
+
+    //
+    <string name="travel_0">Auto</string>
+    <string name="travel_1">Taxi Car</string>
+    <string name="travel_2">Airways</string>
+    <string name="travel_3">Railways</string>
+    <string name="travel_4">Roadways</string>
+    <string-array name="travel_store">
+        <item>Auto</item>
+        <item>Taxi Car</item>
+    </string-array>
+
+
+    <string-array name="shows_cinema">
+        <item>Shows</item>
+        <item>Cinema Hall</item>
+
+    </string-array>
+
+    //
+    <string name="shows_0">Shows</string>
+    <string name="shows_1">Cinema Hall</string>
+    <string-array name="education">
+        <item>School</item>
+        <item>Tution Centers</item>
+        <item>Home Tution</item>
+        <item>Academy</item>
+        <item>Book Store</item>
+        <item>Coaching Center</item>
+    </string-array>
+
+    //
+    <string name="education_0">School</string>
+    <string name="education_1">Tution Centers</string>
+    <string name="education_2">Home Tution</string>
+    <string name="education_3">Academy</string>
+    <string name="education_4">Book Store</string>
+    <string name="education_5">Coaching Center</string>
+    <string-array name="booking">
+        <item>Tent</item>
+        <item>Party hall</item>
+        <item>Decoration</item>
+        <item>Marriage place</item>
+        <item>Sound box(DJ)</item>
+        <item>Catering(Halwai)</item>
+
+    </string-array>
+    //
+    <string name="booking_0">Tent</string>
+    <string name="booking_1">Party hall</string>
+    <string name="booking_2">Decoration</string>
+    <string name="booking_3">Marriage place</string>
+    <string name="booking_4">Sound box(DJ)</string>
+    <string name="booking_5">Catering(Halwai)</string>
+    <string-array name="rentals">
+        <item>Shop</item>
+        <item>House</item>
+        <item>Godam</item>
+        <item>PG(paying guest)</item>
+    </string-array>
+    //
+    <string name="rentals_0">Shop</string>
+    <string name="rentals_1">House</string>
+    <string name="rentals_2">Godam</string>
+    <string name="rentals_3">PG(paying guest)</string>
+    <string-array name="sell_buy">
+        <item>Plot</item>
+        <item>Shop</item>
+        <item>House</item>
+        <item>Vehicle</item>
+        <item>Furniture</item>
+        <item>Electronics</item>
+        <item>Other</item>
+    </string-array>
+    <string name="sell_0">Plot</string>
+    <string name="sell_1">Shop</string>
+    <string name="sell_2">House</string>
+    <string name="sell_3">Vehicle</string>
+    <string name="sell_4">Furniture</string>
+    <string name="sell_5">Electronics</string>
+    <string name="sell_6">Other</string>
+    <string-array name="agriculture">
+        <item>Anaj Mandi</item>
+        <item>Sabji Mandi</item>
+        <item>Seeds Shop</item>
+
+    </string-array>
+    //
+    <string name="agriculture_0">Anaj Mandi</string>
+    <string name="agriculture_1">Sabji Mandi</string>
+    <string name="agriculture_2">Seeds Shop</string>
+    <string-array name="bulding">
+        <item>Thekedar</item>
+        <item>Dharam Kanta</item>
+        <item>Material Store</item>
+
+    </string-array>
+    //
+    <string name="bulding_0">Thekedar</string>
+    <string name="bulding_1">Dharam Kanta</string>
+    <string name="bulding_2">Material Store</string>
+    <string-array name="stay">
+        <item>Hotel</item>
+        <item>Dharamshala</item>
+
+    </string-array>
+    //
+    <string name="stay_0">Hotel</string>
+    <string name="stay_1">Dharamshala</string>
+    <string-array name="cyber">
+        <item>Cyber cafe</item>
+        <item>CCTV stores</item>
+        <item>Photo studio</item>
+
+    </string-array>
+    ///
+    <string name="cyber_0">Cyber cafe</string>
+    <string name="cyber_1">CCTV stores</string>
+    <string name="cyber_2">Photo studio</string>
+    <string-array name="factories">
+        <item>iles</item>
+        <item>Bricks</item>
+    </string-array>
+    //
+    <string name="factories_0">iles</string>
+    <string name="factories_1">Bricks</string>
+    <string-array name="ngo_club">
+        <item>NGO</item>
+        <item>Club</item>
+
+    </string-array>
+
+    //
+    <string name="ngo_0">NGO</string>
+    <string name="ngo_1">Club</string>
+    <string-array name="bank_atm">
+        <item>Insurance</item>
+        <item>Bank</item>
+        <item>ATM</item>
+
+    </string-array>
+
+    //
+    <string name="bank_0">Insurance</string>
+    <string name="bank_1">Bank</string>
+    <string name="bank_2">ATM</string>
+    <string-array name="petrol_pump">
+        <item>Petrol pump</item>
+        <item>Services Stations</item>
+        <item>Gas agencies</item>
+
+    </string-array>
+
+    //
+    <string name="petrol_0">Petrol pump</string>
+    <string name="petrol_1">Services Stations</string>
+    <string name="petrol_2">Gas agencies</string>
+    <string-array name="travel_for_store">
+        <item>Auto</item>
+        <item>Taxi Car</item>
+    </string-array>
+
+    //
+
+    <string-array name="government">
+        <item>Police Station</item>
+        <item>Fire Brigade</item>
+        <item>Hospital</item>
+        <item>College</item>
+        <item>Court</item>
+        <item>BDO office</item>
+        <item>Post Office</item>
+        <item>BEO office</item>
+        <item>DEO office</item>
+        <item>Panchayat Bhawan</item>
+        <item>Other Office</item>
+    </string-array>
+<!--    <string name="app_name”>CityTimes</string>-->
+
+<!--    <string name="shopping">Shopping</string>-->
+<!--    <string name="food">Food</string>-->
+<!--    <string name="gym_sports">Gym Sports</string>-->
+<!--    <string name="parlourl_saloon">Parlour Saloon</string>-->
+<!--    <string name="electronics">Electronics</string>-->
+<!--    <string name="health">Health</string>-->
+<!--    <string name="travel">Travel</string>-->
+<!--    <string name="movies">Movies</string>-->
+<!--    <string name="education">Education</string>-->
+<!--    <string name="catering">Catering</string>-->
+<!--    <string name="rentals">Rentals</string>-->
+<!--    <string name="sell_buy">Sell and Buy</string>-->
+<!--    <string name="agriculture">Agriculture</string>-->
+<!--    <string name="machanice">Mechanic</string>-->
+<!--    <string name="other">Other</string>-->
+<!--    <string name="text">Light Mode</string>-->
+<!--    <string name="open">open</string>-->
+<!--    <string name="close">closed</string>-->
+<!--    <string name="country">Country</string>-->
+<!--    <string name="state">State</string>-->
+<!--    <string name="sub_category">SubCategory</string>-->
+<!--    <string name="city">City</string>-->
+
+<!--    <string name="stores">Stores</string>-->
+
+<!--    <string-array name="Category">-->
+<!--        <item>Shopping</item>-->
+<!--        <item>Food</item>-->
+<!--        <item>Stay</item>-->
+<!--        <item>Parlour Saloon</item>-->
+<!--        <item>Gym Sports</item>-->
+<!--        <item>Shows and Cinema</item>-->
+<!--        <item>Education</item>-->
+<!--        <item>Health</item>-->
+<!--        <item>Cyber</item>-->
+<!--        <item>Electronics</item>-->
+<!--        <item>Travel</item>-->
+<!--        <item>Vehicles and Workshop</item>-->
+<!--        <item>Booking</item>-->
+<!--        <item>Rentals</item>-->
+<!--        <item>Sell and Buy</item>-->
+<!--        <item>Building Material</item>-->
+<!--        <item>Agriculture</item>-->
+<!--        <item>Factories</item>-->
+<!--        <item>NGO and Club</item>-->
+<!--        <item>Bank and Atm</item>-->
+<!--        <item>Pentrol Pump</item>-->
+<!--    </string-array>-->
+
+
+<!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
+<!--    <string name="check_mail">We have sent you a verification link on your registered email </string>-->
+<!--    <string name="facebook_app_id">2618037285122683</string>-->
+<!--    <string name="fb_login_protocol_scheme">fb2618037285122683</string>-->
+<!--    <string name="navigation_drawer_open">Drawer Open</string>-->
+<!--    <string name="navigation_drawer_close">Drawer Closed</string>-->
+<!--    <string name="setup_profile">Now let\s setup your store profile.\n Your store is not visible on CityTimes as of yet </string>-->
+<!--    <string name="let_go">Let\n Go!</string>-->
+<!--    <string name="settings">Settings</string>-->
+<!--    <string name="personalize">Personalize</string>-->
+<!--    <string name="english">English</string>-->
+<!--    <string name="change_languange_of_the_app">Change language of the app</string>-->
+<!--    <string name="delhi">Delhi</string>-->
+<!--    <string name="default_city_for_news_alerts_and_more">Default city</string>-->
+<!--    <string name="change">CHANGE</string>-->
+<!--    <string name="categories">Categories</string>-->
+<!--    <string name="all_services">All Services</string>-->
+<!--    <string name="government">Government</string>-->
+<!--    <string name="setup_your_store">Setup your service!</string>-->
+<!--    <string name="we_are_indiain">We are INDIAN</string>-->
+<!--    <string name="about_city">About City</string>-->
+
+
+
+
+
+
+<!--    <string name="movies_shows">Movie Shows</string>-->
+<!--    <string name="new_show">New Show</string>-->
+
+<!--    <string name="enter_these_details">Enter these details</string>-->
+
+
+<!--    <string name="procced">proceed</string>-->
+<!--    <string name="favourite_stores">Favourite</string>-->
+
+<!--    <string name="add_new_collection">Add new folder</string>-->
+<!--    <string name="my_product">My Product</string>-->
+<!--    <string name="products">Products</string>-->
+<!--    <string name="government_offices">Government Offices</string>-->
+<!--    <string name="offices">Offices</string>-->
+<!--    <string name="sort">Sort</string>-->
+<!--    <string name="plots">Plots</string>-->
+<!--    <string name="plot_for_selling">Plot for selling</string>-->
+
+<!--    <string name="price">Price:</string>-->
+<!--    <string name="_9027385476">9027385476</string>-->
+
+<!--    <string name="opeing_closing_time">opening-closing time</string>-->
+<!--    <string name="contact_number">contact number</string>-->
+
+<!--    <string name="register_your_service">Register your Service!</string>-->
+<!--    <string name="service_name">Service Name</string>-->
+<!--    <string name="owner_s_name">Owner\'s Name</string>-->
+<!--    <string name="mobile_number1">Mobile Number1</string>-->
+<!--    <string name="mobile_number2_optional">Mobile Number2(optional)</string>-->
+<!--    <string name="current_location">current location</string>-->
+
+<!--    <string name="store_category">Service Category</string>-->
+<!--    <string name="store_sub_category">Service Sub-Category</string>-->
+
+<!--    <string name="sell_products">Sell Products</string>-->
+<!--    <string name="products_for_selling">Products for selling</string>-->
+<!--    <string name="dark_theme">Dark theme</string>-->
+<!--    <string name="clear_app_cache">Clear app cache</string>-->
+<!--    <string name="support">Support</string>-->
+<!--    <string name="rate_us">Rate us!</string>-->
+<!--    <string name="share_this_app">share this app</string>-->
+<!--    <string name="feedback">Feedback</string>-->
+
+<!--    <string name="privacy">Privacy</string>-->
+<!--    <string name="terms_of_use">Terms of use</string>-->
+
+<!--    <string name="board_name">Board name</string>-->
+<!--    <string name="rating">rating</string>-->
+
+<!--    <string name="hostel_facility">Hostel facility!</string>-->
+<!--    <string name="transport_facility">Transport facility!</string>-->
+
+<!--    <string name="description_not_added">Description not added</string>-->
+
+<!--    <string name="welcome_to">Welcome to</string>-->
+<!--    <string name="c">C</string>-->
+<!--    <string name="ity">ity</string>-->
+
+<!--    <string name="imes">imes</string>-->
+
+<!--    <string name="seller_name">Seller Name</string>-->
+
+<!--    <string name="home_delivery_not_available">Home Delivery is Not Available</string>-->
+<!--    <string name="workers_required">Workers required!</string>-->
+<!--    <string name="transport_servics_avilable">Transport servics avilable</string>-->
+<!--    <string name="hostel_servics_avilable">Hostel servics avilable</string>-->
+<!--    <string name="see_all_photos">See all photos</string>-->
+<!--    <string name="shows">Shows</string>-->
+<!--    <string name="service_description">Service Description</string>-->
+<!--    <string name="service_description">service description</string>-->
+
+<!--    <string name="apply">Apply</string>-->
+<!--    <string name="all_photos">All Photos</string>-->
+<!--    <string name="category_store">Category Service</string>-->
+<!--    <string name="facebook">Facebook</string>-->
+<!--    <string name="google">Google</string>-->
+<!--    <string name="email_address">Email Address</string>-->
+
+<!--    <string name="forgot_password">Forgot Password?</string>-->
+<!--    <string name="login">Login</string>-->
+<!--    <string name="don_t_have_an_account">Don\'t have an account?</string>-->
+<!--    <string name="register_now">Register Now</string>-->
+<!--    <string name="register_to_citytimes">Register to CityTimes</string>-->
+<!--    <string name="full_name">Full Name</string>-->
+<!--    <string name="email">Email</string>-->
+<!--    <string name="password">Password</string>-->
+<!--    <string name="select_country">Select Country</string>-->
+<!--    <string name="select_state">Select State</string>-->
+<!--    <string name="select_city">Select City</string>-->
+<!--    <string name="register">Register</string>-->
+<!--    <string name="by_registering_you_agree_to">By registering you agree to</string>-->
+<!--    <string name="term_and_conditions">Terms of use</string>-->
+<!--    <string name="and">and</string>-->
+<!--    <string name="privacy_policy">Privacy Policy</string>-->
+<!--    <string name="of_the_my_city">of the CityTimes</sring>-->
+<!--    <string name="add_collection">Add folder</string>-->
+<!--    <string name="collection_name">Folder name</string>-->
+
+<!--    <string name="add">ADD</string>-->
+<!--    <string name="show_time">Show Time:</string>-->
+
+<!--    <string name="movie_name">movie name</string>-->
+<!--    <string name="tickit_price">ticket price</string>-->
+
+<!--    <string name="sub_category_name">Sub Category Name</string>-->
+<!--    <string name="category_name">category name</string>-->
+<!--    <string name="explore">Explore</string>-->
+<!--    <string name="city_name">City Name</string>-->
+<!--    <string name="sell_and_buy">Sell and Buy</string>-->
+<!--    <string name="information">Information</string>-->
+<!--    <string name="about_us">About Us</string>-->
+<!--    <string name="contact_us">Contact Us</string>-->
+<!--    <string name="version">Version</string>-->
+<!--    <string name="logout">Logout</string>-->
+<!--    <string name="loading">loading...</string>-->
+
+<!--    <string name="product_title">Product title</string>-->
+
+<!--    <string name="seller_phone">Seller phone</string>-->
+<!--    <string name="define_search">Define Search</string>-->
+<!--    <string name="store_name">Service Name</string>-->
+<!--    <string name="store_address">Service Address</string>-->
+<!--    <string name="principal_director_name">Principal name</string>-->
+<!--    <string name="school_board">School board</string>-->
+
+<!--    <string name="check_your_email">Check your Email</string>-->
+<!--    <string name="go_to_login">Go to Login</string>-->
+<!--    <string name="send_feedback">Send feedback</string>-->
+<!--    <string name="type_message">Type message</string>-->
+
+<!--    <string name="send">SEND</string>-->
+<!--    <string name="general">General</string>-->
+<!--    <string name="history">History</string>-->
+
+<!--    <string name="no_such_store_exist">No such service exist</string>-->
+<!--    <string name="tourism">Tourism</string>-->
+<!--    <string name="reset_password">Reset Password</string>-->
+<!--    <string name="enter_email">enter email</string>-->
+
+<!--    <string name="sumbit">SUMBIT</string>-->
+<!--    <string name="image_discription">Image discription</string>-->
+<!--    <string name="back">back</string>-->
+<!--    <string name="office_type">office type</string>-->
+<!--    <string name="address">address</string>-->
+<!--    <string name="your_data_safe">your data safe</string>-->
+
+<!--    <string name="rename">Rename</string>-->
+<!--    <string name="add_photo">Add Photo</string>-->
+<!--    <string name="upload">upload</string>-->
+<!--    <string name="store">Service</string>-->
+<!--    <string name="rate_now">Rate Now!</string>-->
+<!--    <string name="rename_collection">Rename folder</string>-->
+<!--    <string name="new_collection_name">new folder name</string>-->
+
+<!--    <string name="product_name">Product name</string>-->
+<!--    <string name="product_type">Product type</string>-->
+
+<!--    <string name="sell_your_product">Sell your product</string>-->
+
+<!--    <string name="add_more">add more</string>-->
+<!--    <string name="product_title_name">Product title/name</string>-->
+<!--    <string name="product_price">Product price</string>-->
+<!--    <string name="seller_phone_number">Seller phone number</string>-->
+<!--    <string name="seller_city">Seller city</string>-->
+<!--    <string name="select_product_type">select product type</string>-->
+<!--    <string name="enter_product_type_name">Enter product type name</string>-->
+
+
+<!--    <string name="sell">SELL</string>-->
+
+<!--    <string name="shop_name">Service name</string>-->
+<!--    <string name="no_of_ratings">no_of_ratings</string>-->
+
+<!--    <string name="avaliable">Available</string>-->
+<!--    <string name="home_delivery_service">Home Delivery Service</string>-->
+<!--    <string name="next">NEXT</string>-->
+<!--    <string name="setup_your_service_profile">Setup your Service profile</string>-->
+<!--    <string name="upload_a_cover_photo">Upload a cover photo</string>-->
+<!--    <string name="upload_owner_s_photo">Upload owner\'s photo</string>-->
+<!--    <string name="timings">Timings</string>-->
+<!--    <string name="setup_other_details">Setup Other details</string>-->
+<!--    <string name="awesome">Awesome!</string>-->
+<!--    <string name="let_s_go">Let\'s Go</string>-->
+<!--    <string name="from_9_40am">From: 9:40AM</string>-->
+<!--    <string name="to_9_40am">To: 9:40AM</string>-->
+<!--    <string name="price_400rupee">Price:₹400</string>-->
+<!--    <string name="sort_by">Sort By</string>-->
+<!--    <string name="distance">Distance</string>-->
+<!--    <string name="km">km</string>-->
+<!--    <string name="set_default">Set Default</string>-->
+<!--    <string name="no_terms">No Terms</string>-->
+<!--    <string name="store_timings">Service timings</string>-->
+<!--    <string name="from">From:</string>-->
+
+
+<!--    <string name="update_store_opening_days">Update Service Opening days</string>-->
+<!--    <string name="days">Days:</string>-->
+
+<!--    <string name="s">S</string>-->
+<!--    <string name="m">M</string>-->
+
+
+<!--    <string name="update_home_delivery_status">Update Home Delivery Status</string>-->
+
+<!--    <string name="is_hostel_facility">Is Hostel facility?</string>-->
+
+<!--    <string name="update_owner_name">Update Owner name</string>-->
+<!--    <string name="owner_name">Owner name</string>-->
+
+<!--    <string name="update_phone_number">Update phone number</string>-->
+<!--    <string name="phone_number">phone number</string>-->
+<!--    <string name="other_phone_number_optional">Other phone number(optional)</string>-->
+
+<!--    <string name="is_shop_open">Is service available?</string>-->
+<!--    <string name="cancel">CANCEL</string>-->
+<!--    <string name="update">Update</string>-->
+<!--    <string name="update_store_local_address">Update Service local address</string>-->
+<!--    <string-array name="vehicle_workshop">-->
+<!--        <item>Showroom</item>-->
+<!--        <item>Workshop</item>-->
+<!--        <item>JCB and Crane</item>-->
+<!--        <item>Two wheeler misthri</item>-->
+<!--        <item>Four wheeler misthri</item>-->
+<!--    </string-array>-->
+
+<!--    //-->
+<!--    <string name="vehicles_0">Showroom</string>-->
+<!--    <string name="vehicles_1">Workshop</string>-->
+<!--    <string name="vehicles_2">JCB and Crane</string>-->
+<!--    <string name="vehicles_3">Two wheller misthri</string>-->
+<!--    <string name="vehicles_4">Four wheeler misthri</string>-->
+
+<!--    <string-array name="shopping">-->
+<!--        <item>Mall</item>-->
+<!--        <item>Superbazar</item>-->
+<!--        <item>Clothes</item>-->
+<!--        <item>Footwear</item>-->
+<!--        <item>Furniture</item>-->
+<!--        <item>General store</item>-->
+<!--        <item>Daily household</item>-->
+
+<!--    </string-array>-->
+
+
+<!--    //-->
+<!--    <string name="shopping_0">Mall</string>-->
+<!--    <string name="shopping_1">Superbazar</string>-->
+<!--    <string name="shopping_2">Clothes</string>-->
+<!--    <string name="shopping_3">Footwear</string>-->
+<!--    <string name="shopping_4">Furniture</string>-->
+<!--    <string name="shopping_5">General store</string>-->
+<!--    <string name="shopping_6">Daily household</string>-->
+
+
+
+
+
+
+
+
+
+
+<!--    <string name="t">t</string>-->
+<!--    <string name="w">w</string>-->
+<!--    <string name="product_description">Product description</string>-->
+<!--    <string name="product_description">Product description</string>-->
+<!--    <string name="f">f</string>-->
+<!--    <string name="hh">hh</string>-->
+<!--    <string name="pm">pm</string>-->
+<!--    <string name="am">am</string>-->
+<!--    <string name="mm">mm</string>-->
+<!--    <string name="to">to</string>-->
+<!--    <string name="update_store_name">Update Service Name</string>-->
+<!--    <string name="update_store_timing">Update service timing</string>-->
+<!--    <string name="worker_are_required_or_not">Worker are required or not</string>-->
+<!--    &lt;!&ndash;    <string name="store_name">Store Name</string>&ndash;&gt;-->
+<!--    <string-array name="Country">-->
+<!--        <item>India</item>-->
+<!--    </string-array>-->
+
+<!--    //-->
+<!--    <string name="country_0">India</string>-->
+<!--    <string-array name="State">-->
+<!--        <item>Haryana</item>-->
+<!--        <item>Uttar Pradesh</item>-->
+<!--    </string-array>-->
+
+<!--    //-->
+<!--    <string name="state_0">Haryana</string>-->
+<!--    <string name="state_1">Uttar Pradesh</string>-->
+<!--    <string-array name="City">-->
+<!--        <item>Narnaul</item>-->
+<!--        <item>ThanaBhawan</item>-->
+<!--    </string-array>-->
+
+<!--    //-->
+<!--    <string name="city_0">Narnaul</string>-->
+<!--    <string name="city_1">ThanaBhawan</string>-->
+<!--    <string-array name="food">-->
+<!--        <item>Restaurants</item>-->
+<!--        <item>Juice Corners</item>-->
+<!--        <item>Fast Food</item>-->
+<!--        <item>Dhaba</item>-->
+<!--        <item>Bar</item>-->
+<!--    </string-array>-->
+<!--    //-->
+<!--    <string name="food_0">Restaurants</string>-->
+<!--    <string name="food_1">Juice Corners</string>-->
+<!--    <string name="food_2">Fast Food</string>-->
+<!--    <string name="food_3">Dhaba</string>-->
+<!--    <string name="food_4">Bar</string>-->
+<!--    <string-array name="gym_sport">-->
+<!--        <item>Gym</item>-->
+<!--        <item>Waterpark</item>-->
+<!--        <item>Sports Store</item>-->
+<!--        <item>Swimming pool</item>-->
+<!--        <item>Sports Acedamy</item>-->
+<!--    </string-array>-->
+<!--    //-->
+<!--    <string name="gym_0">Gym</string>-->
+<!--    <string name="gym_1">Waterpark</string>-->
+<!--    <string name="gym_2">Sports Store</string>-->
+<!--    <string name="gym_3">Swimming pool</string>-->
+<!--    <string name="gym_4">Sports Acedamy</string>-->
+<!--    <string-array name="parlour_saloon">-->
+<!--        <item>Only Ladies</item>-->
+<!--        <item>Only Men</item>-->
+<!--        <item>Both</item>-->
+<!--        <item>Spa</item>-->
+<!--    </string-array>-->
+
+<!--    //-->
+<!--    <string name="parlourl_0">Only Ladies</string>-->
+<!--    <string name="parlourl_1">Only Men</string>-->
+<!--    <string name="parlourl_2">Both</string>-->
+<!--    <string name="parlourl_3">Spa</string>-->
+<!--    <string-array name="electronics">-->
+<!--        <item>Mobiles</item>-->
+<!--        <item>Electronics</item>-->
+<!--        <item>Computer and laptops</item>-->
+<!--    </string-array>-->
+<!--    //-->
+<!--    <string name="electronics_0">Mobiles</string>-->
+<!--    <string name="electronics_1">Electronics</string>-->
+<!--    <string name="electronics_2">Computer and laptops</string>-->
+<!--    <string-array name="health">-->
+<!--        <item>Hospitals</item>-->
+<!--        <item>Health Clinics</item>-->
+<!--        <item>Medical Stores</item>-->
+<!--        <item>Pet care</item>-->
+<!--    </string-array>-->
+
+<!--    //-->
+<!--    <string name="health_">Hospitals</string>-->
+<!--    <string name="health_">Health Clinics</string>-->
+<!--    <string name="health_">Medical Stores</string>-->
+<!--    <string name="health_">Pet care</string>-->
+<!--    <string-array name="travel">-->
+<!--        <item>Auto</item>-->
+<!--        <item>Taxi Car</item>-->
+<!--        <item>Airways</item>-->
+<!--        <item>Railways</item>-->
+<!--        <item>Roadways</item>-->
+<!--    </string-array>-->
+
+<!--    //-->
+<!--    <string name="travel_0">Auto</string>-->
+<!--    <string name="travel_1">Taxi Car</string>-->
+<!--    <string name="travel_2">Airways</string>-->
+<!--    <string name="travel_3">Railways</string>-->
+<!--    <string name="travel_4">Roadways</string>-->
+<!--    <string-array name="travel_store">-->
+<!--        <item>Auto</item>-->
+<!--        <item>Taxi Car</item>-->
+<!--    </string-array>-->
+
+
+<!--    <string-array name="shows_cinema">-->
+<!--        <item>Shows</item>-->
+<!--        <item>Cinema Hall</item>-->
+
+<!--    </string-array>-->
+
+<!--    //-->
+<!--    <string name="shows_0">Shows</string>-->
+<!--    <string name="shows_1">Cinema Hall</string>-->
+<!--    <string-array name="education">-->
+<!--        <item>School</item>-->
+<!--        <item>Tution Centers</item>-->
+<!--        <item>Home Tution</item>-->
+<!--        <item>Academy</item>-->
+<!--        <item>Book Store</item>-->
+<!--        <item>Coaching Center</item>-->
+<!--    </string-array>-->
+
+<!--    //-->
+<!--    <string name="education_0">School</string>-->
+<!--    <string name="education_1">Tution Centers</string>-->
+<!--    <string name="education_2">Home Tution</string>-->
+<!--    <string name="education_3">Academy</string>-->
+<!--    <string name="education_4">Book Store</string>-->
+<!--    <string name="education_5">Coaching Center</string>-->
+<!--    <string-array name="booking">-->
+<!--        <item>Tent</item>-->
+<!--        <item>Party hall</item>-->
+<!--        <item>Decoration</item>-->
+<!--        <item>Marriage place</item>-->
+<!--        <item>Sound box(DJ)</item>-->
+<!--        <item>Catering(Halwai)</item>-->
+
+<!--    </string-array>-->
+<!--    //-->
+<!--    <string name="booking_0">Tent</string>-->
+<!--    <string name="booking_1">Party hall</string>-->
+<!--    <string name="booking_2">Decoration</string>-->
+<!--    <string name="booking_3">Marriage place</string>-->
+<!--    <string name="booking_4">Sound box(DJ)</string>-->
+<!--    <string name="booking_5">Catering(Halwai)</string>-->
+<!--    <string-array name="rentals">-->
+<!--        <item>Shop</item>-->
+<!--        <item>House</item>-->
+<!--        <item>Godam</item>-->
+<!--        <item>PG(paying guest)</item>-->
+<!--    </string-array>-->
+<!--    //-->
+<!--    <string name="rentals_0">Shop</string>-->
+<!--    <string name="rentals_1">House</string>-->
+<!--    <string name="rentals_2">Godam</string>-->
+<!--    <string name="rentals_3">PG(paying guest)</string>-->
+<!--    <string-array name="sell_buy">-->
+<!--        <item>Plot</item>-->
+<!--        <item>Shop</item>-->
+<!--        <item>House</item>-->
+<!--        <item>Vehicle</item>-->
+<!--        <item>Furniture</item>-->
+<!--        <item>Electronics</item>-->
+<!--        <item>Other</item>-->
+<!--    </string-array>-->
+<!--    <string name="sell_0">Plot</string>-->
+<!--    <string name="sell_1">Shop</string>-->
+<!--    <string name="sell_2">House</string>-->
+<!--    <string name="sell_3">Vehicle</string>-->
+<!--    <string name="sell_4">Furniture</string>-->
+<!--    <string name="sell_5">Electronics</string>-->
+<!--    <string name="sell_6">Other</string>-->
+<!--    <string-array name="agriculture">-->
+<!--        <item>Anaj Mandi</item>-->
+<!--        <item>Sabji Mandi</item>-->
+<!--        <item>Seeds Shop</item>-->
+
+<!--    </string-array>-->
+<!--    //-->
+<!--    <string name="agriculture_">Anaj Mandi</string>-->
+<!--    <string name="agriculture_">Sabji Mandi</string>-->
+<!--    <string name="agriculture_">Seeds Shop</string>-->
+<!--    <string-array name="building">-->
+<!--        <item>Thekedar</item>-->
+<!--        <item>Dharam Kanta</item>-->
+<!--        <item>Material Store</item>-->
+
+<!--    </string-array>-->
+<!--    //-->
+<!--    <string name="building_">Thekedar</string>-->
+<!--    <string name="building_">Dharam Kanta</string>-->
+<!--    <string name="building_">Material Store</string>-->
+<!--    <string-array name="stay">-->
+<!--        <item>Hotel</item>-->
+<!--        <item>Dharamshala</item>-->
+
+<!--    </string-array>-->
+<!--    //-->
+<!--    <string name="stay_">Hotel</string>-->
+<!--    <string name="stay_">Dharamshala</string>-->
+<!--    <string-array name="cyber">-->
+<!--        <item>Cyber cafe</item>-->
+<!--        <item>CCTV stores</item>-->
+<!--        <item>Photo studio</item>-->
+
+<!--    </string-array>-->
+<!--    ///-->
+<!--    <string name="cyber_">Cyber cafe</string>-->
+<!--    <string name="cyber_">CCTV stores</string>-->
+<!--    <string name="cyber_">Photo studio</string>-->
+<!--    <string-array name="factories">-->
+<!--        <item>iles</item>-->
+<!--        <item>Bricks</item>-->
+<!--    </string-array>-->
+<!--    //-->
+<!--    <string name="factories_">iles</string>-->
+<!--    <string name="factories_">Bricks</string>-->
+<!--    <string-array name="ngo_club">-->
+<!--        <item>NGO</item>-->
+<!--        <item>Club</item>-->
+
+<!--    </string-array>-->
+
+<!--    //-->
+<!--    <string name="ngo_">NGO</string>-->
+<!--    <string name="ngo_">Club</string>-->
+<!--    <string-array name="bank_atm">-->
+<!--        <item>Insurance</item>-->
+<!--        <item>Bank</item>-->
+<!--        <item>ATM</item>-->
+
+<!--    </string-array>-->
+
+<!--    //-->
+<!--    <string name="bank_">Insurance</string>-->
+<!--    <string name="bank_">Bank</string>-->
+<!--    <string name="bank_">ATM</string>-->
+<!--    <string-array name="petrol_pump">-->
+<!--        <item>Petrol pump</item>-->
+<!--        <item>Services Stations</item>-->
+<!--        <item>Gas agencies</item>-->
+
+<!--    </string-array>-->
+
+<!--    //-->
+<!--    <string name="petrol_">Petrol pump</string>-->
+<!--    <string name="petrol_">Services Stations</string>-->
+<!--    <string name="petrol_">Gas agencies</string>-->
+<!--    <string-array name="travel_for_store">-->
+<!--        <item>Auto</item>-->
+<!--        <item>Taxi Car</item>-->
+<!--    </string-array>-->
+
+<!--    //-->
+
+<!--    <string-array name="government">-->
+<!--        <item>Police Station</item>-->
+<!--        <item>Fire Brigade</item>-->
+<!--        <item>Hospital</item>-->
+<!--        <item>College</item>-->
+<!--        <item>Court</item>-->
+<!--        <item>BDO office</item>-->
+<!--        <item>Post Office</item>-->
+<!--        <item>BEO office</item>-->
+<!--        <item>DEO office</item>-->
+<!--        <item>Panchayat Bhawan</item>-->
+<!--        <item>Other Office</item>-->
+<!--    </string-array>-->
+<!--    //-->
+<!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
+<!--    <string name="check_mail">We have sent you a verification link on your registerd email </string>-->
+<!--    <string name="facebook_app_id">2618037285122683</string>-->
+<!--    <string name="fb_login_protocol_scheme">fb2618037285122683</string>-->
+<!--    <string name="navigation_drawer_open">Drawer Open</string>-->
+<!--    <string name="navigation_drawer_close">Drawer Closed</string>-->
+<!--    <string name="setup_profile">Now let\s setup your store profile.\n Your store is not visible on CityTimes as of yet </string>-->
+<!--    <string name="let_go">Let\n Go!</string>-->
+
+<!--    <string name="settings">Settings</string>-->
+<!--    <string name="personalize">Personalize</string>-->
+<!--    <string name="english">English</string>-->
+<!--    <string name="change_languange_of_the_app">Change languange of the app</string>-->
+<!--    <string name="delhi">Delhi</string>-->
+<!--    <string name="default_city_for_news_alerts_and_more">Default city for news alerts and more</string>-->
+<!--    <string name="change">CHANGE</string>-->
+<!--    <string name="categories">Categories</string>-->
+<!--    <string name="all_services">All Services</string>-->
+<!--    <string name="government">Government</string>-->
+<!--    <string name="setup_your_store">Setup your Store!</string>-->
+
+
+<!--    <string name="app_name">MyCity</string>-->
+<!--    <string name="shopping">Shopping</string>-->
+<!--    <string name="food">Food</string>-->
+<!--    <string name="gym_sports">Gym Sports</string>-->
+<!--    <string name="parlourl_saloon">Parlourl Saloon</string>-->
+<!--    <string name="electronics">Electronics</string>-->
+<!--    <string name="health">Health</string>-->
+<!--    <string name="travel">Travel</string>-->
+<!--    <string name="movies">Movies</string>-->
+<!--    <string name="education">Education</string>-->
+<!--    <string name="catering">Catering</string>-->
+<!--    <string name="rentals">Rentals</string>-->
+<!--    <string name="sell_buy">Sell and Buy</string>-->
+<!--    <string name="agriculture">Agriculture</string>-->
+<!--    <string name="machanice">Machanice</string>-->
+<!--    <string name="other">Other</string>-->
+<!--    <string name="text">Light Mode</string>-->
+
+<!--    <string-array name="Category">-->
+<!--        <item>Shopping</item>-->
+<!--        <item>Food</item>-->
+<!--        <item>Stay</item>-->
+<!--        <item>Parlourl Saloon</item>-->
+<!--        <item>Gym Sports</item>-->
+<!--        <item>Shows and Cinema</item>-->
+<!--        <item>Education</item>-->
+<!--        <item>Health</item>-->
+<!--        <item>Cyber</item>-->
+<!--        <item>Electronics</item>-->
+<!--        <item>Travel</item>-->
+<!--        <item>Vehicles and Workshop</item>-->
+<!--        <item>Booking</item>-->
+<!--        <item>Rentals</item>-->
+<!--        <item>Sell and Buy</item>-->
+<!--        <item>Buliding Material</item>-->
+<!--        <item>Agriculture</item>-->
+<!--        <item>Factories</item>-->
+<!--        <item>NGO and Club</item>-->
+<!--        <item>Bank and Atm</item>-->
+<!--        <item>Pentrol Pump</item>-->
+<!--    </string-array>-->
+
+<!--    <string-array name="shopping">-->
+<!--    <item>Mall</item>-->
+<!--    <item>Superbazar</item>-->
+<!--    <item>Clothes</item>-->
+<!--    <item>Footwear</item>-->
+<!--    <item>Furniture</item>-->
+<!--    <item>General store</item>-->
+<!--    <item>Daily household</item>-->
+<!--    </string-array>-->
+
+<!--    <string name="stores">Stores</string>-->
+<!--    <string name="open">open</string>-->
+<!--    <string name="close">closed</string>-->
+<!--    <string name="we_are_indiain">We are INDIAIN</string>-->
+<!--    <string name="about_city">About City</string>-->
+
+
+
+<!--    <string name="movies_shows">Movies Shows</string>-->
+<!--    <string name="new_show">New Show</string>-->
+
+<!--    <string name="enter_these_details">Enter these details</string>-->
+
+
+<!--    <string name="procced">procced</string>-->
+<!--    <string name="favourite_stores">Favourite Stores</string>-->
+
+<!--    <string name="add_new_collection">Add new collection</string>-->
+<!--    <string name="my_product">My Product</string>-->
+<!--    <string name="products">Products</string>-->
+<!--    <string name="government_offices">Government Offices</string>-->
+<!--    <string name="offices">Offices</string>-->
+<!--    <string name="sort">Sort</string>-->
+<!--    <string name="plots">Plots</string>-->
+<!--    <string name="plot_for_selling">Plot for selling</string>-->
+
+<!--    <string name="price">Price:</string>-->
+<!--    <string name="_9027385476">9027385476</string>-->
+
+<!--    <string name="opeing_closing_time">opeing-closing time</string>-->
+<!--    <string name="contact_number">contact number</string>-->
+
+<!--    <string name="register_your_service">Register your Service!</string>-->
+<!--    <string name="service_name">Service Name</string>-->
+<!--    <string name="owner_s_name">Owner\'s Name</string>-->
+<!--    <string name="mobile_number1">Mobile Number1</string>-->
+<!--    <string name="mobile_number2_optional">Mobile Number2(optional)</string>-->
+<!--    <string name="current_location">current location</string>-->
+
+<!--    <string name="store_category">Store Category</string>-->
+<!--    <string name="store_sub_category">Store Sub-Category</string>-->
+
+<!--    <string name="sell_products">Sell Products</string>-->
+<!--    <string name="products_for_selling">Products for selling</string>-->
+<!--    <string name="dark_theme">Dark theme</string>-->
+<!--    <string name="clear_app_cache">Clear app cache</string>-->
+<!--    <string name="support">Support</string>-->
+<!--    <string name="rate_us">Rate us!</string>-->
+<!--    <string name="share_this_app">share this app</string>-->
+<!--    <string name="feedback">Feedback</string>-->
+
+<!--    <string name="privacy">Privacy</string>-->
+<!--    <string name="terms_of_use">Terms of use</string>-->
+
+<!--    <string name="board_name">Board name</string>-->
+<!--    <string name="rating">rating</string>-->
+
+<!--    <string name="hostel_facility">Hostel facility!</string>-->
+<!--    <string name="transport_facility">transport facility!</string>-->
+
+<!--    <string name="description_not_added">Description not added</string>-->
+
+<!--    <string name="welcome_to">Welcome to</string>-->
+<!--    <string name="c">C</string>-->
+<!--    <string name="ity">ity</string>-->
+
+<!--    <string name="imes">imes</string>-->
+
+<!--    <string name="seller_name">Seller Name</string>-->
+
+<!--    <string name="home_delivery_not_available">Home Delivery Not Available</string>-->
+<!--    <string name="workers_required">Workers required!</string>-->
+<!--    <string name="transport_servics_avilable">Transport servics avilable</string>-->
+<!--    <string name="hostel_servics_avilable">Hostel servics avilable</string>-->
+<!--    <string name="see_all_photos">See all photos</string>-->
+<!--    <string name="shows">Shows</string>-->
+<!--    <string name="service_descrption">Service Descrption</string>-->
+<!--    <string name="service_description">service description</string>-->
+
+<!--    <string name="apply">Apply</string>-->
+<!--    <string name="all_photos">All Photos</string>-->
+<!--    <string name="category_store">Category Store</string>-->
+<!--    <string name="facebook">Facebook</string>-->
+<!--    <string name="google">Google</string>-->
+<!--    <string name="email_address">Email Address</string>-->
+
+<!--    <string name="forgot_password">Forgot Password?</string>-->
+<!--    <string name="login">Login</string>-->
+<!--    <string name="don_t_have_an_account">Don\'t have an account?</string>-->
+<!--    <string name="register_now">Register Now</string>-->
+<!--    <string name="register_to_citytimes">Register to CityTimes</string>-->
+<!--    <string name="full_name">Full Name</string>-->
+<!--    <string name="email">Email</string>-->
+<!--    <string name="password">Password</string>-->
+<!--    <string name="select_country">Select Country</string>-->
+<!--    <string name="select_state">Select State</string>-->
+<!--    <string name="select_city">Select City</string>-->
+<!--    <string name="register">Register</string>-->
+<!--    <string name="by_registering_you_agree_to">By registering you agree to</string>-->
+<!--    <string name="term_and_conditions">Term and Conditions</string>-->
+<!--    <string name="and">and</string>-->
+<!--    <string name="privacy_policy">Privacy Policy</string>-->
+<!--    <string name="of_the_my_city">of the My City</string>-->
+<!--    <string name="add_collection">Add Collection</string>-->
+<!--    <string name="collection_name">Collection name</string>-->
+
+<!--    <string name="add">ADD</string>-->
+<!--    <string name="show_time">Show Time:</string>-->
+
+<!--    <string name="movie_name">movie name</string>-->
+<!--    <string name="tickit_price">tickit price</string>-->
+
+<!--    <string name="sub_category_name">Sub Category Name</string>-->
+<!--    <string name="category_name">category name</string>-->
+<!--    <string name="explore">Explore</string>-->
+<!--    <string name="city_name">City Name</string>-->
+<!--    <string name="sell_and_buy">Sell and Buy</string>-->
+<!--    <string name="information">Information</string>-->
+<!--    <string name="about_us">About Us</string>-->
+<!--    <string name="contact_us">Contact Us</string>-->
+<!--    <string name="version">Version</string>-->
+<!--    <string name="logout">Logout</string>-->
+<!--    <string name="loading">loading...</string>-->
+
+<!--    <string name="product_title">Product title</string>-->
+
+<!--    <string name="seller_phone">Seller phone</string>-->
+<!--    <string name="define_search">Define Search</string>-->
+<!--    <string name="store_name">Store Name</string>-->
+<!--    <string name="store_address">Store Address</string>-->
+<!--    <string name="principal_director_name">Principal/director name</string>-->
+<!--    <string name="school_board">School board</string>-->
+
+<!--    <string name="check_your_email">Check your Email</string>-->
+<!--    <string name="go_to_login">Go to Login</string>-->
+<!--    <string name="send_feedback">Send feedback</string>-->
+<!--    <string name="type_message">type message</string>-->
+
+<!--    <string name="send">SEND</string>-->
+<!--    <string name="general">General</string>-->
+<!--    <string name="history">History</string>-->
+
+<!--    <string name="no_such_store_exist">No such store exist</string>-->
+<!--    <string name="tourism">Tourism</string>-->
+<!--    <string name="reset_password">Reset Password</string>-->
+<!--    <string name="enter_email">enter email</string>-->
+
+<!--    <string name="sumbit">SUMBIT</string>-->
+<!--    <string name="image_discription">Image discription</string>-->
+<!--    <string name="back">back</string>-->
+<!--    <string name="office_type">office type</string>-->
+<!--    <string name="address">address</string>-->
+<!--    <string name="your_data_safe">your data safe</string>-->
+
+<!--    <string name="rename">Rename</string>-->
+<!--    <string name="add_photo">Add Photo</string>-->
+<!--    <string name="upload">upload</string>-->
+<!--    <string name="store">Store</string>-->
+<!--    <string name="rate_now">Rate Now!</string>-->
+<!--    <string name="rename_collection">Rename Collection</string>-->
+<!--    <string name="new_collection_name">new collection name</string>-->
+
+<!--    <string name="product_name">Product name</string>-->
+
+<!--    <string name="city">City</string>-->
+<!--    <string name="sell_your_product">Sell your product</string>-->
+
+<!--    <string name="add_more">add more</string>-->
+<!--    <string name="product_title_name">Product title/name</string>-->
+<!--    <string name="product_price">Product price</string>-->
+<!--    <string name="seller_phone_number">Seller phone number</string>-->
+<!--    <string name="seller_city">Seller city</string>-->
+<!--    <string name="select_product_type">select product type</string>-->
+<!--    <string name="enter_product_type_name">Enter product type name</string>-->
+<!--    <string name="product_description">Product description</string>-->
+
+<!--    <string name="sell">SELL</string>-->
+
+<!--    <string name="shop_name">Shop name</string>-->
+<!--    <string name="no_of_ratings">no_of_ratings</string>-->
+
+<!--    <string name="avaliable">Avaliable</string>-->
+<!--    <string name="home_delivery_service">Home Delivery Service</string>-->
+<!--    <string name="next">NEXT</string>-->
+<!--    <string name="setup_your_service_profile">Setup your Service profile</string>-->
+<!--    <string name="upload_a_cover_photo">Upload a cover photo</string>-->
+<!--    <string name="upload_owner_s_photo">Upload owner\'s photo</string>-->
+<!--    <string name="timings">Timings</string>-->
+<!--    <string name="setup_other_details">Setup Other details</string>-->
+<!--    <string name="awesome">Awesome!</string>-->
+<!--    <string name="let_s_go">Let\'s Go</string>-->
+<!--    <string name="from_9_40am">From: 9:40AM</string>-->
+<!--    <string name="to_9_40am">To: 9:40AM</string>-->
+<!--    <string name="price_400rupee">Price:400rupee</string>-->
+<!--    <string name="sort_by">Sort By</string>-->
+<!--    <string name="distance">Distance</string>-->
+<!--    <string name="km">km</string>-->
+<!--    <string name="set_default">Set Default</string>-->
+<!--    <string name="no_terms">No Terms</string>-->
+<!--    <string name="store_timings">Store timings</string>-->
+<!--    <string name="from">From:</string>-->
+
+
+<!--    <string name="update_store_opening_days">Update Store Opening days</string>-->
+<!--    <string name="days">Days:</string>-->
+
+<!--    <string name="s">S</string>-->
+<!--    <string name="m">M</string>-->
+
+
+<!--    <string name="update_home_delivery_status">Update Home Delivery Status</string>-->
+
+<!--    <string name="is_hostel_facility">Is Hostel facility?</string>-->
+
+<!--    <string name="update_owner_name">Update Owner name</string>-->
+<!--    <string name="owner_name">Owner name</string>-->
+
+<!--    <string name="update_phone_number">Update phone number</string>-->
+<!--    <string name="phone_number">phone number</string>-->
+<!--    <string name="other_phone_number_optional">Other phone number(optional)</string>-->
+
+<!--    <string name="is_shop_open">Is shop open?</string>-->
+<!--    <string name="cancel">CANCEL</string>-->
+<!--    <string name="update">Update</string>-->
+<!--    <string name="update_store_local_address">Update Store local address</string>-->
+
+<!--    //-->
+<!--    <string name="shopping_0">Mall</string>-->
+<!--    <string name="shopping_1">Superbazar</string>-->
+<!--    <string name="shopping_2">Clothes</string>-->
+<!--    <string name="shopping_3">Footwear</string>-->
+<!--    <string name="shopping_4">Furniture</string>-->
+<!--    <string name="shopping_5">General store</string>-->
+<!--    <string name="shopping_6">Daily household</string>-->
+<!--    <string name="t">t</string>-->
+<!--    <string name="w">w</string>-->
+<!--&lt;!&ndash;    <string name="product_description">Product description</string>&ndash;&gt;-->
+<!--    <string name="product_descrption">Product descrption</string>-->
+<!--    <string name="f">f</string>-->
+<!--    <string name="hh">hh</string>-->
+<!--    <string name="pm">pm</string>-->
+<!--    <string name="am">am</string>-->
+<!--    <string name="mm">mm</string>-->
+<!--    <string name="to">to</string>-->
+<!--    <string name="update_store_name">Update Store Name</string>-->
+<!--    <string name="update_store_timing">Update store timing</string>-->
+<!--    <string name="worker_are_required_or_not">Worker are required or not</string>-->
+<!--    &lt;!&ndash;    <string name="store_name">Store Name</string>&ndash;&gt;-->
+
+<!--    <string name="country">Country</string>-->
+<!--    <string name="state">State</string>-->
+<!--    <string name="sub_category">SubCategory</string>-->
+
+
+
+<!--<string name="gym_0">Gym</string>-->
+<!--<string name="gym_1">Waterpark</string>-->
+<!--<string name="gym_2">Sports Store</string>-->
+<!--<string name="gym_3">Swiming pool</string>-->
+<!--<string name="gym_4">Sports Acedamy</string>-->
+
+<!--    <string name="food_0">Restaurants</string>-->
+<!--    <string name="food_1">Juice Corners</string>-->
+<!--    <string name="food_2">Fast Food</string>-->
+<!--    <string name="food_3">Dhabha</string>-->
+<!--    <string name="food_4">Bar</string>-->
+
+<!--    <string name="city_0">Naural</string>-->
+<!--    <string name="city_1">ThanaBhawan</string>-->
+
+<!--    <string name="state_0">Haryana</string>-->
+<!--    <string name="state_1">Uttar Pradesh</string>-->
+
+<!--    <string name="country_0">India</string>-->
+
+<!--    <string name="vehicles_0">Showroom</string>-->
+<!--    <string name="vehicles_1">Workshop</string>-->
+<!--    <string name="vehicles_2">JCB and Crane</string>-->
+<!--    <string name="vehicles_3">Two wheller misthri</string>-->
+<!--    <string name="vehicles_4">Four wheeler misthri</string>-->
+<!--//extra string-->
+<!--    <string name="worker_required">Yes, workers required</string>-->
+<!--    <string name="worker_not_required">No, workers required</string>-->
+<!--    <string name="home_delivery">Home delivery Available</string>-->
+<!--    <string name="no_home_delivery">Home delivery not Available</string>-->
+
+<!--    <string name="enable_gps">Enable Gps</string>-->
+<!--    <string name="yes">Yes</string>-->
+<!--    <string name="no">No</string>-->
+<!--    <string name="do_you_want_delete_this_product">Do you want to delete this product?</string>-->
+<!--    <string name="delete_product">Delete Product</string>-->
+<!--    <string name="get_current_location">get current location</string>-->
+<!--    <string name="opne_gps">open Gps</string>-->
+<!--    <string name="try_again">try again</string>-->
+<!--    <string name="deleting">deleting...</string>-->
+<!--    <string name="do_you_want_delete_this_show">Do you want to delete this show?</string>-->
+<!--    <string name="delete_show">Delete Show</string>-->
+<!--    <string name="not_available">Not available</string>-->
+<!--    <string name="set_up_store">setup store...</string>-->
+<!--    <string name="set_up">everything setuped</string>-->
+<!--    <string name="all">All</string>-->
+<!--    <string name="police_station">Police Station</string>-->
+<!--    <string name="fire_brigade">Fire Brigade</string>-->
+<!--    <string name="college">College</string>-->
+<!--    <string name="court">Court</string>-->
+<!--    <string name="bdo_office">BDO office</string>-->
+<!--    <string name="post_office">Post Office</string>-->
+<!--    <string name="beo_office">BEO office</string>-->
+<!--    <string name="deo_office">DEO office</string>-->
+<!--    <string name="panchayat_bhawan">Panchayat Bhawan</string>-->
+<!--    <string name="u_p_board">U.P. Board</string>-->
+<!--    <string name="haryana_board">Haryana Board</string>-->
+<!--    <string name="cbse_board">CBSE Board</string>-->
+<!--    <string name="hospital">Hospital</string>-->
+
+<!--    //-->
+<!--    <string name="hostel_available">Hostel facility avilable</string>-->
+<!--    <string name="hostel_not_available">Hostel facility not avilable</string>-->
+<!--    <string name="transport_available">Transport facility avilable</string>-->
+<!--    <string name="transport_not_available">Transport facility not avilable</string>-->
+<!--    <string name="delivery">delivery</string>-->
+<!--    <string name="no_delivery">delivery not</string>-->
+<!--    <string name="product_type">Product Type</string>-->
+<!--    <string name="photo_uploading">Photo uploading...</string>-->
+
+<!--    //-->
+<!--    <string name="petrol_0">Petrol pump</string>-->
+<!--    <string name="petrol_1">Services Stations</string>-->
+<!--    <string name="petrol_2">Gas agencies</string>-->
+<!--    <string name="bank_0">Insurance</string>-->
+<!--    <string name="bank_1">Bank</string>-->
+<!--    <string name="bank_2">ATM</string>-->
+<!--    <string name="ngo_0">NGO</string>-->
+<!--    <string name="ngo_1">Club</string>-->
+<!--    <string name="factories_0">iles</string>-->
+<!--    <string name="factories_1">Bricks</string>-->
+<!--    <string name="cyber_0">Cyber cafe</string>-->
+<!--    <string name="cyber_1">CCTV stores</string>-->
+<!--    <string name="cyber_2">Photo studio</string>-->
+<!--    <string name="stay_0">Hotel</string>-->
+<!--    <string name="stay_1">Dharamshala</string>-->
+<!--    <string name="bulding_0">Thekedar</string>-->
+<!--    <string name="bulding_1">Dharam Kanta</string>-->
+<!--    <string name="bulding_2">Material Store</string>-->
+<!--    <string name="agriculture_0">Anaj mandi</string>-->
+<!--    <string name="agriculture_1">Sabji mandi</string>-->
+<!--    <string name="agriculture_2">Seeds Shop</string>-->
+<!--    <string name="sell_0">Plot</string>-->
+<!--    <string name="sell_1">Shop</string>-->
+<!--    <string name="sell_2">House</string>-->
+<!--    <string name="sell_3">Vehicle</string>-->
+<!--    <string name="sell_4">Furniture</string>-->
+<!--    <string name="sell_5">Electronics</string>-->
+<!--    <string name="sell_6">Other</string>-->
+<!--    <string name="rentals_0">Shop</string>-->
+<!--    <string name="rentals_1">House</string>-->
+<!--    <string name="rentals_2">Goldam</string>-->
+<!--    <string name="rentals_3">PG(paying guest)</string>-->
+<!--    <string name="booking_0">Tent</string>-->
+<!--    <string name="booking_1">Party hall</string>-->
+<!--    <string name="booking_2">Decoration</string>-->
+<!--    <string name="booking_3">Marriage place</string>-->
+<!--    <string name="booking_4">Sound box(DJ)</string>-->
+<!--    <string name="booking_5">Catering(Halwai)</string>-->
+<!--    <string name="education_0">School</string>-->
+<!--    <string name="education_1">Tuition Centers</string>-->
+<!--    <string name="education_2">Home Tuition</string>-->
+<!--    <string name="education_3">Academy</string>-->
+<!--    <string name="education_4">Book Store</string>-->
+<!--    <string name="education_5">Coaching Center</string>-->
+<!--    <string name="shows_0">Shows</string>-->
+<!--    <string name="shows_1">Cinema Hall</string>-->
+<!--    <string name="travel_0">Auto</string>-->
+<!--    <string name="travel_1">Taxi Car</string>-->
+<!--    <string name="travel_2">Airways</string>-->
+<!--    <string name="travel_3">Railways</string>-->
+<!--    <string name="travel_4">Roadways</string>-->
+<!--    <string name="health_0">Hospitals</string>-->
+<!--    <string name="health_1">Health Clinics</string>-->
+<!--    <string name="health_2">Medical Stores</string>-->
+<!--    <string name="health_3">Pet care</string>-->
+<!--    <string name="electronics_0">Mobiles</string>-->
+<!--    <string name="electronics_1">Electronics</string>-->
+<!--    <string name="electronics_2">Computer and laptops</string>-->
+<!--    <string name="parlourl_0">Only Ladies</string>-->
+<!--    <string name="parlourl_1">Only Men</string>-->
+<!--    <string name="parlourl_2">Both</string>-->
+<!--    <string name="parlourl_3">Spa</string>-->
+
+<!--    //-->
+<!--    <string name="category_0">Shopping</string>-->
+<!--    <string name="category_1">Food</string>-->
+<!--    <string name="category_2">Stay</string>-->
+<!--    <string name="category_3">Parlourl Saloon</string>-->
+<!--    <string name="category_4">Gym Sports</string>-->
+<!--    <string name="category_5">Shows and Cinema</string>-->
+<!--    <string name="category_6">Education</string>-->
+<!--    <string name="category_7">Health</string>-->
+<!--    <string name="category_8">Cyber</string>-->
+<!--    <string name="category_9">Electronics</string>-->
+<!--    <string name="category_10">Travel</string>-->
+<!--    <string name="category_11">Vehicles and Workshop</string>-->
+<!--    <string name="category_12">Booking</string>-->
+<!--    <string name="category_13">Rentals</string>-->
+<!--    <string name="category_14">Sell and Buy</string>-->
+<!--    <string name="category_15">Buliding Material</string>-->
+<!--    <string name="category_16">Agriculture</string>-->
+<!--    <string name="category_17">Factories</string>-->
+<!--    <string name="category_18">NGO and Club</string>-->
+<!--    <string name="category_19">Bank and Atm</string>-->
+<!--    <string name="category_20">Pentrol Pump</string>-->
+
+<!--    //-->
+<!--    <string name="government_0">Police Station</string>-->
+<!--    <string name="government_1">Fire Brigade</string>-->
+<!--    <string name="government_2">Hospital</string>-->
+<!--    <string name="government_3">College</string>-->
+<!--    <string name="government_4">Court</string>-->
+<!--    <string name="government_5">BDO office</string>-->
+<!--    <string name="government_6">Post Office</string>-->
+<!--    <string name="government_7">BEO office</string>-->
+<!--    <string name="government_8">DEO office</string>-->
+<!--    <string name="government_9">Panchayat Bhawan</string>-->
+<!--    <string name="government_10">Other Office</string>-->
+
+<!--    <string name="category_0">Shopping</string>-->
+<!--    <string name="category_1">Food</string>-->
+<!--    <string name="category_2">Stay</string>-->
+<!--    <string name="category_3">Parlourl Saloon</string>-->
+<!--    <string name="category_4">Gym Sports</string>-->
+<!--    <string name="category_5">Shows and Cinema</string>-->
+<!--    <string name="category_6">Education</string>-->
+<!--    <string name="category_7">Health</string>-->
+<!--    <string name="category_8">Cyber</string>-->
+<!--    <string name="category_9">Electronics</string>-->
+<!--    <string name="category_10">Travel</string>-->
+<!--    <string name="category_11">Vehicles and Workshop</string>-->
+<!--    <string name="category_12">Booking</string>-->
+<!--    <string name="category_13">Rentals</string>-->
+<!--    <string name="category_14">Sell and Buy</string>-->
+<!--    <string name="category_15">Buliding Material</string>-->
+<!--    <string name="category_16">Agriculture</string>-->
+<!--    <string name="category_17">Factories</string>-->
+<!--    <string name="category_18">NGO and Club</string>-->
+<!--    <string name="category_19">Bank and Atm</string>-->
+<!--    <string name="category_20">Pentrol Pump</string>-->
+<!--    <string name="government_0">Police Station</string>-->
+<!--    <string name="government_1">Fire Brigade</string>-->
+<!--    <string name="government_2">Hospital</string>-->
+<!--    <string name="government_3">College</string>-->
+<!--    <string name="government_4">Court</string>-->
+<!--    <string name="government_5">BDO office</string>-->
+<!--    <string name="government_6">Post Office</string>-->
+<!--    <string name="government_7">BEO office</string>-->
+<!--    <string name="government_8">DEO office</string>-->
+<!--    <string name="government_9">Panchayat Bhawan</string>-->
+<!--    <string name="government_10">Other Office</string>-->
+
+
+
+<!--    <string name="worker_required">Yes, workers required</string>-->
+<!--    <string name="worker_not_required">No, workers required</string>-->
+<!--    <string name="home_delivery">Home delivery Available</string>-->
+<!--    <string name="no_home_delivery">Home delivery not Available</string>-->
+
+<!--    //extra string-->
+<!--    <string name="hostel_available">Hostel facility avilable</string>-->
+<!--    <string name="hostel_not_available">Hostel facility not avilable</string>-->
+<!--    <string name="transport_available">Transport facility avilable</string>-->
+<!--    <string name="transport_not_available">Transport facility not avilable</string>-->
+<!--    <string name="delivery">delivery</string>-->
+<!--    <string name="no_delivery">delivery not</string>-->
+<!--&lt;!&ndash;    <string name="product_type">Product Type</string>&ndash;&gt;-->
+<!--    <string name="photo_uploading">Photo uploading...</string>-->
+<!--    <string name="do_you_want_delete_this_product">Do you want to delete this product?</string>-->
+<!--    <string name="delete_product">Delete Product</string>-->
+<!--    <string name="get_current_location">get current location</string>-->
+<!--    <string name="opne_gps">open Gps</string>-->
+<!--    <string name="try_again">try again</string>-->
+<!--    <string name="deleting">deleting...</string>-->
+<!--    <string name="do_you_want_delete_this_show">Do you want to delete this show?</string>-->
+<!--    <string name="delete_show">Delete Show</string>-->
+<!--    <string name="not_available">Not available</string>-->
+<!--    <string name="set_up_store">setup store...</string>-->
+<!--    <string name="set_up">everything setuped</string>-->
+<!--    <string name="all">All</string>-->
+<!--    <string name="police_station">Police Station</string>-->
+<!--    <string name="fire_brigade">Fire Brigade</string>-->
+<!--    <string name="hospital">Hospital</string>-->
+<!--    <string name="college">College</string>-->
+<!--    <string name="court">Court</string>-->
+<!--    <string name="bdo_office">BDO office</string>-->
+<!--    <string name="post_office">Post Office</string>-->
+<!--    <string name="beo_office">BEO office</string>-->
+<!--    <string name="deo_office">DEO office</string>-->
+<!--    <string name="panchayat_bhawan">Panchayat Bhawan</string>-->
+<!--    <string name="u_p_board">U.P. Board</string>-->
+<!--    <string name="haryana_board">Haryana Board</string>-->
+<!--    <string name="cbse_board">CBSE Board</string>-->
+
+<!--    <string name="enable_gps">Enable Gps</string>-->
+<!--    <string name="yes">Yes</string>-->
+<!--    <string name="no">No</string>-->
+<!--    <string name="ready_for_sell">ready for sell...</string>-->
+<!--    <string name="rs">Rs:</string>-->
+<!--    <string name="name_editing">Name editing...</string>-->
+<!--    <string name="wait">wait please...</string>-->
+<!--    <string name="show_adding">show adding...</string>-->
+    <string name="category_0">Shopping</string>
+    <string name="category_1">Food</string>
+    <string name="category_2">Stay</string>
+    <string name="category_3">Parlourl Saloon</string>
+    <string name="category_4">Gym Sports</string>
+    <string name="category_5">Shows and Cinema</string>
+    <string name="category_6">Education</string>
+    <string name="category_7">Health</string>
+    <string name="category_8">Cyber</string>
+    <string name="category_9">Electronics</string>
+    <string name="category_10">Travel</string>
+    <string name="category_11">Vehicles and Workshop</string>
+    <string name="category_12">Booking</string>
+    <string name="category_13">Rentals</string>
+    <string name="category_14">Sell and Buy</string>
+    <string name="category_15">Buliding Material</string>
+    <string name="category_16">Agriculture</string>
+    <string name="category_17">Factories</string>
+    <string name="category_18">NGO and Club</string>
+    <string name="category_19">Bank and Atm</string>
+    <string name="category_20">Pentrol Pump</string>
+    <string name="government_0">Police Station</string>
+    <string name="government_1">Fire Brigade</string>
+    <string name="government_2">Hospital</string>
+    <string name="government_3">College</string>
+    <string name="government_4">Court</string>
+    <string name="government_5">BDO office</string>
+    <string name="government_6">Post Office</string>
+    <string name="government_7">BEO office</string>
+    <string name="government_8">DEO office</string>
+    <string name="government_9">Panchayat Bhawan</string>
+    <string name="government_10">Other Office</string>
+
+
+
+    <string name="worker_required">Yes, workers required</string>
+    <string name="worker_not_required">No, workers required</string>
+    <string name="home_delivery">Home delivery Available</string>
+    <string name="no_home_delivery">Home delivery not Available</string>
+
+    //extra string
+    <string name="hostel_available">Hostel facility avilable</string>
+    <string name="hostel_not_available">Hostel facility not avilable</string>
+    <string name="transport_available">Transport facility avilable</string>
+    <string name="transport_not_available">Transport facility not avilable</string>
+    <string name="delivery">delivery</string>
+    <string name="no_delivery">delivery not</string>
+
+    <string name="photo_uploading">Photo uploading...</string>
+    <string name="do_you_want_delete_this_product">Do you want to delete this product?</string>
+    <string name="delete_product">Delete Product</string>
+    <string name="get_current_location">get current location</string>
+    <string name="opne_gps">open Gps</string>
+    <string name="try_again">try again</string>
+    <string name="deleting">deleting...</string>
+    <string name="do_you_want_delete_this_show">Do you want to delete this show?</string>
+    <string name="delete_show">Delete Show</string>
+    <string name="not_available">Not available</string>
+    <string name="set_up_store">setup store...</string>
+    <string name="set_up">everything setuped</string>
+    <string name="all">All</string>
+    <string name="police_station">Police Station</string>
+    <string name="fire_brigade">Fire Brigade</string>
+    <string name="hospital">Hospital</string>
+    <string name="college">College</string>
+    <string name="court">Court</string>
+    <string name="bdo_office">BDO office</string>
+    <string name="post_office">Post Office</string>
+    <string name="beo_office">BEO office</string>
+    <string name="deo_office">DEO office</string>
+    <string name="panchayat_bhawan">Panchayat Bhawan</string>
+    <string name="u_p_board">U.P. Board</string>
+    <string name="haryana_board">Haryana Board</string>
+    <string name="cbse_board">CBSE Board</string>
+
+    <string name="enable_gps">Enable Gps</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="ready_for_sell">ready for sell...</string>
+    <string name="rs">Rs:</string>
+    <string name="name_editing">Name editing...</string>
+    <string name="wait">wait please...</string>
+    <string name="show_adding">show adding...</string>
+    <string name="home">Home</string>
+    <string name="your_store">Your Store</string>
+    <string name="nav_about_city">About City</string>
+    <string name="favorites">Favorites</string>
+    <string name="verification_email">\"We have sent you a verification link on your registerd email \"</string>
+    <string name="sign_in">signIn...</string>
+    <string name="do_you_want_lagout">Do you want to logout?</string>
+    <string name="current_user_city">Current user City</string>
+    <string name="change_user_city">Change user city</string>
+    <string name="change_app_theme">Change app theme</string>
+
+
+</resources>

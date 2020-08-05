@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/refresh_layout"
     tools:context="users.fragments.StoresFragment">
     <androidx.recyclerview.widget.RecyclerView
         android:layout_marginTop="5dp"
@@ -10,6 +11,19 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:layout_height="match_parent"/>
+    <TextView
+
+        android:id="@+id/tv_no_exist"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/no_such_store_exist"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/red"
+        android:textStyle="italic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 
 </RelativeLayout>
+

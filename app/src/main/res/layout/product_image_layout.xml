@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:id="@+id/main_layout"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginStart="10dp"
     android:orientation="vertical"
+    android:background="@color/other_background"
     android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
     android:layout_marginEnd="10dp">
-
     <LinearLayout
         android:layout_width="match_parent"
-
         android:layout_height="wrap_content">
-
         <TextView
             android:id="@+id/tv_img_type"
             android:layout_width="0dp"
@@ -19,8 +20,7 @@
             android:layout_weight="2"
             android:textSize="20sp"
             android:textColor="@color/black"
-            android:text="Store" />
-
+            android:text="@string/store" />
         <LinearLayout
             android:id="@+id/rename_layout"
             android:layout_width="0dp"
@@ -33,7 +33,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rename"
+                android:text="@string/rename"
                 android:textColor="@color/selver"
                 android:textSize="18sp" />
 
@@ -49,34 +49,93 @@
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_marginTop="10dp"
-        android:background="@color/white"
         android:layout_height="wrap_content"/>
     <LinearLayout
         android:id="@+id/add_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:onClick="addPhoto"
         android:orientation="vertical"
-        android:background="@drawable/add_photo_background">
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@drawable/add"/>
-        <TextView
-            android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:textColor="@color/selver"
-            android:layout_marginTop="10dp"
-            android:text="Add Photo"/>
+        android:onClick="addPhoto"
+        >
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:background="@drawable/add_photo_background">
+            <ImageView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/img_view"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/add"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/selver"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/img_view"
+                android:text="@string/add_photo"/>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/new_image_card_view"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+                <ImageView
 
+                    android:id="@+id/new_product_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/map_image"
+                    />
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+       <LinearLayout
+           android:id="@+id/upload_layout"
+           android:visibility="gone"
+           android:layout_width="match_parent"
+           android:orientation="vertical"
+           android:layout_height="wrap_content">
+           <EditText
+               android:layout_marginTop="5dp"
+               android:inputType="number"
+               android:id="@+id/et_product_price"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@drawable/background_white"
+               android:hint="@string/price"
+               android:gravity="center"
+               />
+
+           <TextView
+               android:id="@+id/tv_upload"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@drawable/button_background"
+               android:text="@string/upload"
+               android:layout_marginStart="10dp"
+               android:layout_marginEnd="10dp"
+               android:gravity="center"
+               android:padding="2dp"
+               android:layout_marginTop="10dp"
+               android:textColor="@color/white"
+               android:textSize="12sp"
+
+               />
+       </LinearLayout>
 
     </LinearLayout>
     <View
         android:layout_width="match_parent"
-        android:background="@color/light_text_color"
+        android:background="@color/light_black"
         android:layout_marginTop="10dp"
         android:layout_height="1dp"/>
 

@@ -11,10 +11,10 @@
     <TextView
             android:id="@+id/tv_category_name"
             android:text="Category Name"
-            android:textColor="@color/black"
+
             android:textSize="30dp"
             android:layout_marginStart="30dp"
-
+            android:textColor="@color/text_dark"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
@@ -33,7 +33,8 @@
             android:id="@+id/tv_back"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:text="back"
+            android:text="@string/back"
+            android:textColor="@color/text_dark"
             android:textSize="18sp"
             android:layout_marginEnd="30dp"
             android:layout_marginTop="30dp"

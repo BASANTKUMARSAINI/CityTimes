@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.example.mycity.R;
 
 import authantication.UserLoginActivity;
+import model.ApplicationClass;
 import seller.SetupProfileActivity;
 
 public class SetUpHomeDeliveryDialog {
@@ -26,6 +27,7 @@ public class SetUpHomeDeliveryDialog {
     }
     public  void startProgressBar()
     {
+        ApplicationClass.loadLocale(activity);
         AlertDialog.Builder builder=new AlertDialog.Builder(activity);
         LayoutInflater inflater=activity.getLayoutInflater();
         builder.setCancelable(false);

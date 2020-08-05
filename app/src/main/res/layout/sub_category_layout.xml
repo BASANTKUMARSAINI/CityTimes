@@ -17,7 +17,7 @@
              android:id="@+id/tv_sub_category_name"
              android:textSize="20dp"
              android:textColor="@color/black"
-             android:text="Sub category name"
+             android:text="@string/sub_category_name"
              android:paddingTop="5dp"
              android:paddingBottom="5dp"
              android:gravity="center_horizontal"

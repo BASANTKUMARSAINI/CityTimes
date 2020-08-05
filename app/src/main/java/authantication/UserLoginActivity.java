@@ -37,6 +37,7 @@ import java.util.Arrays;
 
 import dialog.CustumProgressDialog;
 import dialog.ResetPasswordDialog;
+import model.ApplicationClass;
 import users.HomeActivity;
 
 public class UserLoginActivity extends AppCompatActivity {
@@ -52,6 +53,7 @@ public class UserLoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ApplicationClass.loadLocale(UserLoginActivity.this);
         setContentView(R.layout.activity_user_login);
         mAuth=FirebaseAuth.getInstance();
         etUserEmail=findViewById(R.id.et_user_email);
@@ -135,7 +137,7 @@ public class UserLoginActivity extends AppCompatActivity {
                 });
     }
     public  void facebookLogin(View view) {
-        dialog.startProgressBar("signIn...");
+        dialog.startProgressBar(getString(R.string.sign_in));
         LoginManager.getInstance().logInWithReadPermissions(UserLoginActivity.this, Arrays.asList("email","public_profile"));
         LoginManager.getInstance().registerCallback(mcallbackManager, new FacebookCallback<LoginResult>() {
             @Override
@@ -191,13 +193,15 @@ public class UserLoginActivity extends AppCompatActivity {
             Toast.makeText(UserLoginActivity.this, "Password can't be empty", Toast.LENGTH_LONG).show();
         }
         else {
-            dialog.startProgressBar("login...");
+            dialog.startProgressBar(getString(R.string.login));
             mAuth.signInWithEmailAndPassword(userEmail,userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful())
                     {
-                       if(mAuth.getCurrentUser().isEmailVerified()) {
+//                       if(mAuth.getCurrentUser().isEmailVerified())
+if(true)
+                       {
                             Intent intent = new Intent(UserLoginActivity.this, HomeActivity.class);
                             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                            startActivity(intent);

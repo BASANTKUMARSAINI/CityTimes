@@ -3,6 +3,8 @@ package model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.firebase.firestore.GeoPoint;
+
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
@@ -10,14 +12,85 @@ import java.util.List;
 public class Seller
 {
     private String ownerName,storeName,storeCity,storeState,storeCountry,storeAddress,backgroundImage,ownerImage
-            ,phone1,phone2,storeCategory,storeSubCategory,storeEmail;
+            ,phone1,phone2,storeCategory,storeSubCategory,storeEmail,storeDescription;
+    private String sortOwnerName,sortStoreName,sortStoreAddress,sortStoreSubCategory;
+    //hindi
+    private  String hiOwnerName,hiStoreName,hiStoreCity,hiStoreState,hiStoreCountry,hiStoreAddress,hiStoreDescription,hiPrincipalName,hiBoardName;
+
+
+boolean shopStatus;
+   private  String geohash;
+   double rating;
+   Double sortRating;
     private List<String>timeFrom,timeTo;
     private HashMap<String, Boolean>days;
-    private boolean deliveryStatus,storeStatus,workersRequred;
-    private Integer totalStar,noOfRatings;
+    private boolean deliveryStatus,workersRequred;
+    private Integer  noOfRatings;
     private Double storeLongitude,storeLatitude;
     private String sUid;
+    private Double totalStar;
+    private GeoPoint geoPoint;
+
+    //education
+    private String principalName,boardName;
+    private boolean hostel,transport;
     public Seller() {
+    }
+
+    public String getSortStoreSubCategory() {
+        return sortStoreSubCategory;
+    }
+
+    public void setSortStoreSubCategory(String sortStoreSubCategory) {
+        this.sortStoreSubCategory = sortStoreSubCategory;
+    }
+
+    public String getSortStoreAddress() {
+        return sortStoreAddress;
+    }
+
+    public void setSortStoreAddress(String sortStoreAddress) {
+        this.sortStoreAddress = sortStoreAddress;
+    }
+
+    public boolean isShopStatus() {
+        return shopStatus;
+    }
+
+    public void setShopStatus(boolean shopStatus) {
+        this.shopStatus = shopStatus;
+    }
+
+    public String getSortOwnerName() {
+        return sortOwnerName;
+    }
+
+    public void setSortOwnerName(String sortOwnerName) {
+        this.sortOwnerName = sortOwnerName;
+    }
+
+    public String getSortStoreName() {
+        return sortStoreName;
+    }
+
+    public void setSortStoreName(String sortStoreName) {
+        this.sortStoreName = sortStoreName;
+    }
+
+    public Double getSortRating() {
+        return sortRating;
+    }
+
+    public void setSortRating(Double sortRating) {
+        this.sortRating = sortRating;
+    }
+
+    public GeoPoint getGeoPoint() {
+        return geoPoint;
+    }
+
+    public void setGeoPoint(GeoPoint geoPoint) {
+        this.geoPoint = geoPoint;
     }
 
     public String getOwnerName() {
@@ -34,6 +107,14 @@ public class Seller
 
     public void setStoreCity(String storeCity) {
         this.storeCity = storeCity;
+    }
+
+    public double getRating() {
+        return rating;
+    }
+
+    public void setRating(double rating) {
+        this.rating = rating;
     }
 
     public String getStoreState() {
@@ -156,11 +237,19 @@ public class Seller
         this.deliveryStatus = deliveryStatus;
     }
 
-    public Integer getTotalStar() {
+    public Double getTotalStar() {
         return totalStar;
     }
 
-    public void setTotalStar(Integer totalStar) {
+    public String getGeohash() {
+        return geohash;
+    }
+
+    public void setGeohash(String geohash) {
+        this.geohash = geohash;
+    }
+
+    public void setTotalStar(Double totalStar) {
         this.totalStar = totalStar;
     }
 
@@ -184,12 +273,12 @@ public class Seller
         return storeName;
     }
 
-    public boolean isStoreStatus() {
-        return storeStatus;
+    public String getStoreDescription() {
+        return storeDescription;
     }
 
-    public void setStoreStatus(boolean storeStatus) {
-        this.storeStatus = storeStatus;
+    public void setStoreDescription(String storeDescription) {
+        this.storeDescription = storeDescription;
     }
 
     public void setStoreName(String storeName) {
@@ -210,5 +299,109 @@ public class Seller
 
     public void setStoreLatitude(Double storeLatitude) {
         this.storeLatitude = storeLatitude;
+    }
+
+    public String getPrincipalName() {
+        return principalName;
+    }
+
+    public void setPrincipalName(String principalName) {
+        this.principalName = principalName;
+    }
+
+    public String getBoardName() {
+        return boardName;
+    }
+
+    public void setBoardName(String boardName) {
+        this.boardName = boardName;
+    }
+
+    public boolean isHostel() {
+        return hostel;
+    }
+
+    public void setHostel(boolean hostel) {
+        this.hostel = hostel;
+    }
+
+    public boolean isTransport() {
+        return transport;
+    }
+
+    public void setTransport(boolean transport) {
+        this.transport = transport;
+    }
+
+    public String getHiOwnerName() {
+        return hiOwnerName;
+    }
+
+    public void setHiOwnerName(String hiOwnerName) {
+        this.hiOwnerName = hiOwnerName;
+    }
+
+    public String getHiStoreName() {
+        return hiStoreName;
+    }
+
+    public void setHiStoreName(String hiStoreName) {
+        this.hiStoreName = hiStoreName;
+    }
+
+    public String getHiStoreCity() {
+        return hiStoreCity;
+    }
+
+    public void setHiStoreCity(String hiStoreCity) {
+        this.hiStoreCity = hiStoreCity;
+    }
+
+    public String getHiStoreState() {
+        return hiStoreState;
+    }
+
+    public void setHiStoreState(String hiStoreState) {
+        this.hiStoreState = hiStoreState;
+    }
+
+    public String getHiStoreCountry() {
+        return hiStoreCountry;
+    }
+
+    public void setHiStoreCountry(String hiStoreCountry) {
+        this.hiStoreCountry = hiStoreCountry;
+    }
+
+    public String getHiStoreAddress() {
+        return hiStoreAddress;
+    }
+
+    public void setHiStoreAddress(String hiStoreAddress) {
+        this.hiStoreAddress = hiStoreAddress;
+    }
+
+    public String getHiStoreDescription() {
+        return hiStoreDescription;
+    }
+
+    public void setHiStoreDescription(String hiStoreDescription) {
+        this.hiStoreDescription = hiStoreDescription;
+    }
+
+    public String getHiPrincipalName() {
+        return hiPrincipalName;
+    }
+
+    public void setHiPrincipalName(String hiPrincipalName) {
+        this.hiPrincipalName = hiPrincipalName;
+    }
+
+    public String getHiBoardName() {
+        return hiBoardName;
+    }
+
+    public void setHiBoardName(String hiBoardName) {
+        this.hiBoardName = hiBoardName;
     }
 }

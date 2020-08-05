@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/up_board"
+        android:title="@string/u_p_board"/>
+    <item android:id="@+id/haryana_board"
+        android:title="@string/haryana_board"/>
+    <item android:id="@+id/cbse_board"
+        android:title="@string/cbse_board"/>
+
+</menu>

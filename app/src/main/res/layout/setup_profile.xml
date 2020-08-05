@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:scrollbars="vertical"
     tools:context="seller.SetupProfileActivity"
-    android:background="@color/background_color_yellow"
+    android:background="@color/main_background"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 
@@ -36,7 +36,7 @@
 
 
         <RelativeLayout
-
+            android:background="@color/other_background"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
           >
@@ -44,8 +44,8 @@
                 android:id="@+id/tv_setup_profile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Setup your Store profile"
-                android:textColor="@color/black"
+                android:text="@string/setup_your_service_profile"
+                android:textColor="@color/text_dark"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_centerHorizontal="true"
@@ -70,11 +70,11 @@
                 android:id="@+id/tv_upload_cover_photo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Upload a cover photo"
+                android:text="@string/upload_a_cover_photo"
                 android:gravity="center_horizontal"
 
                 android:textSize="17dp"
-                android:textColor="@color/light_text_color"
+                android:textColor="@color/text_dark"
                 android:layout_below="@id/img_background"/>
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -91,17 +91,17 @@
                 android:id="@+id/tv_upload_seller_photo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Upload owner's photo"
+                android:text="@string/upload_owner_s_photo"
                 android:gravity="center_horizontal"
                 android:layout_centerHorizontal="true"
                 android:textSize="17dp"
-                android:textColor="@color/light_text_color"
+                android:textColor="@color/text_dark"
                 android:layout_below="@id/img_owner"/>
             <TextView
                 android:id="@+id/tv_store_timing"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Store timings"
+                android:text="@string/timings"
                 android:background="@drawable/pop_up_botton_background"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
@@ -120,7 +120,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingStart="10dp"
-                android:text="Home Delivery service"
+                android:text="@string/home_delivery_service"
                 android:background="@drawable/pop_up_botton_background"
                 android:layout_marginStart="10dp"
                 android:onClick="setDeliveryService"
@@ -132,19 +132,37 @@
                 android:paddingTop="5dp"
                  android:paddingBottom="5dp"
                 android:layout_below="@id/tv_store_timing"/>
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_important_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:text="@string/setup_other_details"
+                android:background="@drawable/pop_up_botton_background"
+                android:layout_marginStart="10dp"
+                android:onClick="setUpOthersDetails"
+                android:layout_marginEnd="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_below="@id/tv_delivery"/>
             <Button
                 android:id="@+id/btn_procced"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/button_background"
-                android:text="Procced"
+                android:text="@string/procced"
                 android:textColor="@color/white"
                 android:layout_marginStart="30dp"
                 android:onClick="procced"
                 android:textSize="18sp"
                 android:layout_marginEnd="30dp"
-                android:layout_below="@+id/tv_delivery"
+                android:layout_below="@+id/tv_important_details"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="50dp"/>
 

@@ -2,8 +2,17 @@ package model;
 
 public class SliderItem {
     String imageUrl,imageDes,imageType;
+    String hiimageDes;
 
     public SliderItem() {
+    }
+
+    public String getHiimageDes() {
+        return hiimageDes;
+    }
+
+    public void setHiimageDes(String hiimageDes) {
+        this.hiimageDes = hiimageDes;
     }
 
     public String getImageUrl() {

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mycity">
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,11 +17,40 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name="users.FavouriteStoreActivity"></activity>
+        <activity android:name="users.ChangeUserCity"></activity>
+        <activity android:name="sell_and_buy.ProductActivity" />
+        <activity android:name="sell_and_buy.ProductMainActivity" />
+        <activity android:name="users.SeeFullImageActivity" />
+        <activity android:name="seller.deffrent_services.CinemaShowsActivity" />
+        <activity android:name="users.government.OfficeActivity" />
+        <activity android:name="sell_and_buy.MyProductActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity android:name="sell_and_buy.SellAndBuyActivity" />
+        <activity android:name="users.different_shops.DifferentShopActivity" />
+        <activity android:name="users.EnterDetailsActivity" />
+
+        <service
+            android:name="model.LocationService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name="users.SearchCategoriesActivity" />
+        <activity android:name="users.FavouriteStoreActivity" />
         <activity android:name="users.StorePhotosActivity" />
         <activity android:name="users.AboutActivity" />
-        <activity android:name="users.SettingsActivity" />
-        <activity android:name=".TextActivity" />
+        <activity
+            android:name="users.SettingsActivity"
+            android:configChanges="locale|orientation"></activity>
         <activity android:name="seller.HandleProductPhotosActivity" />
         <activity android:name="seller.SetupProfileActivity" />
         <activity android:name="seller.StoreActivity" />

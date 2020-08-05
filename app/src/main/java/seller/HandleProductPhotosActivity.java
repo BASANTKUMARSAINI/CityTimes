@@ -3,15 +3,14 @@ package seller;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
-import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,27 +25,23 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Locale;
 
 import dialog.AddCollectionDialog;
 import dialog.CustumProgressDialog;
 import dialog.RenameCollectionDialog;
+import model.ApplicationClass;
 import model.CollectionType;
-import model.Model;
 import model.ProductImage;
-import view_holder.ModelViewHolder;
+import users.SeeFullImageActivity;
 import view_holder.ProductCollectionViewHolder;
 import view_holder.ProductImageViewHolder;
 
@@ -60,12 +55,13 @@ public class HandleProductPhotosActivity extends AppCompatActivity {
 
     static int  OPEN_GELLERY=1;
     private static String PERSENT_COLLECTION_NAME="store";
-    Uri uri;
+    Uri uri=null;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ApplicationClass.loadLocale(this);
         setContentView(R.layout.activity_handle_product_photos);
 
         db=FirebaseFirestore.getInstance();
@@ -73,27 +69,33 @@ public class HandleProductPhotosActivity extends AppCompatActivity {
         mStoreRef= FirebaseStorage.getInstance().getReference();
         imageView=findViewById(R.id.img_add_collection);
         recyclerView_main=findViewById(R.id.recycler_view_main);
-
-       recyclerView_main.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView_main.setLayoutManager(new LinearLayoutManager(this));
+        Log.v("TAG","oncreate");
+        if(uri!=null)
+        {
+            Log.v("TAG","not null");
+        }
 
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        final Query query=db.collection("sellers").document(mAuth.getUid()).collection("productImages");
+        Log.v("TAG","onstart");
+        final Query query=db.collection("productCollections").whereEqualTo("uid",mAuth.getUid());
         FirestoreRecyclerOptions<CollectionType>options=new FirestoreRecyclerOptions.Builder<CollectionType>()
                                                         .setQuery(query,CollectionType.class)
                                                         .build();
         adapter=new FirestoreRecyclerAdapter<CollectionType, ProductCollectionViewHolder>(options) {
             @Override
-            protected void onBindViewHolder(@NonNull ProductCollectionViewHolder holder, int position, @NonNull final CollectionType model) {
+            protected void onBindViewHolder(@NonNull final ProductCollectionViewHolder holder, int position, @NonNull final CollectionType model) {
                 String collectionName=model.getCollectionName();
                 holder.setCollectionType(collectionName);
+                if(ApplicationClass.LANGUAGE_MODE.equals("hi"))
+                    holder.tvCollectionType.setText(model.getHicollectionName());
+                Query query1= db.collection("productImages").whereEqualTo("collectionName",model.getCollectionName())
+                        .whereEqualTo("uid",mAuth.getUid());
 
-
-                Query query1=db.collection("sellers").document(mAuth.getUid()).collection("productImages")
-                     .document(model.getCollectionName()).collection("products");
 
                 FirestoreRecyclerOptions<ProductImage>options1=new FirestoreRecyclerOptions.Builder<ProductImage>()
                                                         .setQuery(query1,ProductImage.class)
@@ -110,43 +112,73 @@ public class HandleProductPhotosActivity extends AppCompatActivity {
 
 
                         });
+                        holder.tvProductPrice.setText(getString(R.string.rs)+model1.getPrice());
+                        if(model1.getPrice()==null)
+                        {
+                            holder.tvProductPrice.setVisibility(View.GONE);
+                        }
+                        holder.imgProduct.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent intent=new Intent(HandleProductPhotosActivity.this, SeeFullImageActivity.class);
+                                intent.putExtra("uri",model1.getImage());
+                                startActivity(intent);
+                            }
+                        });
 
                     }
-
                     @NonNull
                     @Override
                     public ProductImageViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
                         View view=LayoutInflater.from(parent.getContext()).inflate(R.layout.photo_layout,parent,false);
-
                         return new ProductImageViewHolder(view);
                     }
                 };
                 holder.recyclerView_sub.setAdapter(adapter1);
                 adapter1.startListening();
                 adapter1.notifyDataSetChanged();
-
-
-
-               holder.renameLayout.setOnClickListener(new View.OnClickListener() {
+                holder.renameLayout.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        RenameCollectionDialog dialog=new RenameCollectionDialog(HandleProductPhotosActivity.this,model.getCollectionName());
+                        String collectionName=model.getCollectionName();
+                        if(ApplicationClass.LANGUAGE_MODE.equals("hi"))
+                            collectionName=model.getHicollectionName();
+                        RenameCollectionDialog dialog=new RenameCollectionDialog(HandleProductPhotosActivity.this,collectionName,model.getId());
                         dialog.show();
                     }
                 });
-              holder.addPhotoLayout.setOnClickListener(new View.OnClickListener() {
+
+                if(uri!=null)
+                {
+                    holder.uploadLayout.setVisibility(View.VISIBLE);
+                    holder.newImageCard.setVisibility(View.VISIBLE);
+                    holder.newImageView.setImageURI(uri);
+                }
+                     holder.addPhotoLayout.setOnClickListener(new View.OnClickListener() {
                   @Override
                   public void onClick(View v) {
                       PERSENT_COLLECTION_NAME=model.getCollectionName();
+                      holder.uploadLayout.setVisibility(View.VISIBLE);
                       addPhoto();
+                  }
+              });
+              holder.tvUpload.setOnClickListener(new View.OnClickListener() {
+                  @Override
+                  public void onClick(View v) {
+                      String price=holder.etProductPrice.getText().toString();
+                      if(uri==null)
+                      {
+                          Toast.makeText(HandleProductPhotosActivity.this,"select an image",Toast.LENGTH_LONG).show();
 
+                      }
+                      else
+                      {
+                          upload(price,holder);
+                      }
 
                   }
               });
-
-
             }
-
             @NonNull
             @Override
             public ProductCollectionViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -161,10 +193,9 @@ public class HandleProductPhotosActivity extends AppCompatActivity {
     private void deletePhotos(String collectionName, final String imageId)
     {
         final CustumProgressDialog dialog=new CustumProgressDialog(HandleProductPhotosActivity.this);
-        dialog.startProgressBar("deleting...");
-        db.collection("sellers").document(mAuth.getUid()).
-                collection("productImages").document(collectionName).
-                collection("products").document(imageId).delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+        dialog.startProgressBar(getString(R.string.deleting));
+        db.collection("productImages").document(imageId).
+                delete().addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful())
@@ -183,7 +214,7 @@ public class HandleProductPhotosActivity extends AppCompatActivity {
                 else
                 {
                     dialog.stopProgressBar();
-                    Toast.makeText(HandleProductPhotosActivity.this,"try again..",Toast.LENGTH_LONG).show();
+                    Toast.makeText(HandleProductPhotosActivity.this,task.getException().getMessage(),Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -210,7 +241,7 @@ public class HandleProductPhotosActivity extends AppCompatActivity {
         startActivityForResult(intent,OPEN_GELLERY);
 
     }
-    public void upload()
+    public void upload(final String price, final ProductCollectionViewHolder holder)
     {
         String currentTime=new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
         String currentDate=new SimpleDateFormat("dd:MM:yy", Locale.getDefault()).format(new Date());
@@ -218,7 +249,7 @@ public class HandleProductPhotosActivity extends AppCompatActivity {
 
 
         final CustumProgressDialog dialog=new CustumProgressDialog(HandleProductPhotosActivity.this);
-        dialog.startProgressBar("photo uploading...");
+        dialog.startProgressBar(getString(R.string.photo_uploading));
         final  StorageReference childRef=mStoreRef.child("images").child("sellers").child(mAuth.getUid()).child("products").child(imageId);
         childRef.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
@@ -226,25 +257,31 @@ public class HandleProductPhotosActivity extends AppCompatActivity {
 
                 childRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                     @Override
-                    public void onSuccess(Uri uri) {
+                    public void onSuccess(Uri URI) {
                         ProductImage productImage=new ProductImage();
-                        productImage.setImage(uri.toString());
+                        productImage.setImage(URI.toString());
                         productImage.setImageId(imageId);
+                        if(!TextUtils.isEmpty(price))
+                        productImage.setPrice(price);
+                        productImage.setCollectionName(PERSENT_COLLECTION_NAME);
+                        productImage.setUid(mAuth.getUid());
 
-                      db.collection("sellers").document(mAuth.getUid()).
-                              collection("productImages").document(PERSENT_COLLECTION_NAME)
-                              .collection("products").document(imageId).set(productImage).addOnCompleteListener(new OnCompleteListener<Void>() {
+                      db.collection("productImages")
+                               .document(imageId).set(productImage).addOnCompleteListener(new OnCompleteListener<Void>() {
                           @Override
                           public void onComplete(@NonNull Task<Void> task) {
                               if(task.isSuccessful())
                               {
+                                  holder.uploadLayout.setVisibility(View.GONE);
+                                  holder.newImageCard.setVisibility(View.GONE);
+                                  uri=null;
                                   dialog.stopProgressBar();
                                   Toast.makeText(HandleProductPhotosActivity.this,"success",Toast.LENGTH_LONG).show();
                               }
                               else
                               {
                                   dialog.stopProgressBar();
-                                  Toast.makeText(HandleProductPhotosActivity.this,"try again...",Toast.LENGTH_LONG).show();
+                                  Toast.makeText(HandleProductPhotosActivity.this,task.getException().getMessage(),Toast.LENGTH_LONG).show();
                               }
                           }
                       });
@@ -255,28 +292,21 @@ public class HandleProductPhotosActivity extends AppCompatActivity {
                             public void onFailure(@NonNull Exception e) {
 
                                 dialog.stopProgressBar();
-                                Toast.makeText(HandleProductPhotosActivity.this,"error",Toast.LENGTH_LONG).show();
+                                Toast.makeText(HandleProductPhotosActivity.this,e.getMessage(),Toast.LENGTH_LONG).show();
                             }
                         });
-
-
-
-
-
-
             }
         });
 
     }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(resultCode==RESULT_OK&&requestCode==OPEN_GELLERY)
         {
             uri=data.getData();
-            upload();
 
         }
+
     }
 }

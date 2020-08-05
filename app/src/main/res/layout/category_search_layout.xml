@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginEnd="5dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/category_view"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_sub_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sub_category_name"
+            android:layout_marginStart="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_dark"
+            />
+        <TextView
+            android:id="@+id/tv_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/category_name"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/text_dark"
+            android:textSize="14sp"
+            android:layout_below="@+id/tv_sub_category"
+            android:layout_centerHorizontal="true"
+
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_black"
+            android:layout_below="@id/tv_category"
+            android:layout_marginTop="5dp"
+
+            />
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

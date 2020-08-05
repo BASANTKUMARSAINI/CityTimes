@@ -6,6 +6,7 @@
     android:paddingBottom="50dp"
     android:paddingStart="20dp"
     android:paddingEnd="20dp"
+    android:background="@color/other_background"
     android:layout_height="match_parent">
 
     <ImageView
@@ -19,7 +20,7 @@
         android:layout_height="wrap_content"/>
     <TextView
         android:id="@+id/tv_awesome"
-        android:text="Awesome!"
+        android:text="@string/awesome"
         android:textSize="25sp"
         android:textStyle="bold"
         android:textColor="@color/black"
@@ -49,7 +50,7 @@
         android:layout_marginStart="60dp"
         android:layout_marginEnd="60dp"
         android:background="@drawable/button_background"
-        android:text="Let's Go"
+        android:text="@string/let_s_go"
         android:textColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

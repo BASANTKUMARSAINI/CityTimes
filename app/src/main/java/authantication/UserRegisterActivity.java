@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.speech.RecognitionListener;
 import android.text.TextUtils;
 import android.util.Log;
@@ -32,7 +34,11 @@ import adapter.AddressAdapter;
 import adapter.SubCategoryAdapter;
 import dialog.CustumProgressDialog;
 import dialog.EmailVerificationDialog;
+import dialog.PrivacyPolicyDialog;
+import dialog.TermsDialog;
 import interfaces.RecyclerViewInterface;
+import model.ApplicationClass;
+import seller.RegisterStoreActivity;
 import users.HomeActivity;
 
 public class UserRegisterActivity extends AppCompatActivity implements RecyclerViewInterface {
@@ -44,10 +50,13 @@ public class UserRegisterActivity extends AppCompatActivity implements RecyclerV
     CustumProgressDialog custumProgressDialog;
     FirebaseAuth mAuth;
     FirebaseFirestore db;
+    String userName,userEmail;
+    public static String userCountry="",userState="",userCity="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ApplicationClass.loadLocale(UserRegisterActivity.this);
         setContentView(R.layout.activity_user_register);
 
         tvUserCountry=findViewById(R.id.tv_user_country);
@@ -66,12 +75,10 @@ public class UserRegisterActivity extends AppCompatActivity implements RecyclerV
 
     public void userRegistration(View view)
     {
-        final String userName=etUserName.getText().toString();
-        final String userEmail=etUserEmail.getText().toString();
+          userName=etUserName.getText().toString();
+         userEmail=etUserEmail.getText().toString();
         String userPassword=etUserPassword.getText().toString();
-        final String userCountry=tvUserCountry.getText().toString();
-        final String userState=tvUserState.getText().toString();
-        final String userCity=tvUserCity.getText().toString();
+
         if(TextUtils.isEmpty(userName))
         {
             Toast.makeText(UserRegisterActivity.this,"Name can't be empty",Toast.LENGTH_LONG).show();
@@ -84,7 +91,7 @@ public class UserRegisterActivity extends AppCompatActivity implements RecyclerV
         {
             Toast.makeText(UserRegisterActivity.this,"Password can't be empty",Toast.LENGTH_LONG).show();
         }
-        else if(TextUtils.isEmpty(userName)||userCountry.equals("Select Country"))
+        else if(TextUtils.isEmpty(userCountry)||userCountry.equals("Select Country"))
         {
             Toast.makeText(UserRegisterActivity.this,"Please select your country",Toast.LENGTH_LONG).show();
         }
@@ -98,6 +105,7 @@ public class UserRegisterActivity extends AppCompatActivity implements RecyclerV
         }
         else
         {
+
             custumProgressDialog.startProgressBar("account creating please wait...");
             mAuth.createUserWithEmailAndPassword(userEmail,userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
@@ -115,14 +123,44 @@ public class UserRegisterActivity extends AppCompatActivity implements RecyclerV
                                     hashMap.put("ucity",userCity);
                                     hashMap.put("ucountry",userCountry);
                                     hashMap.put("ustate",userState);
-                                    db.collection("users").document(mAuth.getUid()).set(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    db.collection("enusers").document(mAuth.getUid()).set(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if(task.isSuccessful())
                                             {
-                                                custumProgressDialog.stopProgressBar();
-                                                EmailVerificationDialog dialog=new EmailVerificationDialog(UserRegisterActivity.this);
-                                                dialog.startProgressBar("We have sent you a verification link on your registerd email "+userEmail);
+                                                ApplicationClass.translatedData=new HashMap<>();
+                                                ApplicationClass.translatedData.put("uemail",userEmail);
+                                                ApplicationClass.setTranslatedDataToMap("ucountry",userCountry);
+                                                ApplicationClass.setTranslatedDataToMap("ustate",userState);
+                                                ApplicationClass.setTranslatedDataToMap("ucity",userCity);
+                                                ApplicationClass.setTranslatedDataToMap("uname",userName);
+                                                new Handler().postDelayed(new Runnable() {
+                                                    @Override
+                                                    public void run() {
+                                                        Log.v("RUN","size"+ApplicationClass.translatedData.size());
+                                                        db.collection("hiusers").document(mAuth.getUid()).set(ApplicationClass.translatedData).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                            @Override
+                                                            public void onComplete(@NonNull Task<Void> task) {
+                                                                if(task.isSuccessful())
+                                                                {
+                                                                    Log.v("SIZ",ApplicationClass.translatedData.size()+"size");
+                                                                    custumProgressDialog.stopProgressBar();
+                                                                    EmailVerificationDialog dialog=new EmailVerificationDialog(UserRegisterActivity.this);
+                                                                    dialog.startProgressBar(getString(R.string.verification_email)+userEmail);
+                                                                }
+                                                                else
+                                                                {
+                                                                    mAuth.getCurrentUser().delete();
+                                                                    custumProgressDialog.stopProgressBar();
+                                                                    Log.v("Error",task.getException().getMessage());
+                                                                    Toast.makeText(UserRegisterActivity.this,task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                                                                }
+                                                            }
+                                                        });
+                                                    }
+                                                },2000);
+
+
                                             }
                                             else
                                             {
@@ -140,7 +178,7 @@ public class UserRegisterActivity extends AppCompatActivity implements RecyclerV
                                 {
                                     mAuth.getCurrentUser().delete();
                                     custumProgressDialog.stopProgressBar();
-                                    Toast.makeText(UserRegisterActivity.this,"try again!",Toast.LENGTH_LONG).show();
+                                    Toast.makeText(UserRegisterActivity.this,task.getException().getMessage(),Toast.LENGTH_LONG).show();
                                 }
                             }
                         });
@@ -148,7 +186,7 @@ public class UserRegisterActivity extends AppCompatActivity implements RecyclerV
                     else
                     {
                         custumProgressDialog.stopProgressBar();
-                        Toast.makeText(UserRegisterActivity.this,"An unexpected error...try again!",Toast.LENGTH_LONG).show();
+                        Toast.makeText(UserRegisterActivity.this,task.getException().getMessage(),Toast.LENGTH_LONG).show();
                     }
                 }
             });
@@ -185,7 +223,14 @@ public class UserRegisterActivity extends AppCompatActivity implements RecyclerV
                 bottomSheetDialog.dismiss();
             }
         });
-        tvTypeName.setText(type);
+        TextView tvBack=bottomSheetView.findViewById(R.id.tv_back);
+        tvBack.setText(R.string.back);
+         if(type.equals("Country"))
+        tvTypeName.setText(R.string.country);
+         else if(type.equals("State"))
+             tvTypeName.setText(R.string.state);
+         else
+             tvTypeName.setText(R.string.city);
         recyclerView=bottomSheetView.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         setData(type);
@@ -213,21 +258,47 @@ public class UserRegisterActivity extends AppCompatActivity implements RecyclerV
     }
 
     @Override
-    public void onItemClicked(String place,String where) {
+    public void onItemClicked(String place,int index,String where) {
         switch (where)
         {
             case "Country":
                 tvUserCountry.setText(place);
+                tvUserCountry.setTextColor(getResources().getColor(R.color.selver));
+                userCountry= ApplicationClass.getEnglishSubCategory("country_"+index, UserRegisterActivity.this);
+
 
                 break;
             case "State":
                 tvUserState.setText(place);
+                tvUserState.setTextColor(getResources().getColor(R.color.selver));
+                userState= ApplicationClass.getEnglishSubCategory("state_"+index, UserRegisterActivity.this);;
+
+
                 break;
             case "City":
                 tvUserCity.setText(place);
+                tvUserCity.setTextColor(getResources().getColor(R.color.selver));
+                userCity= ApplicationClass.getEnglishSubCategory("city_"+index, UserRegisterActivity.this);;
+
                 break;
         }
         bottomSheetDialog.dismiss();
 
+    }
+    public void goToBack(View view)
+    {
+        finish();
+    }
+    public void seeTerms(View view)
+    {
+        TermsDialog dialog=new TermsDialog(this);
+        dialog.setCancelable(false);
+        dialog.show();
+    }
+    public void seePrivacyPolicy(View view)
+    {
+        PrivacyPolicyDialog dialog=new PrivacyPolicyDialog(this);
+        dialog.setCancelable(false);
+        dialog.show();
     }
 }

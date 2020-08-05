@@ -1,5 +1,5 @@
 package interfaces;
 
 public interface RecyclerViewInterface {
-    void onItemClicked(String place,String where);
+    void onItemClicked(String value,int index,String where);
 }

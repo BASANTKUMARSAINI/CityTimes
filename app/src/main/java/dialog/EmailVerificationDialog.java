@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.example.mycity.R;
 
 import authantication.UserLoginActivity;
+import model.ApplicationClass;
 
 public class EmailVerificationDialog
 {
@@ -22,6 +23,7 @@ public class EmailVerificationDialog
     }
     public  void startProgressBar(String massage)
     {
+        ApplicationClass.loadLocale(activity);
         AlertDialog.Builder builder=new AlertDialog.Builder(activity);
         LayoutInflater inflater=activity.getLayoutInflater();
         builder.setCancelable(false);

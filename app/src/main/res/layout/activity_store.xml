@@ -3,13 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:background="@color/main_background"
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
 
 <RelativeLayout
     android:layout_width="match_parent"
-    android:background="@color/background_color_yellow"
+    android:background="@color/main_background"
     android:layout_height="match_parent"
+
     tools:context="seller.StoreActivity">
 
          <ImageView
@@ -22,13 +24,49 @@
         android:onClick="goToBack"
         android:src="@drawable/back"
         />
+    <LinearLayout
+        android:id="@+id/change_shop_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:paddingEnd="20dp"
+        android:paddingStart="5dp"
+        android:paddingTop="5dp"
+        android:onClick="updateShopStatus"
+        android:paddingBottom="5dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/button_boundry"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:id="@+id/img_shop_status"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_right_green"
+            android:layout_gravity="center_vertical"
+            />
+        <TextView
+            android:id="@+id/tv_shop_status"
+            android:layout_width="match_parent"
+            android:text="@string/open"
+            android:textColor="@color/green"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
     <RelativeLayout
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:id="@+id/img_background_card"
         android:layout_below="@+id/btn_back"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:background="@color/background_color_yellow"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_centerHorizontal="true"
         android:layout_height="180dp">
 
 
@@ -38,11 +76,11 @@
     app:cardElevation="10dp"
     app:cardCornerRadius="10dp"
     android:layout_centerVertical="true"
-    android:background="@color/background_color_yellow"
     android:layout_height="180dp">
 
 
     <ImageView
+        android:onClick="backgroundClick"
         android:id="@+id/img_background"
         android:layout_width="match_parent"
         android:layout_height="180dp"
@@ -58,6 +96,7 @@
         android:layout_width="102dp"
         android:layout_below="@+id/img_background_card"
         android:layout_height="102dp"
+        android:onClick="profileClick"
         android:layout_marginTop="-51dp"
         android:src="@drawable/profile_icon"/>
 
@@ -78,19 +117,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp">
-
             <TextView
-
                 android:id="@+id/tv_store_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center_horizontal"
+                android:text="@string/store_name"
+                android:onClick="updateStoreName"
+                android:textColor="@color/text_dark"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_board_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:gravity="center_horizontal"
-                android:text="Store Name"
+                android:text="@string/school_board"
+                android:layout_below="@+id/tv_store_name"
+                android:textColor="@color/text_dark"
                 android:onClick="updateStoreName"
-                android:textColor="@color/black"
-                android:textSize="25sp" />
+
+                android:textSize="20sp" />
 
             <ImageView
                 android:id="@+id/update_store_name"
@@ -102,7 +154,6 @@
                 android:layout_marginEnd="5dp"
                 android:src="@drawable/pen"
                 android:visibility="gone" />
-
         </RelativeLayout>
 
         <RelativeLayout
@@ -117,9 +168,10 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
+                android:textColor="@color/text_dark"
                 android:onClick="updateOwnerName"
                 android:gravity="center_horizontal"
-                android:text="Seller Name"
+                android:text="@string/seller_name"
                 android:textSize="20sp" />
 
             <ImageView
@@ -146,9 +198,9 @@
                 android:id="@+id/tv_rating_bar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="4.5"
+                android:text="@string/rating"
                 android:textSize="20sp"
-                android:textColor="@color/black"
+                android:textColor="@color/text_dark"
                 />
             <ImageView
                 android:layout_width="20dp"
@@ -188,12 +240,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
-                    android:text="9027385476"
+                    android:text="@string/contact_number"
+                    android:textColor="@color/text_dark"
                     android:textSize="20sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
-
+                    android:textColor="@color/text_dark"
                     android:layout_height="wrap_content"
                     android:text=" , "
                     android:textSize="20sp" />
@@ -203,7 +256,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
-                    android:text="7766812858"
+
+                    android:textColor="@color/text_dark"
                     android:textSize="20sp" />
 
             </LinearLayout>
@@ -235,12 +289,13 @@
 
             <TextView
                 android:id="@+id/tv_store_address"
+                android:textColor="@color/text_dark"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
 
                 android:layout_weight="8"
-                android:text="Manti hasnpur,Thanabhawan,Shamli"
+                android:text="@string/address"
                 android:textSize="20sp" />
 
             <ImageView
@@ -259,6 +314,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:id="@+id/time_layout"
             android:orientation="horizontal">
 
             <ImageView
@@ -274,7 +330,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:layout_weight="8"
-                android:text="9am-9pm"
+                android:textColor="@color/text_dark"
+                android:text="@string/opeing_closing_time"
                 android:textSize="20sp" />
 
             <ImageView
@@ -293,6 +350,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:id="@+id/day_layout"
             android:layout_marginEnd="5dp"
             android:orientation="horizontal">
 
@@ -318,7 +376,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="S "
+                    android:text="@string/s"
                     android:textColor="@color/green"
                     android:textSize="18sp" />
 
@@ -329,7 +387,7 @@
                     android:layout_weight="1"
                     android:paddingTop="1dp"
                     android:paddingBottom="1dp"
-                    android:text="M "
+                    android:text="@string/m"
                     android:textColor="@color/green"
                     android:textSize="18sp" />
 
@@ -339,7 +397,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
 
-                    android:text="T "
+                    android:text="@string/t"
                     android:textColor="@color/green"
                     android:textSize="18sp" />
 
@@ -349,7 +407,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
 
-                    android:text="W "
+                    android:text="@string/w"
                     android:textColor="@color/green"
                     android:textSize="18sp" />
 
@@ -359,7 +417,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
 
-                    android:text="T "
+                    android:text="@string/t"
                     android:textColor="@color/green"
                     android:textSize="18sp" />
 
@@ -369,7 +427,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
 
-                    android:text="F "
+                    android:text="@string/f"
                     android:textColor="@color/green"
                     android:textSize="18sp" />
 
@@ -379,7 +437,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
 
-                    android:text="S "
+                    android:text="@string/s"
                     android:textColor="@color/green"
                     android:textSize="18sp" />
 
@@ -404,10 +462,12 @@
         </LinearLayout>
 
         <LinearLayout
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/home_delivery_view">
 
             <ImageView
                 android:layout_width="0dp"
@@ -422,8 +482,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:layout_weight="8"
-
-                android:text="Home Delivery Not Available"
+                android:textColor="@color/text_dark"
+                android:text="@string/home_delivery_not_available"
                 android:textSize="20sp" />
 
             <ImageView
@@ -456,10 +516,13 @@
                 android:id="@+id/tv_workers"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:textColor="@color/text_dark"
                 android:layout_marginStart="5dp"
                 android:layout_weight="8"
-                android:text="Workers required!"
+                android:text="@string/workers_required"
                 android:textSize="20sp" />
+
+
 
             <ImageView
                 android:id="@+id/update_workers"
@@ -472,13 +535,85 @@
                 android:visibility="gone" />
 
         </LinearLayout>
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/transprt_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
 
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/photos" />
+
+            <TextView
+                android:id="@+id/tv_transport"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                  android:textColor="@color/text_dark"
+
+
+                android:layout_weight="8"
+                android:text="@string/transport_servics_avilable"
+                android:textSize="20sp" />
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/update_transport"
+                android:layout_width="0dp"
+                android:onClick="seeAllPhotos"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/pen" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/hostel_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/photos" />
+
+            <TextView
+                android:id="@+id/tv_hostel"
+                android:layout_width="0dp"
+                android:textColor="@color/text_dark"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="8"
+                android:text="@string/hostel_servics_avilable"
+                android:textSize="20sp" />
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/update_hostel"
+                android:layout_width="0dp"
+                android:onClick="seeAllPhotos"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/pen" />
+
+
+        </LinearLayout>
         <LinearLayout
             android:id="@+id/photos_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="50dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -494,7 +629,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:layout_weight="8"
-                android:text="See all photos"
+                android:text="@string/see_all_photos"
+                android:textColor="@color/text_dark"
                 android:textSize="20sp" />
 
             <ImageView
@@ -508,6 +644,84 @@
 
 
         </LinearLayout>
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/show_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="openShowActivity"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/photos" />
+
+            <TextView
+                android:id="@+id/tv_show"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/text_dark"
+                android:layout_weight="8"
+                android:text="@string/shows"
+                android:textSize="20sp" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/description_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="80dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/photos" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="8"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:id="@+id/tv_shop_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/text_dark"
+                    android:text="@string/service_description"
+                    android:textSize="20sp" />
+                <EditText
+                    android:id="@+id/et_shop_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:hint="@string/service_description"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
 
 
     </LinearLayout>
@@ -538,13 +752,12 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-android:visibility="gone"
-             android:layout_marginEnd="10dp"
+            android:visibility="gone"
+            android:layout_marginEnd="10dp"
             android:onClick="setVisibilityGone"
-
             android:layout_marginBottom="50dp"
             android:background="@drawable/button_background"
-            android:text="CANCEL"
+            android:text="@string/cancel"
             android:textColor="@color/white" />
         <Button
 
@@ -552,12 +765,12 @@ android:visibility="gone"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-android:layout_marginStart="10dp"
-             android:visibility="gone"
+            android:layout_marginStart="10dp"
+            android:visibility="gone"
             android:onClick="applyAllChanges"
             android:layout_marginBottom="50dp"
             android:background="@drawable/button_background"
-            android:text="Apply"
+            android:text="@string/apply"
             android:textColor="@color/white" />
 
     </LinearLayout>

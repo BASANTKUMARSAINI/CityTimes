@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/button_color"
+    android:background="@color/main_background"
     android:layout_height="match_parent"
     tools:context="users.FavouriteStoreActivity">
     <RelativeLayout
@@ -28,9 +28,9 @@
             android:layout_toEndOf="@id/btn_back"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Favourite Stores"
+            android:text="@string/favourite_stores"
             android:textStyle="bold"
-            android:textColor="@color/black"
+            android:textColor="@color/text_dark"
             android:layout_marginStart="5dp"
             android:textSize="20sp"
 
@@ -43,17 +43,28 @@
         android:layout_centerHorizontal="true"
         android:layout_marginEnd="5dp"
         android:layout_marginStart="5dp"
-        android:background="@drawable/background"
+        android:background="@drawable/lower_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <FrameLayout
-            android:id="@+id/fragment"
+        <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_centerHorizontal="true"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
             android:layout_centerVertical="true"
-            android:layout_height="match_parent"/>
+            android:id="@+id/recycler_view"/>
+        <TextView
+
+            android:id="@+id/tv_no_exist"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/no_such_store_exist"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/red"
+            android:textStyle="italic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
     </RelativeLayout>
 
 

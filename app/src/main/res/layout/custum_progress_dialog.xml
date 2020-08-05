@@ -11,6 +11,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:padding="50dp"
+    android:background="@color/other_background"
     android:layout_height="wrap_content">
     <ProgressBar
         android:id="@+id/progress_circular"
@@ -21,7 +22,8 @@
     <TextView
         android:id="@+id/tv_progress_type"
         android:layout_width="match_parent"
-        android:text="loading..."
+        android:text="@string/loading"
+        android:textColor="@color/text_dark"
         android:gravity="center_horizontal"
         android:layout_below="@id/progress_circular"
         android:layout_centerHorizontal="true"

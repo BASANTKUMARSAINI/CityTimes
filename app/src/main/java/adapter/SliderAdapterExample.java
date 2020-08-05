@@ -17,6 +17,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
+import model.ApplicationClass;
 import model.SliderItem;
 
 public class SliderAdapterExample extends
@@ -55,7 +56,10 @@ public class SliderAdapterExample extends
         public void onBindViewHolder(SliderAdapterVH viewHolder, final int position) {
 
             SliderItem sliderItem = mSliderItems.get(position);
+
             viewHolder.tvImageDes.setText(sliderItem.getImageDes());
+            if(ApplicationClass.LANGUAGE_MODE.equals("hi"))
+                viewHolder.tvImageDes.setText(sliderItem.getHiimageDes());
             Picasso.get().load(sliderItem.getImageUrl()).into(viewHolder.imageAdv);
 
             viewHolder.itemView.setOnClickListener(new View.OnClickListener() {

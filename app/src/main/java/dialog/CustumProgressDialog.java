@@ -2,11 +2,14 @@ package dialog;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
 import com.example.mycity.R;
+
+import model.ApplicationClass;
 
 public class CustumProgressDialog
 {
@@ -18,6 +21,7 @@ public class CustumProgressDialog
     }
     public  void startProgressBar(String massage)
     {
+        ApplicationClass.loadLocale((Context)activity);
         AlertDialog.Builder builder=new AlertDialog.Builder(activity);
         LayoutInflater inflater=activity.getLayoutInflater();
         builder.setCancelable(false);

@@ -22,6 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import interfaces.UpdateInterface;
+import model.ApplicationClass;
 
 public class UpdateDays extends Dialog {
     public Context context;
@@ -44,6 +45,7 @@ public class UpdateDays extends Dialog {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ApplicationClass.loadLocale(context);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.update_days);
 
@@ -88,11 +90,11 @@ public class UpdateDays extends Dialog {
     private void setAllChecked() {
         if(days.get("monday"))
             tMonday.setChecked(true);
-        if(days.get("tuseday"))
+        if(days.get("tuesday"))
             tTuseday.setChecked(true);
         if(days.get("wednesday"))
             tWednesday.setChecked(true);
-        if(days.get("thrusday"))
+        if(days.get("thursday"))
             tThrusday.setChecked(true);
         if(days.get("friday"))
             tFriday.setChecked(true);
@@ -107,9 +109,9 @@ public class UpdateDays extends Dialog {
 HashMap<String,Boolean>days=new HashMap<>();
         days.put("sunday",false);
         days.put("monday",false);
-        days.put("tuseday",false);
+        days.put("tuesday",false);
         days.put("wednesday",false);
-        days.put("thrusday",false);
+        days.put("thursday",false);
         days.put("friday",false);
         days.put("saturday",false);
 
@@ -118,11 +120,11 @@ HashMap<String,Boolean>days=new HashMap<>();
         if(tMonday.isChecked())
             days.put("monday",true);
         if(tTuseday.isChecked())
-            days.put("tuseday",true);
+            days.put("tuesday",true);
         if(tWednesday.isChecked())
             days.put("wednesday",true);
         if(tThrusday.isChecked())
-            days.put("thrusday",true);
+            days.put("thursday",true);
         if(tFriday.isChecked())
             days.put("friday",true);
         if(tSaturday.isChecked())

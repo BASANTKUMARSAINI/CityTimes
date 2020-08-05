@@ -24,6 +24,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import interfaces.UpdateInterface;
+import model.ApplicationClass;
 
 public class UpdateStoreTime extends Dialog {
     public Context context;
@@ -49,6 +50,7 @@ public class UpdateStoreTime extends Dialog {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ApplicationClass.loadLocale(context);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.update_store_time);
 

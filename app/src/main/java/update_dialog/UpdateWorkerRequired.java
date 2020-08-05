@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import interfaces.UpdateInterface;
+import model.ApplicationClass;
 
 public class UpdateWorkerRequired extends Dialog {
     public Context context;
@@ -43,6 +44,7 @@ public class UpdateWorkerRequired extends Dialog {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ApplicationClass.loadLocale(context);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.update_workers_required);
 

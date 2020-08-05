@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp"
+    android:paddingBottom="50dp"
+    android:paddingTop="50dp"
+    android:paddingStart="30dp"
+    android:paddingEnd="30dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/is_shop_open"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_marginTop="50dp"
+                 android:layout_gravity="center_vertical"
+
+                 android:layout_height="wrap_content">
+                 <ImageView
+                     android:id="@+id/img_yes"
+                     android:layout_width="0dp"
+                     android:layout_weight="1"
+                     android:layout_height="40dp"
+                     android:layout_marginStart="50dp"
+
+                     android:src="@drawable/ic_right"/>
+
+                 <ImageView
+                     android:id="@+id/img_no"
+                     android:layout_width="0dp"
+                     android:layout_height="40dp"
+                      android:layout_weight="1"
+
+                     android:layout_marginEnd="50dp"
+                     android:src="@drawable/ic_cross" />
+             </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/button_background"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/update"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/button_background"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

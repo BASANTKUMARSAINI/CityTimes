@@ -10,9 +10,10 @@ import android.widget.TextView;
 
 import com.example.mycity.R;
 
+import model.ApplicationClass;
 import users.fragments.GeneralFragment;
 import users.fragments.HistoryFragment;
-import users.fragments.HomeFragment;
+
 import users.fragments.TourismFragment;
 
 public class AboutActivity extends AppCompatActivity {
@@ -26,6 +27,7 @@ public class AboutActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ApplicationClass.loadLocale(this);
         setContentView(R.layout.activity_about);
         tvGeneral=findViewById(R.id.tv_general);
         tvHistory=findViewById(R.id.tv_history);
@@ -43,11 +45,11 @@ public class AboutActivity extends AppCompatActivity {
         tvGeneral.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tvGeneral.setTextColor(getResources().getColor(R.color.black));
+                tvGeneral.setTextColor(getResources().getColor(R.color.text_dark));
                 viewGeneral.setVisibility(View.VISIBLE);
-                tvHistory.setTextColor(getResources().getColor(R.color.light_text_color));
+                tvHistory.setTextColor(getResources().getColor(R.color.text_light));
                 viewHistory.setVisibility(View.GONE);
-                tvTourism.setTextColor(getResources().getColor(R.color.light_text_color));
+                tvTourism.setTextColor(getResources().getColor(R.color.text_light));
                 viewTourism.setVisibility(View.GONE);
                 setFragment(GENERAL);
 
@@ -58,11 +60,11 @@ public class AboutActivity extends AppCompatActivity {
         tvTourism.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tvTourism.setTextColor(getResources().getColor(R.color.black));
+                tvTourism.setTextColor(getResources().getColor(R.color.text_dark));
                 viewTourism.setVisibility(View.VISIBLE);
-                tvHistory.setTextColor(getResources().getColor(R.color.light_text_color));
+                tvHistory.setTextColor(getResources().getColor(R.color.text_light));
                 viewHistory.setVisibility(View.GONE);
-                tvGeneral.setTextColor(getResources().getColor(R.color.light_text_color));
+                tvGeneral.setTextColor(getResources().getColor(R.color.text_light));
                 viewGeneral.setVisibility(View.GONE);
                 setFragment(TOURISM);
 
@@ -71,11 +73,11 @@ public class AboutActivity extends AppCompatActivity {
         tvHistory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tvHistory.setTextColor(getResources().getColor(R.color.black));
+                tvHistory.setTextColor(getResources().getColor(R.color.text_dark));
                 viewHistory.setVisibility(View.VISIBLE);
-                tvGeneral.setTextColor(getResources().getColor(R.color.light_text_color));
+                tvGeneral.setTextColor(getResources().getColor(R.color.text_light));
                 viewGeneral.setVisibility(View.GONE);
-                tvTourism.setTextColor(getResources().getColor(R.color.light_text_color));
+                tvTourism.setTextColor(getResources().getColor(R.color.text_light));
                 viewTourism.setVisibility(View.GONE);
                 setFragment(HISTORY);
 

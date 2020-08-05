@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:scrollbars="vertical"
+    android:background="@color/other_background"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 
@@ -26,8 +27,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/img_back"
-            android:text="Register your store!"
-            android:textColor="@color/black"
+            android:text="@string/register_your_service"
+            android:textColor="@color/text_dark"
             android:textStyle="bold"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="10dp"
@@ -42,7 +43,7 @@
             android:layout_marginTop="20dp"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="15dp"
-            android:hint= "Store Name"
+            android:hint= "@string/service_name"
             android:textSize="18sp"
 
             android:layout_marginEnd="10dp"/>
@@ -55,7 +56,7 @@
             android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="15dp"
-            android:hint= "Owner's Name"
+            android:hint= "@string/owner_s_name"
             android:textSize="18sp"
             android:layout_marginEnd="10dp"/>
         <EditText
@@ -67,7 +68,7 @@
             android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="15dp"
-            android:hint= "Mobile Number1"
+            android:hint= "@string/mobile_number1"
             android:textSize="18sp"
 
             android:layout_marginEnd="10dp"/>
@@ -80,7 +81,7 @@
             android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="15dp"
-            android:hint= "Mobile Number2(optional)"
+            android:hint= "@string/mobile_number2_optional"
             android:textSize="18sp"
 
             android:layout_marginEnd="10dp"/>
@@ -93,13 +94,31 @@
             android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="15dp"
-            android:hint= "Store Address"
+            android:hint= "@string/address"
             android:textSize="18sp"
             android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_current_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_store_address"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/pop_up_botton_background"
+            android:onClick="getCurrentLocation"
+            android:paddingStart="5dp"
+            android:textColor="@color/text_dark"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/current_location"
+            android:textSize="16sp" />
         <LinearLayout
             android:id="@+id/linera_layout"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/et_store_address"
+            android:layout_below="@+id/tv_current_location"
             android:layout_width="match_parent"
             android:gravity="center"
             android:layout_marginTop="20dp"
@@ -112,10 +131,11 @@
                 android:layout_weight="3"
                 android:layout_height="wrap_content"
                 android:background="@drawable/pop_up_botton_background"
-                android:text="Select Country"
+                android:text="@string/select_country"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
                 android:layout_marginEnd="5dp"
+                android:textColor="@color/text_dark"
                 android:gravity="center_horizontal"
                 android:textSize="16sp"
                 android:onClick="getCountry"
@@ -129,7 +149,8 @@
                 android:layout_weight="2"
                 android:layout_height="wrap_content"
                 android:background="@drawable/pop_up_botton_background"
-                android:text="Select State"
+                android:text="@string/select_state"
+                android:textColor="@color/text_dark"
                 android:layout_marginEnd="5dp"
                 android:gravity="center_horizontal"
                 android:textSize="16sp"
@@ -145,7 +166,8 @@
                 android:gravity="center_horizontal"
                 android:layout_height="wrap_content"
                 android:background="@drawable/pop_up_botton_background"
-                android:text="Select City"
+                android:text="@string/select_city"
+                android:textColor="@color/text_dark"
                 android:textSize="16sp"
                 android:onClick="getCity"
                 />
@@ -164,6 +186,7 @@
             <TextView
                 android:id="@+id/tv_store_category"
                 android:layout_width="0dp"
+                android:textColor="@color/text_dark"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="5dp"
@@ -173,15 +196,16 @@
                 android:layout_weight="1"
                 android:background="@drawable/pop_up_botton_background"
                 android:onClick="getCategory"
-                android:text="Store Category"
+                android:text="@string/store_category"
                 android:textSize="16sp" />
         <TextView
             android:id="@+id/tv_store_sub_category"
             android:layout_width="0dp"
             android:layout_weight="1"
+            android:textColor="@color/text_dark"
             android:layout_height="wrap_content"
             android:background="@drawable/pop_up_botton_background"
-            android:text="Store Sub-Category"
+            android:text="@string/store_sub_category"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:gravity="center_horizontal"
@@ -199,74 +223,13 @@
             android:textColor="@color/white"
             android:textStyle="bold"
             android:onClick="storeRegistration"
-            android:text="Register"
+            android:text="@string/register"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/linera_layout_2"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="30dp"
             android:layout_marginStart="30dp"
             android:layout_height="wrap_content"/>
-<!--        <LinearLayout-->
-<!--            android:id="@+id/linera_layout3"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_centerHorizontal="true"-->
-<!--            android:orientation="horizontal"-->
-<!--            android:layout_marginTop="20dp"-->
-<!--            android:gravity="center_horizontal"-->
-<!--            android:layout_below="@+id/btn_register">-->
-<!--            <TextView-->
-<!--                android:id="@+id/tv_terms_and_conditions1"-->
-<!--                android:text="By registering you agree to "-->
-<!--                android:textSize="12sp"-->
-<!--                android:gravity="center_horizontal"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_marginBottom="50dp"-->
-<!--                android:layout_height="wrap_content"/>-->
-<!--            <TextView-->
-<!--                android:id="@+id/tv_terms_and_conditions2"-->
-<!--                android:text="Terms-Conditions"-->
-<!--                android:textSize="12sp"-->
-<!--                android:textColor="@color/button_color"-->
-<!--                android:gravity="center_horizontal"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"/>-->
-
-<!--        </LinearLayout>-->
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_centerHorizontal="true"-->
-<!--            android:orientation="horizontal"-->
-<!--            android:gravity="center_horizontal"-->
-<!--            android:layout_below="@+id/linera_layout3">-->
-<!--            <TextView-->
-
-<!--                android:text="By registering you agree to "-->
-<!--                android:textSize="12sp"-->
-<!--                android:layout_below="@id/btn_register"-->
-<!--                android:layout_marginTop="20dp"-->
-<!--                android:layout_centerHorizontal="true"-->
-<!--                android:gravity="center_horizontal"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_marginBottom="50dp"-->
-<!--                android:layout_height="wrap_content"/>-->
-<!--            <TextView-->
-
-<!--                android:text="Terms-Conditions"-->
-<!--                android:textSize="12sp"-->
-<!--                android:layout_below="@id/btn_register"-->
-<!--                android:textColor="@color/button_color"-->
-<!--                android:layout_marginTop="20dp"-->
-
-
-
-<!--                android:gravity="center_horizontal"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_marginBottom="50dp"-->
-<!--                android:layout_height="wrap_content"/>-->
-
-<!--        </LinearLayout>-->
 
 <LinearLayout
     android:id="@+id/relative_layout3"
@@ -277,13 +240,14 @@
     android:gravity="center_horizontal"
     android:layout_marginTop="20dp">
     <TextView
+        android:textColor="@color/text_dark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="By registering you agree to "/>
+        android:text="@string/by_registering_you_agree_to"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/button_color"
+        android:textColor="@color/selver"
         android:text="Term and Conditions"/>
 
 </LinearLayout>
@@ -296,18 +260,20 @@
             android:gravity="center_horizontal"
             >
             <TextView
+                android:textColor="@color/text_dark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="and"/>
+                android:text="@string/and"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/button_color"
-                android:text="Privacy Policy"/>
+                android:textColor="@color/selver"
+                android:text="@string/privacy_policy"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="of the My City"/>
+                android:textColor="@color/text_dark"
+                android:text="@string/of_the_my_city"/>
 
         </LinearLayout>
 

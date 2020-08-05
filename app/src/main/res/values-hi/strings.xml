@@ -1,0 +1,1605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CityTimes</string>
+
+    <string name="shopping">शॉपिंग</string>
+    <string name="food">फ़ूड</string>
+    <string name="gym_sports">जिम स्पोर्ट्स</string>
+    <string name="parlourl_saloon">पार्लर सैलून</string>
+    <string name="electronics">इलेक्ट्रॉनिक्स</string>
+    <string name="health">स्वास्थ</string>
+    <string name="travel">यात्रा</string>
+    <string name="movies">सिनेमा</string>
+    <string name="education">शिक्षा</string>
+    <string name="catering">हलवाई</string>
+    <string name="rentals">किराए हेतु</string>
+    <string name="sell_buy">सैल एंड बाय</string>
+    <string name="agriculture">कृषि</string>
+    <string name="machanice">मिस्त्री</string>
+    <string name="other">अन्य</string>
+    <string name="text">लाईट मोड</string>
+    <string name="open">खुला हुआ</string>
+    <string name="close">बंद</string>
+    <string name="country">देश</string>
+    <string name="state">राज्य</string>
+    <string name="sub_category">उपश्रेणी</string>
+    <string name="city">शहर</string>
+
+    <string name="stores">सर्विस</string>
+
+    <string-array name="Category">
+        <item>शॉपिंग</item>
+        <item>फ़ूड</item>
+        <item>विश्राम</item>
+        <item>पार्लर सैलून</item>
+        <item>जिम स्पोर्ट्स</item>
+        <item>सिनेमा</item>
+        <item>शिक्षा</item>
+        <item>स्वास्थ</item>
+        <item>साइबर</item>
+        <item>इलेक्ट्रॉनिक्स</item>
+        <item>यात्रा</item>
+        <item>व्हीकल</item>
+        <item>बुकिंग</item>
+        <item>किराए हेतु</item>
+        <item>सैल एंड बाय</item>
+        <item>बिल्डिंग मटीरीयल</item>
+        <item>कृषि</item>
+        <item>फ़ैक्टरी</item>
+        <item>एन॰जी॰ओ॰</item>
+        <item>बैंक एंड ए॰टी॰एम॰</item>
+        <item>पेट्रोल पम्प</item>
+    </string-array>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="check_mail">आपकी रेजिस्टर्ड ईमेल पर वेरिफ़िकेशन लिंक भेज दिया गया है</string>
+    <string name="facebook_app_id">2618037285122683</string>
+    <string name="fb_login_protocol_scheme">fb2618037285122683</string>
+    <string name="navigation_drawer_open">Drawer Open</string>
+    <string name="navigation_drawer_close">Drawer Closed</string>
+    <string name="setup_profile">कृप्या अपनी प्रोफ़ाईल पूर्ण करें</string>
+    <string name="let_go">आगे बढ़ें</string>
+    <string name="settings">सेटिंग</string>
+    <string name="personalize">निजी</string>
+    <string name="english">इंग्लिश</string>
+    <string name="change_languange_of_the_app">ऐप की भाषा बदलें</string>
+
+    <string name="default_city_for_news_alerts_and_more">ऐप </string>
+    <string name="change">बदलें</string>
+    <string name="categories">श्रेणी</string>
+    <string name="all_services">सभी सर्विस</string>
+    <string name="government">सरकारी</string>
+    <string name="setup_your_store">अपनी सर्विस सेट करें!</string>
+
+    <string name="about_city">शहर के बारे मे</string>
+
+
+
+
+
+
+    <string name="movies_shows">मूवी शो</string>
+    <string name="new_show">नया शो</string>
+
+    <string name="enter_these_details">कृप्या अपनी डिटेल भरें</string>
+
+
+    <string name="procced">आगे बढ़ें</string>
+    <string name="favourite_stores">पसंदीदा</string>
+
+    <string name="add_new_collection">नया फ़ोल्डर बनायें</string>
+    <string name="my_product">मेरे प्रॉडक्ट्स</string>
+    <string name="products">प्रॉडक्ट्स</string>
+    <string name="government_offices">सरकारी कार्यालय</string>
+    <string name="offices">कार्यालय</string>
+    <string name="sort">सॉर्ट</string>
+    <string name="plots">प्लॉट</string>
+    <string name="plot_for_selling">बेचने हेतु प्लॉट</string>
+
+    <string name="price">मूल्य:</string>
+
+
+    <string name="opeing_closing_time">खुलने बंद होने का समय</string>
+    <string name="contact_number">फ़ोन नम्बर</string>
+
+    <string name="register_your_service">अपनी सर्विस रेजिस्टर करें</string>
+    <string name="service_name">सर्विस का नाम</string>
+    <string name="owner_s_name">मालिक का नाम</string>
+    <string name="mobile_number1">फ़ोन नम्बर1</string>
+    <string name="mobile_number2_optional">फ़ोन नम्बर2(वैकल्पिक)</string>
+    <string name="current_location">वर्तमान लोकेशन</string>
+    <string name="store_category">सर्विस श्रेणी</string>
+
+<string name="store_sub_category">सर्विस उपश्रेणी</string>
+
+<string name="sell_products">प्रॉडक्ट्स बेंचे</string>
+<string name="products_for_selling">बेचने हेतु प्रॉडक्ट्स</string>
+<string name="dark_theme">डार्क थीम</string>
+<string name="clear_app_cache">ऐप कचे मिटायें</string>
+<string name="support">सहयोग</string>
+<string name="rate_us">हमें रेटिंग दें!</string>
+<string name="share_this_app">ऐप साझा करें</string>
+<string name="feedback">प्रतिपुष्टि</string>
+
+<string name="privacy">प्राइवेसी</string>
+<string name="terms_of_use">उपयोग की शर्तें</string>
+
+<string name="board_name">बोर्ड</string>
+<string name="rating">रेटिंग</string>
+
+<string name="hostel_facility">हॉस्टल सुविधा!</string>
+<string name="transport_facility">ट्रांसपोर्ट सुविधा!</string>
+
+<string name="description_not_added">विवरण नही है</string>
+
+
+<string name="c">C</string>
+<string name="ity">ity</string>
+    <string name="imes">imes</string>
+
+<string name="seller_name">मालिक का नाम</string>
+
+<string name="home_delivery_not_available">होम डिलीवरी उपलब्ध नही है</string>
+<string name="workers_required">वर्कर्स की ज़रूरत है</string>
+<string name="transport_servics_avilable">ट्रांसपोर्ट सुविधा उपलब्ध है</string>
+<string name="hostel_servics_avilable">हॉस्टल सुविधा उपलब्ध है</string>
+<string name="see_all_photos">फ़ोटो</string>
+<string name="shows">शो</string>
+
+<string name="service_description">सर्विस विवरण</string>
+
+<string name="apply">लागू</string>
+<string name="all_photos">सभी फ़ोटो</string>
+<string name="category_store">श्रेणी सर्विस</string>
+<string name="facebook">फ़सेबुक</string>
+<string name="google">गूगल</string>
+<string name="email_address">ईमेल</string>
+
+<string name="forgot_password">पासवर्ड?</string>
+<string name="login">लॉग इन</string>
+<string name="don_t_have_an_account">अकाउंट नही है?</string>
+<string name="register_now">रजिस्टर करें</string>
+<string name="register_to_citytimes">CityTimes में रजिस्टर करें</string>
+<string name="full_name">पूरा नाम</string>
+<string name="email">ईमेल</string>
+<string name="password">पास्वर्ड</string>
+<string name="select_country">देश चुने</string>
+<string name="select_state">राज्य चुने</string>
+<string name="select_city">शहर चुने</string>
+<string name="register">रजिस्टर</string>
+<string name="by_registering_you_agree_to">रजिस्ट्रेशन कर के आप CityTimes की</string>
+<string name="term_and_conditions">उपयोग की शर्तें</string>
+<string name="and">और</string>
+<string name="privacy_policy">प्राइवेसी पॉलिसी</string>
+<string name="of_the_my_city">से सहमित है</string>
+<string name="add_collection">फ़ोल्डर जोड़े</string>
+<string name="collection_name">फ़ोल्डर का नाम</string>
+
+<string name="add">जोड़े</string>
+<string name="show_time">शो का समय:</string>
+
+<string name="movie_name">मूवी का नाम</string>
+<string name="tickit_price">टिकट मूल्य</string>
+
+<string name="sub_category_name">उपश्रेणी का नाम</string>
+<string name="category_name">श्रेणी का नाम</string>
+<string name="explore">एक्सप्लोर</string>
+<string name="city_name">शहर का नाम</string>
+<string name="sell_and_buy">सैल एंड बाय</string>
+<string name="information">जानकारी</string>
+<string name="about_us">हमारे बारे में</string>
+<string name="contact_us">सम्पर्क</string>
+<string name="version">वर्जन</string>
+<string name="logout">लोग आउट</string>
+<string name="loading">लोडिंग….</string>
+
+<string name="product_title">प्रोडक्ट शीर्षक</string>
+
+<string name="seller_phone">सैलर फ़ोन</string>
+<string name="define_search">खोज बतायें</string>
+<string name="store_name">सर्विस का नाम</string>
+<string name="store_address">पता</string>
+<string name="principal_director_name">प्रिन्सिपल का नाम</string>
+<string name="school_board">स्कूल बोर्ड</string>
+
+<string name="check_your_email">अपना ईमेल चेक करें</string>
+<string name="go_to_login">लोग इन के लिए जाए</string>
+<string name="send_feedback">प्रतिपुष्टि भेजे</string>
+<string name="type_message">संदेस लिखे</string>
+
+<string name="send">भेजें</string>
+<string name="general">सामान्य</string>
+<string name="history">इतिहास</string>
+
+<string name="no_such_store_exist">कोई सर्विस उपलब्ध नही है</string>
+<string name="tourism">पर्यटन</string>
+<string name="reset_password">पास्वर्ड बदलें</string>
+<string name="enter_email">ईमेल लिखें</string>
+
+<string name="sumbit">सबमिट</string>
+<string name="image_discription">फ़ोटो का विवरण</string>
+<string name="back">वापस</string>
+<string name="office_type">कार्यालय जैसा</string>
+<string name="address">पता</string>
+<string name="your_data_safe">your data safe</string>
+
+<string name="rename">नाम बदलें</string>
+<string name="add_photo">फ़ोटो जोड़ें</string>
+<string name="upload">डालें</string>
+<string name="store">सर्विस</string>
+<string name="rate_now">रटे करें !</string>
+<string name="rename_collection">फ़ोल्डर का नाम बदले</string>
+<string name="new_collection_name">नए फ़ोल्डर का नाम</string>
+
+<string name="product_name">प्रोडक्ट का नाम</string>
+<string name="product_type">प्रोडक्ट टाईप</string>
+
+<string name="sell_your_product">अपना प्रोडक्ट बेचें</string>
+
+<string name="add_more">और जोड़ें</string>
+<string name="product_title_name">प्रोडक्ट का नाम</string>
+<string name="product_price">प्रोडक्ट का मूल्य</string>
+<string name="seller_phone_number">सेलर का फ़ोन नम्बर</string>
+<string name="seller_city">सेलर का शहर</string>
+<string name="select_product_type">प्रोडक्ट टाइप चुने</string>
+<string name="enter_product_type_name">प्रोडक्ट टाइप का नाम लिखे</string>
+
+
+<string name="sell">बेचें</string>
+
+<string name="shop_name">दुकान का नाम</string>
+<string name="no_of_ratings">रेटिंग की संख्या</string>
+
+<string name="avaliable">उपलब्ध</string>
+<string name="home_delivery_service">होम डिलीवरी सर्विस</string>
+<string name="next">अगला</string>
+<string name="setup_your_service_profile">अपनी सर्विस प्रोफ़ाइल बनायें</string>
+<string name="upload_a_cover_photo">कवर फ़ोटो लगायें</string>
+<string name="upload_owner_s_photo">मालिक की फ़ोटो लगायें</string>
+<string name="timings">सर्विस समय</string>
+<string name="setup_other_details">बाक़ी जानकारी भरें</string>
+    <string name="awesome">शुक्रिय</string>
+
+    <string name="let_s_go">आगे बढ़ें</string>
+<!--    <string name="from_9_40am">9:40AM से</string>-->
+<!--    <string name="to_9_40am">To: 9:40AM तक</string>-->
+<!--    <string name="price_400rupee">मूल्य: ₹400</string>-->
+    <string name="sort_by">सॉर्ट बाई</string>
+    <string name="distance">दूरी</string>
+    <string name="km">km </string>
+    <string name="set_default">सेट डिफ़ॉल्ट</string>
+    <string name="no_terms">कोई टर्म नही</string>
+    <string name="store_timings">सर्विस का समय</string>
+    <string name="from">से:</string>
+
+
+    <string name="update_store_opening_days">सर्विस उपलब्ध दिन</string>
+    <string name="days">दिन:</string>
+
+    <string name="s">S</string>
+    <string name="m">M</string>
+
+
+    <string name="update_home_delivery_status">होम डिलीवरी सर्विस अपडेट करें</string>
+
+    <string name="is_hostel_facility">हॉस्टल सुविधा उपलब्ध है?</string>
+
+    <string name="update_owner_name">मालिक का नाम अपडेट करें</string>
+    <string name="owner_name">मालिक का नाम</string>
+
+    <string name="update_phone_number">फ़ोन नम्बर</string>
+    <string name="phone_number">फ़ोन नम्बर</string>
+    <string name="other_phone_number_optional">दूसरा फ़ोन नम्बर (वैकल्पिक)</string>
+
+    <string name="is_shop_open">क्या अभी सर्विस उपलब्ध है?</string>
+    <string name="cancel">हटायें</string>
+    <string name="update">अपडेट करें</string>
+    <string name="update_store_local_address">सर्विस का पता</string>
+    <string-array name="vehicle_workshop">
+        <item>शोरूम</item>
+        <item>वर्कशॉप </item>
+        <item>जे॰सी॰बी॰ एंड क्रेन</item>
+        <item>दो पहिया वाहन मिस्त्री</item>
+        <item>चार पहिया वाहन मिस्त्री</item>
+    </string-array>
+
+    //
+    <string name="vehicles_0">शोरूम</string>
+    <string name="vehicles_1">वर्कशॉप </string>
+    <string name="vehicles_2">जे॰सी॰बी॰ एंड क्रेन</string>
+    <string name="vehicles_3">दो पहिया वाहन मिस्त्री</string>
+    <string name="vehicles_4">चार पहिया वाहन मिस्त्री</string>
+
+    <string-array name="shopping">
+        <item>मॉल</item>
+        <item>सुपरबाज़ार</item>
+        <item>कपड़े</item>
+        <item>जूते चप्पल</item>
+        <item>फ़र्निचर</item>
+        <item>जनरल स्टोर</item>
+        <item>डेली हाउसहोल्ड</item>
+
+    </string-array>
+
+
+    //
+    <string name="shopping_0">मॉल</string>
+    <string name="shopping_1">सुपरबाज़ार</string>
+    <string name="shopping_2">कपड़े</string>
+    <string name="shopping_3">जूते चप्पल</string>
+    <string name="shopping_4">फ़र्निचर</string>
+    <string name="shopping_5">जनरल स्टोर</string>
+    <string name="shopping_6">डेली हाउसहोल्ड</string>
+
+
+
+
+
+
+
+
+
+
+    <string name="t">T</string>
+    <string name="w">W</string>
+    <string name="product_description">प्रोडक्ट विवरण</string>
+
+    <string name="f">F</string>
+    <string name="hh">hh</string>
+    <string name="pm">pm</string>
+    <string name="am">am</string>
+    <string name="mm">mm</string>
+    <string name="to">तक</string>
+    <string name="update_store_name">सर्विस का नाम अपडेट करें</string>
+    <string name="update_store_timing">सर्विस का समय अपडेट करें</string>
+    <string name="worker_are_required_or_not">वर्कर्स नही चाहिए</string>
+    <!--    <string name="store_name">सर्विस का नाम</string>-->
+    <string-array name="Country">
+        <item>भारत</item>
+    </string-array>
+
+    //
+<string name="country_0">भारत</string>
+<string-array name="State">
+<item>हरियाणा</item>
+<item>उत्तर प्रदेश </item>
+</string-array>
+
+    //
+<string name="state_0">हरियाणा</string>
+<string name="state_1">उत्तर प्रदेश</string>
+<string-array name="City">
+<item>नरनौलl</item>
+<item>थानाभवन</item>
+</string-array>
+
+    //
+<string name="city_0">नरनौल</string>
+<string name="city_1">थानाभवन</string>
+<string-array name="food">
+<item>रेस्टोरेंट</item>
+<item>जूस कॉर्नर</item>
+<item>फ़ास्ट फ़ूड</item>
+<item>ढ़ाभा</item>
+<item>बार</item>
+</string-array>
+    //
+<string name="food_0">रेस्टोरेंट</string>
+    <string name="food_1">जूस कॉर्नर</string>
+
+    <string name="food_2">फ़ास्ट फ़ूड</string>
+    <string name="food_3">ढ़ाभा</string>
+    <string name="food_4">बार</string>
+    <string-array name="gym_sport">
+        <item>जिम</item>
+        <item>वॉटर पार्क</item>
+        <item>स्पोर्ट्स स्टोर</item>
+        <item>स्विमिंग पूलl</item>
+        <item>स्पोर्ट्स अकेडमी</item>
+    </string-array>
+    //
+    <string name="gym_0">जिम</string>
+    <string name="gym_1">वॉटर पार्क</string>
+    <string name="gym_2">स्पोर्ट्स स्टोर</string>
+    <string name="gym_3">स्विमिंग पूल</string>
+    <string name="gym_4">स्पोर्ट्स अकेडमी</string>
+    <string-array name="parlour_saloon">
+        <item>केवल लेडीज़</item>
+        <item>केवल जेंट्स</item>
+        <item>दोनो</item>
+        <item>स्पा</item>
+    </string-array>
+
+    //
+    <string name="parlourl_0">केवल लेडीज़</string>
+    <string name="parlourl_1">केवल जेंट्स</string>
+    <string name="parlourl_2">दोनो</string>
+    <string name="parlourl_3">स्पा</string>
+    <string-array name="electronics">
+        <item>मोबाइल</item>
+        <item>इलेक्ट्रॉनिक्स</item>
+        <item>कम्प्यूटर एंड लैप्टॉप</item>
+    </string-array>
+    //
+    <string name="electronics_0">मोबाइल</string>
+    <string name="electronics_1">इलेक्ट्रॉनिक्स</string>
+    <string name="electronics_2">कम्प्यूटर एंड लैप्टॉप</string>
+    <string-array name="health">
+        <item>हॉस्पिटल</item>
+        <item>हेल्थ क्लिनिक्स</item>
+        <item>मेडिकल स्टोर</item>
+        <item>पशु केयर</item>
+    </string-array>
+
+    //
+    <string name="health_0">हॉस्पिटल</string>
+    <string name="health_1">हेल्थ क्लिनिक्स</string>
+    <string name="health_2">मेडिकल स्टोर</string>
+    <string name="health_3">पशु केयर</string>
+    <string-array name="travel">
+        <item>ऑटो</item>
+        <item>टैक्सी कार</item>
+        <item>ऐयरवेज़ </item>
+        <item>रेलवेज़</item>
+        <item>रोडवेज़</item>
+    </string-array>
+
+    //
+    <string name="travel_0">ऑटो</string>
+    <string name="travel_1">टैक्सी कार</string>
+    <string name="travel_2">ऐयरवेज़</string>
+    <string name="travel_3">रेलवेज़</string>
+    <string name="travel_4">रोडवेज़</string>
+    <string-array name="travel_store">
+        <item>ऑटो</item>
+        <item>टैक्सी कार</item>
+    </string-array>
+
+
+    <string-array name="shows_cinema">
+        <item>शो</item>
+        <item>सिनेमा हॉल</item>
+
+    </string-array>
+
+    //
+    <string name="shows_0">शो</string>
+    <string name="shows_1">सिनेमा हॉल</string>
+    <string-array name="education">
+        <item>स्कूल</item>
+        <item>टयूशन सेंटर</item>
+        <item>होम टयूशन</item>
+        <item>अकेडमी</item>
+        <item>बुक स्टोर</item>
+        <item>कोचिंग सेंटर</item>
+    </string-array>
+
+    //
+    <string name="education_0">स्कूल</string>
+    <string name="education_1">टयूशन सेंटर</string>
+    <string name="education_2">होम टयूशन</string>
+    <string name="education_3">अकेडमी</string>
+    <string name="education_4">बुक स्टोर</string>
+    <string name="education_5">कोचिंग सेंटर</string>
+    <string-array name="booking">
+        <item>टेंट</item>
+        <item>पार्टी हॉल</item>
+        <item>डेकोरेशन</item>
+        <item>मैरिज प्लेस</item>
+        <item>म्यूज़िक सिस्टम (डी॰जे॰)</item>
+        <item>केटरिंग(हलवाई)</item>
+
+    </string-array>
+    //
+    <string name="booking_0">टेंट</string>
+    <string name="booking_1">पार्टी हॉल</string>
+    <string name="booking_2">डेकोरेशन</string>
+    <string name="booking_3">मैरिज प्लेस</string>
+    <string name="booking_4">म्यूज़िक सिस्टम (डी॰जे॰)</string>
+    <string name="booking_5">केटरिंग(हलवाई)</string>
+    <string-array name="rentals">
+        <item>दुकान</item>
+        <item>मकान</item>
+        <item>गोदाम</item>
+        <item>पी॰जी॰(पेयिंग गेस्ट)</item>
+    </string-array>
+    //
+    <string name="rentals_0">दुकान</string>
+    <string name="rentals_1">मकान</string>
+    <string name="rentals_2">गोदाम</string>
+    <string name="rentals_3">पी॰जी॰(पेयिंग गेस्ट)</string>
+    <string-array name="sell_buy">
+        <item>प्लॉट</item>
+        <item>दुकान</item>
+        <item>मकान</item>
+        <item>व्हीकल</item>
+        <item>फ़र्निचर</item>
+        <item>इलेक्ट्रॉनिक्स</item>
+        <item>अन्य</item>
+    </string-array>
+    <string name="sell_0">प्लॉट</string>
+    <string name="sell_1">दुकान</string>
+    <string name="sell_2">मकान</string>
+    <string name="sell_3">व्हीकल</string>
+    <string name="sell_4">फ़र्निचर</string>
+    <string name="sell_5">इलेक्ट्रॉनिक्स</string>
+    <string name="sell_6">अन्य</string>
+    <string-array name="agriculture">
+        <item>अनाज मंडी</item>
+        <item>सब्ज़ी मंडी</item>
+        <item>बीज भंडार</item>
+
+    </string-array>
+    //
+    <string name="agriculture_0">अनाज मंडी</string>
+    <string name="agriculture_1">सब्ज़ी मंडी</string>
+    <string name="agriculture_2">बीज भंडार</string>
+    <string-array name="bulding">
+        <item>ठेकेदार</item>
+        <item>धर्म काँटा</item>
+        <item>मटीरीयल स्टोर</item>
+
+    </string-array>
+
+    <string name="bulding_0">ठेकेदार</string>
+    <string name="bulding_1">धर्म काँटा</string>
+    <string name="bulding_2">मटीरीयल स्टोर</string>
+    <string-array name="stay">
+        <item>होटल</item>
+        <item>धर्मशाला</item>
+
+    </string-array>
+    //
+    <string name="stay_0">होटल</string>
+    <string name="stay_1">धर्मशाला</string>
+    <string-array name="cyber">
+        <item>साइबर कैफ़े</item>
+        <item>सी॰सी॰टी॰वी॰ स्टोर</item>
+        <item>फ़ोटो स्टूडीओ</item>
+
+    </string-array>
+    ///
+    <string name="cyber_0">साइबर कैफ़े</string>
+    <string name="cyber_1">सी॰सी॰टी॰वी॰ स्टोर</string>
+    <string name="cyber_2">फ़ोटो स्टूडीओ</string>
+    <string-array name="factories">
+        <item>टाइल</item>
+        <item>ईंट</item>
+    </string-array>
+    //
+    <string name="factories_0">टाइल</string>
+    <string name="factories_1">ईंट</string>
+    <string-array name="ngo_club">
+        <item>एन॰जी॰ओ॰</item>
+        <item>क्लब</item>
+
+    </string-array>
+
+    //
+    <string name="ngo_0">एन॰जी॰ओ॰</string>
+    <string name="ngo_1">क्लब</string>
+    <string-array name="bank_atm">
+        <item>इंशोरैन्स</item>
+        <item>बैंक</item>
+        <item>ए॰टी॰एम॰</item>
+
+    </string-array>
+
+    //
+    <string name="bank_0">इंशोरैन्स</string>
+    <string name="bank_1">बैंक</string>
+    <string name="bank_2">ए॰टी॰एम॰</string>
+<!--    <string-array name=“पेट्रोल पम्प">-->
+<string-array name="petrol_pump">
+<item>पेट्रोल पम्प</item>
+<item>सर्विस स्टेशन</item>
+<item>गैस एजेन्सी</item>
+
+    </string-array>
+
+
+<string name="petrol_0">पेट्रोल पम्प</string>
+<string name="petrol_1">सर्विस स्टेशन</string>
+<string name="petrol_2">गैस एजेन्सी</string>
+
+<string-array name="travel_for_store">
+<item>ऑटो</item>
+<item>टैक्सी कार</item>
+</string-array>
+
+
+
+<string-array name="government">
+<item>पुलिस स्टेशन</item>
+<item>फ़ायर ब्रिगेड</item>
+<item>हॉस्पिटल</item>
+<item>कॉलेज</item>
+<item>कोर्ट</item>
+<item>बी॰डी॰ओ॰ ऑफ़िस</item>
+<item>पोस्ट ऑफ़िस</item>
+<item>बी॰ई॰ओ॰ ऑफ़िस</item>
+<item>डी॰ई॰ओ॰ ऑफ़िस</item>
+<item>पंचायत भवन</item>
+<item>ऑफ़िस</item>
+</string-array>
+<!--    <string name="hello_blank_fragment">HelloH blank fragment</string>-->
+<!--    <string name="check_mail">We have sentH you a verification link on your registerd email </string>-->
+<!--    <string name="facebook_app_id">2618037285122683</string>-->
+<!--    <string name="fb_login_protocol_scheme">fb2618037285122683</string>-->
+<!--    <string name="navigation_drawer_open">Drawer Open</string>-->
+<!--    <string name="navigation_drawer_close">Drawer Closed</string>-->
+<!--    <string name="setup_profile">NHow let\s setup your store profile.\n Your store is not visible on CityTimes as of yet </string>-->
+<!--    <string name="let_go">Let\Hn Go!</string>-->
+
+<!--    <string name="settings">Set Hker rhe hai</string>-->
+<!--    <string name="personalize">PHersonalize</string>-->
+<!--    <string name="english">EnHglis</string>-->
+<!--    <string name="change_languange_of_the_app">in hHHindi</string>-->
+<!--    <string name="delhi">in Hhindi</string>-->
+<!--    <string name="default_city_for_news_alerts_and_more">in hHindi</string>-->
+<!--    <string name="change">badaliyeH</string>-->
+<!--    <string name="categories">palHicaye</string>-->
+<!--    <string name="all_services">suvidhHa</string>-->
+<!--    <string name="government">sarkariH</string>-->
+<!--    <string name="setup_your_store">HSetup your Store!</string>-->
+
+<!--    <string name="app_name">MHyCityh</string>-->
+<!--    <string name="shopping">HShoppinhg</string>-->
+<!--    <string name="food">FHoodh</string>-->
+<!--    <string name="gym_sports">hGym-SHports</string>-->
+<!--    <string name="parlourl_saloon">HParlourl-Saloon</string>-->
+<!--    <string name="electronics">HEhlectronics</string>-->
+<!--    <string name="health">HeaHlth</string>-->
+<!--    <string name="travel">TrHavel</string>-->
+<!--    <string name="movies">MHovies</string>-->
+<!--    <string name="education">EducatHion</string>-->
+<!--    <string name="catering">CateriHng</string>-->
+<!--    <string name="rentals">RentalHs</string>-->
+<!--    <string name="sell_buy">SellH and Buy</string>-->
+<!--    <string name="agriculture">HAgriculture</string>-->
+<!--    <string name="machanice">HMachanice</string>-->
+<!--    <string name="other">OthHer</string>-->
+<!--    <string name="text">LigHht Mode</string>-->
+
+<!--    <string name="stores">HStores</string>-->
+<!--    <string-array name="Category">-->
+<!--        <item>ShHoppinghh</item>-->
+<!--        <item>FHoodhh</item>-->
+<!--        <item>HStayhh</item>-->
+<!--        <item>ParlouhHhrl-Saloon</item>-->
+<!--        <item>Gym-SpHorts</item>-->
+<!--        <item>ShowsH and Cinema</item>-->
+<!--        <item>EducHation</item>-->
+<!--        <item>HeaHlth</item>-->
+<!--        <item>CyHber</item>-->
+<!--        <item>EHlectronics</item>-->
+<!--        <item>HTravel</item>-->
+<!--        <item>VehiclesH and Workshop</item>-->
+<!--        <item>BookingH</item>-->
+<!--        <item>RentalHs</item>-->
+<!--        <item>Sell Hand Buy</item>-->
+<!--        <item>BuliHding Material</item>-->
+<!--        <item>Agriculture</item>-->
+<!--        <item>FacHtories</item>-->
+<!--        <item>NGHO and Club</item>-->
+<!--        <item>BHank and Atm</item>-->
+<!--        <item>HPentrol Pump</item>-->
+<!--    </string-array>-->
+
+<!--    <string-array name="shopping">-->
+<!--    <item>MaHllh</item>-->
+<!--    <item>SHuperbazarh</item>-->
+<!--    <item>HClothes</item>-->
+<!--    <item>FootwearHhhhhh</item>-->
+<!--    <item>FurnitureH</item>-->
+<!--    <item>GeneralH store</item>-->
+<!--    <item>Daily Hhousehold</item>-->
+<!--    </string-array>-->
+
+
+<!--&lt;!&ndash;    <string name="open">khula</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="close">band</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="we_are_indiain">We are INDIAIN</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="about_city">About City</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="general">General</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="history">History</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="tourism">Tourism</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="movies_shows">Movies Shows</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="new_show">New Show</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="shows">Shows</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="enter_these_details">Enter these details</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="select_country">Select Country</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="select_state">Select State</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="select_city">Select City</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="procced">procced</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="favourite_stores">Favourite Stores</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="no_such_store_exist">No such store exist</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="add_new_collection">Add new collection</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="my_product">My Product</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="products">Products</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="government_offices">Government Offices</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="offices">Offices</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="sort">Sort</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="plots">Plots</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="plot_for_selling">Plot for selling</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="product_title">Product title</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="product_type">Product type</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="price">Price:</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="_9027385476">9027385476</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="address">address</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="opeing_closing_time">opeing-closing time</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="contact_number">contact number</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="s">S</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="m">M</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="t">T</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="w">W</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="t">T</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="f">F</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="s">S</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="product_descrption">Product Descrption</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="product_descrption">Product Descrption</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="register_your_service">Register your Service!</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="service_name">Service Name</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="owner_s_name">Owner\'s Name</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="mobile_number1">Mobile Number1</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="mobile_number2_optional">Mobile Number2(optional)</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="current_location">current location</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="select_country">Select Country</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="select_state">Select State</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="select_city">Select City</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="store_category">Store Category</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="store_sub_category">Store Sub-Category</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="register">Register</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="by_registering_you_agree_to">By registering you agree to</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="and">and</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="privacy_policy">Privacy Policy</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="of_the_my_city">of the My City</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="sell_and_buy">Sell and Buy</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="sell_products">Sell Products</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="products_for_selling">Products for selling</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="dark_theme">Dark theme</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="clear_app_cache">Clear app cache</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="support">Support</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="rate_us">Rate us!</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="share_this_app">share this app</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="feedback">Feedback</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="information">Information</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="about_us">About Us</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="version">Version</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="logout">Logout</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="privacy">Privacy</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="terms_of_use">Terms of use</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="privacy_policy">Privacy Policy</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="store_name">Store Name</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="seller_name">Seller Name</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="board_name">Board name</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="rating">rating</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="s">S</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="m">M</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="t">T</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="w">W</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="t">T</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="f">F</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="s">S</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="home_delivery_not_available">Home Delivery Not Available</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="workers_required">Workers required!</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="hostel_facility">Hostel facility!</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="transport_facility">transport facility!</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="see_all_photos">See all photos</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="service_descrption">Service Descrption</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="description_not_added">Description not added</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="shows">Shows</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="welcome_to">Welcome to</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="c">C</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="ity">ity</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="t">T</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="imes">imes</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="store_name">Store Name</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="school_board">School board</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="seller_name">Seller Name</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="m">M</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="t">T</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="w">W</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="t">T</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="f">F</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="s">S</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="home_delivery_not_available">Home Delivery Not Available</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="workers_required">Workers required!</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="transport_servics_avilable">Transport servics avilable</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="hostel_servics_avilable">Hostel servics avilable</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="see_all_photos">See all photos</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="shows">Shows</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="service_descrption">Service Descrption</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="service_description">service description</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="cancel">CANCEL</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="apply">Apply</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="all_photos">All Photos</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="category_store">Category Store</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="facebook">Facebook</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="google">Google</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="email_address">Email Address</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="password">Password</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="forgot_password">Forgot Password?</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="login">Login</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="don_t_have_an_account">Don\'t have an account?</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="register_now">Register Now</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="register_to_citytimes">Register to CityTimes</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="full_name">Full Name</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="email">Email</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="password">Password</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="select_country">Select Country</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="select_state">Select State</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="select_city">Select City</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="register">Register</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="by_registering_you_agree_to">By registering you agree to</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="term_and_conditions">Term and Conditions</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="and">and</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="privacy_policy">Privacy Policy</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="of_the_my_city">of the My City</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="add_collection">Add Collection</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="collection_name">Collection name</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="cancel">CANCEL</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="add">ADD</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="show_time">Show Time:</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="from">From:</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="hh">hh</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="mm">mm</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="pm">PM</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="am">AM</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="to">To:</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="hh">hh</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="mm">mm</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="am">AM</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="pm">PM</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="movie_name">movie name</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="tickit_price">tickit price</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="cancel">CANCEL</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="category_name">category name</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="define_search">Define Search</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="sub_category_name">Sub Category Name</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="category_name">category name</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="explore">Explore</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="city_name">City Name</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="sell_and_buy">Sell and Buy</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="information">Information</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="about_us">About Us</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="contact_us">Contact Us</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="version">Version</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="logout">Logout</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="loading">loading...</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="define_search">Define Search</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="product_title">Product title</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="product_type">Product type</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="seller_city">Seller city</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="seller_phone">Seller phone</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="define_search">Define Search</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="store_name">Store Name</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="store_address">Store Address</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="principal_director_name">Principal/director name</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="school_board">School board</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="cancel">CANCEL</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="update">Update</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="check_your_email">Check your Email</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="go_to_login">Go to Login</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="send_feedback">Send feedback</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="type_message">type message</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="cancel">CANCEL</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="send">SEND</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="general">General</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="history">History</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="sell_your_product">Sell your product</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="add_more">add more</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="add_more">add more</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="product_title_name">Product title/name</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="product_price">Product price</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="seller_phone_number">Seller phone number</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="seller_city">Seller city</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="select_product_type">select product type</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="enter_product_type_name">Enter product type name</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="product_description">Product description</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="cancel">CANCEL</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="sell">SELL</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="no_such_store_exist">No such store exist</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="tourism">Tourism</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="reset_password">Reset Password</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="enter_email">enter email</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="cancel">CANCEL</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="sumbit">SUMBIT</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="image_discription">Image discription</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="back">back</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="office_type">office type</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="address">address</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="your_data_safe">your data safe</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="store">Store</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="rename">Rename</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="add_photo">Add Photo</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="upload">upload</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="store">Store</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="rate_now">Rate Now!</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="rename_collection">Rename Collection</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="new_collection_name">new collection name</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="update">Update</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="product_name">Product name</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="product_type">Product type</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="city">City</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="sell_your_product">Sell your product</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="add_more">add more</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="add_more">add more</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="product_title_name">Product title/name</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="product_price">Product price</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="seller_phone_number">Seller phone number</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="seller_city">Seller city</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="select_product_type">select product type</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="enter_product_type_name">Enter product type name</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="product_description">Product description</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="cancel">CANCEL</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="sell">SELL</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="shop_name">Shop name</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="shop_name">Shop name</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="no_of_ratings">no_of_ratings</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="km">km</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="avaliable">Avaliable</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="home_delivery_service">Home Delivery Service</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="next">NEXT</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="setup_your_service_profile">Setup your Service profile</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="upload_a_cover_photo">Upload a cover photo</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="upload_owner_s_photo">Upload owner\'s photo</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="timings">Timings</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="setup_other_details">Setup Other details</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="awesome">Awesome!</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="let_s_go">Let\'s Go</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="from_9_40am">From: 9:40AM</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="to_9_40am">To: 9:40AM</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="price_400rupee">Price:400rupee</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="sort_by">Sort By</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="distance">Distance</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="km">km</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="set_default">Set Default</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="no_terms">No Terms</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="store_timings">Store timings</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="from">From:</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="am">AM</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="am">AM</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="pm">PM</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="pm">PM</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="to">To:</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="am">AM</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="am">AM</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="pm">PM</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="pm">PM</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="days">Days:</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="s">S</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="s">S</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="m">M</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="update_store_opening_days">Update Store Opening days</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="days">Days:</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="s">S</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="s">S</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="m">M</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="cancel">CANCEL</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="update">Update</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="update_home_delivery_status">Update Home Delivery Status</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="update">Update</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="cancel">CANCEL</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="is_hostel_facility">Is Hostel facility?</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="cancel">CANCEL</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="update">Update</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="update_owner_name">Update Owner name</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="owner_name">Owner name</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="cancel">CANCEL</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="update">Update</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="update_phone_number">Update phone number</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="phone_number">phone number</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="other_phone_number_optional">Other phone number(optional)</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="cancel">CANCEL</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="update">Update</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="is_shop_open">Is shop open?</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="cancel">CANCEL</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="update">Update</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="update_store_local_address">Update Store local address</string>&ndash;&gt;-->
+
+
+<!--    <string name="open">opeHn</string>-->
+<!--    <string name="close">cloHsed</string>-->
+<!--    <string name="we_are_indiain">WHe are INDIAIN</string>-->
+<!--    <string name="about_city">About HCity</string>-->
+
+
+
+<!--    <string name="movies_shows">MovieHs Shows</string>-->
+<!--    <string name="new_show">New ShoHw</string>-->
+
+<!--    <string name="enter_these_details">HEnter these details</string>-->
+
+
+<!--    <string name="procced">prHocced</string>-->
+<!--    <string name="favourite_stores">FHavourite Stores</string>-->
+
+<!--    <string name="add_new_collection">Add Hnew collection</string>-->
+<!--    <string name="my_product">My ProductH</string>-->
+<!--    <string name="products">ProductHs</string>-->
+<!--    <string name="government_offices">HGovernment Offices</string>-->
+<!--    <string name="offices">OfficesH</string>-->
+<!--    <string name="sort">SortH</string>-->
+<!--    <string name="plots">PlotHs</string>-->
+<!--    <string name="plot_for_selling">PloHt for selling</string>-->
+
+<!--    <string name="price">PriceH:</string>-->
+<!--    <string name="_9027385476">902738547H6</string>-->
+
+<!--    <string name="opeing_closing_time">opeing-cloHsing time</string>-->
+<!--    <string name="contact_number">contaHct number</string>-->
+
+<!--    <string name="register_your_service">HRegister your Service!</string>-->
+<!--    <string name="service_name">Service NaHme</string>-->
+<!--    <string name="owner_s_name">Owner\'s NaHme</string>-->
+<!--    <string name="mobile_number1">Mobile NumHber1</string>-->
+<!--    <string name="mobile_number2_optional">MoHbile Number2(optional)</string>-->
+<!--    <string name="current_location">current loHcation</string>-->
+
+<!--    <string name="store_category">Store CategorHy</string>-->
+<!--    <string name="store_sub_category">Store Sub-HCategory</string>-->
+<!--<string name="sell_products">Sell ProHducts</string>-->
+<!--    <string name="products_for_selling">ProducHts for selling</string>-->
+<!--    <string name="dark_theme">Dark themHe</string>-->
+<!--    <string name="clear_app_cache">ClearH app cache</string>-->
+<!--    <string name="support">SupportH</string>-->
+<!--    <string name="rate_us">Rate us!H</string>-->
+<!--    <string name="share_this_app">shHare this app</string>-->
+<!--    <string name="feedback">FeedbackH</string>-->
+
+<!--    <string name="privacy">PrivacyH</string>-->
+<!--    <string name="terms_of_use">TerHms of use</string>-->
+
+<!--    <string name="board_name">HBoard name</string>-->
+<!--    <string name="rating">ratHing</string>-->
+
+<!--    <string name="hostel_facility">Hostel faHcility!</string>-->
+<!--    <string name="transport_facility">transpoHrt facility!</string>-->
+
+<!--    <string name="description_not_added">DeHscription not added</string>-->
+
+<!--    <string name="welcome_to">WHelcome to</string>-->
+<!--    <string name="c">CH</string>-->
+<!--    <string name="ity">ityH</string>-->
+
+<!--    <string name="imes">iHmes</string>-->
+
+<!--    <string name="seller_name">Seller NaHme</string>-->
+
+<!--    <string name="home_delivery_not_available">HoHme Delivery Not Available</string>-->
+<!--    <string name="workers_required">Workers requHired!</string>-->
+<!--    <string name="transport_servics_avilable">THransport servics avilable</string>-->
+<!--    <string name="hostel_servics_avilable">HosHtel servics avilable</string>-->
+<!--    <string name="see_all_photos">HSee all photos</string>-->
+<!--    <string name="shows">ShowHs</string>-->
+<!--    <string name="service_descrption">SeHrvice Descrption</string>-->
+<!--    <string name="service_description">Hservice description</string>-->
+
+<!--    <string name="apply">AppHly</string>-->
+<!--    <string name="all_photos">All PhHotos</string>-->
+<!--    <string name="category_store">CHategory Store</string>-->
+<!--    <string name="facebook">FacHebook</string>-->
+<!--    <string name="google">GoogHle</string>-->
+<!--    <string name="email_address">Email AddressH</string>-->
+
+<!--    <string name="forgot_password">Forgot PasHsword?</string>-->
+<!--    <string name="login">LogiHn</string>-->
+<!--    <string name="don_t_have_an_account">Don\'t haveH an account?</string>-->
+<!--    <string name="register_now">Register NowH</string>-->
+<!--    <string name="register_to_citytimes">ReHgister to CityTimes</string>-->
+<!--    <string name="full_name">FHull Name</string>-->
+<!--    <string name="email">EmaiHl</string>-->
+<!--    <string name="password">PassworHd</string>-->
+<!--    <string name="select_country">HSelect Country</string>-->
+<!--    <string name="select_state">SHelect State</string>-->
+<!--    <string name="select_city">SHelect City</string>-->
+<!--    <string name="register">ReHgister</string>-->
+<!--    <string name="by_registering_you_agree_to">BHy registering you agree to</string>-->
+<!--    <string name="term_and_conditions">TeHrm and Conditions</string>-->
+<!--    <string name="and">aHnd</string>-->
+<!--    <string name="privacy_policy">PriHvacy Policy</string>-->
+<!--    <string name="of_the_my_city">Hof the My City</string>-->
+<!--    <string name="add_collection">AHdd Collection</string>-->
+<!--    <string name="collection_name">CHollection name</string>-->
+
+<!--    <string name="add">ADHD</string>-->
+<!--    <string name="show_time">Show Time:H</string>-->
+
+<!--    <string name="movie_name">movie namHe</string>-->
+<!--    <string name="tickit_price">tickitH price</string>-->
+
+<!--    <string name="sub_category_name">HSub Category Name</string>-->
+<!--    <string name="category_name">catHegory name</string>-->
+<!--    <string name="explore">ExploreH</string>-->
+<!--    <string name="city_name">City Name</string>-->
+<!--    <string name="sell_and_buy">SellH and Buy</string>-->
+<!--    <string name="information">InfoHrmation</string>-->
+<!--    <string name="about_us">About HUs</string>-->
+<!--    <string name="contact_us">ConHtact Us</string>-->
+<!--    <string name="version">VersiHon</string>-->
+<!--    <string name="logout">LogouHt</string>-->
+<!--    <string name="loading">loading.H..</string>-->
+
+<!--    <string name="product_title">ProductH title</string>-->
+
+<!--    <string name="seller_phone">Seller Hphone</string>-->
+<!--    <string name="define_search">DefinHe Search</string>-->
+<!--    <string name="store_name">Store NHame</string>-->
+<!--    <string name="store_address">Store AddresHs</string>-->
+<!--    <string name="principal_director_name">PHrincipal/director name</string>-->
+<!--    <string name="school_board">SchooHl board</string>-->
+
+<!--    <string name="check_your_email">HCheck your Email</string>-->
+<!--    <string name="go_to_login">Go tHo Login</string>-->
+<!--    <string name="send_feedback">HSend feedback</string>-->
+<!--    <string name="type_message">tyHpe message</string>-->
+
+<!--    <string name="send">SENHD</string>-->
+<!--    <string name="general">GenerHal</string>-->
+<!--    <string name="history">HistHoryH</string>-->
+
+<!--    <string name="no_such_store_exist">HNo such store exist</string>-->
+<!--    <string name="tourism">TourismH</string>-->
+<!--    <string name="reset_password">HReset Password</string>-->
+<!--    <string name="enter_email">eHnter email</string>-->
+
+<!--    <string name="sumbit">SUMBITH</string>-->
+<!--    <string name="image_discription">ImHage discription</string>-->
+<!--    <string name="back">baHck</string>-->
+<!--    <string name="office_type">oHffice type</string>-->
+<!--    <string name="address">addrHess</string>-->
+<!--    <string name="your_data_safe">your Hdata safe</string>-->
+
+<!--    <string name="rename">RenaHme</string>-->
+<!--    <string name="add_photo">AdHd Photo</string>-->
+<!--    <string name="upload">uplHoad</string>-->
+<!--    <string name="store">StoHre</string>-->
+<!--    <string name="rate_now">Rate NoHw!</string>-->
+<!--    <string name="rename_collection">RenameH Collection</string>-->
+<!--    <string name="new_collection_name">newH collection name</string>-->
+
+<!--    <string name="product_name">PrHoduct name</string>-->
+
+<!--    <string name="city">CHity</string>-->
+<!--    <string name="sell_your_product">HSell your product</string>-->
+
+<!--    <string name="add_more">adHd more</string>-->
+<!--    <string name="product_title_name">ProdHuct title/name</string>-->
+<!--    <string name="product_price">Product Hprice</string>-->
+<!--    <string name="seller_phone_number">SHeller phone number</string>-->
+<!--    <string name="seller_city">SeHller city</string>-->
+<!--    <string name="select_product_type">select pHroduct type</string>-->
+<!--    <string name="enter_product_type_name">EntHer product type name</string>-->
+<!--    <string name="product_description">ProducHt description</string>-->
+
+<!--    <string name="sell">SELHL</string>-->
+
+<!--    <string name="shop_name">Shop Hname</string>-->
+<!--    <string name="no_of_ratings">no_Hof_ratings</string>-->
+
+<!--    <string name="avaliable">AvaliHable</string>-->
+<!--    <string name="home_delivery_service">HomeH Delivery Service</string>-->
+<!--    <string name="next">NEHXT</string>-->
+<!--    <string name="setup_your_service_profile">HSetup your Service profile</string>-->
+<!--    <string name="upload_a_cover_photo">UploaHd a cover photo</string>-->
+<!--    <string name="upload_owner_s_photo">UploHad owner\'s photo</string>-->
+<!--    <string name="timings">TiminHgs</string>-->
+<!--    <string name="setup_other_details">SetupH Other details</string>-->
+<!--    <string name="awesome">Awesome!</string>-->
+<!--    <string name="let_s_go">Let\'sH Go</string>-->
+<!--    <string name="from_9_40am">From: H9:40AM</string>-->
+<!--    <string name="to_9_40am">To: 9:40AM</string>-->
+<!--    <string name="price_400rupee">PriceH:400rupee</string>-->
+<!--    <string name="sort_by">SoHrt By</string>-->
+<!--    <string name="distance">DHistance</string>-->
+<!--    <string name="km">kmH</string>-->
+<!--    <string name="set_default">SeHt Default</string>-->
+<!--    <string name="no_terms">No THerms</string>-->
+<!--    <string name="store_timings">StHore timings</string>-->
+<!--    <string name="from">FroHm:</string>-->
+
+
+<!--    <string name="update_store_opening_days">HUpdate Store Opening days</string>-->
+<!--    <string name="days">Days:H</string>-->
+
+<!--    <string name="s">SH</string>-->
+<!--    <string name="m">MH</string>-->
+
+
+<!--    <string name="update_home_delivery_status">UHpdate Home Delivery Status</string>-->
+
+<!--    <string name="is_hostel_facility">Is HHostel facility?</string>-->
+
+<!--    <string name="update_owner_name">UpdaHte Owner name</string>-->
+<!--    <string name="owner_name">Owner nameH</string>-->
+
+<!--    <string name="update_phone_number">HUpdate phone number</string>-->
+<!--    <string name="phone_number">phoneH number</string>-->
+<!--    <string name="other_phone_number_optional">OtheHr phone number(optional)</string>-->
+
+<!--    <string name="is_shop_open">IHs shop open?</string>-->
+<!--    <string name="cancel">CANCELH</string>-->
+<!--    <string name="update">UpdatHe</string>-->
+<!--    <string name="update_store_local_address">UpdHate Store local address</string>-->
+<!--    <string name="shopping_0">MalHl</string>-->
+<!--    <string name="shopping_1">SuperHbazar</string>-->
+<!--    <string name="shopping_2">ClotHhes</string>-->
+<!--    <string name="shopping_3">FooHtwear</string>-->
+<!--    <string name="shopping_4">FuHrniture</string>-->
+<!--    <string name="shopping_5">GHeneral store</string>-->
+<!--    <string name="shopping_6">HDaily household</string>-->
+<!--    <string name="t">tH</string>-->
+<!--    <string name="w">wH</string>-->
+
+<!--    <string name="product_descrption">HProduct descrption</string>-->
+<!--    <string name="f">fH</string>-->
+<!--    <string name="hh">hhH</string>-->
+<!--    <string name="pm">pHm</string>-->
+<!--    <string name="am">Ham</string>-->
+<!--    <string name="mm">mmH</string>-->
+<!--    <string name="to">toH</string>-->
+<!--    <string name="update_store_name">Update Store NamHe</string>-->
+<!--    <string name="update_store_timing">Update store tiHming</string>-->
+<!--    <string name="worker_are_required_or_not">Worker Hare required or not</string>-->
+
+<!--    <string name="country">CouHntry</string>-->
+<!--    <string name="state">StatHe</string>-->
+<!--    <string name="sub_category">SubHCategory</string>-->
+<!--    &lt;!&ndash;    <string name="store_name">Store Name</string>&ndash;&gt;-->
+<!--    //-->
+
+<!--<string name="gym_0">GHymh</string>-->
+<!--<string name="gym_1">HWaterparkh</string>-->
+<!--<string name="gym_2">Sports StoreHh</string>-->
+<!--<string name="gym_3">Swiming pooHlh</string>-->
+<!--<string name="gym_4">Sports AceHdamyh</string>-->
+
+<!--    <string name="food_0">RestHaurantsh</string>-->
+<!--    <string name="food_1">JuiHce Cornersh</string>-->
+<!--    <string name="food_2">FaHst Foodh</string>-->
+<!--    <string name="food_3">DHhabhah</string>-->
+<!--    <string name="food_4">HBarh</string>-->
+
+<!--    <string name="city_0">NauralHh</string>-->
+<!--    <string name="city_1">ThanaBhawaHnh</string>-->
+
+<!--    <string name="state_0">HaryanahH</string>-->
+<!--    <string name="state_1">Uttar PrHhadesh</string>-->
+
+<!--    <string name="country_0">IndiaH</string>-->
+
+<!--    <string name="vehicles_0">ShowrooHmh</string>-->
+<!--    <string name="vehicles_1">WorkshHop</string>-->
+<!--    <string name="vehicles_2">JCB and CrhaneH</string>-->
+<!--    <string name="vehicles_3">Two wheller misthri</string>-->
+<!--    <string name="vehicles_4">Four wheeler misHthri</string>-->
+<!--    <string name="worker_required">Yes, workers requiHred</string>-->
+<!--    <string name="worker_not_required">No, workers requiHred</string>-->
+<!--    <string name="home_delivery">Home delivery AvailablHe</string>-->
+<!--    <string name="no_home_delivery">Home delivery not HAvailable</string>-->
+<!--    <string name="do_you_want_delete_this_product">DoH you want to delete this product?</string>-->
+<!--    <string name="delete_product">Delete PrHoduct</string>-->
+<!--    <string name="get_current_location">geHt current location</string>-->
+<!--    <string name="opne_gps">open GHps</string>-->
+<!--    <string name="try_again">try Hagain</string>-->
+<!--    <string name="deleting">deleHting...</string>-->
+<!--    <string name="do_you_want_delete_this_show">DoH you want to delete this show?</string>-->
+<!--    <string name="delete_show">DeleteH Show</string>-->
+<!--    <string name="not_available">NotH available</string>-->
+<!--    <string name="set_up_store">sHeHtup store...</string>-->
+<!--    <string name="set_up">evHerything setuped</string>-->
+<!--    <string name="all">AllH</string>-->
+<!--    <string name="police_station">HPolice Station</string>-->
+<!--    <string name="fire_brigade">HFire Brigade</string>-->
+<!--    <string name="college">HCollege</string>-->
+<!--    <string name="court">CHourt</string>-->
+<!--    <string name="bdo_office">BDO officeH</string>-->
+<!--    <string name="post_office">Post OffHice</string>-->
+<!--    <string name="beo_office">BEO offiHce</string>-->
+<!--    <string name="deo_office">DEO offHice</string>-->
+<!--    <string name="panchayat_bhawan">HPanchayat Bhawan</string>-->
+<!--    <string name="u_p_board">U.P. HBoard</string>-->
+<!--    <string name="haryana_board">HHaryana Board</string>-->
+<!--    <string name="cbse_board">HCBSE Board</string>-->
+<!--    <string name="hospital">HHospital</string>-->
+
+<!--    //-->
+<!--    <string name="hostel_available">Hostel faciHlity avilable</string>-->
+<!--    <string name="hostel_not_available">HostelH facility not avilable</string>-->
+<!--    <string name="transport_available">TranspHort facility avilable</string>-->
+<!--    <string name="transport_not_available">THransport facility not avilable</string>-->
+<!--    <string name="delivery">deliverHy</string>-->
+<!--    <string name="no_delivery">deliverHy not</string>-->
+<!--    <string name="product_type">ProduHct Type</string>-->
+<!--    <string name="photo_uploading">PHhoto uploading...</string>-->
+
+
+<!--    //-->
+<!--    <string name="petrol_0">PetrHol pump</string>-->
+<!--    <string name="petrol_1">SerHvices Stations</string>-->
+<!--    <string name="petrol_2">GaHs agencies</string>-->
+<!--    <string name="bank_0">InsHurance</string>-->
+<!--    <string name="bank_1">BaHnk</string>-->
+<!--    <string name="bank_2">AHTM</string>-->
+<!--    <string name="ngo_0">NHGO</string>-->
+<!--    <string name="ngo_1">CluHb</string>-->
+<!--    <string name="factories_0">ilHes</string>-->
+<!--    <string name="factories_1">BHricks</string>-->
+<!--    <string name="cyber_0">CyHber cafe</string>-->
+<!--    <string name="cyber_1">CHCTV stores</string>-->
+<!--    <string name="cyber_2">HPhoto studio</string>-->
+<!--    <string name="stay_0">HHotel</string>-->
+<!--    <string name="stay_1">DharaHmshala</string>-->
+<!--    <string name="bulding_0">THhekedar</string>-->
+<!--    <string name="bulding_1">Dharam KHanta</string>-->
+<!--    <string name="bulding_2">MateriaHl Store</string>-->
+<!--    <string name="agriculture_0">AnHaj mandi</string>-->
+<!--    <string name="agriculture_1">SHabji mandi</string>-->
+<!--    <string name="agriculture_2">HSeeds Shop</string>-->
+<!--    <string name="sell_0">PlHot</string>-->
+<!--    <string name="sell_1">SHhop</string>-->
+<!--    <string name="sell_2">HHouse</string>-->
+<!--    <string name="sell_3">VehicleH</string>-->
+<!--    <string name="sell_4">FurnitHure</string>-->
+<!--    <string name="sell_5">ElectHronics</string>-->
+<!--    <string name="sell_6">OtheHr</string>-->
+<!--    <string name="rentals_0">HShop</string>-->
+<!--    <string name="rentals_1">House</string>-->
+<!--    <string name="rentals_2">GoldaHm</string>-->
+<!--    <string name="rentals_3">PG(pHaying guest)</string>-->
+<!--    <string name="booking_0">TenHt</string>-->
+<!--    <string name="booking_1">Party hall</string>-->
+<!--    <string name="booking_2">DecoratHion</string>-->
+<!--    <string name="booking_3">MarriaHge place</string>-->
+<!--    <string name="booking_4">SoundH box(DJ)</string>-->
+<!--    <string name="booking_5">CateHring(Halwai)</string>-->
+<!--    <string name="education_0">SHchool</string>-->
+<!--    <string name="education_1">TuitioHn Centers</string>-->
+<!--    <string name="education_2">Home HTuition</string>-->
+<!--    <string name="education_3">AcadHemy</string>-->
+<!--    <string name="education_4">BooHk Store</string>-->
+<!--    <string name="education_5">CoHaching Center</string>-->
+<!--    <string name="shows_0">ShowsH</string>-->
+<!--    <string name="shows_1">CineHma Hall</string>-->
+<!--    <string name="travel_0">AuHto</string>-->
+<!--    <string name="travel_1">Taxi HCar</string>-->
+<!--    <string name="travel_2">AirwHays</string>-->
+<!--    <string name="travel_3">RailwaysH</string>-->
+<!--    <string name="travel_4">RoadwayHs</string>-->
+<!--    <string name="health_0">HospitHals</string>-->
+<!--    <string name="health_1">HealtHh Clinics</string>-->
+<!--    <string name="health_2">MediHcal Stores</string>-->
+<!--    <string name="health_3">PetH care</string>-->
+<!--    <string name="electronics_0">MobileHs</string>-->
+<!--    <string name="electronics_1">ElectHronics</string>-->
+<!--    <string name="electronics_2">CompHuter and laptops</string>-->
+<!--    <string name="parlourl_0">Only LHadies</string>-->
+<!--    <string name="parlourl_1">Only HMen</string>-->
+<!--    <string name="parlourl_2">BothH</string>-->
+<!--    <string name="parlourl_3">SpaH</string>-->
+<!--    <string name="enable_gps">EnHable Gps</string>-->
+<!--    <string name="yes">HYes</string>-->
+<!--    <string name="no">HNo</string>-->
+
+<!--    //-->
+<!--    <string name="category_0">ShoHpping</string>-->
+<!--    <string name="category_1">FoHod</string>-->
+<!--    <string name="category_2">SHtay</string>-->
+<!--    <string name="category_3">HParlourl SHaloon</string>-->
+<!--    <string name="category_4">Gym SportHs</string>-->
+<!--    <string name="category_5">Shows anHd Cinema</string>-->
+<!--    <string name="category_6">EducatiHon</string>-->
+<!--    <string name="category_7">HealthH</string>-->
+<!--    <string name="category_8">CyberH</string>-->
+<!--    <string name="category_9">ElecHtronics</string>-->
+<!--    <string name="category_10">TrHavel</string>-->
+<!--    <string name="category_11">VehicleHs and Workshop</string>-->
+<!--    <string name="category_12">BookinHg</string>-->
+<!--    <string name="category_13">RentaHls</string>-->
+<!--    <string name="category_14">Sell anHd Buy</string>-->
+<!--    <string name="category_15">BulidiHng Material</string>-->
+<!--    <string name="category_16">AgricHulture</string>-->
+<!--    <string name="category_17">FactHories</string>-->
+<!--    <string name="category_18">NGO and CHlub</string>-->
+<!--    <string name="category_19">Bank andH Atm</string>-->
+<!--    <string name="category_20">PentrolH Pump</string>-->
+<!--    //-->
+<!--    <string name="government_0">Police Stationh</string>-->
+<!--    <string name="government_1">Fire Brigadeh</string>-->
+<!--    <string name="government_2">Hospitalh</string>-->
+<!--    <string name="government_3">Collegeh</string>-->
+<!--    <string name="government_4">Courth</string>-->
+<!--    <string name="government_5">BDO officeh</string>-->
+<!--    <string name="government_6">Post Officeh</string>-->
+<!--    <string name="government_7">BEO officeh</string>-->
+<!--    <string name="government_8">DEO officeh</string>-->
+<!--    <string name="government_9">Panchayat Bhhawan</string>-->
+<!--    <string name="government_10">Other Offiche</string>-->
+
+    ///
+<!--    <string name="category_0">Shopping</string>-->
+<!--    <string name="category_1">Food</string>-->
+<!--    <string name="category_2">Stay</string>-->
+<!--    <string name="category_3">Parlourl Saloon</string>-->
+<!--    <string name="category_4">Gym Sports</string>-->
+<!--    <string name="category_5">Shows and Cinema</string>-->
+<!--    <string name="category_6">Education</string>-->
+<!--    <string name="category_7">Health</string>-->
+<!--    <string name="category_8">Cyber</string>-->
+<!--    <string name="category_9">Electronics</string>-->
+<!--    <string name="category_10">Travel</string>-->
+<!--    <string name="category_11">Vehicles and Workshop</string>-->
+<!--    <string name="category_12">Booking</string>-->
+<!--    <string name="category_13">Rentals</string>-->
+<!--    <string name="category_14">Sell and Buy</string>-->
+<!--    <string name="category_15">Buliding Material</string>-->
+<!--    <string name="category_16">Agriculture</string>-->
+<!--    <string name="category_17">Factories</string>-->
+<!--    <string name="category_18">NGO and Club</string>-->
+<!--    <string name="category_19">Bank and Atm</string>-->
+<!--    <string name="category_20">Pentrol Pump</string>-->
+<!--    <string name="government_0">Police Station</string>-->
+<!--    <string name="government_1">Fire Brigade</string>-->
+<!--    <string name="government_2">Hospital</string>-->
+<!--    <string name="government_3">College</string>-->
+<!--    <string name="government_4">Court</string>-->
+<!--    <string name="government_5">BDO office</string>-->
+<!--    <string name="government_6">Post Office</string>-->
+<!--    <string name="government_7">BEO office</string>-->
+<!--    <string name="government_8">DEO office</string>-->
+<!--    <string name="government_9">Panchayat Bhawan</string>-->
+<!--    <string name="government_10">Other Office</string>-->
+
+
+
+<!--    <string name="worker_required">Yes, workers required</string>-->
+<!--    <string name="worker_not_required">No, workers required</string>-->
+<!--    <string name="home_delivery">Home delivery Available</string>-->
+<!--    <string name="no_home_delivery">Home delivery not Available</string>-->
+
+<!--    //extra string-->
+<!--    <string name="hostel_available">Hostel facility avilable</string>-->
+<!--    <string name="hostel_not_available">Hostel facility not avilable</string>-->
+<!--    <string name="transport_available">Transport facility avilable</string>-->
+<!--    <string name="transport_not_available">Transport facility not avilable</string>-->
+<!--    <string name="delivery">delivery</string>-->
+<!--    <string name="no_delivery">delivery not</string>-->
+
+<!--    <string name="photo_uploading">Photo uploading...</string>-->
+<!--    <string name="do_you_want_delete_this_product">Do you want to delete this product?</string>-->
+<!--    <string name="delete_product">Delete Product</string>-->
+<!--    <string name="get_current_location">get current location</string>-->
+<!--    <string name="opne_gps">open Gps</string>-->
+<!--    <string name="try_again">try again</string>-->
+<!--    <string name="deleting">deleting...</string>-->
+<!--    <string name="do_you_want_delete_this_show">Do you want to delete this show?</string>-->
+<!--    <string name="delete_show">Delete Show</string>-->
+<!--    <string name="not_available">Not available</string>-->
+<!--    <string name="set_up_store">setup store...</string>-->
+<!--    <string name="set_up">everything setuped</string>-->
+<!--    <string name="all">All</string>-->
+<!--    <string name="police_station">Police Station</string>-->
+<!--    <string name="fire_brigade">Fire Brigade</string>-->
+<!--    <string name="hospital">Hospital</string>-->
+<!--    <string name="college">College</string>-->
+<!--    <string name="court">Court</string>-->
+<!--    <string name="bdo_office">BDO office</string>-->
+<!--    <string name="post_office">Post Office</string>-->
+<!--    <string name="beo_office">BEO office</string>-->
+<!--    <string name="deo_office">DEO office</string>-->
+<!--    <string name="panchayat_bhawan">Panchayat Bhawan</string>-->
+<!--    <string name="u_p_board">U.P. Board</string>-->
+<!--    <string name="haryana_board">Haryana Board</string>-->
+<!--    <string name="cbse_board">CBSE Board</string>-->
+
+<!--    <string name="enable_gps">Enable Gps</string>-->
+<!--    <string name="yes">Yes</string>-->
+<!--    <string name="no">No</string>-->
+<!--    <string name="ready_for_sell">ready for sell...</string>-->
+<!--    <string name="rs">Rs:</string>-->
+<!--    <string name="name_editing">Name editing...</string>-->
+<!--    <string name="wait">wait please...</string>-->
+<!--    <string name="show_adding">show adding...</string>-->
+    <string name="category_0">शॉपिंग</string>
+    <string name="category_1">फ़ूड</string>
+    <string name="category_2">विश्राम</string>
+    <string name="category_3">पार्लर सैलून</string>
+    <string name="category_4">जिम स्पोर्ट्स</string>
+    <string name="category_5">सिनेमा</string>
+    <string name="category_6">शिक्षा</string>
+    <string name="category_7">स्वास्थ</string>
+    <string name="category_8">साइबर</string>
+    <string name="category_9">इलेक्ट्रॉनिक्स</string>
+    <string name="category_10">यात्रा</string>
+    <string name="category_11">व्हीकल एंड वर्कशॉप</string>
+    <string name="category_12">बुकिंग</string>
+    <string name="category_13">किराए हेतु</string>
+    <string name="category_14">सैल एंड बाय</string>
+    <string name="category_15">बिल्डिंग मटीरीयल</string>
+    <string name="category_16">कृषि</string>
+    <string name="category_17">फ़ैक्टरी</string>
+    <string name="category_18">एन॰जी॰ओ॰</string>
+    <string name="category_19">बैंक एंड ए॰टी॰एम॰</string>
+    <string name="category_20">पेट्रोल पम्प</string>
+    <string name="government_0">पुलिस स्टेशन</string>
+    <string name="government_1">फ़ायर ब्रिगेड</string>
+    <string name="government_2">हॉस्पिटल</string>
+    <string name="government_3">कॉलेज</string>
+    <string name="government_4">कोर्ट</string>
+    <string name="government_5">बी॰डी॰ओ॰ ऑफ़िस</string>
+    <string name="government_6">पोस्ट ऑफ़िस</string>
+    <string name="government_7">बी॰ई॰ओ॰ ऑफ़िस</string>
+    <string name="government_8">डी॰ई॰ओ॰ ऑफ़िस</string>
+    <string name="government_9">पंचायत भवन</string>
+    <string name="government_10">ऑफ़िस</string>
+
+
+<string name="worker_required">नये वर्कर्स की आवश्यकता है</string>
+
+    <string name="worker_not_required">अभी नये वर्कर्स की आवश्यकता नही है</string>
+    <string name="home_delivery">होम डिलीवरी उपलब्ध है</string>
+    <string name="no_home_delivery">होम डिलीवरी उपलब्ध नही है</string>
+
+    //extra string
+    <string name="hostel_available">हॉस्टल सुविधा उपलब्ध है</string>
+    <string name="hostel_not_available">हॉस्टल सुविधा उपलब्ध नही है</string>
+    <string name="transport_available">ट्रांसपोर्ट सुविधा उपलब्ध है</string>
+    <string name="transport_not_available">ट्रांसपोर्ट सुविधा उपलब्ध नही है</string>
+    <string name="delivery">डिलीवरी</string>
+    <string name="no_delivery">डिलीवरी नही है</string>
+
+    <string name="photo_uploading">फ़ोटो अपलोड हो रही है…</string>
+    <string name="do_you_want_delete_this_product">क्या आप इस प्रोडक्ट को हटाना चाहते है?</string>
+    <string name="delete_product">प्रोडक्ट हटायें</string>
+    <string name="get_current_location">वर्तमान लोकेशन</string>
+    <string name="opne_gps">जी॰पी॰एस॰ चलु करे</string>
+    <string name="try_again">फिर से प्रयास करे</string>
+    <string name="deleting">हट रहा है...</string>
+    <string name="do_you_want_delete_this_show">क्या आप इस शो को हटाना चाहते है?</string>
+    <string name="delete_show">शो हटायें</string>
+    <string name="not_available">उपलब्ध नही है</string>
+    <string name="set_up_store">सर्विस बनायें...</string>
+    <string name="set_up">सबकुछ सेटअप हो चुका है</string>
+    <string name="all">सभी</string>
+    <string name="police_station">पुलिस स्टेशन</string>
+    <string name="fire_brigade">फ़ायर ब्रिगेड</string>
+    <string name="hospital">हॉस्पिटल</string>
+    <string name="college">कॉलेज</string>
+    <string name="court">कोर्ट</string>
+    <string name="bdo_office">बी॰डी॰ओ॰ ऑफ़िस</string>
+    <string name="post_office">पोस्ट ऑफ़िस</string>
+    <string name="beo_office">बी॰ई॰ओ॰ ऑफ़िस</string>
+    <string name="deo_office">डी॰ई॰ओ॰ ऑफ़िस</string>
+    <string name="panchayat_bhawan">पंचायत भवन</string>
+    <string name="u_p_board">यू॰पी॰ बोर्ड</string>
+    <string name="haryana_board">हरियाणा बोर्ड</string>
+    <string name="cbse_board">सी॰बी॰एस॰ई॰ बोर्ड</string>
+
+    <string name="enable_gps">जी॰पी॰एस॰ चालू करे</string>
+    <string name="yes">हाँ</string>
+    <string name="no">नही</string>
+
+    //
+    <string name="delhi">Delhi</string>
+    <string name="we_are_indiain">We are INDIAIN</string>
+    <string name="welcome_to">Welcome to</string>
+    <string name="ready_for_sell">ready for sell...</string>
+    <string name="rs">Rs:</string>
+    <string name="name_editing">Name editing...</string>
+    <string name="wait">wait please...</string>
+    <string name="show_adding">show adding...</string>
+    <string name="home">hHome</string>
+    <string name="your_store">hYour Store</string>
+    <string name="nav_about_city">hAbout City</string>
+    <string name="favorites">hFavorites</string>
+    <string name="verification_email">\"We have sent you a verification link on your registerd email \"</string>
+    <string name="sign_in">signIn...</string>
+    <string name="do_you_want_lagout">Do you want to logout?</string>
+    <string name="current_user_city">Current user City</string>
+    <string name="change_user_city">Change user city</string>
+    <string name="change_app_theme">Change app theme</string>
+
+</resources>

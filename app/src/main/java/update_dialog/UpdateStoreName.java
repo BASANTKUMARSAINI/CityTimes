@@ -26,6 +26,7 @@ import java.util.List;
 
 import dialog.CustumProgressDialog;
 import interfaces.UpdateInterface;
+import model.ApplicationClass;
 
 public class UpdateStoreName extends Dialog {
     public Context context;
@@ -48,6 +49,7 @@ public class UpdateStoreName extends Dialog {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ApplicationClass.loadLocale(context);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.update_store_name);
 
@@ -61,6 +63,7 @@ public class UpdateStoreName extends Dialog {
 
         if(!STORE_NAME.equals(""))
            etStoreName.setText(STORE_NAME);
+           // ApplicationClass.setTranslatedText(etStoreName,STORE_NAME);
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

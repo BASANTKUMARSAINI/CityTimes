@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:text="Home Delivery Service"
+        android:text="@string/home_delivery_service"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:layout_marginStart="10dp"
@@ -47,7 +47,7 @@
         android:background="@drawable/button_background"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:text="NEXT"
+        android:text="@string/next"
         android:textColor="@color/white"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="40dp"/>

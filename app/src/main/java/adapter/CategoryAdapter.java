@@ -13,7 +13,7 @@ import com.example.mycity.R;
 public class CategoryAdapter extends BaseAdapter {
    private  int []imageList;
 
-   private int[]categorylist;
+   private String[]categorylist;
     private  Context context;
     private LayoutInflater inflater;
     @Override
@@ -25,7 +25,7 @@ public class CategoryAdapter extends BaseAdapter {
     public Object getItem(int position) {
         return null;
     }
-public CategoryAdapter(Context context,int []imageList,int []categorylist)
+public CategoryAdapter(Context context,int []imageList,String []categorylist)
 {
     this.context=context;
     this.categorylist=categorylist;

@@ -5,6 +5,7 @@
     android:paddingTop="20dp"
     android:paddingBottom="50dp"
     android:paddingStart="20dp"
+    android:background="@color/other_background"
     android:paddingEnd="20dp"
     android:layout_height="match_parent">
     <ImageView
@@ -21,15 +22,15 @@
         android:layout_width="wrap_content"
         android:layout_below="@id/img_cross"
         android:layout_marginTop="50dp"
-        android:src="@drawable/check_mail"
+        android:src="@drawable/awesome_icon"
         android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"/>
     <TextView
         android:id="@+id/tv_check_mail"
-        android:text="Check your Email"
+        android:text="@string/check_your_email"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textColor="@color/text_dark"
         android:gravity="center_horizontal"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/img_check_mail"
@@ -44,6 +45,7 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/tv_check_mail"
         android:layout_marginTop="10dp"
+        android:textColor="@color/text_dark"
         android:layout_width="match_parent"
         android:layout_marginEnd="60dp"
         android:layout_marginStart="60dp"
@@ -55,8 +57,8 @@
         android:layout_marginTop="30dp"
         android:layout_marginStart="60dp"
         android:layout_marginEnd="60dp"
-        android:background="@drawable/enable_botton_background"
-        android:text="Go to Login"
+        android:background="@drawable/button_background"
+        android:text="@string/go_to_login"
         android:textColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

@@ -16,19 +16,24 @@ import android.widget.TextView;
 import com.example.mycity.R;
 
 import authantication.UserLoginActivity;
+import model.ApplicationClass;
 import seller.SetupProfileActivity;
 
 public class SetupProfileDialog extends Dialog {
   Context context;
-    public  SetupProfileDialog(Context context)
+  String CATEGORY,SUB_CATEGORY;
+    public  SetupProfileDialog(Context context,String CATEGORY,String SUB_CATEGORY)
     {
         super(context);
         this.context=context;
+        this.CATEGORY=CATEGORY;
+        this.SUB_CATEGORY=SUB_CATEGORY;
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ApplicationClass.loadLocale(context);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.setup_profile_layout);
         Log.v("TAG","inininin");
@@ -36,10 +41,30 @@ public class SetupProfileDialog extends Dialog {
         btnLetGo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //handle where we should go
                 Intent intent=new Intent(context, SetupProfileActivity.class);
-                context.startActivity(intent);
                 Activity activity=(Activity)context;
-                activity.finish();
+                switch (CATEGORY)
+                {
+                    case "Education":
+                         intent=new Intent(context, SetupProfileActivity.class);
+                        intent.putExtra("category",CATEGORY);
+                        intent.putExtra("subCategory",SUB_CATEGORY);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        context.startActivity(intent);
+                        activity.finish();
+                        break;
+                    default:
+                        intent=new Intent(context, SetupProfileActivity.class);
+                        intent.putExtra("category",CATEGORY);
+                        intent.putExtra("subCategory",SUB_CATEGORY);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        context.startActivity(intent);
+                        activity.finish();
+
+                }
+
+
 
             }
         });
