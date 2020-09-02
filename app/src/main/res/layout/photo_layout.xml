@@ -35,6 +35,7 @@
             android:textColor="@color/button_color"
             android:textStyle="italic"
             android:textSize="16sp"
+
             android:gravity="center_horizontal"
             />
 

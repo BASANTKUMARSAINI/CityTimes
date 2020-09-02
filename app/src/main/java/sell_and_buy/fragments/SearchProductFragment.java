@@ -87,14 +87,9 @@ RecyclerView recyclerView;
         adapter=new FirestoreRecyclerAdapter<Product, ProductViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull final ProductViewHolder holder, int position, @NonNull final Product model) {
-//                ApplicationClass.setTranslatedText(holder.tvSellerCity,model.getScity());
-//                ApplicationClass.setTranslatedText(holder.tvProductPrice,"Rs:"+model.getPprice());
-//                ApplicationClass.setTranslatedText(holder.tvProductType,model.getPtype());
-//                ApplicationClass.setTranslatedText(holder.tvProductTitle,model.getPtitle());
-                //holder.tvSellerPhone.setText(model.getSphone());
+
               holder.tvSellerCity.setText(model.getScity());
-               holder.tvProductPrice.setText(getString(R.string.rs)+model.getPprice());
-                //holder.tvProductDes.setText(model.getPdescription());
+               holder.tvProductPrice.setText(getString(R.string.Rs)+model.getPprice());
                 holder.tvProductType. setText(model.getPtype());
                holder.tvProductTitle.setText(model.getPtitle());
                 final List<String> imgList=model.getPimage();
@@ -105,32 +100,13 @@ RecyclerView recyclerView;
                     @Override
                     public void onClick(View v) {
                         Intent intent=new Intent( getContext(), ProductMainActivity.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        intent.putExtra("user_type","buyer");
                         intent.putExtra("pid",model.getPid());
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
                          startActivity(intent);
                     }
                 });
-//                holder.morePhotos.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//                    @Override
-//                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                        if(isChecked)
-//                        {
-//                            setImages(holder,imgList);
-//                        }
-//                        else
-//                        {
-//                            holder.photosLayoutLastTwo.setVisibility(GONE);
-//                            holder.photosLayoutFirsTwo.setVisibility(GONE);
-//                        }
-//                    }
-//                });
-//
-//                holder.call.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        makeCall(model.getSphone());
-//                    }
-//                });
             }
 
 
@@ -152,57 +128,5 @@ RecyclerView recyclerView;
         if (adapter!=null)
             adapter.stopListening();
     }
-
-//    private void setImages(ProductViewHolder holder, List<String>imgList) {
-//        int siz=imgList.size();
-//        if(siz==5)
-//        {
-//            holder.photosLayoutLastTwo.setVisibility(View.VISIBLE);
-//            holder.photosLayoutFirsTwo.setVisibility(View.VISIBLE);
-//            Picasso.get().load(imgList.get(1)).into(holder.productImage2);
-//            Picasso.get().load(imgList.get(2)).into(holder.productImage3);
-//            Picasso.get().load(imgList.get(3)).into(holder.productImage4);
-//            Picasso.get().load(imgList.get(4)).into(holder.productImage5);
-//        }
-//        else if(siz==4)
-//        {
-//            holder.photosLayoutLastTwo.setVisibility(View.VISIBLE);
-//            holder.photosLayoutFirsTwo.setVisibility(View.VISIBLE);
-//            Picasso.get().load(imgList.get(1)).into(holder.productImage2);
-//            Picasso.get().load(imgList.get(2)).into(holder.productImage3);
-//            Picasso.get().load(imgList.get(3)).into(holder.productImage4);
-//            holder.productImage5.setVisibility(GONE);
-//        }
-//        else if(siz==3)
-//        {
-//
-//            holder.photosLayoutFirsTwo.setVisibility(View.VISIBLE);
-//            Picasso.get().load(imgList.get(1)).into(holder.productImage2);
-//            Picasso.get().load(imgList.get(2)).into(holder.productImage3);
-//            holder.photosLayoutLastTwo.setVisibility(GONE);
-//
-//        }
-//        else if(siz==2)
-//        {
-//
-//            holder.photosLayoutFirsTwo.setVisibility(View.VISIBLE);
-//            Picasso.get().load(imgList.get(1)).into(holder.productImage2);
-//            holder.productImage3.setVisibility(GONE);
-//            holder.photosLayoutLastTwo.setVisibility(GONE);
-//
-//
-//        }
-//        else
-//        {
-//            holder.photosLayoutLastTwo.setVisibility(GONE);
-//            holder.photosLayoutFirsTwo.setVisibility(GONE);
-//            Toast.makeText(getContext(),"no more photos",Toast.LENGTH_LONG).show();
-//        }
-//
-//
-//    }
-
-//    private void makeCall(String sphone) {
-//    }
 
 }

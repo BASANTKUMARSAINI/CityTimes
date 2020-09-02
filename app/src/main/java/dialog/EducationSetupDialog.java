@@ -37,12 +37,14 @@ public class EducationSetupDialog extends Dialog   {
     private TextView  tvBoard;
     private CheckBox checkBoxTransport,checkBoxHostel;
     private EditText etPrincipalName;
-    public static String BOARD_NAME="";
+    public static String BOARD_NAME=null;
     boolean HOSTEL=false,TRANSPORT=false;
+    private  String SUB_CATEGORY;
 
-    public EducationSetupDialog(@NonNull Context context, EducationInterface updateInterface) {
+    public EducationSetupDialog(@NonNull Context context ,String SUB_CATEGORY,EducationInterface updateInterface) {
         super(context);
         this.context = context;
+        this.SUB_CATEGORY=SUB_CATEGORY;
         this.educationInterface =updateInterface;
     }
 
@@ -61,6 +63,9 @@ public class EducationSetupDialog extends Dialog   {
         etPrincipalName=findViewById(R.id.et_pricipal_name);
         btnCancel = findViewById(R.id.btn_cancel);
         btnSet = findViewById(R.id.btn_update);
+
+         setVisibility();
+
 
 
         checkBoxTransport.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -92,7 +97,7 @@ public class EducationSetupDialog extends Dialog   {
             @Override
             public void onClick(View v) {
                 setData();
-dismiss();
+
             }
 
 
@@ -128,20 +133,32 @@ dismiss();
 
     }
 
+    private void setVisibility() {
+        switch (SUB_CATEGORY)
+        {
+            case "School":
+                tvBoard.setVisibility(View.VISIBLE);
+                break;
+        }
+    }
+
     private void setData() {
         String principalName=etPrincipalName.getText().toString();
 //        String board=tvBoard.getText().toString();
+
         if(TextUtils.isEmpty(principalName))
         {
             Toast.makeText(context,"principal name required",Toast.LENGTH_LONG).show();
         }
-        else if(TextUtils.isEmpty(BOARD_NAME)||BOARD_NAME.equals("School board"))
+        else if((BOARD_NAME==null)&&(SUB_CATEGORY.equals("School")))
         {
             Toast.makeText(context,"select school board",Toast.LENGTH_LONG).show();
         }
         else
         {
+
             educationInterface.educationData(principalName,BOARD_NAME,HOSTEL,TRANSPORT);
+            dismiss();
         }
     }
 

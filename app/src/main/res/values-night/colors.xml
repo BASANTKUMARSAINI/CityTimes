@@ -8,13 +8,12 @@
     <color name="light_green">#a5d6a7</color>
     <color name="red">#d50000</color>
     <color name="light_red">#ff6e40</color>
-    <color name="selver"> #ffc400</color>-->
-    <color name="light_selver"> #ffd740</color>
+    <color name="selver"> #ffc400</color><![CDATA[-->
 
 
+    ]]>
     <color name="main_background">#000000</color>
     <color name="other_background">#abb4bd</color>
-    <color name="white_background">#ffffff</color>
     <color name="text_light">#d9dde2</color>
     <color name="text_dark">#ffffff</color>
     <color name="white">#ffffff</color>

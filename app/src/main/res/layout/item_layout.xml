@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:text="Item name"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:id="@+id/tv_rs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+           android:layout_toEndOf="@id/tv_item_name"
+            android:layout_marginStart="30dp"
+            android:text="@string/Rs"
+            android:textStyle="bold"
+
+            android:textColor="@color/selver"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:id="@+id/tv_item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/tv_rs"
+            android:layout_marginStart="5dp"
+            android:text="00"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            />
+            <ImageView
+                android:id="@+id/img_delete"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/delete"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,20 +1,23 @@
 package seller;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.LocationManager;
-import android.media.audiofx.LoudnessEnhancer;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -25,36 +28,29 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.mycity.MainActivity;
 import com.example.mycity.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.GeoPoint;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
-import java.util.Map;
 
 import adapter.AddressAdapter;
-import authantication.UserRegisterActivity;
 import ch.hsr.geohash.GeoHash;
 import dialog.CustumProgressDialog;
-import dialog.EmailVerificationDialog;
 import dialog.SetupProfileDialog;
 import interfaces.RecyclerViewInterface;
 import model.ApplicationClass;
-import model.LocationService;
-import model.Seller;
-import users.HomeActivity;
+import services.LocationService;
 
 public class RegisterStoreActivity extends AppCompatActivity implements RecyclerViewInterface {
+    private static final int PERMISSIONS_REQUEST =1 ;
     RecyclerView recyclerView;
     TextView tvStoreCountry,tvStoreState,tvStoreCity,tvCurrentAddress;
     TextView tvStoreCategory,tvStoreSubCategory;
@@ -80,6 +76,8 @@ public class RegisterStoreActivity extends AppCompatActivity implements Recycler
         super.onCreate(savedInstanceState);
         ApplicationClass.loadLocale(RegisterStoreActivity.this);
         setContentView(R.layout.activity_register_store);
+
+        getCurrentLocation();
 
         tvStoreCountry=findViewById(R.id.tv_store_country);
         tvStoreState=findViewById(R.id.tv_store_state);
@@ -112,7 +110,7 @@ public class RegisterStoreActivity extends AppCompatActivity implements Recycler
         hashMap.put("Stay", R.array.stay);
         hashMap.put("Factories", R.array.factories);
         hashMap.put("NGO and Club", R.array.ngo_club);
-        hashMap.put("Bank and Atm", R.array.bank_atm);
+        hashMap.put("Banking", R.array.banking);
         hashMap.put("Pentrol Pump", R.array.petrol_pump);
         hashMap.put("Vehicles and Workshop", R.array.vehicle_workshop);
         hashMap.put("Travel",R.array.travel_store);
@@ -123,18 +121,18 @@ public class RegisterStoreActivity extends AppCompatActivity implements Recycler
         mDataRef= FirebaseDatabase.getInstance().getReference();
 
         tvCurrentAddress.setText(R.string.get_current_location);
-        if(ActivityCompat.checkSelfPermission(RegisterStoreActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)!= PackageManager.PERMISSION_GRANTED&&
-                ActivityCompat.checkSelfPermission(RegisterStoreActivity.this,Manifest.permission.ACCESS_COARSE_LOCATION)!= PackageManager.PERMISSION_GRANTED)
-        {
-            ActivityCompat.requestPermissions(RegisterStoreActivity.this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION},1);
-
-        }
-        LocationManager locationManager=(LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        if(!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER))
-        {
-            tvCurrentAddress.setText(R.string.opne_gps);
-            ApplicationClass.onGps(RegisterStoreActivity.this);
-        }
+//        if(ActivityCompat.checkSelfPermission(RegisterStoreActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)!= PackageManager.PERMISSION_GRANTED&&
+//                ActivityCompat.checkSelfPermission(RegisterStoreActivity.this,Manifest.permission.ACCESS_COARSE_LOCATION)!= PackageManager.PERMISSION_GRANTED)
+//        {
+//            ActivityCompat.requestPermissions(RegisterStoreActivity.this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION},1);
+//
+//        }
+//        LocationManager locationManager=(LocationManager) getSystemService(Context.LOCATION_SERVICE);
+//        if(!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER))
+//        {
+//            tvCurrentAddress.setText(R.string.opne_gps);
+//            ApplicationClass.onGps(RegisterStoreActivity.this);
+//        }
     }
 
     public  void getCountry(View view)
@@ -274,6 +272,7 @@ public class RegisterStoreActivity extends AppCompatActivity implements Recycler
                         if(i!=-1)
                             firstWord=storeCategory.substring(0,i);
                 storeSubCategory=ApplicationClass.getEnglishSubCategory(firstWord.toLowerCase()+"_"+index,RegisterStoreActivity.this);
+                Log.d("TAG","subCategory:"+storeSubCategory);
                 break;
         }
         bottomSheetDialog.dismiss();
@@ -288,13 +287,10 @@ public class RegisterStoreActivity extends AppCompatActivity implements Recycler
         final String phone1=etPhone1.getText().toString();
         final String phone2=etPhone2.getText().toString();
 
-//        final String storeCountry=tvStoreCountry.getText().toString();
-//        final String storeState=tvStoreState.getText().toString();
-//        final String storeCity=tvStoreCity.getText().toString();
-//        final String storeCategory=tvStoreCategory.getText().toString();
-//        final String storeSubCategory=tvStoreSubCategory.getText().toString();
         STORE_LONGITUDE=ApplicationClass.USER_LOGITUDE;
         STORE_LATITUDE=ApplicationClass.USER_LATITUDE;
+
+        boolean condition1=!storeSubCategory.equals("ATM");
 
         if(TextUtils.isEmpty(storeName))
         {
@@ -304,10 +300,7 @@ public class RegisterStoreActivity extends AppCompatActivity implements Recycler
         {
             Toast.makeText(RegisterStoreActivity.this,"Owner's name can't be empty",Toast.LENGTH_LONG).show();
         }
-        else if(TextUtils.isEmpty(phone1))
-        {
-            Toast.makeText(RegisterStoreActivity.this,"Phone number can't be empty",Toast.LENGTH_LONG).show();
-        }
+
         else if(TextUtils.isEmpty(storeAddress))
         {
             Toast.makeText(RegisterStoreActivity.this,"Store address can't be empty",Toast.LENGTH_LONG).show();
@@ -335,6 +328,10 @@ public class RegisterStoreActivity extends AppCompatActivity implements Recycler
         else if(TextUtils.isEmpty(storeSubCategory)||storeCity.equals("Store Sub-Category"))
         {
             Toast.makeText(RegisterStoreActivity.this,"Please select store sub-category",Toast.LENGTH_LONG).show();
+        }
+        else if(TextUtils.isEmpty(phone1)&&condition1)
+        {
+            Toast.makeText(RegisterStoreActivity.this,"Phone number can't be empty",Toast.LENGTH_LONG).show();
         }
         else
         {
@@ -382,6 +379,7 @@ public class RegisterStoreActivity extends AppCompatActivity implements Recycler
                     {
                         custumProgressDialog.stopProgressBar();
                         SetupProfileDialog dialog=new SetupProfileDialog(RegisterStoreActivity.this,storeCategory,storeSubCategory);
+                        dialog.setCancelable(false);
                         dialog.show();
                     }
                     else
@@ -479,5 +477,53 @@ public class RegisterStoreActivity extends AppCompatActivity implements Recycler
             tvCurrentAddress.setText(R.string.get_current_location);
             //tvCurrentAddress.setTextColor(getResources().getColor(R.color.red));
         }
+    }
+    private void getCurrentLocation() {
+        LocationManager lm = (LocationManager) getSystemService(LOCATION_SERVICE);
+        if (!lm.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+
+        }
+        int permission = ContextCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_FINE_LOCATION);
+        if (permission == PackageManager.PERMISSION_GRANTED) {
+            startTrackerService();
+        } else {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                    PERMISSIONS_REQUEST);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[]
+            grantResults) {
+        if (requestCode == PERMISSIONS_REQUEST && grantResults.length == 1
+                && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            startTrackerService();
+        } else {
+            onGps();
+            Toast.makeText(this, "Please enable location services to allow GPS tracking", Toast.LENGTH_SHORT).show();
+        }
+    }
+    private void startTrackerService() {
+        startService(new Intent(this, LocationService.class));
+        //Toast.makeText(this, "GPS tracking enabled", Toast.LENGTH_SHORT).show();
+    }
+    private void onGps() {
+        final AlertDialog.Builder builder=new AlertDialog.Builder(this);
+        builder.setMessage(R.string.opne_gps).setCancelable(false).setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+            }
+        }).setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+        final AlertDialog dialog=builder.create();
+        dialog.show();
+
     }
 }

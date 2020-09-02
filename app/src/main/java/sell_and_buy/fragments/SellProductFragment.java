@@ -57,6 +57,7 @@ import model.ApplicationClass;
 import model.Product;
 import model.ProductCategory;
 import sell_and_buy.ProductActivity;
+import sell_and_buy.ProductMainActivity;
 import seller.RegisterStoreActivity;
 import view_holder.ProductCategoryViewHolder;
 
@@ -77,10 +78,10 @@ public class SellProductFragment extends Fragment {
     ImageView productImage2, productImage3, productImage4, productImage5;
     String productImageUrl1=null,productImageUrl2=null,productImageUrl3=null,productImageUrl4=null,productImageUrl5=null;
     public final static int IMAGE_VIEW1=1,IMAGE_VIEW2=2,IMAGE_VIEW3=3,IMAGE_VIEW4=4,IMAGE_VIEW5=5;
-   public String PRODUCT_ID="";
-   RecyclerView recyclerView;
-   public static String productType="";
-View view;
+    public String PRODUCT_ID="";
+    RecyclerView recyclerView;
+    public static String productType="";
+    View view;
     BottomSheetDialog bottomSheetDialog;
     public SellProductFragment() {
         String currentTime=new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
@@ -94,7 +95,7 @@ View view;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ApplicationClass.loadLocale(getContext());
-         View view=inflater.inflate(R.layout.fragment_sell_product, container, false);
+        View view=inflater.inflate(R.layout.fragment_sell_product, container, false);
         this.view=view;
 
         etProductTitle=view.findViewById(R.id.et_product_title);
@@ -228,26 +229,22 @@ View view;
         adapter=new FirestoreRecyclerAdapter<ProductCategory, ProductCategoryViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull ProductCategoryViewHolder holder, int position, @NonNull final ProductCategory model) {
-                //ApplicationClass.setTranslatedText(holder.tvProductCategory,model.getCategoryName());
-
                 holder.tvProductCategory.setText(model.getCategoryName());
-
                 holder.tvProductCategory.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         tvProductType.setText(model.getCategoryName());
-                        //ApplicationClass.setTranslatedText(tvProductType,model.getCategoryName());
                         productType=model.getCategoryName();
-                    tvProductType.setTextColor(getResources().getColor(R.color.selver));
-                         if(model.getCategoryName().equals("Other"))
-                         {
-                             etOtherType.setVisibility(View.VISIBLE);
-                         }
-                         else
-                         {
-                             etOtherType.setVisibility(View.GONE);
-                         }
-                         bottomSheetDialog.dismiss();
+                        tvProductType.setTextColor(getResources().getColor(R.color.selver));
+                        if(model.getCategoryName().equals("Other"))
+                        {
+                            etOtherType.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            etOtherType.setVisibility(View.GONE);
+                        }
+                        bottomSheetDialog.dismiss();
                     }
                 });
             }
@@ -264,27 +261,7 @@ View view;
         adapter.notifyDataSetChanged();
     }
 
-    //    private void openProductTypeList() {
-//        PopupMenu popupMenu=new PopupMenu(getContext(),tvProductType);
-//        popupMenu.getMenuInflater().inflate(R.menu.product_type_menu,popupMenu.getMenu());
-//        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-//            @Override
-//            public boolean onMenuItemClick(MenuItem item) {
-//                tvProductType.setText(item.getTitle());
-//                if(item.getItemId()==R.id.other)
-//                {
-//                    etOtherType.setVisibility(View.VISIBLE);
-//                }
-//                else
-//                {
-//                    etOtherType.setVisibility(View.GONE);
-//                }
-//                return true;
-//            }
-//        });
-//        popupMenu.show();
-//
-//    }
+
     private void sellProduct()
     {
         String productTitle=etProductTitle.getText().toString();
@@ -292,7 +269,7 @@ View view;
         String productDes=etProductDes.getText().toString();
         String sellerPhone=etSellerPhone.getText().toString();
         String sellerCity=etSellerCity.getText().toString();
-//        String productType=tvProductType.getText().toString();
+
         boolean other=false;
         if(productImageUrl1==null)
         {
@@ -336,7 +313,7 @@ View view;
 
             final CustumProgressDialog dialog=new CustumProgressDialog(getActivity());
             dialog.startProgressBar(getString(R.string.ready_for_sell));
-           final Product product=new Product();
+            final Product product=new Product();
 
             product.setPdescription(productDes);
             product.setPprice(productPrice);
@@ -396,41 +373,46 @@ View view;
             }
             product.setPimage(list);
             ApplicationClass.translatedData.put("pimage",list);
-new Handler().postDelayed(new Runnable() {
-    @Override
-    public void run() {
-        db.collection("ensellProducts").document(PRODUCT_ID)
-                .set(product).addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
-                db.collection("hisellProducts")
-                        .document(PRODUCT_ID).set(ApplicationClass.translatedData).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if(task.isSuccessful())
-                        {
-                            dialog.stopProgressBar();
-                            getActivity().getSupportFragmentManager().popBackStack();
-                        }
-                        else
-                        {
-                            dialog.stopProgressBar();
-                            Toast.makeText(getContext(),task.getException().getMessage(),Toast.LENGTH_LONG).show();
-                        }
-                    }
-                });
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    db.collection("ensellProducts").document(PRODUCT_ID)
+                            .set(product).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            db.collection("hisellProducts")
+                                    .document(PRODUCT_ID).set(ApplicationClass.translatedData).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if(task.isSuccessful())
+                                    {
+                                        dialog.stopProgressBar();
+                                        Intent intent=new Intent( getContext(), ProductMainActivity.class);
+                                        intent.putExtra("user_type","seller");
+                                        intent.putExtra("pid",PRODUCT_ID);
+                                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                        startActivity(intent);
+                                        getActivity().getSupportFragmentManager().popBackStack();
+                                    }
+                                    else
+                                    {
+                                        dialog.stopProgressBar();
+                                        Toast.makeText(getContext(),task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                                    }
+                                }
+                            });
 
-            }
-        })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        dialog.stopProgressBar();
-                        Toast.makeText(getContext(),e.getMessage(),Toast.LENGTH_LONG).show();
-                    }
-                });
-    }
-}, 3000);
+                        }
+                    })
+                            .addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    dialog.stopProgressBar();
+                                    Toast.makeText(getContext(),e.getMessage(),Toast.LENGTH_LONG).show();
+                                }
+                            });
+                }
+            }, 3000);
 
         }
 
@@ -474,7 +456,7 @@ new Handler().postDelayed(new Runnable() {
 
     private void uploadImage(Uri uri, final String imageNumber) {
         final CustumProgressDialog dialog=new CustumProgressDialog(getActivity());
-        dialog.startProgressBar(getContext().getString(R.string.photo_uploading));
+        dialog.startProgressBar(getString(R.string.uploading_photo));
         final StorageReference childRef=mStoreRef.child("images").child("sellProduct").child(PRODUCT_ID).child(imageNumber);
         childRef.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
@@ -482,7 +464,6 @@ new Handler().postDelayed(new Runnable() {
                 childRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                     @Override
                     public void onSuccess(Uri uri) {
-                       // productImageUrl1=uri.toString();
                         switch (imageNumber)
                         {
                             case "image1.jpg":

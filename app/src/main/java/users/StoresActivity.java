@@ -40,11 +40,11 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.google.firebase.ml.common.modeldownload.FirebaseModelDownloadConditions;
-import com.google.firebase.ml.naturallanguage.FirebaseNaturalLanguage;
-import com.google.firebase.ml.naturallanguage.translate.FirebaseTranslateLanguage;
-import com.google.firebase.ml.naturallanguage.translate.FirebaseTranslator;
-import com.google.firebase.ml.naturallanguage.translate.FirebaseTranslatorOptions;
+//import com.google.firebase.ml.common.modeldownload.FirebaseModelDownloadConditions;
+//import com.google.firebase.ml.naturallanguage.FirebaseNaturalLanguage;
+//import com.google.firebase.ml.naturallanguage.translate.FirebaseTranslateLanguage;
+//import com.google.firebase.ml.naturallanguage.translate.FirebaseTranslator;
+//import com.google.firebase.ml.naturallanguage.translate.FirebaseTranslatorOptions;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
 
@@ -88,9 +88,9 @@ public class StoresActivity extends AppCompatActivity {
         sliderView=findViewById(R.id.imageSlider);
         subCategory=getIntent().getStringExtra("subCategory");
         category=getIntent().getStringExtra("category");
-        String text=subCategory+" "+getString(R.string.stores);
-         //ApplicationClass.setTranslatedText(tvStoreType,text);
-tvStoreType.setText(text);
+        String text=subCategory+" "+getString(R.string.services);
+
+        tvStoreType.setText(text);
         setSliderImage();
 
         fragment=new StoresFragment(subCategory,category);
@@ -102,16 +102,10 @@ tvStoreType.setText(text);
             @Override
             public void onClick(View v) {
 
-            searchView.setEnabled(true);
+            searchView.setIconified(false);
             }
         });
-        searchView.setOnSearchClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                searchView.setEnabled(true);
 
-            }
-        });
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {

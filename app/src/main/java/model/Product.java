@@ -118,4 +118,6 @@ public class Product {
     public void setPtype(String ptype) {
         this.ptype = ptype;
     }
+
+
 }

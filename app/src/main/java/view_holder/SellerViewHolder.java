@@ -23,7 +23,7 @@ import users.ShopActivity;
 import static android.view.View.GONE;
 
 public class SellerViewHolder extends RecyclerView.ViewHolder {
-    public TextView tvShopName,tvShopAddress,tvStar,tvRatings,tvDistance,tvShopStatus,tvDeliveryStatus;
+    public TextView tvShopName,tvShopAddress,tvStar,tvRatings,tvDistance,tvShopStatus,tvDeliveryStatus,tvCompanyName;
     Context context;
 
     public CardView cardView;
@@ -38,11 +38,15 @@ public class SellerViewHolder extends RecyclerView.ViewHolder {
         tvRatings=itemView.findViewById(R.id.tv_number_of_ratings);
         tvDistance=itemView.findViewById(R.id.tv_distance);
         cardView=itemView.findViewById(R.id.card_view);
+        tvCompanyName=itemView.findViewById(R.id.tv_company_name);
 
 
     }
     public double setDistance(Double storeLatitude,Double storeLongitude,String category)
+
     {
+        Log.d("TAG","STORE"+" la:"+storeLatitude+", lo:"+storeLongitude);
+        Log.d("TAG","USER"+" la:"+ApplicationClass.USER_LATITUDE+", lo:"+ApplicationClass.USER_LOGITUDE);
             if(ApplicationClass.USER_LOGITUDE==0.0||ApplicationClass.USER_LATITUDE==0.0)
             {
                 tvDistance.setText("");
@@ -99,28 +103,84 @@ tvShopName.setText(ownerName);
     {
         tvRatings.setText(ratings+context.getString(R.string.rating));
     }
-    public void setShopStatus(boolean isOpen) {
+    public void setShopStatus(boolean isOpen,String category,String storeSubCategory) {
 //        Calendar calendar=Calendar.getInstance();
 //        String today=calendar.getDisplayName(Calendar.DAY_OF_WEEK,Calendar.LONG, Locale.getDefault()).toLowerCase();
 //        Log.v("DAY",today);
 //        boolean shopStatus=days.get(today);
+        if(storeSubCategory.equals("NGO"))
+        {
+            tvDeliveryStatus.setVisibility(GONE);
+            return;
+        }
+//        if(isOpen)
+//        {
+//            tvShopStatus.setBackgroundResource(R.drawable.small_green_background);
+//            tvShopStatus.setTextColor(context.getResources().getColor(R.color.green));
+//            tvShopStatus.setText(R.string.open);
+//        }
+//        else
+//        {
+//            tvShopStatus.setBackgroundResource(R.drawable.small_red_background);
+//            tvShopStatus.setTextColor(context.getResources().getColor(R.color.red));
+//            tvShopStatus.setText(R.string.close);
+//        }
+        boolean freeBookedCondition=category.equals("Travel")||storeSubCategory.equals("Sound box(DJ)")
+                ||storeSubCategory.equals("JCB and Crane");
+        boolean availableNotAvailableCondition=category.equals("Rentals")||storeSubCategory.equals("Thekedar");
+
         if(isOpen)
         {
-            tvShopStatus.setBackgroundResource(R.drawable.small_green_background);
-            tvShopStatus.setTextColor(context.getResources().getColor(R.color.green));
+
             tvShopStatus.setText(R.string.open);
+
+            if(freeBookedCondition)
+            {
+                tvShopStatus.setText(R.string.free);
+            }
+            else if(availableNotAvailableCondition)
+            {
+                tvShopStatus.setText(R.string.available);
+            }
+
+            tvShopStatus.setTextColor(context.getResources().getColor(R.color.green));
         }
         else
         {
-            tvShopStatus.setBackgroundResource(R.drawable.small_red_background);
-            tvShopStatus.setTextColor(context.getResources().getColor(R.color.red));
+
             tvShopStatus.setText(R.string.close);
+            if (freeBookedCondition)
+            {
+                tvShopStatus.setText(R.string.booked);
+            }
+            else if(availableNotAvailableCondition)
+            {
+                tvShopStatus.setText(R.string.not_available);
+            }
+            tvShopStatus.setTextColor(context.getResources().getColor(R.color.red));
         }
 
 
+
     }
-    public void setDeliveryStatus(boolean isDelivery,String category) {
+    public void setDeliveryStatus(boolean isDelivery,String category,String subCategory) {
         if(category.equals("Shopping")||category.equals("Food"))
+        {
+            if (isDelivery) {
+                tvDeliveryStatus.setBackgroundResource(R.drawable.small_green_background);
+                tvDeliveryStatus.setTextColor(context.getResources().getColor(R.color.green));
+                tvDeliveryStatus.setText(R.string.delivery);
+
+            } else {
+
+                tvDeliveryStatus.setBackgroundResource(R.drawable.small_red_background);
+                tvDeliveryStatus.setTextColor(context.getResources().getColor(R.color.red));
+                tvDeliveryStatus.setText(R.string.no_delivery);
+
+
+            }
+        }
+        else  if( subCategory.equals("Two wheeler misthri")||subCategory.equals("Four wheeler misthri"))
         {
             if (isDelivery) {
                 tvDeliveryStatus.setBackgroundResource(R.drawable.small_green_background);
@@ -148,4 +208,14 @@ tvShopName.setText(ownerName);
         context.startActivity(intent);
     }
 
+    public void setCompanyName(String companyName, String storeSubCategory) {
+        if(storeSubCategory.equals("Showroom")&&companyName!=null)
+        {
+            if(!companyName.equals(""))
+            {
+                tvCompanyName.setText(companyName);
+                tvCompanyName.setVisibility(View.VISIBLE);
+            }
+        }
+    }
 }

@@ -16,7 +16,7 @@
             android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/update_store_local_address"
+            android:text="@string/update_service_local_address"
             android:textColor="@color/black"
             android:textSize="20sp"/>
 

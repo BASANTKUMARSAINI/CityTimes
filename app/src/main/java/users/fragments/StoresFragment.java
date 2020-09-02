@@ -36,16 +36,21 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.GeoPoint;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.google.firebase.ml.common.modeldownload.FirebaseModelDownloadConditions;
-import com.google.firebase.ml.naturallanguage.FirebaseNaturalLanguage;
-import com.google.firebase.ml.naturallanguage.translate.FirebaseTranslateLanguage;
-import com.google.firebase.ml.naturallanguage.translate.FirebaseTranslator;
-import com.google.firebase.ml.naturallanguage.translate.FirebaseTranslatorOptions;
+//import com.google.firebase.ml.common.modeldownload.FirebaseModelDownloadConditions;
+//import com.google.firebase.ml.naturallanguage.FirebaseNaturalLanguage;
+//import com.google.firebase.ml.naturallanguage.translate.FirebaseTranslateLanguage;
+//import com.google.firebase.ml.naturallanguage.translate.FirebaseTranslator;
+//import com.google.firebase.ml.naturallanguage.translate.FirebaseTranslatorOptions;
 import com.google.protobuf.ApiProto;
 
 import ch.hsr.geohash.GeoHash;
@@ -120,6 +125,11 @@ public class StoresFragment extends Fragment {
                 userState=user.getUstate();
                 userCountry=user.getUcountry();
                 final String  path=ApplicationClass.LANGUAGE_MODE+"sellers";
+                Log.d("TAG","sub"+subCategory);
+                Log.v("TAG","sub"+subCategory.toLowerCase());
+                Log.v("TAG","city"+userCity);
+                Log.v("TAG","state"+userState);
+                Log.v("TAG","country"+userCountry);
                 Query query=db.collection(path)
                         .whereEqualTo("storeCity",userCity)
                         .whereEqualTo("storeState",userState).whereEqualTo("storeCountry",userCountry)
@@ -131,9 +141,21 @@ public class StoresFragment extends Fragment {
                         query=db.collection(path).whereEqualTo("storeCity",userCity)
                                 .whereEqualTo("storeState",userState).whereEqualTo("storeCountry",userCountry)
                                 .whereEqualTo("sortStoreSubCategory",subCategory.toLowerCase());
+
+                        Log.d("TAG","sub2"+subCategory);
+                        Log.v("TAG","sub2"+subCategory.toLowerCase());
+                        Log.v("TAG","city2"+userCity);
+                        Log.v("TAG","state2"+userState);
+                        Log.v("TAG","country2"+userCountry);
                     }
                     else
                     {
+                        Log.d("TAG","sub3"+subCategory);
+                        Log.v("TAG","sub23"+subCategory.toLowerCase());
+                        Log.v("TAG","city3"+userCity);
+                        Log.v("TAG","state3"+userState);
+                        Log.v("TAG","country3"+userCountry);
+
                         if(ApplicationClass.USER_LATITUDE!=0.0&&ApplicationClass.USER_LOGITUDE!=0.0) {
                             double lat = 0.0144927536231884;
                             double lon = 0.0181818181818182;
@@ -159,6 +181,11 @@ public class StoresFragment extends Fragment {
                 }
                 else
                 {
+                    Log.d("TAG","sub4"+subCategory);
+                    Log.v("TAG","sub4"+subCategory.toLowerCase());
+                    Log.v("TAG","city4"+userCity);
+                    Log.v("TAG","state4"+userState);
+                    Log.v("TAG","country4"+userCountry);
 
                   query=db.collection(path).whereEqualTo("sortStoreSubCategory",subCategory.toLowerCase())
                            .whereEqualTo("storeCity",userCity)
@@ -173,12 +200,32 @@ public class StoresFragment extends Fragment {
                 adapter=new FirestoreRecyclerAdapter<Seller, SellerViewHolder>(options) {
                     @Override
                     protected void onBindViewHolder(@NonNull final SellerViewHolder holder, int position, final @NonNull Seller model) {
-                        holder.setDeliveryStatus(model.isDeliveryStatus(),category);
-                        holder.setShopStatus(model.isShopStatus());
+                        holder.setDeliveryStatus(model.isDeliveryStatus(),category,model.getStoreSubCategory());
+                        holder.setShopStatus(model.isShopStatus(),model.getStoreCategory(),model.getStoreSubCategory());
+                        if(model.getStoreSubCategory().equals("Auto"))
+                        {
+                            FirebaseDatabase.getInstance().getReference().child("current_location")
+                                    .child(model.getsUid()).addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                    Double latitude=snapshot.child("location").child("latitude").getValue(Double.class);
+                                    Double longitude=snapshot.child("location").child("longitude").getValue(Double.class);
+                                    holder.setDistance(latitude,longitude,category);
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError error) {
+                                    holder.setDistance(model.getStoreLatitude(),model.getStoreLongitude(),category);
+                                }
+                            });
+
+                        }else{
                         holder.setDistance(model.getStoreLatitude(),model.getStoreLongitude(),category);
+                        }
                         holder.setRatings(model.getNoOfRatings(),category);
                         holder.setStar(model.getTotalStar(),model.getNoOfRatings(),category);
                         holder.setShopName(model.getStoreName(),model.getOwnerName(),category);
+                        holder.setCompanyName(model.getCompanyName(),model.getStoreSubCategory());
                         // ApplicationClass.setTranslatedText(holder.tvShopAddress,model.getStoreAddress());
                         holder.tvShopAddress.setText(model.getStoreAddress());
                         tvNoExist.setVisibility(GONE);
@@ -229,11 +276,11 @@ public class StoresFragment extends Fragment {
         if(adapter!=null)
         adapter.stopListening();
     }
-    private boolean isNetworkAvailable() {
-        ConnectivityManager manager=(ConnectivityManager)getApplicationContext().getSystemService(CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo=manager.getActiveNetworkInfo();
-        return networkInfo!=null;
-    }
+//    private boolean isNetworkAvailable() {
+//        ConnectivityManager manager=(ConnectivityManager)getApplicationContext().getSystemService(CONNECTIVITY_SERVICE);
+//        NetworkInfo networkInfo=manager.getActiveNetworkInfo();
+//        return networkInfo!=null;
+//    }
 
 
 }

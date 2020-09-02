@@ -35,7 +35,7 @@ public class UpdateStoreAddress extends Dialog {
     String  STORE_ADDRESS="";
     FirebaseFirestore db;
     FirebaseAuth mAuth;
-    Double STORE_LONGITUDE=1.0,STORE_LATITUDE=1.0;
+
 
     public UpdateStoreAddress(@NonNull Context context, String STORE_ADDRESS, UpdateInterface updateInterface) {
         super(context);
@@ -62,7 +62,7 @@ public class UpdateStoreAddress extends Dialog {
 
         if(!STORE_ADDRESS.equals(""))
            etStoreAddress.setText(STORE_ADDRESS);
-            //ApplicationClass.setTranslatedText(etStoreAddress,STORE_ADDRESS);
+
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,9 +77,6 @@ public class UpdateStoreAddress extends Dialog {
 
 
         });
-
-
-
     }
     private void updateStoreName() {
 
@@ -89,40 +86,9 @@ public class UpdateStoreAddress extends Dialog {
         else{
             List<String>list=new ArrayList<>();
             list.add(storeAddress);
-            if(!getAddress(storeAddress))
-            {
-                Toast.makeText(context,"invalid new address",Toast.LENGTH_LONG).show();
-                return;
-            }
-                 updateInterface.update("STORE_ADDRESS",list,STORE_LONGITUDE,STORE_LATITUDE);
-           dismiss();
-
-        }
-
-    }
-    public boolean getAddress(String address)
-    {
-
-        Geocoder geocoder=new Geocoder(context, Locale.getDefault());
-        try {
-
-            List list=geocoder.getFromLocationName(address,1);
-            if(list!=null&&list.size()>0)
-            {
-                Address ADDRESS=(Address) list.get(0);
-                STORE_LATITUDE=ADDRESS.getLatitude();
-                STORE_LONGITUDE=ADDRESS.getLongitude();
-                return  true;
-
-            }
-            else
-            {
-                return false;
-            }
-        }
-        catch (Exception e)
-        {
-            return false;
+            updateInterface.update("STORE_ADDRESS",list);
+            dismiss();
         }
     }
+
 }

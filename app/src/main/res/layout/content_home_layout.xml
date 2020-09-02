@@ -22,7 +22,6 @@
                     android:layout_height="40dp"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentStart="true"
-                    android:onClick="openDrawer"
                     android:src="@drawable/three_line"
 
                     />
@@ -33,7 +32,7 @@
                     android:layout_width="match_parent"
                     android:layout_marginStart="45dp"
                     android:orientation="vertical"
-
+                        android:id="@+id/linera_layout"
                     android:layout_height="wrap_content">
                     <TextView
                         android:layout_width="match_parent"
@@ -56,6 +55,16 @@
                     </RelativeLayout>
 
                 </LinearLayout>
+                <ImageView
+                    android:onClick="openNotification"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_notifications"
+                    android:layout_alignParentTop="true"
+                    />
             </RelativeLayout>
 
     <ScrollView
@@ -91,7 +100,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
                     app:sliderAnimationDuration="600"
-                    app:sliderAutoCycleDirection="back_and_forth"
+                    app:sliderAutoCycleDirection="right"
                     app:sliderAutoCycleEnabled="true"
                     app:sliderIndicatorAnimationDuration="600"
                     app:sliderIndicatorGravity="center_horizontal|bottom"
@@ -176,97 +185,137 @@
                     android:textColor="@color/text_dark"
                     android:textSize="30sp"
                     android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tv_all_services"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/tv_categories"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/all_services"
-                    android:textColor="@color/text_dark"
-                    android:textSize="16sp" />
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@+id/tv_categories">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/tv_all_services"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/all_services"
+                            android:textColor="@color/text_dark"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:id="@+id/all_services_view"
+                            android:layout_width="80dp"
+                            android:layout_height="1dp"
+                            android:background="@color/black"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginStart="15dp"
+
+                             />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/text_light"
+                            android:onClick="sellBuyProduct"
+                            android:text="@string/sell_and_buy"
+                            android:textSize="16sp" />
+                        <View
+                            android:id="@+id/all_sell_buy_view"
+                            android:layout_width="80dp"
+                            android:layout_height="1dp"
+                            android:background="@color/text_light"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="10dp"
+
+
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+<!--                <TextView-->
+<!--                    android:id="@+id/government"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@+id/tv_categories"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:text="@string/government"-->
+<!--                    android:textColor="@color/text_light"-->
+<!--                    android:textSize="16sp" />-->
+
+<!--                <View-->
+<!--                    android:id="@+id/government_view"-->
+<!--                    android:layout_width="80dp"-->
+<!--                    android:layout_height="1dp"-->
+<!--                    android:visibility="gone"-->
+<!--                    android:layout_below="@id/tv_all_services"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_marginStart="180dp"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:background="@color/black"-->
+<!--                      />-->
+
+
 
                 <View
-                    android:id="@+id/all_services_view"
-                    android:layout_width="80dp"
-                    android:layout_height="2dp"
-                    android:layout_below="@id/tv_all_services"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@color/black" />
-
-                <TextView
-                    android:id="@+id/government"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tv_categories"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_width="100dp"
+                    android:layout_height="5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
                     android:layout_centerHorizontal="true"
-                    android:text="@string/government"
-                    android:textColor="@color/text_light"
-                    android:textSize="16sp" />
-
-                <View
-                    android:id="@+id/government_view"
-                    android:layout_width="80dp"
-                    android:layout_height="1dp"
-                    android:visibility="gone"
-                    android:layout_below="@id/tv_all_services"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginStart="180dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@color/black"
-                      />
-                <TextView
-                    android:id="@+id/tv_sell_and_buy"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tv_categories"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_alignParentEnd="true"
-                    android:textColor="@color/text_light"
-                    android:onClick="sellBuyProduct"
-                    android:text="@string/sell_and_buy"
-                    android:textSize="16sp" />
-
-
+                    android:background="@color/light_black"
+                    />
                 <FrameLayout
                     android:id="@+id/fragment_category"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_below="@id/all_services_view"
-                    android:layout_centerHorizontal="true"
                     android:layout_marginTop="20dp"/>
-
-
-                <View
-                    android:id="@+id/view_2"
-                    android:layout_width="100dp"
-                    android:layout_height="5dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="10dp"
-                    android:layout_centerHorizontal="true"
-                    android:background="@color/light_black" />
 
 
 
             </RelativeLayout>
+        <RelativeLayout
+
+            android:id="@+id/relative_layout2_down"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/relative_layout3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/background">
+        </RelativeLayout>
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_view2"
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
-                android:layout_below="@id/relative_layout3"
+                android:layout_below="@id/relative_layout2_down"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="4dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="-50dp"
                 app:cardCornerRadius="20dp">
 
                 <com.smarteist.autoimageslider.SliderView
@@ -274,7 +323,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
                     app:sliderAnimationDuration="600"
-                    app:sliderAutoCycleDirection="back_and_forth"
+                    app:sliderAutoCycleDirection="right"
                     app:sliderAutoCycleEnabled="true"
                     app:sliderIndicatorAnimationDuration="600"
                     app:sliderIndicatorGravity="center_horizontal|bottom"
@@ -294,21 +343,15 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/card_view2"
                 android:layout_centerHorizontal="true"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
                 android:background="@drawable/lower_background"
                 android:orientation="vertical">
 
                 <View
-                    android:id="@+id/view_3"
                     android:layout_width="100dp"
                     android:layout_height="5dp"
-                    android:layout_marginTop="10dp"
-
+                    android:layout_marginTop="60dp"
                     android:layout_gravity="center_horizontal"
                     android:background="@color/light_black" />
-
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

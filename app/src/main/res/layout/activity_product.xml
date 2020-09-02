@@ -24,6 +24,7 @@
             >
             <RelativeLayout
                 android:id="@+id/relative_layout"
+                android:visibility="visible"
                 android:layout_width="match_parent"
                 android:layout_centerHorizontal="true"
                 android:layout_alignParentTop="true"
@@ -88,28 +89,12 @@
             android:layout_below="@id/relative_layout2"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <TextView
-                android:id="@+id/tv_selling_product"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:text="@string/plot_for_selling"
-                android:layout_marginStart="10dp"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/text_dark"/>
-                            <androidx.recyclerview.widget.RecyclerView
-                                android:id="@+id/recycler_view"
-                                android:background="@color/other_background"
-                                android:layout_below="@id/tv_selling_product"
-                                android:layout_centerHorizontal="true"
-                                android:layout_marginTop="10dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"/>
-
-
+                android:id="@+id/fragment"/>
         </RelativeLayout>
     </RelativeLayout>
 

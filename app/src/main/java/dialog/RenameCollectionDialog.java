@@ -38,15 +38,17 @@ public class RenameCollectionDialog extends Dialog {
     private Button btnCancel,btnUpdate;
     String COLLECTION_NAME=null;
     String COLLECTION_ID=null;
+    String HI_COLLECTION_NAME=null;
 
     FirebaseFirestore db;
     FirebaseAuth mAuth;
 
-    public  RenameCollectionDialog(@NonNull Context context,String COLLECTION_NAME,String COLLECTION_ID) {
+    public  RenameCollectionDialog(@NonNull Context context,String COLLECTION_NAME,String HI_COLLECTION_NAME,String COLLECTION_ID) {
         super(context);
         this.context=context;
         this.COLLECTION_NAME=COLLECTION_NAME;
         this.COLLECTION_ID=COLLECTION_ID;
+        this.HI_COLLECTION_NAME=HI_COLLECTION_NAME;
 
     }
 
@@ -65,8 +67,10 @@ public class RenameCollectionDialog extends Dialog {
 
         mAuth=FirebaseAuth.getInstance();
         db=FirebaseFirestore.getInstance();
-        if(COLLECTION_NAME!=null)
-            etCollectionName.setText(COLLECTION_NAME);
+
+        etCollectionName.setText(COLLECTION_NAME);
+        if(ApplicationClass.LANGUAGE_MODE.equals("hi"))
+                etCollectionName.setText(HI_COLLECTION_NAME);
 
 
         btnCancel.setOnClickListener(new View.OnClickListener() {
@@ -100,54 +104,83 @@ public class RenameCollectionDialog extends Dialog {
         else {
             final CustumProgressDialog dialog=new CustumProgressDialog((Activity)context);
             dialog.startProgressBar(context.getString(R.string.name_editing));
-            final HashMap<String ,Object>hashMap=new HashMap<>();
-            hashMap.put("collectionName",newCollectionName);
-            ApplicationClass.translatedData=new HashMap<>();
-            ApplicationClass.setTranslatedDataToMap("hicollectionName",newCollectionName);
-
-            new Handler().postDelayed(new Runnable() {
+            db.collection("productCollections").whereEqualTo("uid",mAuth.getUid())
+                    .whereEqualTo("collectionName",newCollectionName).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                 @Override
-                public void run() {
-                    hashMap.putAll(ApplicationClass.translatedData);
-                    db.collection("productCollections").document(COLLECTION_ID).update(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if(task.isSuccessful())
-                            {
-                                db.collection("productImages").whereEqualTo("uid",mAuth.getUid())
-                                        .whereEqualTo("collectionName",COLLECTION_NAME).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                                    @Override
-                                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                                        if(!queryDocumentSnapshots.isEmpty())
-                                        {
-                                            for(DocumentSnapshot documentSnapshot:queryDocumentSnapshots)
-                                            {
-                                                ProductImage productImage=documentSnapshot.toObject(ProductImage.class);
-                                                HashMap<String,Object>hashMap1=new HashMap<>();
-                                                hashMap1.put("collectionName",newCollectionName);
-                                                db.collection("productImages").document(productImage.getImageId()).update(hashMap1);
-                                            }
-                                            dialog.stopProgressBar();
-                                        }
+                public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                    if(queryDocumentSnapshots.isEmpty())
+                    {
+                        final HashMap<String ,Object>hashMap=new HashMap<>();
+                        hashMap.put("collectionName",newCollectionName);
+                        ApplicationClass.translatedData=new HashMap<>();
+                        ApplicationClass.setTranslatedDataToMap("hicollectionName",newCollectionName);
 
-                                    }
-                                }).addOnFailureListener(new OnFailureListener() {
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                hashMap.putAll(ApplicationClass.translatedData);
+                                db.collection("productCollections").document(COLLECTION_ID).update(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
-                                    public void onFailure(@NonNull Exception e) {
-                                        dialog.stopProgressBar();
-                                        Toast.makeText(context,e.getMessage(),Toast.LENGTH_LONG).show();
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if(task.isSuccessful())
+                                        {
+                                            db.collection("productImages").whereEqualTo("uid",mAuth.getUid())
+                                                    .whereEqualTo("collectionName",COLLECTION_NAME).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                                                @Override
+                                                public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                                                    if(!queryDocumentSnapshots.isEmpty())
+                                                    {
+                                                        for(DocumentSnapshot documentSnapshot:queryDocumentSnapshots)
+                                                        {
+                                                            ProductImage productImage=documentSnapshot.toObject(ProductImage.class);
+                                                            HashMap<String,Object>hashMap1=new HashMap<>();
+                                                            hashMap1.put("collectionName",newCollectionName);
+                                                            hashMap1.putAll(ApplicationClass.translatedData);
+                                                            db.collection("productImages").document(productImage.getImageId()).update(hashMap1);
+                                                        }
+                                                        dialog.stopProgressBar();
+                                                        dismiss();
+                                                    }
+                                                    else
+                                                    {
+                                                        dismiss();
+                                                        dialog.stopProgressBar();
+                                                    }
+
+                                                }
+                                            }).addOnFailureListener(new OnFailureListener() {
+                                                @Override
+                                                public void onFailure(@NonNull Exception e) {
+                                                    dialog.stopProgressBar();
+                                                    Toast.makeText(context,e.getMessage(),Toast.LENGTH_LONG).show();
+                                                }
+                                            });
+                                        }
+                                        else
+                                        {
+                                            dialog.stopProgressBar();
+                                            Toast.makeText(context,task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                                        }
                                     }
                                 });
                             }
-                            else
-                            {
-                                dialog.stopProgressBar();
-                                Toast.makeText(context,task.getException().getMessage(),Toast.LENGTH_LONG).show();
-                            }
-                        }
-                    });
+                        }, 1000);
+                    }
+                    else
+                    {
+                        dialog.stopProgressBar();
+                        Toast.makeText(context,"This name already exist",Toast.LENGTH_LONG).show();
+                    }
+
                 }
-            }, 1000);
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    dialog.stopProgressBar();
+                    Toast.makeText(context,e.getMessage(),Toast.LENGTH_LONG).show();
+                }
+            });
+
 
 //            db.collection("productCollections").whereEqualTo("uid",mAuth.getUid())
 //                    .whereEqualTo("collectionName",COLLECTION_NAME)
@@ -186,6 +219,7 @@ public class RenameCollectionDialog extends Dialog {
 //            });
 //            dialog.stopProgressBar();
         }
-        dismiss();
+
     }
+
 }

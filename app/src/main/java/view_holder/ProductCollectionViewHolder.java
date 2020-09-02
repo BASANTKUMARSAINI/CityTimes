@@ -27,6 +27,7 @@ public class ProductCollectionViewHolder extends RecyclerView.ViewHolder {
     public CardView newImageCard;
     public ImageView newImageView;
     public LinearLayout mainLayout;
+    public ImageView imgDeleteCollection;
     public ProductCollectionViewHolder(@NonNull View itemView,Context context) {
         super(itemView);
         this.context=context;
@@ -35,6 +36,7 @@ public class ProductCollectionViewHolder extends RecyclerView.ViewHolder {
         uploadLayout=itemView.findViewById(R.id.upload_layout);
         newImageCard=itemView.findViewById(R.id.new_image_card_view);
         newImageView=itemView.findViewById(R.id.new_product_image);
+        imgDeleteCollection=itemView.findViewById(R.id.img_delete_collection);
 
         etProductPrice=itemView.findViewById(R.id.et_product_price);
         tvUpload=itemView.findViewById(R.id.tv_upload);

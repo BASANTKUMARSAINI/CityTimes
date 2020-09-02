@@ -70,6 +70,7 @@ public class StorePhotosActivity extends AppCompatActivity {
                     @Override
                     protected void onBindViewHolder(@NonNull ProductImageViewHolder holder, int position, @NonNull final ProductImage model1) {
                         holder.setProductImage(model1.getImage());
+                        if(model1.getPrice()!=null)
                         holder.tvProductPrice.setText(getString(R.string.rs)+model1.getPrice());
                         holder.btnDelete.setImageResource(R.drawable.share);
 

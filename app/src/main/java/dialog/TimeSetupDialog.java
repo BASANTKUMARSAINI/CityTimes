@@ -31,8 +31,12 @@ public class TimeSetupDialog  {
     public ToggleButton tMonday,tSunday,tTuseday,tWednesday,tThrusday,tFriday,tSaturday,fromAM,fromPM,toAM,toPM;
     public EditText fromHour,fromMin,toHour,toMin;
     public Button btnNext;
-    public TimeSetupDialog(Activity activity)
+    TextView tvServiceTimming;
+    String CATEGORY="",SUB_CATEGORY="";
+    public TimeSetupDialog(String CATEGORY,String SUB_CATEGORY,Activity activity)
     {
+        this.CATEGORY=CATEGORY;
+        this.SUB_CATEGORY=SUB_CATEGORY;
         this.activity=activity;
     }
     public  void startProgressBar()
@@ -48,6 +52,11 @@ public class TimeSetupDialog  {
         tThrusday=view.findViewById(R.id.tThursday);
         tFriday=view.findViewById(R.id.tFriday);
         tSaturday=view.findViewById(R.id.tSaturday);
+        tvServiceTimming=view.findViewById(R.id.tv_service_timming);
+        if(CATEGORY.equals("Education")&&(!SUB_CATEGORY.equals("Book Store")))
+            tvServiceTimming.setText(R.string.meeting_time);
+        if(SUB_CATEGORY.equals("JCB and Crane"))
+            tvServiceTimming.setText(R.string.meeting_time);
 
 
 

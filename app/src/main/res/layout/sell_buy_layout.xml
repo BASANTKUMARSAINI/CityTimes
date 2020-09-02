@@ -13,6 +13,7 @@
     android:layout_height="wrap_content">
     <RelativeLayout
         android:paddingStart="5dp"
+        android:paddingEnd="5dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:layout_width="match_parent"
@@ -21,7 +22,7 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/img_product"
-           android:layout_alignParentTop="true"
+            android:layout_alignParentTop="true"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_alignParentStart="true"
@@ -33,32 +34,29 @@
             android:layout_marginStart="10dp"
             android:layout_centerVertical="true"
             android:layout_toEndOf="@+id/img_product">
-
-        <LinearLayout
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-            <TextView
-
-                android:id="@+id/tv_product_name"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
-                android:textSize="18sp"
-                android:textColor="@color/black"
-                android:text="@string/product_name"
-                />
-            <TextView
-                android:id="@+id/tv_product_type"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:textSize="18sp"
-                android:textColor="@color/black"
-                android:text="@string/product_type"
-                />
-        </LinearLayout>
+                >
+                <TextView
+                    android:id="@+id/tv_product_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:text="@string/product_name"
+                    />
+                <TextView
+                    android:id="@+id/tv_product_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:text="@string/product_type"
+                    />
+            </LinearLayout>
             <LinearLayout
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"

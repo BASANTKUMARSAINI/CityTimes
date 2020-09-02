@@ -8,10 +8,12 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.inputmethodservice.InputMethodService;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.mycity.R;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -37,8 +39,8 @@ import users.StoresActivity;
 
 public class SellAndBuyActivity extends AppCompatActivity {
 FirebaseFirestore db;
-FirebaseAuth mAuth;
 Fragment fragment;
+TextView tvProductSelling;
 FragmentTransaction transaction;
 androidx.appcompat.widget.SearchView searchView;
 SliderView sliderView;
@@ -50,72 +52,53 @@ SliderView sliderView;
         setContentView(R.layout.activity_sell_and_buy);
         db=FirebaseFirestore.getInstance();
         sliderView= findViewById(R.id.imageSlider);
+        tvProductSelling=findViewById(R.id.tv_selling_product);
+        tvProductSelling.setText(R.string.products_for_selling);
         setSliderImage();
         transaction=getSupportFragmentManager().beginTransaction();
         fragment=new BuyProductFragment();
         transaction.replace(R.id.sub_fragment,fragment);
-        transaction.addToBackStack(null);
+
+        if(!getSupportFragmentManager().getFragments().isEmpty())
+            transaction.addToBackStack(null);
         transaction.commit();
         searchView=findViewById(R.id.search_view);
-//        searchView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                enableSearchView(searchView,true);
-//               // Intent intent=new Intent(SellAndBuyActivity.this, SearchCategoriesActivity.class);
-//                EditText editText=(EditText)searchView.findViewById(R.id.search_src_text);
-//                editText.setEnabled(true);
-//                //startActivityForResult(intent,1);
-//
-//            }
-//        });
-//        searchView.setOnSearchClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                enableSearchView(searchView,true);
-////                Intent intent=new Intent(SellAndBuyActivity.this,SearchCategoriesActivity.class);
-//                EditText editText=(EditText)searchView.findViewById(R.id.search_src_text);
-//                editText.setEnabled(true);
-//                //startActivityForResult(intent,1);
-//            }
-//        });
         searchView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                InputMethodManager manager=(InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-                EditText editText=(EditText)searchView.findViewById(R.id.search_src_text);
-              // editText.setEnabled(true);
-                manager.showSoftInput(editText,0);
 
-            }
-        });
-        searchView.setOnSearchClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                transaction=getSupportFragmentManager().beginTransaction();
-                fragment=new SearchProductFragment();
-                transaction.replace(R.id.sub_fragment,fragment);
-                transaction.addToBackStack(null);
+                searchView.setIconified(false);
+                tvProductSelling.setText(R.string.all_products);
+                transaction = getSupportFragmentManager().beginTransaction();
+                fragment = new SearchProductFragment();
+                transaction.replace(R.id.sub_fragment, fragment);
                 transaction.commit();
             }
         });
-
         searchView.setOnQueryTextListener(new androidx.appcompat.widget.SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                transaction=getSupportFragmentManager().beginTransaction();
-                fragment=new SearchProductFragment(query);
-                transaction.replace(R.id.sub_fragment,fragment);
-                transaction.commit();
-                return true;
+                if(!TextUtils.isEmpty(query)) {
+
+                    transaction = getSupportFragmentManager().beginTransaction();
+                    fragment = new SearchProductFragment(query);
+                    transaction.replace(R.id.sub_fragment, fragment);
+                    transaction.commit();
+                    return true;
+                }
+               return false;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                transaction=getSupportFragmentManager().beginTransaction();
-                fragment=new SearchProductFragment(newText);
-                transaction.replace(R.id.sub_fragment,fragment);
-                transaction.commit();
-                return true;
+                if(!TextUtils.isEmpty(newText)) {
+                    transaction = getSupportFragmentManager().beginTransaction();
+                    fragment = new SearchProductFragment(newText);
+                    transaction.replace(R.id.sub_fragment, fragment);
+                    transaction.commit();
+                    return true;
+                }
+                return false;
             }
         });
 
@@ -127,22 +110,6 @@ SliderView sliderView;
 
     }
 
-
-
-
-//    private void enableSearchView(View view, boolean enabled)
-//    {
-//        view.setEnabled(enabled);
-//        if(view instanceof ViewGroup)
-//        {
-//            ViewGroup viewGroup=(ViewGroup)view;
-//            for(int i=0;i<viewGroup.getChildCount();i++)
-//            {
-//                View child=viewGroup.getChildAt(i);
-//                enableSearchView(child,enabled);
-//            }
-//        }
-//    }
     public void sellProduct(View view)
     {
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment,new SellProductFragment()).addToBackStack(null).commit();
@@ -159,29 +126,6 @@ SliderView sliderView;
     }
     private void setSliderImage() {
         ApplicationClass.setSliderImage(SellAndBuyActivity.this,sliderView,"general");
-//        db.collection("images").whereEqualTo("imageType","general").limit(5).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-//            @Override
-//            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-//                List<SliderItem> list=new ArrayList<>();
-//                for(DocumentSnapshot documentSnapshot:queryDocumentSnapshots)
-//                {
-//                    list.add(documentSnapshot.toObject(SliderItem.class));
-//                }
-//
-//                SliderAdapterExample adapter = new SliderAdapterExample(SellAndBuyActivity.this,list);
-//
-//                sliderView.setSliderAdapter(adapter);
-//
-//                //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
-//                sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
-//                sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
-//                sliderView.setIndicatorSelectedColor(Color.WHITE);
-//                sliderView.setIndicatorUnselectedColor(Color.GRAY);
-//                sliderView.setScrollTimeInSec(2); //set scroll delay in seconds :
-//                sliderView.startAutoCycle();
-//
-//            }
-//        });
     }
     public void myProduct(View view)
     {

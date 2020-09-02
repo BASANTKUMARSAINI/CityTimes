@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/main_background"
     android:layout_height="match_parent"
     tools:context="users.ShopActivity"
-
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ImageView
@@ -16,10 +13,25 @@
         android:layout_height="40dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="5dp"
         android:onClick="goToBack"
         android:src="@drawable/back"
         />
+    <TextView
+        android:id="@+id/tv_last_update"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/change_shop_status"
+        android:background="@drawable/pop_up_botton_background"
+        android:text="last update"
+        android:textSize="8sp"
+        android:padding="5dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:layout_marginEnd="5dp"
+        />
+
     <LinearLayout
         android:id="@+id/change_shop_status"
         android:layout_width="wrap_content"
@@ -52,8 +64,8 @@
             android:layout_marginStart="5dp"
             android:layout_height="wrap_content"
             />
-
     </LinearLayout>
+
     <ScrollView
         android:layout_below="@+id/btn_back"
         android:layout_height="match_parent"
@@ -63,7 +75,8 @@
         >
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:id="@+id/img_background"
@@ -88,6 +101,7 @@
                         android:src="@drawable/map_image" />
                 </androidx.cardview.widget.CardView>
             </RelativeLayout>
+
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/img_profile"
                 android:layout_centerHorizontal="true"
@@ -96,8 +110,9 @@
                 android:layout_height="102dp"
                 android:layout_marginTop="-50dp"
                 android:src="@drawable/profile_icon"/>
+
             <LinearLayout
-                android:id="@+id/linera_layout"
+                android:id="@+id/main_linera_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/img_profile"
@@ -107,8 +122,9 @@
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/background_with_boarder"
                 android:orientation="vertical">
+
                 <RelativeLayout
-                    android:id="@+id/relative_layout"
+                    android:id="@+id/store_name_relative_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp">
@@ -147,11 +163,28 @@
                         />
                 </RelativeLayout>
                 <RelativeLayout
-                    android:id="@+id/relative_layout1"
+                    android:id="@+id/company_name_relative_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="5dp">
+                    <TextView
+                        android:id="@+id/tv_company_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_dark"
+                        android:gravity="center_horizontal"
+                        android:text="@string/company_name"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/ownername_relative_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp">
-
                     <TextView
                         android:id="@+id/tv_owner_name"
                         android:layout_width="match_parent"
@@ -164,25 +197,27 @@
                         android:textSize="20sp" />
                 </RelativeLayout>
                 <RelativeLayout
-                    android:id="@+id/relative_layout_board"
-                    android:layout_width="match_parent"
                     android:visibility="gone"
+                    android:id="@+id/principle_relative_layout"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp">
                     <TextView
-                        android:id="@+id/tv_board_name"
+                        android:id="@+id/tv_principle_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:gravity="center_horizontal"
-                        android:text="@string/board_name"
                         android:textColor="@color/text_dark"
+                        android:gravity="center_horizontal"
+                        android:text="@string/principle"
                         android:textSize="20sp" />
                 </RelativeLayout>
 
+
+
                 <LinearLayout
-                    android:id="@+id/rating_layout"
+                    android:id="@+id/rating_linear_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -201,34 +236,85 @@
                         android:layout_height="20dp"
                         android:layout_gravity="center_vertical"
                         android:src="@drawable/star"/>
-
                 </LinearLayout>
+
+
+
+
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="10dp"
-                    android:textColor="@color/black"/>
+                    android:background="@color/black"/>
+
 
                 <LinearLayout
+                    android:id="@+id/board_linear_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_board" />
+                    <TextView
+                        android:id="@+id/tv_board_name"
+                        android:layout_width="0dp"
+                        android:layout_weight="9"
+                        android:layout_height="wrap_content"
+                        android:text="@string/school_board"
+                        android:textColor="@color/text_dark"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rate_linear_layout"
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/selver"
+                        android:textStyle="bold"
+                        android:textSize="25sp"
+                        android:text="@string/Rs"/>
+                    <TextView
+                        android:id="@+id/tv_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="9"
+                        android:text="@string/rate"
+                        android:textColor="@color/text_dark"
+                        android:textSize="20sp" />
+                </LinearLayout>
 
+                <LinearLayout
+                    android:id="@+id/contact_linear_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:src="@drawable/call" />
-
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="8">
-
+                        android:layout_weight="9">
                         <TextView
                             android:id="@+id/tv_phone_1"
                             android:layout_width="wrap_content"
@@ -237,15 +323,13 @@
                             android:text="@string/contact_number"
                             android:textColor="@color/text_dark"
                             android:textSize="20sp" />
-
                         <TextView
                             android:layout_width="wrap_content"
-
+                            android:id="@+id/tv_comma"
                             android:layout_height="wrap_content"
                             android:text=" , "
                             android:textColor="@color/text_dark"
                             android:textSize="20sp" />
-
                         <TextView
                             android:id="@+id/tv_phone_2"
                             android:layout_width="wrap_content"
@@ -253,74 +337,62 @@
                             android:layout_marginStart="5dp"
                             android:textColor="@color/text_dark"
                             android:textSize="20sp" />
-
                     </LinearLayout>
-
-
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/address_linear_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
-
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:src="@drawable/location" />
-
                     <TextView
                         android:id="@+id/tv_store_address"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:textColor="@color/text_dark"
-                        android:layout_weight="8"
+                        android:layout_weight="9"
                         android:text="@string/address"
                         android:textSize="20sp" />
-
-
-
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/time_layout"
+                    android:id="@+id/time_linear_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
-
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:src="@drawable/time" />
-
                     <TextView
                         android:id="@+id/tv_store_timing"
                         android:layout_width="0dp"
                         android:textColor="@color/text_dark"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
-                        android:layout_weight="8"
+                        android:layout_weight="9"
                         android:text="@string/opeing_closing_time"
                         android:textSize="20sp" />
-
-
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/day_layout"
+                    android:id="@+id/day_linear_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="5dp"
                     android:orientation="horizontal">
-
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -328,16 +400,13 @@
                         android:layout_marginStart="5dp"
                         android:layout_weight="1"
                         android:src="@drawable/days" />
-
                     <LinearLayout
-                        android:id="@+id/relative_layout5"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="5dp"
-                        android:layout_weight="7"
+                        android:layout_weight="9"
                         android:gravity="center_horizontal">
-
                         <TextView
                             android:id="@+id/tv_day_sunday"
                             android:layout_width="0dp"
@@ -346,7 +415,6 @@
                             android:text="@string/s"
                             android:textColor="@color/green"
                             android:textSize="18sp" />
-
                         <TextView
                             android:id="@+id/tv_day_monday"
                             android:layout_width="0dp"
@@ -357,211 +425,178 @@
                             android:text="@string/m"
                             android:textColor="@color/green"
                             android:textSize="18sp" />
-
                         <TextView
                             android:id="@+id/tv_day_tuesday"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-
                             android:text="@string/t"
                             android:textColor="@color/green"
                             android:textSize="18sp" />
-
                         <TextView
                             android:id="@+id/tv_day_wednesday"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-
                             android:text="@string/w"
                             android:textColor="@color/green"
                             android:textSize="18sp" />
-
                         <TextView
                             android:id="@+id/tv_day_thursday"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-
                             android:text="@string/t"
                             android:textColor="@color/green"
                             android:textSize="18sp" />
-
                         <TextView
                             android:id="@+id/tv_day_friday"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-
                             android:text="@string/f"
                             android:textColor="@color/green"
                             android:textSize="18sp" />
-
                         <TextView
                             android:id="@+id/tv_day_saturday"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-
                             android:text="@string/s"
                             android:textColor="@color/green"
                             android:textSize="18sp" />
-
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
                     </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="5"/>
-
-
                 </LinearLayout>
 
                 <LinearLayout
                     android:visibility="gone"
-                    android:id="@+id/view_home_delivery"
+                    android:id="@+id/home_delivery_linear_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
-
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:src="@drawable/bike" />
-
                     <TextView
                         android:id="@+id/tv_delivery_status"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
-                        android:layout_weight="8"
+                        android:layout_weight="9"
                         android:textColor="@color/text_dark"
                         android:text="@string/home_delivery_not_available"
                         android:textSize="20sp" />
-
-
-
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/workers_linear_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-
                     android:orientation="horizontal">
-
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:src="@drawable/account_circle" />
-
                     <TextView
                         android:id="@+id/tv_workers"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
-                        android:layout_weight="8"
+                        android:layout_weight="9"
                         android:textColor="@color/text_dark"
                         android:text="@string/workers_required"
                         android:textSize="20sp" />
-
-
-
                 </LinearLayout>
+
                 <LinearLayout
                     android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:id="@+id/hostel_layout"
+                    android:id="@+id/hostel_linear_layout"
                     android:orientation="horizontal">
-
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:src="@drawable/account_circle" />
-
                     <TextView
                         android:id="@+id/tv_hostel"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:textColor="@color/text_dark"
-                        android:layout_weight="8"
+                        android:layout_weight="9"
                         android:text="@string/hostel_facility"
                         android:textSize="20sp" />
-
-
-
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:id="@+id/transport_layout"
+                    android:id="@+id/transprot_linear_layout"
                     android:visibility="gone"
                     android:orientation="horizontal">
-
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:src="@drawable/account_circle" />
-
+                        android:src="@drawable/ic_transport" />
                     <TextView
                         android:id="@+id/tv_transport"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
-                        android:layout_weight="8"
+                        android:layout_weight="9"
                         android:text="@string/transport_facility"
                         android:textSize="20sp"
                         android:textColor="@color/text_dark"/>
-
-
-
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/photos_layout"
+                    android:id="@+id/photos_linear_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:onClick="seeAllPhotos"
                     android:layout_marginBottom="80dp"
                     android:orientation="horizontal">
-
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:src="@drawable/photos" />
-
                     <TextView
                         android:id="@+id/tv_see_all_photos"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:textColor="@color/text_dark"
-                        android:layout_weight="8"
+                        android:layout_weight="9"
                         android:text="@string/see_all_photos"
                         android:textSize="20sp" />
                 </LinearLayout>
             </LinearLayout>
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/img_call"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_below="@id/linera_layout"
+                android:layout_below="@id/main_linera_layout"
                 android:layout_marginTop="-30dp"
                 android:onClick="makePhoneCall"
                 android:layout_marginEnd="30dp"
@@ -572,7 +607,7 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/img_navigation"
                 android:layout_width="80dp"
-                android:layout_below="@id/linera_layout"
+                android:layout_below="@id/main_linera_layout"
                 android:layout_centerHorizontal="true"
                 android:layout_height="80dp"
                 android:layout_marginTop="-40dp"
@@ -580,27 +615,27 @@
                 android:background="@drawable/circuler_image_background"
                 android:src="@drawable/navigation" />
 
-
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/img_star"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_below="@id/linera_layout"
+                android:layout_below="@id/main_linera_layout"
                 android:layout_marginTop="-30dp"
                 android:layout_marginStart="30dp"
                 android:onClick="setStoreRatings"
                 android:layout_toEndOf="@+id/img_navigation"
                 android:background="@drawable/circuler_image_background"
                 android:src="@drawable/star" />
+
             <LinearLayout
-                android:id="@+id/description_layout"
+                android:id="@+id/description_linear_layout"
                 android:layout_width="match_parent"
+                android:visibility="gone"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
                 android:background="@drawable/background_with_boarder"
-                android:layout_below="@+id/img_navigation"
+                android:layout_below="@+id/workers_qualification_linear_layout"
                 android:orientation="vertical">
                 <LinearLayout
                     android:orientation="horizontal"
@@ -614,15 +649,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:src="@drawable/photos"/>
-
+                        android:src="@drawable/ic_decription"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:textColor="@color/text_dark"
                         android:text="@string/service_description"
-
                         android:textSize="20sp" />
                 </LinearLayout>
                 <TextView
@@ -638,10 +671,11 @@
             </LinearLayout>
 
             <RelativeLayout
-                android:id="@+id/layout_photo"
+                android:visibility="gone"
+                android:id="@+id/photos_relative_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/description_layout"
+                android:layout_below="@id/description_linear_layout"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
                 android:padding="10dp"
@@ -654,7 +688,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
-                    android:text="Photos"
+                    android:text="@string/photos"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="5dp"
                     android:textColor="@color/text_dark"
@@ -666,20 +700,21 @@
                     android:layout_width="match_parent"
                     android:layout_centerHorizontal="true"
                     android:layout_below="@id/tv_photos"
+                    android:background="@color/other_background"
                     android:layout_marginTop="20dp"
                     android:layout_height="match_parent"/>
 
             </RelativeLayout>
+
             <RelativeLayout
-                android:id="@+id/layout_show"
+                android:id="@+id/show_relative_layout"
                 android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/layout_photo"
+                android:layout_below="@+id/photos_relative_layout"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
-
-                android:background="@drawable/lower_background_white"
+                android:background="@drawable/background"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp">
                 <TextView
@@ -701,11 +736,83 @@
                     android:layout_below="@id/tv_shows"
                     android:layout_marginTop="20dp"
                     android:layout_height="match_parent"/>
-
             </RelativeLayout>
 
+            <RelativeLayout
+                android:id="@+id/items_relative_layout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/show_relative_layout"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/lower_background"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:id="@+id/tv_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/items"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/text_dark"
+                    android:textSize="20sp"
+                    android:layout_centerHorizontal="true"
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_items"
+                    android:layout_width="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/tv_items"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="match_parent"/>
 
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/workers_qualification_linear_layout"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/background_with_boarder"
+                android:layout_below="@+id/img_navigation"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/account_circle"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:textColor="@color/text_dark"
+                        android:text="@string/workers_qualifications"
+                        android:textSize="20sp" />
+                </LinearLayout>
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/tv_workers_qualifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/text_dark"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/description_not_added"
+                    android:textSize="16sp" />
+            </LinearLayout>
         </RelativeLayout>
     </ScrollView>
-
 </RelativeLayout>

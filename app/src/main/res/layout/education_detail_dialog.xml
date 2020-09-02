@@ -9,14 +9,25 @@
         android:orientation="vertical"
         android:layout_height="match_parent">
         <EditText
+            android:visibility="gone"
+            android:id="@+id/et_chairman_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/chairman"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+        <EditText
             android:id="@+id/et_pricipal_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/principal_director_name"
+            android:hint="@string/principle_head_name"
             android:textSize="16sp"
             android:layout_margin="10dp"/>
         <TextView
             android:id="@+id/tv_school_board"
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"

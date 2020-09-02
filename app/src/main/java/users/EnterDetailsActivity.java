@@ -225,17 +225,17 @@ public class EnterDetailsActivity extends AppCompatActivity implements RecyclerV
             case "Country":
                 tvUserCountry.setText(place);
                 tvUserCountry.setTextColor(getResources().getColor(R.color.selver));
-                userCountry=place;//ApplicationClass.getEnglishSubCategory("country_"+index,EnterDetailsActivity.this);
+                userCountry=ApplicationClass.getEnglishSubCategory("country_"+index,EnterDetailsActivity.this);
                 break;
             case "State":
                 tvUserState.setText(place);
                 tvUserState.setTextColor(getResources().getColor(R.color.selver));
-                userState=place;//ApplicationClass.getEnglishSubCategory("state_"+index,EnterDetailsActivity.this);
+                userState=ApplicationClass.getEnglishSubCategory("state_"+index,EnterDetailsActivity.this);
                 break;
             case "City":
                 tvUserCity.setText(place);
                 tvUserCity.setTextColor(getResources().getColor(R.color.selver));
-                userCity=place;//ApplicationClass.getEnglishSubCategory("city_"+index, EnterDetailsActivity.this);
+                userCity=ApplicationClass.getEnglishSubCategory("city_"+index, EnterDetailsActivity.this);
                 break;
         }
         bottomSheetDialog.dismiss();

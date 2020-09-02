@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">CityTimes</string>
 
     <string name="shopping">शॉपिंग</string>
@@ -112,160 +111,160 @@
     <string name="current_location">वर्तमान लोकेशन</string>
     <string name="store_category">सर्विस श्रेणी</string>
 
-<string name="store_sub_category">सर्विस उपश्रेणी</string>
+    <string name="store_sub_category">सर्विस उपश्रेणी</string>
 
-<string name="sell_products">प्रॉडक्ट्स बेंचे</string>
-<string name="products_for_selling">बेचने हेतु प्रॉडक्ट्स</string>
-<string name="dark_theme">डार्क थीम</string>
-<string name="clear_app_cache">ऐप कचे मिटायें</string>
-<string name="support">सहयोग</string>
-<string name="rate_us">हमें रेटिंग दें!</string>
-<string name="share_this_app">ऐप साझा करें</string>
-<string name="feedback">प्रतिपुष्टि</string>
+    <string name="sell_products">प्रॉडक्ट्स बेंचे</string>
+    <string name="products_for_selling">बेचने हेतु प्रॉडक्ट्स</string>
+    <string name="dark_theme">डार्क थीम</string>
+    <string name="clear_app_cache">ऐप कचे मिटायें</string>
+    <string name="support">सहयोग</string>
+    <string name="rate_us">हमें रेटिंग दें!</string>
+    <string name="share_this_app">ऐप साझा करें</string>
+    <string name="feedback">प्रतिपुष्टि</string>
 
-<string name="privacy">प्राइवेसी</string>
-<string name="terms_of_use">उपयोग की शर्तें</string>
+    <string name="privacy">प्राइवेसी</string>
+    <string name="terms_of_use">उपयोग की शर्तें</string>
 
-<string name="board_name">बोर्ड</string>
-<string name="rating">रेटिंग</string>
+    <string name="board_name">बोर्ड</string>
+    <string name="rating">रेटिंग</string>
 
-<string name="hostel_facility">हॉस्टल सुविधा!</string>
-<string name="transport_facility">ट्रांसपोर्ट सुविधा!</string>
+    <string name="hostel_facility">हॉस्टल सुविधा!</string>
+    <string name="transport_facility">ट्रांसपोर्ट सुविधा!</string>
 
-<string name="description_not_added">विवरण नही है</string>
+    <string name="description_not_added">विवरण नही है</string>
 
 
-<string name="c">C</string>
-<string name="ity">ity</string>
+    <string name="c">C</string>
+    <string name="ity">ity</string>
     <string name="imes">imes</string>
 
-<string name="seller_name">मालिक का नाम</string>
+    <string name="seller_name">मालिक का नाम</string>
 
-<string name="home_delivery_not_available">होम डिलीवरी उपलब्ध नही है</string>
-<string name="workers_required">वर्कर्स की ज़रूरत है</string>
-<string name="transport_servics_avilable">ट्रांसपोर्ट सुविधा उपलब्ध है</string>
-<string name="hostel_servics_avilable">हॉस्टल सुविधा उपलब्ध है</string>
-<string name="see_all_photos">फ़ोटो</string>
-<string name="shows">शो</string>
+    <string name="home_delivery_not_available">होम डिलीवरी उपलब्ध नही है</string>
+    <string name="workers_required">वर्कर्स की ज़रूरत है</string>
+    <string name="transport_servics_avilable">ट्रांसपोर्ट सुविधा उपलब्ध है</string>
+    <string name="hostel_servics_avilable">हॉस्टल सुविधा उपलब्ध है</string>
+    <string name="see_all_photos">फ़ोटो</string>
+    <string name="shows">शो</string>
 
-<string name="service_description">सर्विस विवरण</string>
+    <string name="service_description">सर्विस विवरण</string>
 
-<string name="apply">लागू</string>
-<string name="all_photos">सभी फ़ोटो</string>
-<string name="category_store">श्रेणी सर्विस</string>
-<string name="facebook">फ़सेबुक</string>
-<string name="google">गूगल</string>
-<string name="email_address">ईमेल</string>
+    <string name="apply">लागू</string>
+    <string name="all_photos">सभी फ़ोटो</string>
+    <string name="category_store">श्रेणी सर्विस</string>
+    <string name="facebook">फ़सेबुक</string>
+    <string name="google">गूगल</string>
+    <string name="email_address">ईमेल</string>
 
-<string name="forgot_password">पासवर्ड?</string>
-<string name="login">लॉग इन</string>
-<string name="don_t_have_an_account">अकाउंट नही है?</string>
-<string name="register_now">रजिस्टर करें</string>
-<string name="register_to_citytimes">CityTimes में रजिस्टर करें</string>
-<string name="full_name">पूरा नाम</string>
-<string name="email">ईमेल</string>
-<string name="password">पास्वर्ड</string>
-<string name="select_country">देश चुने</string>
-<string name="select_state">राज्य चुने</string>
-<string name="select_city">शहर चुने</string>
-<string name="register">रजिस्टर</string>
-<string name="by_registering_you_agree_to">रजिस्ट्रेशन कर के आप CityTimes की</string>
-<string name="term_and_conditions">उपयोग की शर्तें</string>
-<string name="and">और</string>
-<string name="privacy_policy">प्राइवेसी पॉलिसी</string>
-<string name="of_the_my_city">से सहमित है</string>
-<string name="add_collection">फ़ोल्डर जोड़े</string>
-<string name="collection_name">फ़ोल्डर का नाम</string>
+    <string name="forgot_password">पासवर्ड?</string>
+    <string name="login">लॉग इन</string>
+    <string name="don_t_have_an_account">अकाउंट नही है?</string>
+    <string name="register_now">रजिस्टर करें</string>
+    <string name="register_to_citytimes">CityTimes में रजिस्टर करें</string>
+    <string name="full_name">पूरा नाम</string>
+    <string name="email">ईमेल</string>
+    <string name="password">पास्वर्ड</string>
+    <string name="select_country">देश चुने</string>
+    <string name="select_state">राज्य चुने</string>
+    <string name="select_city">शहर चुने</string>
+    <string name="register">रजिस्टर</string>
+    <string name="by_registering_you_agree_to">रजिस्ट्रेशन कर के आप CityTimes की</string>
+    <string name="term_and_conditions">उपयोग की शर्तें</string>
+    <string name="and">और</string>
+    <string name="privacy_policy">प्राइवेसी पॉलिसी</string>
+    <string name="of_the_my_city">से सहमित है</string>
+    <string name="add_collection">फ़ोल्डर जोड़े</string>
+    <string name="collection_name">फ़ोल्डर का नाम</string>
 
-<string name="add">जोड़े</string>
-<string name="show_time">शो का समय:</string>
+    <string name="add">जोड़े</string>
+    <string name="show_time">शो का समय:</string>
 
-<string name="movie_name">मूवी का नाम</string>
-<string name="tickit_price">टिकट मूल्य</string>
+    <string name="movie_name">मूवी का नाम</string>
+    <string name="tickit_price">टिकट मूल्य</string>
 
-<string name="sub_category_name">उपश्रेणी का नाम</string>
-<string name="category_name">श्रेणी का नाम</string>
-<string name="explore">एक्सप्लोर</string>
-<string name="city_name">शहर का नाम</string>
-<string name="sell_and_buy">सैल एंड बाय</string>
-<string name="information">जानकारी</string>
-<string name="about_us">हमारे बारे में</string>
-<string name="contact_us">सम्पर्क</string>
-<string name="version">वर्जन</string>
-<string name="logout">लोग आउट</string>
-<string name="loading">लोडिंग….</string>
+    <string name="sub_category_name">उपश्रेणी का नाम</string>
+    <string name="category_name">श्रेणी का नाम</string>
+    <string name="explore">एक्सप्लोर</string>
+    <string name="city_name">शहर का नाम</string>
+    <string name="sell_and_buy">सैल एंड बाय</string>
+    <string name="information">जानकारी</string>
+    <string name="about_us">हमारे बारे में</string>
+    <string name="contact_us">सम्पर्क</string>
+    <string name="version">वर्जन</string>
+    <string name="logout">लोग आउट</string>
+    <string name="loading">लोडिंग….</string>
 
-<string name="product_title">प्रोडक्ट शीर्षक</string>
+    <string name="product_title">प्रोडक्ट शीर्षक</string>
 
-<string name="seller_phone">सैलर फ़ोन</string>
-<string name="define_search">खोज बतायें</string>
-<string name="store_name">सर्विस का नाम</string>
-<string name="store_address">पता</string>
-<string name="principal_director_name">प्रिन्सिपल का नाम</string>
-<string name="school_board">स्कूल बोर्ड</string>
+    <string name="seller_phone">सैलर फ़ोन</string>
+    <string name="define_search">खोज बतायें</string>
+    <string name="store_name">सर्विस का नाम</string>
+    <string name="store_address">पता</string>
+    <string name="principal_director_name">प्रिन्सिपल का नाम</string>
+    <string name="school_board">स्कूल बोर्ड</string>
 
-<string name="check_your_email">अपना ईमेल चेक करें</string>
-<string name="go_to_login">लोग इन के लिए जाए</string>
-<string name="send_feedback">प्रतिपुष्टि भेजे</string>
-<string name="type_message">संदेस लिखे</string>
+    <string name="check_your_email">अपना ईमेल चेक करें</string>
+    <string name="go_to_login">लोग इन के लिए जाए</string>
+    <string name="send_feedback">प्रतिपुष्टि भेजे</string>
+    <string name="type_message">संदेस लिखे</string>
 
-<string name="send">भेजें</string>
-<string name="general">सामान्य</string>
-<string name="history">इतिहास</string>
+    <string name="send">भेजें</string>
+    <string name="general">सामान्य</string>
+    <string name="history">इतिहास</string>
 
-<string name="no_such_store_exist">कोई सर्विस उपलब्ध नही है</string>
-<string name="tourism">पर्यटन</string>
-<string name="reset_password">पास्वर्ड बदलें</string>
-<string name="enter_email">ईमेल लिखें</string>
+    <string name="no_such_store_exist">कोई सर्विस उपलब्ध नही है</string>
+    <string name="tourism">पर्यटन</string>
+    <string name="reset_password">पास्वर्ड बदलें</string>
+    <string name="enter_email">ईमेल लिखें</string>
 
-<string name="sumbit">सबमिट</string>
-<string name="image_discription">फ़ोटो का विवरण</string>
-<string name="back">वापस</string>
-<string name="office_type">कार्यालय जैसा</string>
-<string name="address">पता</string>
-<string name="your_data_safe">your data safe</string>
+    <string name="sumbit">सबमिट</string>
+    <string name="image_discription">फ़ोटो का विवरण</string>
+    <string name="back">वापस</string>
+    <string name="office_type">कार्यालय जैसा</string>
+    <string name="address">पता</string>
+    <string name="your_data_safe">your data safe</string>
 
-<string name="rename">नाम बदलें</string>
-<string name="add_photo">फ़ोटो जोड़ें</string>
-<string name="upload">डालें</string>
-<string name="store">सर्विस</string>
-<string name="rate_now">रटे करें !</string>
-<string name="rename_collection">फ़ोल्डर का नाम बदले</string>
-<string name="new_collection_name">नए फ़ोल्डर का नाम</string>
+    <string name="rename">नाम बदलें</string>
+    <string name="add_photo">फ़ोटो जोड़ें</string>
+    <string name="upload">डालें</string>
+    <string name="store">सर्विस</string>
+    <string name="rate_now">रटे करें !</string>
+    <string name="rename_collection">फ़ोल्डर का नाम बदले</string>
+    <string name="new_collection_name">नए फ़ोल्डर का नाम</string>
 
-<string name="product_name">प्रोडक्ट का नाम</string>
-<string name="product_type">प्रोडक्ट टाईप</string>
+    <string name="product_name">प्रोडक्ट का नाम</string>
+    <string name="product_type">प्रोडक्ट टाईप</string>
 
-<string name="sell_your_product">अपना प्रोडक्ट बेचें</string>
+    <string name="sell_your_product">अपना प्रोडक्ट बेचें</string>
 
-<string name="add_more">और जोड़ें</string>
-<string name="product_title_name">प्रोडक्ट का नाम</string>
-<string name="product_price">प्रोडक्ट का मूल्य</string>
-<string name="seller_phone_number">सेलर का फ़ोन नम्बर</string>
-<string name="seller_city">सेलर का शहर</string>
-<string name="select_product_type">प्रोडक्ट टाइप चुने</string>
-<string name="enter_product_type_name">प्रोडक्ट टाइप का नाम लिखे</string>
+    <string name="add_more">और जोड़ें</string>
+    <string name="product_title_name">प्रोडक्ट का नाम</string>
+    <string name="product_price">प्रोडक्ट का मूल्य</string>
+    <string name="seller_phone_number">सेलर का फ़ोन नम्बर</string>
+    <string name="seller_city">सेलर का शहर</string>
+    <string name="select_product_type">प्रोडक्ट टाइप चुने</string>
+    <string name="enter_product_type_name">प्रोडक्ट टाइप का नाम लिखे</string>
 
 
-<string name="sell">बेचें</string>
+    <string name="sell">बेचें</string>
 
-<string name="shop_name">दुकान का नाम</string>
-<string name="no_of_ratings">रेटिंग की संख्या</string>
+    <string name="shop_name">दुकान का नाम</string>
+    <string name="no_of_ratings">रेटिंग की संख्या</string>
 
-<string name="avaliable">उपलब्ध</string>
-<string name="home_delivery_service">होम डिलीवरी सर्विस</string>
-<string name="next">अगला</string>
-<string name="setup_your_service_profile">अपनी सर्विस प्रोफ़ाइल बनायें</string>
-<string name="upload_a_cover_photo">कवर फ़ोटो लगायें</string>
-<string name="upload_owner_s_photo">मालिक की फ़ोटो लगायें</string>
-<string name="timings">सर्विस समय</string>
-<string name="setup_other_details">बाक़ी जानकारी भरें</string>
+    <string name="avaliable">उपलब्ध</string>
+    <string name="home_delivery_service">होम डिलीवरी सर्विस</string>
+    <string name="next">अगला</string>
+    <string name="setup_your_service_profile">अपनी सर्विस प्रोफ़ाइल बनायें</string>
+    <string name="upload_a_cover_photo">कवर फ़ोटो लगायें</string>
+    <string name="upload_owner_s_photo">मालिक की फ़ोटो लगायें</string>
+    <string name="timings">सर्विस समय</string>
+    <string name="setup_other_details">बाक़ी जानकारी भरें</string>
     <string name="awesome">शुक्रिय</string>
 
     <string name="let_s_go">आगे बढ़ें</string>
-<!--    <string name="from_9_40am">9:40AM से</string>-->
-<!--    <string name="to_9_40am">To: 9:40AM तक</string>-->
-<!--    <string name="price_400rupee">मूल्य: ₹400</string>-->
+    <!--    <string name="from_9_40am">9:40AM से</string>-->
+    <!--    <string name="to_9_40am">To: 9:40AM तक</string>-->
+    <!--    <string name="price_400rupee">मूल्य: ₹400</string>-->
     <string name="sort_by">सॉर्ट बाई</string>
     <string name="distance">दूरी</string>
     <string name="km">km </string>
@@ -361,32 +360,32 @@
     </string-array>
 
     //
-<string name="country_0">भारत</string>
-<string-array name="State">
-<item>हरियाणा</item>
-<item>उत्तर प्रदेश </item>
-</string-array>
+    <string name="country_0">भारत</string>
+    <string-array name="State">
+        <item>हरियाणा</item>
+        <item>उत्तर प्रदेश </item>
+    </string-array>
 
     //
-<string name="state_0">हरियाणा</string>
-<string name="state_1">उत्तर प्रदेश</string>
-<string-array name="City">
-<item>नरनौलl</item>
-<item>थानाभवन</item>
-</string-array>
+    <string name="state_0">हरियाणा</string>
+    <string name="state_1">उत्तर प्रदेश</string>
+    <string-array name="City">
+        <item>नरनौल</item>
+        <item>थानाभवन</item>
+    </string-array>
 
     //
-<string name="city_0">नरनौल</string>
-<string name="city_1">थानाभवन</string>
-<string-array name="food">
-<item>रेस्टोरेंट</item>
-<item>जूस कॉर्नर</item>
-<item>फ़ास्ट फ़ूड</item>
-<item>ढ़ाभा</item>
-<item>बार</item>
-</string-array>
+    <string name="city_0">नरनौल</string>
+    <string name="city_1">थानाभवन</string>
+    <string-array name="food">
+        <item>रेस्टोरेंट</item>
+        <item>जूस कॉर्नर</item>
+        <item>फ़ास्ट फ़ूड</item>
+        <item>ढ़ाभा</item>
+        <item>बार</item>
+    </string-array>
     //
-<string name="food_0">रेस्टोरेंट</string>
+    <string name="food_0">रेस्टोरेंट</string>
     <string name="food_1">जूस कॉर्नर</string>
 
     <string name="food_2">फ़ास्ट फ़ूड</string>
@@ -469,11 +468,11 @@
     <string name="shows_1">सिनेमा हॉल</string>
     <string-array name="education">
         <item>स्कूल</item>
-        <item>टयूशन सेंटर</item>
-        <item>होम टयूशन</item>
+        <item>कोचिंग सेंटर</item>
+        <item>टयूशन</item>
         <item>अकेडमी</item>
         <item>बुक स्टोर</item>
-        <item>कोचिंग सेंटर</item>
+
     </string-array>
 
     //
@@ -580,7 +579,7 @@
     //
     <string name="ngo_0">एन॰जी॰ओ॰</string>
     <string name="ngo_1">क्लब</string>
-    <string-array name="bank_atm">
+    <string-array name="banking">
         <item>इंशोरैन्स</item>
         <item>बैंक</item>
         <item>ए॰टी॰एम॰</item>
@@ -588,42 +587,654 @@
     </string-array>
 
     //
-    <string name="bank_0">इंशोरैन्स</string>
-    <string name="bank_1">बैंक</string>
-    <string name="bank_2">ए॰टी॰एम॰</string>
-<!--    <string-array name=“पेट्रोल पम्प">-->
-<string-array name="petrol_pump">
-<item>पेट्रोल पम्प</item>
-<item>सर्विस स्टेशन</item>
-<item>गैस एजेन्सी</item>
+    <string name="banking_0">इंशोरैन्स</string>
+    <string name="banking_1">बैंक</string>
+    <string name="banking_2">ए॰टी॰एम॰</string>
+    <!--    <string-array name=“पेट्रोल पम्प">-->
+    <string-array name="petrol_pump">
+        <item>पेट्रोल पम्प</item>
+        <item>सर्विस स्टेशन</item>
+        <item>गैस एजेन्सी</item>
 
     </string-array>
 
 
-<string name="petrol_0">पेट्रोल पम्प</string>
-<string name="petrol_1">सर्विस स्टेशन</string>
-<string name="petrol_2">गैस एजेन्सी</string>
+    <string name="petrol_0">पेट्रोल पम्प</string>
+    <string name="petrol_1">सर्विस स्टेशन</string>
+    <string name="petrol_2">गैस एजेन्सी</string>
 
-<string-array name="travel_for_store">
-<item>ऑटो</item>
-<item>टैक्सी कार</item>
-</string-array>
+    <string-array name="travel_for_store">
+        <item>ऑटो</item>
+        <item>टैक्सी कार</item>
+    </string-array>
 
 
 
-<string-array name="government">
-<item>पुलिस स्टेशन</item>
-<item>फ़ायर ब्रिगेड</item>
-<item>हॉस्पिटल</item>
-<item>कॉलेज</item>
-<item>कोर्ट</item>
-<item>बी॰डी॰ओ॰ ऑफ़िस</item>
-<item>पोस्ट ऑफ़िस</item>
-<item>बी॰ई॰ओ॰ ऑफ़िस</item>
-<item>डी॰ई॰ओ॰ ऑफ़िस</item>
-<item>पंचायत भवन</item>
-<item>ऑफ़िस</item>
-</string-array>
+    <string-array name="government">
+        <item>पुलिस स्टेशन</item>
+        <item>फ़ायर ब्रिगेड</item>
+        <item>हॉस्पिटल</item>
+        <item>कॉलेज</item>
+        <item>कोर्ट</item>
+        <item>बी॰डी॰ओ॰ ऑफ़िस</item>
+        <item>पोस्ट ऑफ़िस</item>
+        <item>बी॰ई॰ओ॰ ऑफ़िस</item>
+        <item>डी॰ई॰ओ॰ ऑफ़िस</item>
+        <item>पंचायत भवन</item>
+        <item>ऑफ़िस</item>
+    </string-array>
+
+    <string name="category_0">शॉपिंग</string>
+    <string name="category_1">फ़ूड</string>
+    <string name="category_2">विश्राम</string>
+    <string name="category_3">पार्लर सैलून</string>
+    <string name="category_4">जिम स्पोर्ट्स</string>
+    <string name="category_5">सिनेमा</string>
+    <string name="category_6">शिक्षा</string>
+    <string name="category_7">स्वास्थ</string>
+    <string name="category_8">साइबर</string>
+    <string name="category_9">इलेक्ट्रॉनिक्स</string>
+    <string name="category_10">यात्रा</string>
+    <string name="category_11">व्हीकल एंड वर्कशॉप</string>
+    <string name="category_12">बुकिंग</string>
+    <string name="category_13">किराए हेतु</string>
+    <string name="category_14">सैल एंड बाय</string>
+    <string name="category_15">बिल्डिंग मटीरीयल</string>
+    <string name="category_16">कृषि</string>
+    <string name="category_17">फ़ैक्टरी</string>
+    <string name="category_18">एन॰जी॰ओ॰</string>
+    <string name="category_19">बैंक एंड ए॰टी॰एम॰</string>
+    <string name="category_20">पेट्रोल पम्प</string>
+    <string name="government_0">पुलिस स्टेशन</string>
+    <string name="government_1">फ़ायर ब्रिगेड</string>
+    <string name="government_2">हॉस्पिटल</string>
+    <string name="government_3">कॉलेज</string>
+    <string name="government_4">कोर्ट</string>
+    <string name="government_5">बी॰डी॰ओ॰ ऑफ़िस</string>
+    <string name="government_6">पोस्ट ऑफ़िस</string>
+    <string name="government_7">बी॰ई॰ओ॰ ऑफ़िस</string>
+    <string name="government_8">डी॰ई॰ओ॰ ऑफ़िस</string>
+    <string name="government_9">पंचायत भवन</string>
+    <string name="government_10">ऑफ़िस</string>
+
+
+    <string name="worker_required">नये वर्कर्स की आवश्यकता है</string>
+
+    <string name="worker_not_required">अभी नये वर्कर्स की आवश्यकता नही है</string>
+    <string name="home_delivery">होम डिलीवरी उपलब्ध है</string>
+    <string name="no_home_delivery">होम डिलीवरी उपलब्ध नही है</string>
+
+    //extra string
+    <string name="hostel_available">हॉस्टल सुविधा उपलब्ध है</string>
+    <string name="hostel_not_available">हॉस्टल सुविधा उपलब्ध नही है</string>
+    <string name="transport_available">ट्रांसपोर्ट सुविधा उपलब्ध है</string>
+    <string name="transport_not_available">ट्रांसपोर्ट सुविधा उपलब्ध नही है</string>
+    <string name="delivery">डिलीवरी</string>
+    <string name="no_delivery">डिलीवरी नही है</string>
+
+    <string name="photo_uploading">फ़ोटो अपलोड हो रही है…</string>
+    <string name="do_you_want_delete_this_product">क्या आप इस प्रोडक्ट को हटाना चाहते है?</string>
+    <string name="delete_product">प्रोडक्ट हटायें</string>
+    <string name="get_current_location">वर्तमान लोकेशन</string>
+    <string name="opne_gps">जी॰पी॰एस॰ चलु करे</string>
+    <string name="try_again">फिर से प्रयास करे</string>
+    <string name="deleting">हट रहा है...</string>
+    <string name="do_you_want_delete_this_show">क्या आप इस शो को हटाना चाहते है?</string>
+    <string name="delete_show">शो हटायें</string>
+    <string name="not_available">उपलब्ध नही है</string>
+    <string name="set_up_store">सर्विस बनायें...</string>
+    <string name="set_up">सबकुछ सेटअप हो चुका है</string>
+    <string name="all">सभी</string>
+    <string name="police_station">पुलिस स्टेशन</string>
+    <string name="fire_brigade">फ़ायर ब्रिगेड</string>
+    <string name="hospital">हॉस्पिटल</string>
+    <string name="college">कॉलेज</string>
+    <string name="court">कोर्ट</string>
+    <string name="bdo_office">बी॰डी॰ओ॰ ऑफ़िस</string>
+    <string name="post_office">पोस्ट ऑफ़िस</string>
+    <string name="beo_office">बी॰ई॰ओ॰ ऑफ़िस</string>
+    <string name="deo_office">डी॰ई॰ओ॰ ऑफ़िस</string>
+    <string name="panchayat_bhawan">पंचायत भवन</string>
+    <string name="u_p_board">यू॰पी॰ बोर्ड</string>
+    <string name="haryana_board">हरियाणा बोर्ड</string>
+    <string name="cbse_board">सी॰बी॰एस॰ई॰ बोर्ड</string>
+
+    <string name="enable_gps">जी॰पी॰एस॰ चालू करे</string>
+    <string name="yes">हाँ</string>
+    <string name="no">नही</string>
+
+    //
+    <string name="delhi">Delhi</string>
+    <string name="we_are_indiain">We are INDIAIN</string>
+    <string name="welcome_to">Welcome to</string>
+    <string name="ready_for_sell">ready for sell...</string>
+    <string name="rs">Rs:</string>
+    <string name="name_editing">Name editing...</string>
+    <string name="wait">wait please...</string>
+    <string name="show_adding">show adding...</string>
+    <string name="Rs">\u20B9</string>
+    <string name="home">hHome</string>
+    <string name="your_store">hYour Store</string>
+    <string name="nav_about_city">hAbout City</string>
+    <string name="favorites">hFavorites</string>
+    <string name="verification_email">\"We have sent you a verification link on your registerd email \"</string>
+    <string name="sign_in">signIn...</string>
+    <string name="do_you_want_lagout">Do you want to logout?</string>
+    <string name="current_user_city">Current user City</string>
+    <string name="change_user_city">Change user city</string>
+    <string name="change_app_theme">Change app theme</string>
+
+
+
+
+
+
+
+
+
+
+    <!--    <string name="app_name">CityTimes</string>-->
+
+<!--    <string name="shopping">शॉपिंग</string>-->
+<!--    <string name="open">खुला हुआ</string>-->
+<!--    <string name="close">बंद</string>-->
+<!--    <string name="country">देश</string>-->
+<!--    <string name="state">राज्य</string>-->
+<!--    <string name="sub_category">उपश्रेणी</string>-->
+<!--    <string name="city">शहर</string>-->
+
+<!--    <string name="stores">सर्विस</string>-->
+
+<!--    <string-array name="Category">-->
+<!--        <item>शॉपिंग</item>-->
+<!--        <item>फ़ूड</item>-->
+<!--        <item>विश्राम</item>-->
+<!--        <item>पार्लर सैलून</item>-->
+<!--        <item>जिम स्पोर्ट्स</item>-->
+<!--        <item>सिनेमा</item>-->
+<!--        <item>शिक्षा</item>-->
+<!--        <item>स्वास्थ</item>-->
+<!--        <item>साइबर</item>-->
+<!--        <item>इलेक्ट्रॉनिक्स</item>-->
+<!--        <item>यात्रा</item>-->
+<!--        <item>व्हीकल</item>-->
+<!--        <item>बुकिंग</item>-->
+<!--        <item>किराए हेतु</item>-->
+<!--        <item>सैल एंड बाय</item>-->
+<!--        <item>बिल्डिंग मटीरीयल</item>-->
+<!--        <item>कृषि</item>-->
+<!--        <item>फ़ैक्टरी</item>-->
+<!--        <item>एन॰जी॰ओ॰</item>-->
+<!--        <item>Banking</item>-->
+<!--        <item>पेट्रोल पम्प</item>-->
+<!--    </string-array>-->
+
+
+<!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
+<!--    <string name="check_mail">आपकी रेजिस्टर्ड ईमेल पर वेरिफ़िकेशन लिंक भेज दिया गया है</string>-->
+<!--    <string name="facebook_app_id">2618037285122683</string>-->
+<!--    <string name="fb_login_protocol_scheme">fb2618037285122683</string>-->
+<!--    <string name="navigation_drawer_open">Drawer Open</string>-->
+<!--    <string name="navigation_drawer_close">Drawer Closed</string>-->
+<!--    <string name="setup_profile">कृप्या अपनी प्रोफ़ाईल पूर्ण करें</string>-->
+<!--    <string name="settings">सेटिंग</string>-->
+<!--    <string name="personalize">निजी</string>-->
+<!--    <string name="english">इंग्लिश</string>-->
+<!--    <string name="change_languange_of_the_app">ऐप की भाषा बदलें</string>-->
+
+<!--    <string name="change">बदलें</string>-->
+<!--    <string name="categories">श्रेणी</string>-->
+<!--    <string name="all_services">सभी सर्विस</string>-->
+<!--    <string name="government">सरकारी</string>-->
+<!--    <string name="setup_your_store">अपनी सर्विस सेट करें!</string>-->
+
+<!--    <string name="about_city">शहर के बारे मे</string>-->
+
+
+
+
+
+
+<!--    <string name="movies_shows">मूवी शो</string>-->
+<!--    <string name="new_show">नया शो</string>-->
+
+<!--    <string name="enter_these_details">कृप्या अपनी डिटेल भरें</string>-->
+
+
+<!--    <string name="procced">आगे बढ़ें</string>-->
+<!--    <string name="favourite_stores">पसंदीदा</string>-->
+
+<!--    <string name="add_new_collection">नया फ़ोल्डर बनायें</string>-->
+<!--    <string name="my_product">मेरे प्रॉडक्ट्स</string>-->
+<!--    <string name="products">प्रॉडक्ट्स</string>-->
+<!--    <string name="government_offices">सरकारी कार्यालय</string>-->
+<!--    <string name="offices">कार्यालय</string>-->
+<!--    <string name="sort">सॉर्ट</string>-->
+<!--    <string name="plots">प्लॉट</string>-->
+<!--    <string name="plot_for_selling">बेचने हेतु प्लॉट</string>-->
+
+<!--    <string name="price">मूल्य:</string>-->
+
+
+<!--    <string name="opeing_closing_time">खुलने बंद होने का समय</string>-->
+<!--    <string name="contact_number">फ़ोन नम्बर</string>-->
+
+<!--    <string name="register_your_service">अपनी सर्विस रेजिस्टर करें</string>-->
+<!--    <string name="service_name">सर्विस का नाम</string>-->
+<!--    <string name="owner_s_name">मालिक का नाम</string>-->
+<!--    <string name="mobile_number1">फ़ोन नम्बर1</string>-->
+<!--    <string name="mobile_number2_optional">फ़ोन नम्बर2(वैकल्पिक)</string>-->
+<!--    <string name="current_location">वर्तमान लोकेशन</string>-->
+<!--    <string name="store_category">सर्विस श्रेणी</string>-->
+
+<!--<string name="store_sub_category">सर्विस उपश्रेणी</string>-->
+
+<!--<string name="sell_products">प्रॉडक्ट्स बेंचे</string>-->
+<!--<string name="products_for_selling">बेचने हेतु प्रॉडक्ट्स</string>-->
+<!--<string name="dark_theme">डार्क थीम</string>-->
+<!--<string name="clear_app_cache">ऐप कचे मिटायें</string>-->
+<!--<string name="support">सहयोग</string>-->
+<!--<string name="rate_us">हमें रेटिंग दें!</string>-->
+<!--<string name="share_this_app">ऐप साझा करें</string>-->
+<!--<string name="feedback">प्रतिपुष्टि</string>-->
+
+<!--<string name="privacy">प्राइवेसी</string>-->
+<!--<string name="terms_of_use">उपयोग की शर्तें</string>-->
+
+<!--<string name="board_name">बोर्ड</string>-->
+<!--<string name="rating">रेटिंग</string>-->
+
+<!--<string name="hostel_facility">हॉस्टल सुविधा!</string>-->
+<!--<string name="transport_facility">ट्रांसपोर्ट सुविधा!</string>-->
+
+<!--<string name="description_not_added">विवरण नही है</string>-->
+
+
+<!--<string name="c">C</string>-->
+<!--<string name="ity">ity</string>-->
+<!--    <string name="imes">imes</string>-->
+
+<!--<string name="seller_name">मालिक का नाम</string>-->
+
+<!--<string name="home_delivery_not_available">होम डिलीवरी उपलब्ध नही है</string>-->
+<!--<string name="workers_required">वर्कर्स की ज़रूरत है</string>-->
+<!--<string name="transport_servics_avilable">ट्रांसपोर्ट सुविधा उपलब्ध है</string>-->
+<!--<string name="hostel_servics_avilable">हॉस्टल सुविधा उपलब्ध है</string>-->
+<!--<string name="see_all_photos">फ़ोटो</string>-->
+<!--<string name="shows">शो</string>-->
+
+<!--<string name="service_description">सर्विस विवरण</string>-->
+
+<!--<string name="apply">लागू</string>-->
+<!--<string name="all_photos">सभी फ़ोटो</string>-->
+<!--<string name="category_store">श्रेणी सर्विस</string>-->
+<!--<string name="facebook">फ़सेबुक</string>-->
+<!--<string name="google">गूगल</string>-->
+<!--<string name="email_address">ईमेल</string>-->
+
+<!--<string name="forgot_password">पासवर्ड?</string>-->
+<!--<string name="login">लॉग इन</string>-->
+<!--<string name="don_t_have_an_account">अकाउंट नही है?</string>-->
+<!--<string name="register_now">रजिस्टर करें</string>-->
+<!--<string name="register_to_citytimes">CityTimes में रजिस्टर करें</string>-->
+<!--<string name="full_name">पूरा नाम</string>-->
+<!--<string name="email">ईमेल</string>-->
+<!--<string name="password">पास्वर्ड</string>-->
+<!--<string name="select_country">देश चुने</string>-->
+<!--<string name="select_state">राज्य चुने</string>-->
+<!--<string name="select_city">शहर चुने</string>-->
+<!--<string name="register">रजिस्टर</string>-->
+<!--<string name="by_registering_you_agree_to">रजिस्ट्रेशन कर के आप CityTimes की</string>-->
+<!--<string name="term_and_conditions">"   उपयोग की शर्तें   "</string>-->
+<!--<string name="and">" और  "</string>-->
+<!--<string name="privacy_policy">"   प्राइवेसी पॉलिसी"</string>-->
+<!--<string name="of_the_my_city">" से सहमित है"</string>-->
+<!--<string name="add_collection">फ़ोल्डर जोड़े</string>-->
+<!--<string name="collection_name">फ़ोल्डर का नाम</string>-->
+
+<!--<string name="add">जोड़े</string>-->
+<!--<string name="show_time">शो का समय:</string>-->
+
+<!--<string name="movie_name">मूवी का नाम</string>-->
+<!--<string name="tickit_price">टिकट मूल्य</string>-->
+
+<!--<string name="sub_category_name">उपश्रेणी का नाम</string>-->
+<!--<string name="category_name">श्रेणी का नाम</string>-->
+<!--<string name="explore">एक्सप्लोर</string>-->
+<!--<string name="city_name">शहर का नाम</string>-->
+<!--<string name="sell_and_buy">सैल एंड बाय</string>-->
+<!--<string name="information">जानकारी</string>-->
+<!--<string name="about_us">हमारे बारे में</string>-->
+<!--<string name="contact_us">सम्पर्क</string>-->
+<!--<string name="version">वर्जन</string>-->
+<!--<string name="logout">लोग आउट</string>-->
+<!--<string name="loading">लोडिंग….</string>-->
+
+<!--<string name="product_title">प्रोडक्ट शीर्षक</string>-->
+
+<!--<string name="seller_phone">सैलर फ़ोन</string>-->
+<!--<string name="define_search">खोज बतायें</string>-->
+<!--<string name="store_name">सर्विस का नाम</string>-->
+<!--<string name="store_address">पता</string>-->
+<!--<string name="principal_director_name">प्रिन्सिपल का नाम</string>-->
+<!--<string name="school_board">स्कूल बोर्ड</string>-->
+
+<!--<string name="check_your_email">अपना ईमेल चेक करें</string>-->
+<!--<string name="go_to_login">लोग इन के लिए जाए</string>-->
+<!--<string name="send_feedback">प्रतिपुष्टि भेजे</string>-->
+<!--<string name="type_message">संदेस लिखे</string>-->
+
+<!--<string name="send">भेजें</string>-->
+<!--<string name="general">सामान्य</string>-->
+<!--<string name="history">इतिहास</string>-->
+
+<!--<string name="no_such_store_exist">कोई सर्विस उपलब्ध नही है</string>-->
+<!--<string name="tourism">पर्यटन</string>-->
+<!--<string name="reset_password">पास्वर्ड बदलें</string>-->
+<!--<string name="enter_email">ईमेल लिखें</string>-->
+
+<!--<string name="sumbit">सबमिट</string>-->
+<!--<string name="image_discription">फ़ोटो का विवरण</string>-->
+<!--<string name="back">वापस</string>-->
+<!--<string name="office_type">कार्यालय जैसा</string>-->
+<!--<string name="address">पता</string>-->
+<!--<string name="your_data_safe">your data safe</string>-->
+
+<!--<string name="rename">नाम बदलें</string>-->
+<!--<string name="add_photo">फ़ोटो जोड़ें</string>-->
+<!--<string name="upload">डालें</string>-->
+<!--<string name="store">सर्विस</string>-->
+<!--<string name="rate_now">रटे करें !</string>-->
+<!--<string name="rename_collection">फ़ोल्डर का नाम बदले</string>-->
+<!--<string name="new_collection_name">नए फ़ोल्डर का नाम</string>-->
+
+<!--<string name="product_name">प्रोडक्ट का नाम</string>-->
+<!--<string name="product_type">प्रोडक्ट टाईप</string>-->
+
+<!--<string name="sell_your_product">अपना प्रोडक्ट बेचें</string>-->
+
+<!--<string name="add_more">और जोड़ें</string>-->
+<!--<string name="product_title_name">प्रोडक्ट का नाम</string>-->
+<!--<string name="product_price">प्रोडक्ट का मूल्य</string>-->
+<!--<string name="seller_phone_number">सेलर का फ़ोन नम्बर</string>-->
+<!--<string name="seller_city">सेलर का शहर</string>-->
+<!--<string name="select_product_type">प्रोडक्ट टाइप चुने</string>-->
+<!--<string name="enter_product_type_name">प्रोडक्ट टाइप का नाम लिखे</string>-->
+
+
+<!--<string name="sell">बेचें</string>-->
+
+<!--<string name="shop_name">दुकान का नाम</string>-->
+<!--<string name="no_of_ratings">रेटिंग की संख्या</string>-->
+
+<!--<string name="avaliable">उपलब्ध</string>-->
+<!--<string name="home_delivery_service">होम डिलीवरी सर्विस</string>-->
+<!--<string name="next">अगला</string>-->
+<!--<string name="setup_your_service_profile">अपनी सर्विस प्रोफ़ाइल बनायें</string>-->
+<!--<string name="upload_a_cover_photo">कवर फ़ोटो लगायें</string>-->
+<!--<string name="upload_owner_s_photo">मालिक की फ़ोटो लगायें</string>-->
+<!--<string name="timings">सर्विस समय</string>-->
+<!--<string name="setup_other_details">बाक़ी जानकारी भरें</string>-->
+<!--    <string name="awesome">शुक्रिय</string>-->
+
+<!--    <string name="let_s_go">आगे बढ़ें</string>-->
+<!--&lt;!&ndash;    <string name="from_9_40am">9:40AM से</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="to_9_40am">To: 9:40AM तक</string>&ndash;&gt;-->
+<!--&lt;!&ndash;    <string name="price_400rupee">मूल्य: ₹400</string>&ndash;&gt;-->
+<!--    <string name="sort_by">सॉर्ट बाई</string>-->
+<!--    <string name="distance">दूरी</string>-->
+<!--    <string name="km">km </string>-->
+<!--    <string name="set_default">सेट डिफ़ॉल्ट</string>-->
+<!--    <string name="no_terms">कोई टर्म नही</string>-->
+<!--    <string name="store_timings">सर्विस का समय</string>-->
+<!--    <string name="from">से:</string>-->
+
+
+<!--    <string name="update_store_opening_days">सर्विस उपलब्ध दिन</string>-->
+<!--    <string name="days">दिन:</string>-->
+
+<!--    <string name="s">S</string>-->
+<!--    <string name="m">M</string>-->
+
+
+<!--    <string name="update_home_delivery_status">होम डिलीवरी सर्विस अपडेट करें</string>-->
+
+<!--    <string name="is_hostel_facility">हॉस्टल सुविधा उपलब्ध है?</string>-->
+
+<!--    <string name="update_owner_name">मालिक का नाम अपडेट करें</string>-->
+<!--    <string name="owner_name">मालिक का नाम</string>-->
+
+<!--    <string name="update_phone_number">फ़ोन नम्बर</string>-->
+<!--    <string name="phone_number">फ़ोन नम्बर</string>-->
+<!--    <string name="other_phone_number_optional">दूसरा फ़ोन नम्बर (वैकल्पिक)</string>-->
+
+<!--    <string name="is_shop_open">क्या अभी सर्विस उपलब्ध है?</string>-->
+<!--    <string name="cancel">हटायें</string>-->
+<!--    <string name="update">अपडेट करें</string>-->
+<!--    <string name="update_store_local_address">सर्विस का पता</string>-->
+<!--    <string-array name="vehicle_workshop">-->
+<!--        <item>शोरूम</item>-->
+<!--        <item>वर्कशॉप </item>-->
+<!--        <item>जे॰सी॰बी॰ एंड क्रेन</item>-->
+<!--        <item>दो पहिया वाहन मिस्त्री</item>-->
+<!--        <item>चार पहिया वाहन मिस्त्री</item>-->
+<!--    </string-array>-->
+
+<!--    //-->
+
+<!--    <string-array name="shopping">-->
+<!--        <item>मॉल</item>-->
+<!--        <item>सुपरबाज़ार</item>-->
+<!--        <item>कपड़े</item>-->
+<!--        <item>जूते चप्पल</item>-->
+<!--        <item>फ़र्निचर</item>-->
+<!--        <item>जनरल स्टोर</item>-->
+<!--        <item>डेली हाउसहोल्ड</item>-->
+
+<!--    </string-array>-->
+
+
+<!--    //-->
+
+
+<!--    <string name="t">T</string>-->
+<!--    <string name="w">W</string>-->
+<!--    <string name="product_description">प्रोडक्ट विवरण</string>-->
+
+<!--    <string name="f">F</string>-->
+<!--    <string name="hh">hh</string>-->
+<!--    <string name="pm">pm</string>-->
+<!--    <string name="am">am</string>-->
+<!--    <string name="mm">mm</string>-->
+<!--    <string name="to">तक</string>-->
+<!--    <string name="update_store_name">सर्विस का नाम अपडेट करें</string>-->
+<!--    <string name="update_store_timing">सर्विस का समय अपडेट करें</string>-->
+<!--    <string name="worker_are_required_or_not">वर्कर्स नही चाहिए</string>-->
+<!--    &lt;!&ndash;    <string name="store_name">सर्विस का नाम</string>&ndash;&gt;-->
+<!--    <string-array name="Country">-->
+<!--        <item>भारत</item>-->
+<!--    </string-array>-->
+
+<!--    //-->
+<!--    <string-array name="State">-->
+<!--<item>हरियाणा</item>-->
+<!--<item>उत्तर प्रदेश </item>-->
+<!--</string-array>-->
+
+<!--    //-->
+<!--    <string-array name="City">-->
+<!--<item>नरनौलl</item>-->
+<!--<item>थानाभवन</item>-->
+<!--</string-array>-->
+
+<!--    //-->
+<!--    <string-array name="food">-->
+<!--<item>रेस्टोरेंट</item>-->
+<!--<item>जूस कॉर्नर</item>-->
+<!--<item>फ़ास्ट फ़ूड</item>-->
+<!--<item>ढ़ाभा</item>-->
+<!--<item>बार</item>-->
+<!--</string-array>-->
+<!--    //-->
+
+<!--    <string-array name="gym_sport">-->
+<!--        <item>जिम</item>-->
+<!--        <item>वॉटर पार्क</item>-->
+<!--        <item>स्पोर्ट्स स्टोर</item>-->
+<!--        <item>स्विमिंग पूलl</item>-->
+<!--        <item>स्पोर्ट्स अकेडमी</item>-->
+<!--    </string-array>-->
+<!--    //-->
+<!--    <string-array name="parlour_saloon">-->
+<!--        <item>केवल लेडीज़</item>-->
+<!--        <item>केवल जेंट्स</item>-->
+<!--        <item>दोनो</item>-->
+<!--        <item>स्पा</item>-->
+<!--    </string-array>-->
+
+<!--    //-->
+<!--    <string-array name="electronics">-->
+<!--        <item>मोबाइल</item>-->
+<!--        <item>इलेक्ट्रॉनिक्स</item>-->
+<!--        <item>कम्प्यूटर एंड लैप्टॉप</item>-->
+<!--    </string-array>-->
+<!--    //-->
+<!--    <string-array name="health">-->
+<!--        <item>हॉस्पिटल</item>-->
+<!--        <item>हेल्थ क्लिनिक्स</item>-->
+<!--        <item>मेडिकल स्टोर</item>-->
+<!--        <item>पशु केयर</item>-->
+<!--    </string-array>-->
+
+<!--    //-->
+<!--    <string-array name="travel">-->
+<!--        <item>ऑटो</item>-->
+<!--        <item>टैक्सी कार</item>-->
+<!--        <item>ऐयरवेज़ </item>-->
+<!--        <item>रेलवेज़</item>-->
+<!--        <item>रोडवेज़</item>-->
+<!--    </string-array>-->
+
+<!--    //-->
+<!--    <string-array name="travel_store">-->
+<!--        <item>ऑटो</item>-->
+<!--        <item>टैक्सी कार</item>-->
+<!--    </string-array>-->
+
+
+<!--    <string-array name="shows_cinema">-->
+<!--        <item>शो</item>-->
+<!--        <item>सिनेमा हॉल</item>-->
+
+<!--    </string-array>-->
+
+<!--    //-->
+<!--    <string-array name="education">-->
+<!--        <item>स्कूल</item>-->
+<!--        <item>टयूशन सेंटर</item>-->
+<!--        <item>होम टयूशन</item>-->
+<!--        <item>अकेडमी</item>-->
+<!--        <item>बुक स्टोर</item>-->
+<!--        <item>कोचिंग सेंटर</item>-->
+<!--    </string-array>-->
+
+<!--    //-->
+<!--    <string-array name="booking">-->
+<!--        <item>टेंट</item>-->
+<!--        <item>पार्टी हॉल</item>-->
+<!--        <item>डेकोरेशन</item>-->
+<!--        <item>मैरिज प्लेस</item>-->
+<!--        <item>म्यूज़िक सिस्टम (डी॰जे॰)</item>-->
+<!--        <item>केटरिंग(हलवाई)</item>-->
+
+<!--    </string-array>-->
+<!--    //-->
+<!--    <string-array name="rentals">-->
+<!--        <item>दुकान</item>-->
+<!--        <item>मकान</item>-->
+<!--        <item>गोदाम</item>-->
+<!--        <item>पी॰जी॰(पेयिंग गेस्ट)</item>-->
+<!--    </string-array>-->
+<!--    //-->
+<!--    <string-array name="sell_buy">-->
+<!--        <item>प्लॉट</item>-->
+<!--        <item>दुकान</item>-->
+<!--        <item>मकान</item>-->
+<!--        <item>व्हीकल</item>-->
+<!--        <item>फ़र्निचर</item>-->
+<!--        <item>इलेक्ट्रॉनिक्स</item>-->
+<!--        <item>अन्य</item>-->
+<!--    </string-array>-->
+<!--    <string-array name="agriculture">-->
+<!--        <item>अनाज मंडी</item>-->
+<!--        <item>सब्ज़ी मंडी</item>-->
+<!--        <item>बीज भंडार</item>-->
+
+<!--    </string-array>-->
+<!--    //-->
+<!--    <string-array name="bulding">-->
+<!--        <item>ठेकेदार</item>-->
+<!--        <item>धर्म काँटा</item>-->
+<!--        <item>मटीरीयल स्टोर</item>-->
+
+<!--    </string-array>-->
+
+<!--    <string-array name="stay">-->
+<!--        <item>होटल</item>-->
+<!--        <item>धर्मशाला</item>-->
+
+<!--    </string-array>-->
+<!--    //-->
+<!--    <string-array name="cyber">-->
+<!--        <item>साइबर कैफ़े</item>-->
+<!--        <item>सी॰सी॰टी॰वी॰ स्टोर</item>-->
+<!--        <item>फ़ोटो स्टूडीओ</item>-->
+
+<!--    </string-array>-->
+<!--    ///-->
+<!--    <string-array name="factories">-->
+<!--        <item>टाइल</item>-->
+<!--        <item>ईंट</item>-->
+<!--        <item>Crashers</item>-->
+<!--    </string-array>-->
+<!--    //-->
+<!--    <string-array name="ngo_club">-->
+<!--        <item>एन॰जी॰ओ॰</item>-->
+<!--        <item>क्लब</item>-->
+
+<!--    </string-array>-->
+
+<!--    //-->
+<!--    <string-array name="banking">-->
+<!--        <item>इंशोरैन्स</item>-->
+<!--        <item>बैंक</item>-->
+<!--        <item>ए॰टी॰एम॰</item>-->
+
+<!--    </string-array>-->
+
+<!--    //-->
+<!--    &lt;!&ndash;    <string-array name=“पेट्रोल पम्प">&ndash;&gt;-->
+<!--<string-array name="petrol_pump">-->
+<!--<item>पेट्रोल पम्प</item>-->
+<!--<item>सर्विस स्टेशन</item>-->
+<!--<item>गैस एजेन्सी</item>-->
+
+<!--    </string-array>-->
+
+
+<!--    <string-array name="government">-->
+<!--<item>पुलिस स्टेशन</item>-->
+<!--<item>फ़ायर ब्रिगेड</item>-->
+<!--<item>हॉस्पिटल</item>-->
+<!--<item>कॉलेज</item>-->
+<!--<item>कोर्ट</item>-->
+<!--<item>बी॰डी॰ओ॰ ऑफ़िस</item>-->
+<!--<item>पोस्ट ऑफ़िस</item>-->
+<!--<item>बी॰ई॰ओ॰ ऑफ़िस</item>-->
+<!--<item>डी॰ई॰ओ॰ ऑफ़िस</item>-->
+<!--<item>पंचायत भवन</item>-->
+<!--<item>ऑफ़िस</item>-->
+<!--</string-array>-->
 <!--    <string name="hello_blank_fragment">HelloH blank fragment</string>-->
 <!--    <string name="check_mail">We have sentH you a verification link on your registerd email </string>-->
 <!--    <string name="facebook_app_id">2618037285122683</string>-->
@@ -1503,103 +2114,120 @@
 <!--    <string name="name_editing">Name editing...</string>-->
 <!--    <string name="wait">wait please...</string>-->
 <!--    <string name="show_adding">show adding...</string>-->
-    <string name="category_0">शॉपिंग</string>
-    <string name="category_1">फ़ूड</string>
-    <string name="category_2">विश्राम</string>
-    <string name="category_3">पार्लर सैलून</string>
-    <string name="category_4">जिम स्पोर्ट्स</string>
-    <string name="category_5">सिनेमा</string>
-    <string name="category_6">शिक्षा</string>
-    <string name="category_7">स्वास्थ</string>
-    <string name="category_8">साइबर</string>
-    <string name="category_9">इलेक्ट्रॉनिक्स</string>
-    <string name="category_10">यात्रा</string>
-    <string name="category_11">व्हीकल एंड वर्कशॉप</string>
-    <string name="category_12">बुकिंग</string>
-    <string name="category_13">किराए हेतु</string>
-    <string name="category_14">सैल एंड बाय</string>
-    <string name="category_15">बिल्डिंग मटीरीयल</string>
-    <string name="category_16">कृषि</string>
-    <string name="category_17">फ़ैक्टरी</string>
-    <string name="category_18">एन॰जी॰ओ॰</string>
-    <string name="category_19">बैंक एंड ए॰टी॰एम॰</string>
-    <string name="category_20">पेट्रोल पम्प</string>
-    <string name="government_0">पुलिस स्टेशन</string>
-    <string name="government_1">फ़ायर ब्रिगेड</string>
-    <string name="government_2">हॉस्पिटल</string>
-    <string name="government_3">कॉलेज</string>
-    <string name="government_4">कोर्ट</string>
-    <string name="government_5">बी॰डी॰ओ॰ ऑफ़िस</string>
-    <string name="government_6">पोस्ट ऑफ़िस</string>
-    <string name="government_7">बी॰ई॰ओ॰ ऑफ़िस</string>
-    <string name="government_8">डी॰ई॰ओ॰ ऑफ़िस</string>
-    <string name="government_9">पंचायत भवन</string>
-    <string name="government_10">ऑफ़िस</string>
 
 
-<string name="worker_required">नये वर्कर्स की आवश्यकता है</string>
+<!--    <string name="worker_required">नये वर्कर्स की आवश्यकता है</string>-->
 
-    <string name="worker_not_required">अभी नये वर्कर्स की आवश्यकता नही है</string>
-    <string name="home_delivery">होम डिलीवरी उपलब्ध है</string>
-    <string name="no_home_delivery">होम डिलीवरी उपलब्ध नही है</string>
+<!--    <string name="worker_not_required">अभी नये वर्कर्स की आवश्यकता नही है</string>-->
+<!--    <string name="home_delivery">होम डिलीवरी उपलब्ध है</string>-->
+<!--    <string name="no_home_delivery">होम डिलीवरी उपलब्ध नही है</string>-->
 
-    //extra string
-    <string name="hostel_available">हॉस्टल सुविधा उपलब्ध है</string>
-    <string name="hostel_not_available">हॉस्टल सुविधा उपलब्ध नही है</string>
-    <string name="transport_available">ट्रांसपोर्ट सुविधा उपलब्ध है</string>
-    <string name="transport_not_available">ट्रांसपोर्ट सुविधा उपलब्ध नही है</string>
-    <string name="delivery">डिलीवरी</string>
-    <string name="no_delivery">डिलीवरी नही है</string>
+<!--    //extra string-->
+<!--    <string name="hostel_available">हॉस्टल सुविधा उपलब्ध है</string>-->
+<!--    <string name="hostel_not_available">हॉस्टल सुविधा उपलब्ध नही है</string>-->
+<!--    <string name="transport_available">ट्रांसपोर्ट सुविधा उपलब्ध है</string>-->
+<!--    <string name="transport_not_available">ट्रांसपोर्ट सुविधा उपलब्ध नही है</string>-->
+<!--    <string name="delivery">डिलीवरी</string>-->
+<!--    <string name="no_delivery">डिलीवरी नही है</string>-->
 
-    <string name="photo_uploading">फ़ोटो अपलोड हो रही है…</string>
-    <string name="do_you_want_delete_this_product">क्या आप इस प्रोडक्ट को हटाना चाहते है?</string>
-    <string name="delete_product">प्रोडक्ट हटायें</string>
-    <string name="get_current_location">वर्तमान लोकेशन</string>
-    <string name="opne_gps">जी॰पी॰एस॰ चलु करे</string>
-    <string name="try_again">फिर से प्रयास करे</string>
-    <string name="deleting">हट रहा है...</string>
-    <string name="do_you_want_delete_this_show">क्या आप इस शो को हटाना चाहते है?</string>
-    <string name="delete_show">शो हटायें</string>
-    <string name="not_available">उपलब्ध नही है</string>
-    <string name="set_up_store">सर्विस बनायें...</string>
-    <string name="set_up">सबकुछ सेटअप हो चुका है</string>
-    <string name="all">सभी</string>
-    <string name="police_station">पुलिस स्टेशन</string>
-    <string name="fire_brigade">फ़ायर ब्रिगेड</string>
-    <string name="hospital">हॉस्पिटल</string>
-    <string name="college">कॉलेज</string>
-    <string name="court">कोर्ट</string>
-    <string name="bdo_office">बी॰डी॰ओ॰ ऑफ़िस</string>
-    <string name="post_office">पोस्ट ऑफ़िस</string>
-    <string name="beo_office">बी॰ई॰ओ॰ ऑफ़िस</string>
-    <string name="deo_office">डी॰ई॰ओ॰ ऑफ़िस</string>
-    <string name="panchayat_bhawan">पंचायत भवन</string>
-    <string name="u_p_board">यू॰पी॰ बोर्ड</string>
-    <string name="haryana_board">हरियाणा बोर्ड</string>
-    <string name="cbse_board">सी॰बी॰एस॰ई॰ बोर्ड</string>
+<!--    <string name="photo_uploading">फ़ोटो अपलोड हो रही है…</string>-->
+<!--    <string name="do_you_want_delete_this_product">क्या आप इस प्रोडक्ट को हटाना चाहते है?</string>-->
+<!--    <string name="delete_product">प्रोडक्ट हटायें</string>-->
+<!--    <string name="get_current_location">वर्तमान लोकेशन</string>-->
+<!--    <string name="opne_gps">जी॰पी॰एस॰ चलु करे</string>-->
+<!--    <string name="try_again">फिर से प्रयास करे</string>-->
+<!--    <string name="deleting">हट रहा है...</string>-->
+<!--    <string name="do_you_want_delete_this_show">क्या आप इस शो को हटाना चाहते है?</string>-->
+<!--    <string name="delete_show">शो हटायें</string>-->
+<!--    <string name="not_available">उपलब्ध नही है</string>-->
+<!--    <string name="set_up_store">सर्विस बनायें...</string>-->
+<!--    <string name="set_up">सबकुछ सेटअप हो चुका है</string>-->
+<!--    <string name="all">सभी</string>-->
+<!--    <string name="police_station">पुलिस स्टेशन</string>-->
+<!--    <string name="fire_brigade">फ़ायर ब्रिगेड</string>-->
+<!--    <string name="hospital">हॉस्पिटल</string>-->
+<!--    <string name="college">कॉलेज</string>-->
+<!--    <string name="court">कोर्ट</string>-->
+<!--    <string name="bdo_office">बी॰डी॰ओ॰ ऑफ़िस</string>-->
+<!--    <string name="post_office">पोस्ट ऑफ़िस</string>-->
+<!--    <string name="beo_office">बी॰ई॰ओ॰ ऑफ़िस</string>-->
+<!--    <string name="deo_office">डी॰ई॰ओ॰ ऑफ़िस</string>-->
+<!--    <string name="panchayat_bhawan">पंचायत भवन</string>-->
+<!--    <string name="u_p_board">यू॰पी॰ बोर्ड</string>-->
+<!--    <string name="haryana_board">हरियाणा बोर्ड</string>-->
+<!--    <string name="cbse_board">सी॰बी॰एस॰ई॰ बोर्ड</string>-->
 
-    <string name="enable_gps">जी॰पी॰एस॰ चालू करे</string>
-    <string name="yes">हाँ</string>
-    <string name="no">नही</string>
+<!--    <string name="enable_gps">जी॰पी॰एस॰ चालू करे</string>-->
+<!--    <string name="yes">हाँ</string>-->
+<!--    <string name="no">नही</string>-->
 
-    //
-    <string name="delhi">Delhi</string>
-    <string name="we_are_indiain">We are INDIAIN</string>
-    <string name="welcome_to">Welcome to</string>
-    <string name="ready_for_sell">ready for sell...</string>
-    <string name="rs">Rs:</string>
-    <string name="name_editing">Name editing...</string>
-    <string name="wait">wait please...</string>
-    <string name="show_adding">show adding...</string>
-    <string name="home">hHome</string>
-    <string name="your_store">hYour Store</string>
-    <string name="nav_about_city">hAbout City</string>
-    <string name="favorites">hFavorites</string>
-    <string name="verification_email">\"We have sent you a verification link on your registerd email \"</string>
-    <string name="sign_in">signIn...</string>
-    <string name="do_you_want_lagout">Do you want to logout?</string>
-    <string name="current_user_city">Current user City</string>
-    <string name="change_user_city">Change user city</string>
-    <string name="change_app_theme">Change app theme</string>
+<!--    //-->
+<!--    <string name="we_are_indiain">We are INDIAIN</string>-->
+<!--    <string name="welcome_to">"Welcome to "</string>-->
+<!--    <string name="ready_for_sell">ready for sell...</string>-->
+<!--    <string name="rs">Rs:</string>-->
+<!--    <string name="name_editing">Name editing...</string>-->
+<!--    <string name="wait">wait please...</string>-->
+<!--    <string name="show_adding">show adding...</string>-->
+<!--    <string name="home">hHome</string>-->
+<!--    <string name="your_store">hYour Store</string>-->
+<!--    <string name="nav_about_city">hAbout City</string>-->
+<!--    <string name="favorites">hFavorites</string>-->
+<!--    <string name="verification_email">\"We have sent you a verification link on your registerd email \"</string>-->
+<!--    <string name="sign_in">signIn...</string>-->
+<!--    <string name="do_you_want_lagout">Do you want to logout?</string>-->
+<!--    <string name="change_user_city">Change user city</string>-->
+<!--    <string name="change_app_theme">Change app theme</string>-->
+    <string name="logging">logging in...</string>
+    <string name="creating_account_please_wait">Creating account, please wait</string>
+    <string name="category_name_2">Category Name</string>
+    <string name="upload_photos">Upload photos</string>
+    <string name="adding">Adding...</string>
+    <string name="more">More</string>
+    <string name="photos">Photos</string>
+    <string name="rate">Rate</string>
+    <string name="add_menu">Add menu</string>
+    <string name="update_service_rate">Update Service Rate</string>
+    <string name="service_rate">Service Rate</string>
+    <string name="item_list">Item List</string>
+    <string name="new_item">New item</string>
+    <string name="items">Items</string>
+    <string name="add_item">Add Item</string>
+    <string name="item_name">Item name</string>
+    <string name="item_adding">Item adding</string>
+    <string name="chairman">Chairman</string>
+    <string name="meeting_time">Meeting time</string>
+    <string name="principle">Principle</string>
+    <string name="principle_name">Principle name</string>
+    <string name="principle_head_name">Principle/Head name</string>
+    <string name="head_name">Head name</string>
+    <string name="workers_qualifications">Workers Qualifications</string>
+    <string name="not_added">Not Added</string>
+
+    <string name="tracking_enabled_notif">Tracking is currently enabled. Tap to cancel.</string>
+    <string name="notifications">Notifications</string>
+    <string name="notification_tittle">Notification Tittle</string>
+    <string name="rate_per_km">Rate per km</string>
+    <string name="free">free</string>
+    <string name="booked">booked</string>
+    <string name="services">Services</string>
+    <string name="company_name">Company name</string>
+    <string name="point_delivery">Point delivery</string>
+    <string name="delivery_services">Delivery Services</string>
+    <string name="point_delivery_avilable">Point delivery Available</string>
+    <string name="point_delivery_not_avialable">Point delivery not Available</string>
+    <string name="service_timming">Service Timming</string>
+    <string name="delivery_status">Delivery status</string>
+    <string name="update_service_opening_day">Update service opening day</string>
+    <string name="update_service_timmings">Update service timmings</string>
+    <string name="update_service_local_address">Update service local address</string>
+    <string name="update_service_name">Update service name</string>
+    <string name="is_service_available">Is Service Available</string>
+    <string name="estimated_rate">Estimated rate</string>
+    <string name="estimated_rent_per_month">Estimated rent per month</string>
+    <string name="available">available</string>
+    <string name="uploading_photo">Uploading photo</string>
+    <string name="for_selling">\" for Selling \"</string>
+    <string name="all_products">All products</string>
 
 </resources>

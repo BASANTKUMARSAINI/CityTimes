@@ -31,6 +31,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.GeoPoint;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -52,15 +53,18 @@ import model.Seller;
 import static android.view.View.GONE;
 
 public class SetupProfileActivity extends AppCompatActivity implements EducationInterface {
+    //
+    EditText etRate,etShowroomCompanyName;
 int BACKGROUND=1,PROFILE=2;
 Uri backgroundUri=null,profileUri=null;
 ImageView imgBackground;
 CircleImageView imgProfile;
 
-public  static  TextView tvStoreTimings,tvDeliveryServices,tvOtherDetails;
+public  static  TextView tvStoreTimings,tvDeliveryServices,tvOtherDetails,tvUploadOwnerPhoto;
 public static  int SELVER_COLOR_CODE;
 
 public static boolean deliveryStatus=true;
+public static int DELIVERY_SATAUS=-1;
 public  static HashMap<String,Boolean>days;
 public  static List<String>timeFrom,timeTo;
 
@@ -71,19 +75,25 @@ FirebaseAuth mAuth;
     boolean tag=true;
 
     TimeSetupDialog dialog;
-    String CATEGORY="";
+    String CATEGORY="",SUB_CATEGORY="";
 
     //education
     boolean HOSTEL=false,TRANSPORT=false;
     String principalName="";
     String board="";
+    private static  boolean ALL_DONE=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //ApplicationClass.setLocale(SetupProfileActivity.this,"en");
+
         ApplicationClass.loadLocale(SetupProfileActivity.this);
         setContentView(R.layout.setup_profile);
+
+        //
+        etRate=findViewById(R.id.et_rate);
+        etShowroomCompanyName=findViewById(R.id.et_showroom_company_name);
+        tvUploadOwnerPhoto=findViewById(R.id.tv_upload_seller_photo);
 
         imgBackground=findViewById(R.id.img_background);
 
@@ -105,9 +115,21 @@ FirebaseAuth mAuth;
         tvOtherDetails=findViewById(R.id.tv_important_details);
 
         CATEGORY=getIntent().getStringExtra("category");
+        SUB_CATEGORY=getIntent().getStringExtra("subCategory");
+
         setUpLayout();
+        setText();
 
 
+    }
+
+    private void setText() {
+        if(CATEGORY.equals("Education")&&(!SUB_CATEGORY.equals("Book Store")))
+            tvStoreTimings.setText(R.string.meeting_time);
+        if(SUB_CATEGORY.equals("JCB and Crane"))
+        {
+            tvStoreTimings.setText(R.string.meeting_time);
+        }
     }
 
     private void setUpLayout()
@@ -125,25 +147,50 @@ FirebaseAuth mAuth;
                 break;
             case "Vehicles and Workshop":
                 tvDeliveryServices.setVisibility(GONE);
+                if(SUB_CATEGORY.equals("Showroom"))
+                {
+                    etShowroomCompanyName.setVisibility(View.VISIBLE);
+                }
+                if(SUB_CATEGORY.equals("Two wheeler misthri")||SUB_CATEGORY.equals("Four wheeler misthri"))
+                {
+                    tvDeliveryServices.setVisibility(View.VISIBLE);
+                    tvDeliveryServices.setText(R.string.point_delivery);
+                }
                 break;
             case "Buliding Material":
                 tvDeliveryServices.setVisibility(GONE);
+                if(SUB_CATEGORY.equals("Thekedar"))
+                {
+                    tvStoreTimings.setVisibility(View.VISIBLE);
+                    tvStoreTimings.setText(R.string.meeting_time);
+                }
                 break;
             case "Rentals":
                 tvDeliveryServices.setVisibility(GONE);
+                etRate.setVisibility(View.VISIBLE);
+                etRate.setHint(R.string.estimated_rent_per_month);
+                tvStoreTimings.setVisibility(View.VISIBLE);
+                tvStoreTimings.setText(R.string.meeting_time);
                 break;
             case "Factories":
                 tvDeliveryServices.setVisibility(GONE);
                 tvStoreTimings.setVisibility(GONE);
                 break;
-            case "Bank and Atm":
+            case "Banking":
                 tvDeliveryServices.setVisibility(GONE);
+                tvUploadOwnerPhoto.setVisibility(GONE);
+                imgProfile.setVisibility(GONE);
                 break;
             case "Pentrol Pump":
                 tvDeliveryServices.setVisibility(GONE);
                 break;
             case "NGO and Club":
                 tvDeliveryServices.setVisibility(GONE);
+                if(SUB_CATEGORY.equals("NGO"))
+                {
+                    tvUploadOwnerPhoto.setVisibility(GONE);
+                    imgProfile.setVisibility(GONE);
+                }
                 break;
             case "Parlourl Saloon":
                 tvDeliveryServices.setVisibility(GONE);
@@ -157,15 +204,33 @@ FirebaseAuth mAuth;
             case "Education":
                 tvDeliveryServices.setVisibility(GONE);
                 tvOtherDetails.setVisibility(View.VISIBLE);
+                if(SUB_CATEGORY.equals("Book Store"))
+                {
+                    tvDeliveryServices.setVisibility(View.VISIBLE);
+                    tvOtherDetails.setVisibility(GONE);
+                    ALL_DONE=true;
+                }
                 break;
             case "Booking":
                 tvDeliveryServices.setVisibility(GONE);
+                etRate.setVisibility(View.VISIBLE);
+                etRate.setHint(R.string.estimated_rate);
                 break;
             case "Agriculture":
                 tvDeliveryServices.setVisibility(GONE);
                 break;
             case "Stay":
                 tvDeliveryServices.setVisibility(GONE);
+                etRate.setVisibility(View.VISIBLE);
+                break;
+            case "Travel":
+                tvDeliveryServices.setVisibility(GONE);
+                if(SUB_CATEGORY.equals("Taxi Car"))
+                {
+                    etRate.setVisibility(View.VISIBLE);
+                    etRate.setHint(R.string.rate_per_km);
+                }
+
                 break;
 
 
@@ -202,6 +267,7 @@ FirebaseAuth mAuth;
 
     public  void setDelivery(boolean status)
     {
+        DELIVERY_SATAUS=1;
         deliveryStatus=status;
        tvDeliveryServices.setTextColor(SELVER_COLOR_CODE);
         if(status)
@@ -212,7 +278,7 @@ FirebaseAuth mAuth;
 
     public void setTiming(View view)
     {
-         dialog=new TimeSetupDialog(SetupProfileActivity.this);
+         dialog=new TimeSetupDialog(SUB_CATEGORY,CATEGORY,SetupProfileActivity.this);
          dialog.startProgressBar();
 
     }
@@ -236,21 +302,34 @@ FirebaseAuth mAuth;
     {
         Log.v("TAG",timeFrom.size()+"pp");
         Log.v("TAG",timeTo.size()+"pp");
+       final String rate=etRate.getText().toString();
+       final String companyName=etShowroomCompanyName.getText().toString();
+       final boolean rateCondition=CATEGORY.equals("Stay")||SUB_CATEGORY.equals("Taxi Car")||CATEGORY.equals("Booking")||CATEGORY.equals("Rentals");
+       final boolean profileUrlCondition=SUB_CATEGORY.equals("NGO")||CATEGORY.equals("Banking");
+       final boolean timmingCondition=CATEGORY.equals("NGO and Club")||CATEGORY.equals("Factories");
         if(backgroundUri==null)
         {
             Toast.makeText(SetupProfileActivity.this,"select background photo",Toast.LENGTH_LONG).show();
         }
-        else if(profileUri==null)
+        else if(profileUri==null&&(!profileUrlCondition))
         {
             Toast.makeText(SetupProfileActivity.this,"select profile photo",Toast.LENGTH_LONG).show();
         }
-        else  if(((!CATEGORY.equals("NGO and Club"))||(!CATEGORY.equals("Factories")))&&timeFrom.size()==0||timeTo.size()==0)
+        else  if((!timmingCondition)&&(timeFrom.size()==0||timeTo.size()==0))
         {
             Toast.makeText(SetupProfileActivity.this,"select time ",Toast.LENGTH_LONG).show();
         }
-        else if(CATEGORY.equals("Education")&&board.equals(""))
+        else if(CATEGORY.equals("Education")&&(!ALL_DONE))
         {
             Toast.makeText(SetupProfileActivity.this,"set some other details also",Toast.LENGTH_LONG).show();
+        }
+        else  if((CATEGORY.equals("Shopping")||CATEGORY.equals("Food")||SUB_CATEGORY.equals("Book Store"))&&(DELIVERY_SATAUS==-1))
+        {
+            Toast.makeText(SetupProfileActivity.this,"set delivery status",Toast.LENGTH_LONG).show();
+        }
+        else if(rateCondition&&TextUtils.isEmpty(rate))
+        {
+            Toast.makeText(SetupProfileActivity.this,"Enter sevices rate",Toast.LENGTH_LONG).show();
         }
         else
         {
@@ -268,139 +347,173 @@ FirebaseAuth mAuth;
                         @Override
                         public void onSuccess(Uri uri) {
                             final String backgroundURL=uri.toString();//backuri
-                            mStoreRef.child("images").child("sellers").child(mAuth.getUid()).child("profile");
+                           final StorageReference mChildRef=mStoreRef.child("images").child("sellers").child(mAuth.getUid()).child("profile");
+                           if(profileUri!=null)
 
-                            childRef.putFile(profileUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                                @Override
-                                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-
-
-                                   childRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                                       @Override
-                                       public void onSuccess(Uri uri) {
-                                           final String profileURL=uri.toString();//mmmm
-
-                                           mDataRef.child("sellers").child(mAuth.getUid()).addValueEventListener(new ValueEventListener() {
-                                               @Override
-                                               public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                                   if(tag) {
-                                                       tag=false;
-
-                                                       if (snapshot.exists()) {
+                           {
+                               mChildRef.putFile(profileUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                                   @Override
+                                   public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
 
-                                                           //
-                                                           final Seller seller = snapshot.getValue(Seller.class);
-                                                           final HashMap<String,Object>hashMap=new HashMap<>();
-                                                           hashMap.put("phone1",seller.getPhone1());
-                                                           hashMap.put("phone2",seller.getPhone2());
-                                                           hashMap.put("storeCategory",seller.getStoreCategory());
-                                                           hashMap.put("storeSubCategory",seller.getStoreSubCategory());
-                                                           hashMap.put("storeEmail",mAuth.getCurrentUser().getEmail());
-                                                           hashMap.put("storeLongitude",seller.getStoreLongitude());
-                                                           hashMap.put("storeLatitude",seller.getStoreLongitude());
-                                                           hashMap.put("sortStoreName",seller.getSortStoreName());
-                                                           hashMap.put("sortOwnerName",seller.getSortOwnerName());
-                                                           hashMap.put("sortStoreAddress",seller.getSortStoreAddress());
-                                                           hashMap.put("sortRating",seller.getSortRating());
-                                                           hashMap.put("sortStoreSubCategory",seller.getSortStoreSubCategory());
-                                                           hashMap.put("rating",seller.getRating());
-                                                           hashMap.put("geohash",seller.getGeohash());
-                                                           GeoPoint geoPoint=new GeoPoint(seller.getStoreLatitude(),seller.getStoreLongitude());
-                                                           hashMap.put("geoPoint",geoPoint);
-                                                           hashMap.put("backgroundImage",backgroundURL);
-                                                           hashMap.put("ownerImage",profileURL);
-                                                           hashMap.put("noOfRatings",0);
-                                                           hashMap.put("totalStar",0.0);
-                                                           hashMap.put("sUid",mAuth.getUid());
-                                                           hashMap.put("workersRequred",false);
-                                                           hashMap.put("isShopStatus",true);
-                                                           if((!CATEGORY.equals("Factories"))||(!CATEGORY.equals("NGO and Club"))) {
-                                                               hashMap.put("timeFrom", timeFrom);
-                                                               hashMap.put("timeTo", timeTo);
-                                                               hashMap.put("days", days);
-                                                           }
-                                                           String CATEGORY=seller.getStoreCategory();
-                                                           if(CATEGORY.equals("Shopping")||CATEGORY.equals("Food"))
-                                                               hashMap.put("deliveryStatus",deliveryStatus);
-                                                           ApplicationClass.translatedData=new HashMap<>();
-                                                           ApplicationClass.translatedData.putAll(hashMap);
-                                                           if(CATEGORY.equals("Education"))
-                                                           {
-                                                               hashMap.put("principalName",principalName);
-                                                               hashMap.put("boardName",board);
-                                                               ApplicationClass.setTranslatedDataToMap("hiBoardName",board);
-                                                               ApplicationClass.setTranslatedDataToMap("hiPrincipalName",principalName);
-                                                               hashMap.put("hostel",HOSTEL);
-                                                               hashMap.put("transport",TRANSPORT);
-                                                               ApplicationClass.translatedData.put("hostel",HOSTEL);
-                                                               ApplicationClass.translatedData.put("transport",TRANSPORT);
-                                                           }
+                                       mChildRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                           @Override
+                                           public void onSuccess(Uri uri) {
+                                               final String profileURL=uri.toString();//mmmm
 
-                                                           hashMap.put("storeName",seller.getStoreName());
-                                                           hashMap.put("ownerName",seller.getOwnerName());
-                                                           hashMap.put("storeAddress",seller.getStoreAddress());
-                                                           hashMap.put("storeCity",seller.getStoreCity());
-                                                           hashMap.put("storeCountry",seller.getStoreCountry());
-                                                           hashMap.put("storeState",seller.getStoreState());
+                                               mDataRef.child("sellers").child(mAuth.getUid()).addValueEventListener(new ValueEventListener() {
+                                                   @Override
+                                                   public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                                       if(tag) {
+                                                           tag=false;
+                                                           if (snapshot.exists()) {
+                                                               //
+                                                               final Seller seller = snapshot.getValue(Seller.class);
+                                                               String CATEGORY=seller.getStoreCategory();
+                                                               final HashMap<String,Object>hashMap=new HashMap<>();
 
-                                                           //
-
-                                                           ApplicationClass.setTranslatedDataToMap("storeName",seller.getStoreName());
-                                                           ApplicationClass.setTranslatedDataToMap("ownerName",seller.getOwnerName());
-                                                           ApplicationClass.setTranslatedDataToMap("storeAddress",seller.getStoreAddress());
-                                                           ApplicationClass.setTranslatedDataToMap("storeCity",seller.getStoreCity());
-                                                           ApplicationClass.setTranslatedDataToMap("storeCountry",seller.getStoreCountry());
-                                                           ApplicationClass.setTranslatedDataToMap("storeState",seller.getStoreState());
-                                                           hashMap.putAll(ApplicationClass.translatedData);
-                                                           new Handler().postDelayed(new Runnable() {
-                                                               @Override
-                                                               public void run() {
-                                                                   final DocumentReference documentReference= db.collection("ensellers").document(mAuth.getUid());
-
-                                                                  documentReference.set(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                                       @Override
-                                                                       public void onComplete(@NonNull Task<Void> task) {
-                                                                           if (task.isSuccessful()) {
-                                                                                db.collection("hisellers").document(mAuth.getUid()).set(ApplicationClass.translatedData).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                                                   @Override
-                                                                                   public void onComplete(@NonNull Task<Void> task) {
-                                                                                       if(task.isSuccessful())
-                                                                                       {
-                                                                                           mDataRef.child("sellers").child(mAuth.getUid()).removeValue();
-                                                                                           Intent intent = new Intent(SetupProfileActivity.this, StoreActivity.class);
-                                                                                           startActivity(intent);
-                                                                                           finish();
-                                                                                       }
-                                                                                       else
-                                                                                       {
-                                                                                           dialog.stopProgressBar();
-                                                                                           Toast.makeText(SetupProfileActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
-                                                                                       }
-                                                                                   }
-                                                                               });
-
-                                                                           } else {
-                                                                               dialog.stopProgressBar();
-                                                                               Toast.makeText(SetupProfileActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
-                                                                           }
-                                                                       }
-                                                                   });
+                                                               hashMap.put("phone1",seller.getPhone1());
+                                                               hashMap.put("phone2",seller.getPhone2());
+                                                               hashMap.put("storeCategory",seller.getStoreCategory());
+                                                               hashMap.put("storeSubCategory",seller.getStoreSubCategory());
+                                                               hashMap.put("storeEmail",mAuth.getCurrentUser().getEmail());
+                                                               hashMap.put("storeLongitude",seller.getStoreLongitude());
+                                                               hashMap.put("storeLatitude",seller.getStoreLatitude());
+                                                               hashMap.put("sortStoreName",seller.getSortStoreName());
+                                                               hashMap.put("sortOwnerName",seller.getSortOwnerName());
+                                                               hashMap.put("sortStoreAddress",seller.getSortStoreAddress());
+                                                               hashMap.put("sortRating",seller.getSortRating());
+                                                               hashMap.put("sortStoreSubCategory",seller.getSortStoreSubCategory());
+                                                               hashMap.put("rating",seller.getRating());
+                                                               hashMap.put("geohash",seller.getGeohash());
+                                                               GeoPoint geoPoint=new GeoPoint(seller.getStoreLatitude(),seller.getStoreLongitude());
+                                                               hashMap.put("geoPoint",geoPoint);
+                                                               hashMap.put("backgroundImage",backgroundURL);
+                                                               if(profileURL!=null)
+                                                               {
+                                                                   hashMap.put("ownerImage",profileURL);
                                                                }
-                                                           }, 3000);
+                                                               hashMap.put("noOfRatings",0);
+                                                               hashMap.put("totalStar",0.0);
+                                                               hashMap.put("sUid",mAuth.getUid());
 
 
-                                                       } else {
-                                                           dialog.stopProgressBar();
-                                                           Toast.makeText(SetupProfileActivity.this, "first complete registration", Toast.LENGTH_LONG).show();
+                                                                   hashMap.put("shopStatus",true);
+                                                                   hashMap.put("workersRequred",false);
 
+                                                               if(SUB_CATEGORY.equals("Showroom")&&(!TextUtils.isEmpty(companyName)))
+                                                               {
+                                                                   hashMap.put("companyName",companyName);
+                                                                   ApplicationClass.setTranslatedDataToMap("companyName",companyName);
+                                                               }
+                                                               if(rateCondition)
+                                                               {
+                                                                   hashMap.put("rate",rate);
+                                                               }
+
+                                                               if(!timmingCondition) {
+                                                                   hashMap.put("timeFrom", timeFrom);
+                                                                   hashMap.put("timeTo", timeTo);
+                                                                   hashMap.put("days", days);
+                                                               }
+                                                               if(CATEGORY.equals("Shopping")||CATEGORY.equals("Food")
+                                                                       ||SUB_CATEGORY.equals("Book Store")||SUB_CATEGORY.equals("Four wheeler misthri")
+                                                                       ||SUB_CATEGORY.equals("Two wheeler misthri"))
+                                                               {
+                                                                   hashMap.put("deliveryStatus",deliveryStatus);
+                                                               }
+
+                                                               ApplicationClass.translatedData=new HashMap<>();
+                                                               ApplicationClass.translatedData.putAll(hashMap);
+                                                               if(CATEGORY.equals("Education")&&(!SUB_CATEGORY.equals("Book Store")))
+                                                               {
+                                                                   hashMap.put("principalName",principalName);
+                                                                   hashMap.put("boardName",board);
+                                                                   ApplicationClass.setTranslatedDataToMap("boardName",board);
+                                                                   ApplicationClass.setTranslatedDataToMap("principalName",principalName);
+                                                                   hashMap.put("hostel",HOSTEL);
+                                                                   hashMap.put("transport",TRANSPORT);
+                                                                   ApplicationClass.translatedData.put("hostel",HOSTEL);
+                                                                   ApplicationClass.translatedData.put("transport",TRANSPORT);
+                                                               }
+
+                                                               hashMap.put("storeName",seller.getStoreName());
+                                                               hashMap.put("ownerName",seller.getOwnerName());
+                                                               hashMap.put("storeAddress",seller.getStoreAddress());
+                                                               hashMap.put("storeCity",seller.getStoreCity());
+                                                               hashMap.put("storeCountry",seller.getStoreCountry());
+                                                               hashMap.put("storeState",seller.getStoreState());
+
+                                                               //hindi
+
+                                                               ApplicationClass.setTranslatedDataToMap("storeName",seller.getStoreName());
+                                                               ApplicationClass.setTranslatedDataToMap("ownerName",seller.getOwnerName());
+                                                               ApplicationClass.setTranslatedDataToMap("storeAddress",seller.getStoreAddress());
+                                                               ApplicationClass.setTranslatedDataToMap("storeCity",seller.getStoreCity());
+                                                               ApplicationClass.setTranslatedDataToMap("storeCountry",seller.getStoreCountry());
+                                                               ApplicationClass.setTranslatedDataToMap("storeState",seller.getStoreState());
+                                                               hashMap.putAll(ApplicationClass.translatedData);
+                                                               new Handler().postDelayed(new Runnable() {
+                                                                   @Override
+                                                                   public void run() {
+                                                                       final DocumentReference documentReference= db.collection("ensellers").document(mAuth.getUid());
+
+                                                                       documentReference.set(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                                           @Override
+                                                                           public void onComplete(@NonNull Task<Void> task) {
+                                                                               if (task.isSuccessful()) {
+                                                                                   db.collection("hisellers").document(mAuth.getUid()).set(ApplicationClass.translatedData).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                                                       @Override
+                                                                                       public void onComplete(@NonNull Task<Void> task) {
+                                                                                           if(task.isSuccessful())
+                                                                                           {
+                                                                                               subscribe();
+                                                                                               mDataRef.child("sellers").child(mAuth.getUid()).removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                                                                   @Override
+                                                                                                   public void onSuccess(Void aVoid) {
+                                                                                                       Intent intent = new Intent(SetupProfileActivity.this, StoreActivity.class);
+                                                                                                       startActivity(intent);
+                                                                                                       finish();
+                                                                                                   }
+                                                                                               }).addOnFailureListener(new OnFailureListener() {
+                                                                                                   @Override
+                                                                                                   public void onFailure(@NonNull Exception e) {
+                                                                                                       Intent intent = new Intent(SetupProfileActivity.this, StoreActivity.class);
+                                                                                                       startActivity(intent);
+                                                                                                       finish();
+                                                                                                   }
+                                                                                               });
+
+                                                                                           }
+                                                                                           else
+                                                                                           {
+                                                                                               dialog.stopProgressBar();
+                                                                                               Toast.makeText(SetupProfileActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                                                                                           }
+                                                                                       }
+                                                                                   });
+
+                                                                               } else {
+                                                                                   dialog.stopProgressBar();
+                                                                                   Toast.makeText(SetupProfileActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                                                                               }
+                                                                           }
+                                                                       });
+                                                                   }
+                                                               }, 3000);
+
+
+                                                           } else {
+                                                               dialog.stopProgressBar();
+                                                               Toast.makeText(SetupProfileActivity.this, "first complete registration", Toast.LENGTH_LONG).show();
+
+                                                           }
+                                                       }
+                                                       else {
+                                                           finish();
+                                                           Log.v("TAG","else");
                                                        }
                                                    }
-                                                   else {
-                                                       finish();
-                                                       Log.v("TAG","else");
-                                                   }
-                                               }
                                                    @Override
                                                    public void onCancelled(@NonNull DatabaseError error) {
                                                        dialog.stopProgressBar();
@@ -418,16 +531,179 @@ FirebaseAuth mAuth;
                                            }
                                        });
                                    }
-                                }).addOnFailureListener(new OnFailureListener() {
-                                    @Override
-                                    public void onFailure(@NonNull Exception e) {
-                                        dialog.stopProgressBar();
-                                        Toast.makeText(SetupProfileActivity.this,e.getMessage(),Toast.LENGTH_LONG).show();
-                                    }
-                                });
+                               }).addOnFailureListener(new OnFailureListener() {
+                                   @Override
+                                   public void onFailure(@NonNull Exception e) {
+                                       dialog.stopProgressBar();
+                                       Toast.makeText(SetupProfileActivity.this,e.getMessage(),Toast.LENGTH_LONG).show();
+                                   }
+                               });
+                           }
+                           else
+                           {
+                               mDataRef.child("sellers").child(mAuth.getUid()).addValueEventListener(new ValueEventListener() {
+                                   @Override
+                                   public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                       if(tag) {
+                                           tag=false;
+                                           if (snapshot.exists()) {
+                                               //
+                                               final Seller seller = snapshot.getValue(Seller.class);
+                                               String CATEGORY=seller.getStoreCategory();
+                                               final HashMap<String,Object>hashMap=new HashMap<>();
+
+                                               hashMap.put("phone1",seller.getPhone1());
+                                               hashMap.put("phone2",seller.getPhone2());
+                                               hashMap.put("storeCategory",seller.getStoreCategory());
+                                               hashMap.put("storeSubCategory",seller.getStoreSubCategory());
+                                               hashMap.put("storeEmail",mAuth.getCurrentUser().getEmail());
+                                               hashMap.put("storeLongitude",seller.getStoreLongitude());
+                                               hashMap.put("storeLatitude",seller.getStoreLatitude());
+                                               hashMap.put("sortStoreName",seller.getSortStoreName());
+                                               hashMap.put("sortOwnerName",seller.getSortOwnerName());
+                                               hashMap.put("sortStoreAddress",seller.getSortStoreAddress());
+                                               hashMap.put("sortRating",seller.getSortRating());
+                                               hashMap.put("sortStoreSubCategory",seller.getSortStoreSubCategory());
+                                               hashMap.put("rating",seller.getRating());
+                                               hashMap.put("geohash",seller.getGeohash());
+                                               GeoPoint geoPoint=new GeoPoint(seller.getStoreLatitude(),seller.getStoreLongitude());
+                                               hashMap.put("geoPoint",geoPoint);
+                                               hashMap.put("backgroundImage",backgroundURL);
+
+                                               hashMap.put("noOfRatings",0);
+                                               hashMap.put("totalStar",0.0);
+                                               hashMap.put("sUid",mAuth.getUid());
+
+                                               if(profileUrlCondition)
+                                               {
+                                                   hashMap.put("shopStatus",true);
+                                                   hashMap.put("workersRequred",false);
+                                               }
+                                               if(SUB_CATEGORY.equals("Showroom")&&(!TextUtils.isEmpty(companyName)))
+                                               {
+                                                   hashMap.put("companyName",companyName);
+                                                   ApplicationClass.setTranslatedDataToMap("companyName",companyName);
+                                               }
+                                               if(rateCondition)
+                                               {
+                                                   hashMap.put("rate",rate);
+                                               }
+
+                                               if(timmingCondition) {
+                                                   hashMap.put("timeFrom", timeFrom);
+                                                   hashMap.put("timeTo", timeTo);
+                                                   hashMap.put("days", days);
+                                               }
+                                               if(CATEGORY.equals("Shopping")||CATEGORY.equals("Food")
+                                                       ||SUB_CATEGORY.equals("Book Store")||SUB_CATEGORY.equals("Four wheeler misthri")
+                                                       ||SUB_CATEGORY.equals("Two wheeler misthri"))
+                                               {
+                                                   hashMap.put("deliveryStatus",deliveryStatus);
+                                               }
+
+                                               ApplicationClass.translatedData=new HashMap<>();
+                                               ApplicationClass.translatedData.putAll(hashMap);
+                                               if(CATEGORY.equals("Education")&&(!SUB_CATEGORY.equals("Book Store")))
+                                               {
+                                                   hashMap.put("principalName",principalName);
+                                                   hashMap.put("boardName",board);
+                                                   ApplicationClass.setTranslatedDataToMap("boardName",board);
+                                                   ApplicationClass.setTranslatedDataToMap("principalName",principalName);
+                                                   hashMap.put("hostel",HOSTEL);
+                                                   hashMap.put("transport",TRANSPORT);
+                                                   ApplicationClass.translatedData.put("hostel",HOSTEL);
+                                                   ApplicationClass.translatedData.put("transport",TRANSPORT);
+                                               }
+
+                                               hashMap.put("storeName",seller.getStoreName());
+                                               hashMap.put("ownerName",seller.getOwnerName());
+                                               hashMap.put("storeAddress",seller.getStoreAddress());
+                                               hashMap.put("storeCity",seller.getStoreCity());
+                                               hashMap.put("storeCountry",seller.getStoreCountry());
+                                               hashMap.put("storeState",seller.getStoreState());
+
+                                               //hindi
+
+                                               ApplicationClass.setTranslatedDataToMap("storeName",seller.getStoreName());
+                                               ApplicationClass.setTranslatedDataToMap("ownerName",seller.getOwnerName());
+                                               ApplicationClass.setTranslatedDataToMap("storeAddress",seller.getStoreAddress());
+                                               ApplicationClass.setTranslatedDataToMap("storeCity",seller.getStoreCity());
+                                               ApplicationClass.setTranslatedDataToMap("storeCountry",seller.getStoreCountry());
+                                               ApplicationClass.setTranslatedDataToMap("storeState",seller.getStoreState());
+                                               hashMap.putAll(ApplicationClass.translatedData);
+                                               new Handler().postDelayed(new Runnable() {
+                                                   @Override
+                                                   public void run() {
+                                                       final DocumentReference documentReference= db.collection("ensellers").document(mAuth.getUid());
+
+                                                       documentReference.set(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                           @Override
+                                                           public void onComplete(@NonNull Task<Void> task) {
+                                                               if (task.isSuccessful()) {
+                                                                   db.collection("hisellers").document(mAuth.getUid()).set(ApplicationClass.translatedData).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                                       @Override
+                                                                       public void onComplete(@NonNull Task<Void> task) {
+                                                                           if(task.isSuccessful())
+                                                                           {
+                                                                               subscribe();
+                                                                               mDataRef.child("sellers").child(mAuth.getUid()).removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                                                   @Override
+                                                                                   public void onSuccess(Void aVoid) {
+                                                                                       Intent intent = new Intent(SetupProfileActivity.this, StoreActivity.class);
+                                                                                       startActivity(intent);
+                                                                                       finish();
+                                                                                   }
+                                                                               }).addOnFailureListener(new OnFailureListener() {
+                                                                                   @Override
+                                                                                   public void onFailure(@NonNull Exception e) {
+                                                                                       Intent intent = new Intent(SetupProfileActivity.this, StoreActivity.class);
+                                                                                       startActivity(intent);
+                                                                                       finish();
+                                                                                   }
+                                                                               });
+
+                                                                           }
+                                                                           else
+                                                                           {
+                                                                               dialog.stopProgressBar();
+                                                                               Toast.makeText(SetupProfileActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                                                                           }
+                                                                       }
+                                                                   });
+
+                                                               } else {
+                                                                   dialog.stopProgressBar();
+                                                                   Toast.makeText(SetupProfileActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                                                               }
+                                                           }
+                                                       });
+                                                   }
+                                               }, 3000);
+
+
+                                           } else {
+                                               dialog.stopProgressBar();
+                                               Toast.makeText(SetupProfileActivity.this, "first complete registration", Toast.LENGTH_LONG).show();
+
+                                           }
+                                       }
+                                       else {
+                                           finish();
+                                           Log.v("TAG","else");
+                                       }
+                                   }
+                                   @Override
+                                   public void onCancelled(@NonNull DatabaseError error) {
+                                       dialog.stopProgressBar();
+                                       Toast.makeText(SetupProfileActivity.this,error.getMessage(),Toast.LENGTH_LONG).show();
+
+                                   }
+                               });
+                           }
 
                             }
                         })
+
 
                             .addOnFailureListener(new OnFailureListener() {
                                 @Override
@@ -455,7 +731,7 @@ FirebaseAuth mAuth;
 
     public  void setUpOthersDetails(View view)
     {
-        EducationSetupDialog dialog=new EducationSetupDialog(SetupProfileActivity.this,this);
+        EducationSetupDialog dialog=new EducationSetupDialog(SetupProfileActivity.this,SUB_CATEGORY,this);
         dialog.setCancelable(false);
         dialog.show();
     }
@@ -500,6 +776,20 @@ FirebaseAuth mAuth;
         this.principalName=principalName;
         this.board=board;
         HOSTEL=hostel;
+        ALL_DONE=true;
         TRANSPORT=transport;
+    }
+    private void subscribe() {
+        FirebaseMessaging.getInstance().subscribeToTopic("users").addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                Log.d("TAG","subcribed11111");
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Log.d("TAG","subqqqq"+e.getMessage());
+            }
+        });
     }
 }

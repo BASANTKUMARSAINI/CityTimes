@@ -33,12 +33,19 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
+//import com.google.firebase.ml.common.modeldownload.FirebaseModelDownloadConditions;
+//import com.google.firebase.ml.naturallanguage.FirebaseNaturalLanguage;
+//import com.google.firebase.ml.naturallanguage.languageid.FirebaseLanguageIdentification;
+//import com.google.firebase.ml.naturallanguage.translate.FirebaseTranslateLanguage;
+//import com.google.firebase.ml.naturallanguage.translate.FirebaseTranslator;
+//import com.google.firebase.ml.naturallanguage.translate.FirebaseTranslatorOptions;
 import com.google.firebase.ml.common.modeldownload.FirebaseModelDownloadConditions;
 import com.google.firebase.ml.naturallanguage.FirebaseNaturalLanguage;
 import com.google.firebase.ml.naturallanguage.languageid.FirebaseLanguageIdentification;
 import com.google.firebase.ml.naturallanguage.translate.FirebaseTranslateLanguage;
 import com.google.firebase.ml.naturallanguage.translate.FirebaseTranslator;
 import com.google.firebase.ml.naturallanguage.translate.FirebaseTranslatorOptions;
+import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
 import com.squareup.picasso.Picasso;
@@ -56,6 +63,7 @@ import adapter.SliderAdapterExample;
 import authantication.UserLoginActivity;
 import sell_and_buy.SellAndBuyActivity;
 import seller.RegisterStoreActivity;
+import services.TrackingService;
 import users.HomeActivity;
 import users.ShopActivity;
 
@@ -68,7 +76,7 @@ public class ApplicationClass
     public  static  String currentAddress=null;
     private static  String translatedText="tt";
     public  static String LANGUAGE_MODE="en";
-    public static int TARGET_LANGUAGE_CODE=FirebaseTranslateLanguage.EN;
+    public static int TARGET_LANGUAGE_CODE= FirebaseTranslateLanguage.EN;
     public static HashMap<String,Object>translatedData;
     public static void logout(final Context context)
     {
@@ -79,6 +87,7 @@ public class ApplicationClass
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        context.stopService(new Intent(context, TrackingService.class));
                         FirebaseAuth mAuth=FirebaseAuth.getInstance();
                         mAuth.signOut();
                         if(LoginManager.getInstance()!=null)
@@ -150,6 +159,7 @@ public class ApplicationClass
 
     public static void setSliderImage(final Context context, final SliderView sliderView, String imageType) {
         db=FirebaseFirestore.getInstance();
+
         db.collection("images").whereEqualTo("imageType",imageType).limit(5).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
@@ -164,12 +174,14 @@ public class ApplicationClass
                 sliderView.setSliderAdapter(adapter);
 
                 //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
-                sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
-                sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
-                sliderView.setIndicatorSelectedColor(Color.WHITE);
-                sliderView.setIndicatorUnselectedColor(Color.GRAY);
-                sliderView.setScrollTimeInSec(2); //set scroll delay in seconds :
                 sliderView.startAutoCycle();
+                sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM);
+                sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
+                //sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
+               // sliderView.setIndicatorSelectedColor(Color.WHITE);
+               // sliderView.setIndicatorUnselectedColor(Color.GRAY);
+                //sliderView.setScrollTimeInSec(2); //set scroll delay in seconds :
+
 
             }
         });
@@ -239,44 +251,44 @@ public class ApplicationClass
         setLocale(context,language);
     }
 
-//    public static void setTranslatedText(final TextView textView, final String text)
-//    {
-//        textView.setText(text);
-//        Log.v("CITY",text+"kk");
-//        int langCode=0;
-//        if(text!=null&&!text.equals("")) {
-//            identifyLanguage(text);
-//            Log.v("CODE", "code" + TARGET_LANGUAGE_CODE);
-//            if (ApplicationClass.LANGUAGE_MODE.equals("hi"))
-//                langCode = FirebaseTranslateLanguage.HI;
-//            else {
-//                langCode = FirebaseTranslateLanguage.EN;
-//            }
-//            Log.v("CODE", "code");
-//            FirebaseTranslatorOptions options = new FirebaseTranslatorOptions.Builder()
-//                    .setSourceLanguage(TARGET_LANGUAGE_CODE)
-//                    .setTargetLanguage(langCode)
-//                    .build();
-//            final FirebaseTranslator translator = FirebaseNaturalLanguage.getInstance().getTranslator(options);
-//            FirebaseModelDownloadConditions conditions = new FirebaseModelDownloadConditions.Builder()
-//                    .build();
-//            translator.downloadModelIfNeeded(conditions).addOnSuccessListener(new OnSuccessListener<Void>() {
-//                @Override
-//                public void onSuccess(Void aVoid) {
-//                    translator.translate(text).addOnSuccessListener(new OnSuccessListener<String>() {
-//                        @Override
-//                        public void onSuccess(String s) {
-//                            textView.setText(s);
-//
-//                            Log.v("CITY", "sss" + s);
-//                            Log.v("CODE", "code" + TARGET_LANGUAGE_CODE);
-//                        }
-//                    });
-//                }
-//            });
-//        }
-//
-//    }
+    public static void setTranslatedText(final TextView textView, final String text)
+    {
+        textView.setText(text);
+        Log.v("CITY",text+"kk");
+        int langCode=0;
+        if(text!=null&&!text.equals("")) {
+            identifyLanguage(text);
+            Log.v("CODE", "code" + TARGET_LANGUAGE_CODE);
+            if (ApplicationClass.LANGUAGE_MODE.equals("hi"))
+                langCode = FirebaseTranslateLanguage.HI;
+            else {
+                langCode = FirebaseTranslateLanguage.EN;
+            }
+            Log.v("CODE", "code");
+            FirebaseTranslatorOptions options = new FirebaseTranslatorOptions.Builder()
+                    .setSourceLanguage(TARGET_LANGUAGE_CODE)
+                    .setTargetLanguage(langCode)
+                    .build();
+            final FirebaseTranslator translator = FirebaseNaturalLanguage.getInstance().getTranslator(options);
+            FirebaseModelDownloadConditions conditions = new FirebaseModelDownloadConditions.Builder()
+                    .build();
+            translator.downloadModelIfNeeded(conditions).addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void aVoid) {
+                    translator.translate(text).addOnSuccessListener(new OnSuccessListener<String>() {
+                        @Override
+                        public void onSuccess(String s) {
+                            textView.setText(s);
+
+                            Log.v("CITY", "sss" + s);
+                            Log.v("CODE", "code" + TARGET_LANGUAGE_CODE);
+                        }
+                    });
+                }
+            });
+        }
+
+    }
     public static void setTranslatedDataToMap(final String key,final String text)
     {
         if(text!=null&&!text.equals("")) {
@@ -306,7 +318,7 @@ public class ApplicationClass
     }
 
     private static void identifyLanguage(String text) {
-        FirebaseLanguageIdentification languageIdentification=FirebaseNaturalLanguage.getInstance().getLanguageIdentification();
+        FirebaseLanguageIdentification languageIdentification= FirebaseNaturalLanguage.getInstance().getLanguageIdentification();
         languageIdentification.identifyLanguage(text).addOnSuccessListener(new OnSuccessListener<String>() {
             @Override
             public void onSuccess(String s) {

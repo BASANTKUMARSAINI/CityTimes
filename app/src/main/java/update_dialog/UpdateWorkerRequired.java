@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.Toast;
 
@@ -28,16 +29,21 @@ public class UpdateWorkerRequired extends Dialog {
     Switch btnSwitch;
     private Button btnCancel,btnUpdate;
     UpdateInterface updateInterface;
-
+    LinearLayout workersQualificationLinearLayout;
+    EditText etWorkersQualification;
     boolean isRequired;
     FirebaseFirestore db;
     FirebaseAuth mAuth;
+    String SUB_CATEGORY="",QUALIFICATION=null;
 
-    public UpdateWorkerRequired(@NonNull Context context, boolean isRequired, UpdateInterface updateInterface) {
+    public UpdateWorkerRequired(@NonNull Context context, boolean isRequired,
+                                UpdateInterface updateInterface,String  SUB_CATEGORY,String QUALIFICATION ) {
         super(context);
         this.context=context;
         this.isRequired=isRequired;
         this.updateInterface=updateInterface;
+        this.QUALIFICATION=QUALIFICATION;
+        this.SUB_CATEGORY=SUB_CATEGORY;
     }
 
 
@@ -51,6 +57,17 @@ public class UpdateWorkerRequired extends Dialog {
         btnSwitch=findViewById(R.id.switch_workers);
         btnCancel=findViewById(R.id.btn_cancel);
         btnUpdate=findViewById(R.id.btn_update);
+        etWorkersQualification=findViewById(R.id.et_workers_qualification);
+        workersQualificationLinearLayout=findViewById(R.id.workers_qualification_linear_layout);
+
+        if(SUB_CATEGORY.equals("Academy")||SUB_CATEGORY.equals("Hospitals")||SUB_CATEGORY.equals("Health Clinics")||SUB_CATEGORY.equals("School"))
+        {
+            workersQualificationLinearLayout.setVisibility(View.VISIBLE);
+        }
+        if(QUALIFICATION!=null)
+        {
+            etWorkersQualification.setText(QUALIFICATION);
+        }
 
 
         mAuth=FirebaseAuth.getInstance();
@@ -77,10 +94,10 @@ public class UpdateWorkerRequired extends Dialog {
 
     }
     private void updateRequiredWorkers() {
-
-
-
-            updateInterface.update("WORKERS",btnSwitch.isChecked());
+            String qualification=etWorkersQualification.getText().toString();
+            if(TextUtils.isEmpty(qualification))
+                    qualification="";
+            updateInterface.update("WORKERS",btnSwitch.isChecked(),qualification);
             dismiss();
 
 

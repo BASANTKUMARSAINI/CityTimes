@@ -24,29 +24,25 @@ import model.ApplicationClass;
 import model.ProductCategory;
 import sell_and_buy.ProductActivity;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class BuyProductFragment extends Fragment {
     RecyclerView recyclerView;
 FirebaseFirestore db;
 FirestoreRecyclerAdapter<ProductCategory,ProductMainViewHolder>adapter;
 
-    String []list;
+
     public BuyProductFragment() {
-        // Required empty public constructor
+
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
         ApplicationClass.loadLocale(getContext());
         View view=inflater.inflate(R.layout.fragment_buy_product, container, false);
         recyclerView=view.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        list=getResources().getStringArray(R.array.sell_buy);
         db=FirebaseFirestore.getInstance();
         return view;
     }
@@ -55,7 +51,7 @@ FirestoreRecyclerAdapter<ProductCategory,ProductMainViewHolder>adapter;
     public void onStart() {
         super.onStart();
 
-        Query query=db.collection("productCategory");
+        Query query=db.collection("productCategory").orderBy("priority", Query.Direction.ASCENDING);
         FirestoreRecyclerOptions<ProductCategory>options=new FirestoreRecyclerOptions.Builder<ProductCategory>()
                                                         .setQuery(query,ProductCategory.class)
                                                         .build();

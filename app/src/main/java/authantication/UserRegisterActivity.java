@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.icu.util.LocaleData;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -21,12 +22,15 @@ import android.widget.Toast;
 
 import com.example.mycity.R;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.auth.User;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.HashMap;
 
@@ -106,7 +110,7 @@ public class UserRegisterActivity extends AppCompatActivity implements RecyclerV
         else
         {
 
-            custumProgressDialog.startProgressBar("account creating please wait...");
+            custumProgressDialog.startProgressBar(getString(R.string.creating_account_please_wait));
             mAuth.createUserWithEmailAndPassword(userEmail,userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
@@ -117,12 +121,14 @@ public class UserRegisterActivity extends AppCompatActivity implements RecyclerV
                             public void onComplete(@NonNull Task<Void> task) {
                                 if(task.isSuccessful())
                                 {
+                                    subscribe();
                                     HashMap<String,Object>hashMap=new HashMap<>();
                                     hashMap.put("uname",userName);
                                     hashMap.put("uemail",userEmail);
                                     hashMap.put("ucity",userCity);
                                     hashMap.put("ucountry",userCountry);
                                     hashMap.put("ustate",userState);
+
                                     db.collection("enusers").document(mAuth.getUid()).set(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
@@ -134,6 +140,7 @@ public class UserRegisterActivity extends AppCompatActivity implements RecyclerV
                                                 ApplicationClass.setTranslatedDataToMap("ustate",userState);
                                                 ApplicationClass.setTranslatedDataToMap("ucity",userCity);
                                                 ApplicationClass.setTranslatedDataToMap("uname",userName);
+
                                                 new Handler().postDelayed(new Runnable() {
                                                     @Override
                                                     public void run() {
@@ -191,6 +198,20 @@ public class UserRegisterActivity extends AppCompatActivity implements RecyclerV
                 }
             });
         }
+    }
+
+    private void subscribe() {
+        FirebaseMessaging.getInstance().subscribeToTopic("users").addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                Log.d("TAG","subcribed");
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Log.d("TAG","sub"+e.getMessage());
+            }
+        });
     }
 
     public  void getCountry(View view)

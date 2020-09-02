@@ -1,6 +1,7 @@
 package dialog;
 
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
@@ -16,9 +17,12 @@ import androidx.annotation.NonNull;
 
 import com.example.mycity.R;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -83,44 +87,72 @@ public class AddCollectionDialog extends Dialog {
     }
     private void  addCollection() {
 
-        String collectionName=etCollectionName.getText().toString();
+        final String collectionName=etCollectionName.getText().toString();
         if(TextUtils.isEmpty( collectionName))
             Toast.makeText(context,"Collection name can't be empty",Toast.LENGTH_LONG).show();
         else{
-            String currentTime=new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
-            String currentDate=new SimpleDateFormat("dd:MM:yy", Locale.getDefault()).format(new Date());
-            final String collectionId="collection_ID"+currentTime+currentDate;
-
-            final HashMap<String,Object>hashMap=new HashMap<>();
-            hashMap.put("collectionName",collectionName);
-            hashMap.put("uid",mAuth.getUid());
-            hashMap.put("id",collectionId);
-            ApplicationClass.translatedData=new HashMap<>();
-            ApplicationClass.setTranslatedDataToMap("hicollectionName",collectionName);
-            new Handler().postDelayed(new Runnable() {
+            final ProgressDialog dialog=new ProgressDialog(context);
+            dialog.setCancelable(false);
+            dialog.setMessage(context.getString(R.string.adding));
+            dialog.show();
+            db.collection("productCollections").whereEqualTo("uid",mAuth.getUid())
+                    .whereEqualTo("collectionName",collectionName).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                 @Override
-                public void run() {
-                    hashMap.putAll(ApplicationClass.translatedData);
-                    db.collection("productCollections").document(collectionId).
-                            set(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if(task.isSuccessful())
-                            {
-                                Toast.makeText(context,"added",Toast.LENGTH_LONG).show();
-                            }
-                            else
-                            {
-                                Log.v("TAG",task.getException().getMessage());
-                                Toast.makeText(context,task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                    if(queryDocumentSnapshots.isEmpty())
+                    {
+                        String currentTime=new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
+                        String currentDate=new SimpleDateFormat("dd:MM:yy", Locale.getDefault()).format(new Date());
+                        final String collectionId="collection_ID"+currentTime+currentDate;
+
+                        final HashMap<String,Object>hashMap=new HashMap<>();
+                        hashMap.put("collectionName",collectionName);
+                        hashMap.put("uid",mAuth.getUid());
+                        hashMap.put("id",collectionId);
+                        ApplicationClass.translatedData=new HashMap<>();
+                        ApplicationClass.setTranslatedDataToMap("hicollectionName",collectionName);
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                hashMap.putAll(ApplicationClass.translatedData);
+                                db.collection("productCollections").document(collectionId).
+                                        set(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if(task.isSuccessful())
+                                        {
+                                            dialog.dismiss();
+                                            Toast.makeText(context,"added",Toast.LENGTH_LONG).show();
+                                            dismiss();
+                                        }
+                                        else
+                                        {
+                                            Log.v("TAG",task.getException().getMessage());
+                                            dialog.dismiss();
+                                            Toast.makeText(context,task.getException().getMessage(),Toast.LENGTH_LONG).show();
+
+                                        }
+                                    }
+                                });
+
 
                             }
-                        }
-                    });
-                    dismiss();
+                        },5000);
 
+                    }
+                    else
+                    {
+                        dialog.dismiss();
+                        Toast.makeText(context,"This name alreday exist",Toast.LENGTH_LONG).show();
+                    }
                 }
-            },5000);
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    dialog.dismiss();
+                    Toast.makeText(context,e.getMessage(),Toast.LENGTH_LONG).show();
+                }
+            });
 
         }
 

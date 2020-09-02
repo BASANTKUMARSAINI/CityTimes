@@ -39,7 +39,6 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:gravity="center_vertical"
-            android:id="@+id/sell_product"
             android:paddingEnd="20dp"
             android:paddingStart="5dp"
             android:paddingTop="5dp"

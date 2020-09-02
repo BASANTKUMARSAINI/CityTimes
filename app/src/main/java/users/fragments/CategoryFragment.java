@@ -40,9 +40,9 @@ import static com.facebook.FacebookSdk.getApplicationContext;
 public class CategoryFragment extends Fragment {
     private int []imageList={R.mipmap.ic_shopping,R.mipmap.ic_food,
             R.mipmap.ic_stay,R.mipmap.beauty,R.mipmap.ic_sports,R.mipmap.movies,R.mipmap.education,R.mipmap.ic_health,
-            R.mipmap.ic_cyber,R.mipmap.electronics,R.mipmap.travel,R.mipmap.ic_mistary,
+            R.drawable.ic_cyber,R.mipmap.electronics,R.mipmap.travel,R.drawable.ic_workshop,
             R.mipmap.catering,R.mipmap.irentals,R.mipmap.sell_buy,R.mipmap.ic_mistary,R.mipmap.agriculture,
-            R.mipmap.ic_factories,R.mipmap.ic_ngo,R.mipmap.ic_atm,R.mipmap.ic_petrol
+            R.mipmap.ic_factories,R.drawable.ic_ngo,R.drawable.ic_bank,R.drawable.ic_petrol
 
     };
     private  String[]categorylist;
@@ -106,7 +106,7 @@ public class CategoryFragment extends Fragment {
                 recyclerView=bottomSheetView.findViewById(R.id.recycler_view);
                 recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
                 setSubCategory(position);
-                    bottomSheetView.setBackgroundColor(getResources().getColor(R.color.other_background));
+                bottomSheetView.setBackground(getContext().getDrawable(R.drawable.bottom_sheet_background));
                 bottomSheetDialog.setContentView(bottomSheetView);
                 bottomSheetDialog.show();
             }
@@ -283,8 +283,8 @@ break;
                 list=getResources().getStringArray(R.array.ngo_club);
                 break;
             case 19:
-                CATEGEORY="Bank and Atm";
-                list=getResources().getStringArray(R.array.bank_atm);
+                CATEGEORY="Banking";
+                list=getResources().getStringArray(R.array.banking);
                 break;
             case 20:
                 CATEGEORY="Pentrol Pump";

@@ -32,24 +32,19 @@ import model.Seller;
 
 public class RatingDialog extends Dialog {
     public Context context;
-   RatingBar ratingBar;
+    RatingBar ratingBar;
     private Button btnCancel,btnUpdate;
     FirebaseFirestore db;
     FirebaseAuth mAuth;
     String SUID=null;
-
     public RatingDialog(@NonNull Context context) {
         super(context);
         this.context=context;
-
-
     }
     public RatingDialog(@NonNull Context context,String SUID) {
         super(context);
         this.context=context;
         this.SUID=SUID;
-
-
     }
 
 
@@ -78,7 +73,7 @@ public class RatingDialog extends Dialog {
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 sendRating();
+                sendRating();
             }
 
 
@@ -89,12 +84,10 @@ public class RatingDialog extends Dialog {
     }
     private void   sendRating() {
         final float ratings =ratingBar.getRating();;
-
         if(ratings<0.5)
         {
             Toast.makeText(context,"rating can't be zero",Toast.LENGTH_LONG).show();
         }
-
         else{
 
             final RatingClass ratingClass=new RatingClass();
@@ -113,9 +106,12 @@ public class RatingDialog extends Dialog {
                                     Seller seller = documentSnapshot1.toObject(Seller.class);
 
                                     RatingClass ratingClass1 = documentSnapshot.toObject(RatingClass.class);
-                                    Double rating=seller.getTotalStar()/seller.getNoOfRatings();
-                                    rating=Double.parseDouble(String.format("%.1f",rating));;
+                                    Double rating=0.0;
+                                    if(seller.getNoOfRatings()!=0)
+                                        rating=seller.getTotalStar()/seller.getNoOfRatings();
+                                    rating=Double.parseDouble(String.format("%.1f",rating));
                                     Double sortRating=Math.floor(rating);
+
 
                                     final HashMap<String,Object>hashMap=new HashMap<>();
                                     hashMap.put("totalStar",seller.getTotalStar() - ratingClass1.getStar() + ratings);
@@ -149,11 +145,14 @@ public class RatingDialog extends Dialog {
                                 }
                             });
                         } else {
-                            db.collection("sellers").document(SUID).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                            db.collection("en"+"sellers").document(SUID)
+                                    .get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                                 @Override
                                 public void onSuccess(final DocumentSnapshot documentSnapshot1) {
                                     Seller seller = documentSnapshot1.toObject(Seller.class);
-                                    Double rating=seller.getTotalStar()/seller.getNoOfRatings();
+                                    Double rating=0.0;
+                                    if(seller.getNoOfRatings()!=0)
+                                    rating=seller.getTotalStar()/seller.getNoOfRatings();
                                     rating=Double.parseDouble(String.format("%.1f",rating));
                                     Double sortRating=Math.floor(rating);
 
@@ -162,7 +161,6 @@ public class RatingDialog extends Dialog {
                                     hashMap.put("rating",rating);
                                     hashMap.put("sortRating",sortRating);
                                     hashMap.put("noOfRatings",seller.getNoOfRatings()+1);
-
 
                                     db.collection("en"+"sellers").document(SUID).update(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override
@@ -215,7 +213,7 @@ public class RatingDialog extends Dialog {
                                     AppRatingClass appRatingClass = documentSnapshot1.toObject(AppRatingClass.class);
 
                                     RatingClass ratingClass1 = documentSnapshot.toObject(RatingClass.class);
-                                     appRatingClass.setTotalStar(appRatingClass.getTotalStar() - ratingClass1.getStar() + ratings);
+                                    appRatingClass.setTotalStar(appRatingClass.getTotalStar() - ratingClass1.getStar() + ratings);
 
 
                                     db.collection("app").document("appRatings").set(appRatingClass).addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -267,7 +265,7 @@ public class RatingDialog extends Dialog {
                 });
 
             }
-          dismiss();
+            dismiss();
 
         }
 

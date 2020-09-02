@@ -193,7 +193,7 @@ public class UserLoginActivity extends AppCompatActivity {
             Toast.makeText(UserLoginActivity.this, "Password can't be empty", Toast.LENGTH_LONG).show();
         }
         else {
-            dialog.startProgressBar(getString(R.string.login));
+            dialog.startProgressBar(getString(R.string.logging));
             mAuth.signInWithEmailAndPassword(userEmail,userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {

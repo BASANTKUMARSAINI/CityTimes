@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.mycity.R;
 
 import interfaces.RecyclerViewInterface;
+import model.ApplicationClass;
 
 public class AddressAdapter  extends RecyclerView.Adapter<AddressAdapter.MyViewHolder> {
 
@@ -32,6 +33,7 @@ public class AddressAdapter  extends RecyclerView.Adapter<AddressAdapter.MyViewH
     @NonNull
     @Override
     public AddressAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        ApplicationClass.loadLocale(context);
         LayoutInflater inflater=LayoutInflater.from(context);
         View view=inflater.inflate(R.layout.store_layout,parent,false);
         return new AddressAdapter.MyViewHolder(view);

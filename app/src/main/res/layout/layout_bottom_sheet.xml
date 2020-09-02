@@ -10,9 +10,8 @@
      android:layout_height="wrap_content">
     <TextView
             android:id="@+id/tv_category_name"
-            android:text="Category Name"
-
-            android:textSize="30dp"
+            android:text="@string/category_name_2"
+            android:textSize="30sp"
             android:layout_marginStart="30dp"
             android:textColor="@color/text_dark"
             android:textStyle="bold"

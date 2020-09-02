@@ -29,17 +29,25 @@
             android:layout_weight="1"
             android:gravity="end"
             android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/img_delete_collection"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/delete" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/rename"
+                android:layout_marginStart="5dp"
                 android:textColor="@color/selver"
                 android:textSize="18sp" />
 
             <ImageView
-                android:layout_width="18dp"
-                android:layout_height="18dp"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="5dp"
                 android:src="@drawable/pen" />

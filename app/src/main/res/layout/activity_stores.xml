@@ -105,7 +105,6 @@ android:background="@color/main_background"
 
         <RelativeLayout
 
-            android:id="@+id/relative_layout_search"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/card_view"
@@ -136,7 +135,6 @@ android:background="@color/main_background"
                     android:background="@drawable/search_view_background"
                     app:queryHint="Search here" />
                 <ImageView
-                    android:id="@+id/img_define_search"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"

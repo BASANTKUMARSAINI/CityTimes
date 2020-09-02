@@ -2,10 +2,12 @@ package seller;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -27,6 +29,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -41,6 +45,7 @@ import dialog.RenameCollectionDialog;
 import model.ApplicationClass;
 import model.CollectionType;
 import model.ProductImage;
+import users.HomeActivity;
 import users.SeeFullImageActivity;
 import view_holder.ProductCollectionViewHolder;
 import view_holder.ProductImageViewHolder;
@@ -56,7 +61,7 @@ public class HandleProductPhotosActivity extends AppCompatActivity {
     static int  OPEN_GELLERY=1;
     private static String PERSENT_COLLECTION_NAME="store";
     Uri uri=null;
-
+    ProductCollectionViewHolder HOLDER;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -141,15 +146,17 @@ public class HandleProductPhotosActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         String collectionName=model.getCollectionName();
-                        if(ApplicationClass.LANGUAGE_MODE.equals("hi"))
-                            collectionName=model.getHicollectionName();
-                        RenameCollectionDialog dialog=new RenameCollectionDialog(HandleProductPhotosActivity.this,collectionName,model.getId());
+
+                        String hcollectionName=model.getHicollectionName();
+                        RenameCollectionDialog dialog=new RenameCollectionDialog(HandleProductPhotosActivity.this,
+                                collectionName,hcollectionName,model.getId());
                         dialog.show();
                     }
                 });
 
-                if(uri!=null)
+                if(uri!=null&&model.getCollectionName().equals(PERSENT_COLLECTION_NAME))
                 {
+                    Log.d("TAG","Yes");
                     holder.uploadLayout.setVisibility(View.VISIBLE);
                     holder.newImageCard.setVisibility(View.VISIBLE);
                     holder.newImageView.setImageURI(uri);
@@ -159,6 +166,7 @@ public class HandleProductPhotosActivity extends AppCompatActivity {
                   public void onClick(View v) {
                       PERSENT_COLLECTION_NAME=model.getCollectionName();
                       holder.uploadLayout.setVisibility(View.VISIBLE);
+                      HOLDER=holder;
                       addPhoto();
                   }
               });
@@ -178,6 +186,29 @@ public class HandleProductPhotosActivity extends AppCompatActivity {
 
                   }
               });
+              holder.imgDeleteCollection.setOnClickListener(new View.OnClickListener() {
+                  @Override
+                  public void onClick(View view) {
+                      final AlertDialog.Builder builder=new AlertDialog.Builder(HandleProductPhotosActivity.this);
+                      builder.setTitle("Delete Collection");
+                      builder.setMessage("Do you want delete this?");
+                      builder.setCancelable(false);
+                      builder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                          @Override
+                          public void onClick(DialogInterface dialogInterface, int i) {
+                              deleteCollection(model.getCollectionName(),model.getId());
+                          }
+                      }).setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                          @Override
+                          public void onClick(DialogInterface dialogInterface, int i) {
+                              dialogInterface.dismiss();
+                          }
+                      });
+                      AlertDialog dialog=builder.create();
+                      dialog.show();
+
+                  }
+              });
             }
             @NonNull
             @Override
@@ -190,6 +221,27 @@ public class HandleProductPhotosActivity extends AppCompatActivity {
         adapter.startListening();
 
     }
+
+    private void deleteCollection(String collectionName, String id) {
+         db.collection("productImages").whereEqualTo("collectionName",collectionName)
+                .whereEqualTo("uid",mAuth.getUid()).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+             @Override
+             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                 if(!queryDocumentSnapshots.isEmpty())
+                 {
+                     for(QueryDocumentSnapshot snapshot:queryDocumentSnapshots)
+                     {
+                         ProductImage image=snapshot.toObject(ProductImage.class);
+                         db.collection("productImages").document(image.getImageId()).delete();
+
+                     }
+                 }
+             }
+         });
+         db.collection("productCollections").document(id).delete();
+
+    }
+
     private void deletePhotos(String collectionName, final String imageId)
     {
         final CustumProgressDialog dialog=new CustumProgressDialog(HandleProductPhotosActivity.this);
@@ -305,6 +357,10 @@ public class HandleProductPhotosActivity extends AppCompatActivity {
         if(resultCode==RESULT_OK&&requestCode==OPEN_GELLERY)
         {
             uri=data.getData();
+//            Log.d("TAG","uri");
+//            HOLDER.uploadLayout.setVisibility(View.VISIBLE);
+//            HOLDER.newImageCard.setVisibility(View.VISIBLE);
+//            HOLDER.newImageView.setImageURI(uri);
 
         }
 

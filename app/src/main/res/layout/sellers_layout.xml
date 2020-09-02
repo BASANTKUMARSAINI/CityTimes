@@ -12,7 +12,6 @@
     android:layout_marginBottom="5dp">
     <LinearLayout
         android:layout_width="match_parent"
-        android:id="@+id/linera_layout_view"
         android:orientation="horizontal"
         android:padding="5dp"
         android:layout_height="wrap_content">
@@ -84,7 +83,22 @@
             android:orientation="vertical"
             android:layout_gravity="center_vertical"
             android:layout_weight="1">
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_company_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_boundry"
+                android:paddingStart="10dp"
+                android:layout_gravity="end"
+                android:textColor="@color/green"
+                android:paddingTop="2dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="2dp"
+                android:text="@string/company_name"
+                android:textSize="10sp"
 
+                />
             <TextView
                 android:id="@+id/tv_shop_status"
                 android:layout_width="wrap_content"
@@ -94,6 +108,7 @@
                 android:layout_gravity="end"
                 android:textColor="@color/green"
                 android:paddingTop="2dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
                 android:paddingEnd="10dp"
                 android:paddingBottom="2dp"
@@ -107,7 +122,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_boundry"
                 android:paddingStart="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_gravity="end"
                 android:layout_marginEnd="10dp"
                 android:textColor="@color/green"

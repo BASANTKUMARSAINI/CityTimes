@@ -158,7 +158,6 @@
 
                 </LinearLayout>
                 <TextView
-                    android:id="@+id/tv_change_user_city"
                     android:layout_centerVertical="true"
                     android:onClick="changeUserCity"
                     android:layout_width="wrap_content"
@@ -233,7 +232,6 @@ android:layout_centerVertical="true"
                     android:layout_width="match_parent"
                     android:orientation="vertical"
                     android:layout_centerVertical="true"
-                    android:id="@+id/clear_cache_view"
                     android:layout_marginStart="10dp"
                     android:onClick="clearCache"
                     android:layout_toEndOf="@+id/img_clear_cache"

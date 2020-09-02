@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:paddingTop="20dp"
-    android:paddingBottom="50dp"
+
     android:paddingStart="20dp"
     android:background="@color/other_background"
     android:paddingEnd="20dp"
@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_below="@id/img_cross"
         android:layout_marginTop="50dp"
-        android:src="@drawable/awesome_icon"
+        android:src="@drawable/check_mail"
         android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"/>
     <TextView
@@ -57,6 +57,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginStart="60dp"
         android:layout_marginEnd="60dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/button_background"
         android:text="@string/go_to_login"
         android:textColor="@color/white"

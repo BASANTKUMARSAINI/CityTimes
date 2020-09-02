@@ -132,6 +132,20 @@
                 android:paddingTop="5dp"
                  android:paddingBottom="5dp"
                 android:layout_below="@id/tv_store_timing"/>
+            <EditText
+                android:visibility="gone"
+                android:inputType="number"
+                android:id="@+id/et_rate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/service_rate"
+                android:background="@drawable/pop_up_botton_background"
+                android:padding="5dp"
+                android:textColor="@color/selver"
+                android:textSize="20sp"
+                android:layout_margin="10dp"
+                android:layout_below="@id/tv_delivery"/>
+
             <TextView
                 android:visibility="gone"
                 android:id="@+id/tv_important_details"
@@ -149,7 +163,20 @@
                 android:textSize="20sp"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
-                android:layout_below="@id/tv_delivery"/>
+                android:layout_below="@id/et_rate"/>
+            <EditText
+                android:visibility="gone"
+                android:inputType="text"
+                android:id="@+id/et_showroom_company_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/company_name"
+                android:background="@drawable/pop_up_botton_background"
+                android:padding="5dp"
+                android:textSize="20sp"
+                android:textColor="@color/selver"
+                android:layout_margin="10dp"
+                android:layout_below="@id/tv_important_details"/>
             <Button
                 android:id="@+id/btn_procced"
                 android:layout_width="match_parent"
@@ -162,7 +189,7 @@
                 android:onClick="procced"
                 android:textSize="18sp"
                 android:layout_marginEnd="30dp"
-                android:layout_below="@+id/tv_important_details"
+                android:layout_below="@+id/et_showroom_company_name"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="50dp"/>
 

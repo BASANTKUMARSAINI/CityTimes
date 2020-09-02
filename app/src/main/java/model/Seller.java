@@ -12,16 +12,14 @@ import java.util.List;
 public class Seller
 {
     private String ownerName,storeName,storeCity,storeState,storeCountry,storeAddress,backgroundImage,ownerImage
-            ,phone1,phone2,storeCategory,storeSubCategory,storeEmail,storeDescription;
+            ,phone1,phone2,storeCategory,storeSubCategory,storeEmail,storeDescription,companyName;
     private String sortOwnerName,sortStoreName,sortStoreAddress,sortStoreSubCategory;
-    //hindi
-    private  String hiOwnerName,hiStoreName,hiStoreCity,hiStoreState,hiStoreCountry,hiStoreAddress,hiStoreDescription,hiPrincipalName,hiBoardName;
 
-
-boolean shopStatus;
-   private  String geohash;
-   double rating;
-   Double sortRating;
+    private String rate;
+    boolean shopStatus;
+    private  String geohash;
+    double rating;
+    Double sortRating;
     private List<String>timeFrom,timeTo;
     private HashMap<String, Boolean>days;
     private boolean deliveryStatus,workersRequred;
@@ -30,7 +28,7 @@ boolean shopStatus;
     private String sUid;
     private Double totalStar;
     private GeoPoint geoPoint;
-
+    private  String wqualification;
     //education
     private String principalName,boardName;
     private boolean hostel,transport;
@@ -333,75 +331,27 @@ boolean shopStatus;
         this.transport = transport;
     }
 
-    public String getHiOwnerName() {
-        return hiOwnerName;
+    public String getRate() {
+        return rate;
     }
 
-    public void setHiOwnerName(String hiOwnerName) {
-        this.hiOwnerName = hiOwnerName;
+    public void setRate(String rate) {
+        this.rate = rate;
     }
 
-    public String getHiStoreName() {
-        return hiStoreName;
+    public String getWqualification() {
+        return wqualification;
     }
 
-    public void setHiStoreName(String hiStoreName) {
-        this.hiStoreName = hiStoreName;
+    public String getCompanyName() {
+        return companyName;
     }
 
-    public String getHiStoreCity() {
-        return hiStoreCity;
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
     }
 
-    public void setHiStoreCity(String hiStoreCity) {
-        this.hiStoreCity = hiStoreCity;
-    }
-
-    public String getHiStoreState() {
-        return hiStoreState;
-    }
-
-    public void setHiStoreState(String hiStoreState) {
-        this.hiStoreState = hiStoreState;
-    }
-
-    public String getHiStoreCountry() {
-        return hiStoreCountry;
-    }
-
-    public void setHiStoreCountry(String hiStoreCountry) {
-        this.hiStoreCountry = hiStoreCountry;
-    }
-
-    public String getHiStoreAddress() {
-        return hiStoreAddress;
-    }
-
-    public void setHiStoreAddress(String hiStoreAddress) {
-        this.hiStoreAddress = hiStoreAddress;
-    }
-
-    public String getHiStoreDescription() {
-        return hiStoreDescription;
-    }
-
-    public void setHiStoreDescription(String hiStoreDescription) {
-        this.hiStoreDescription = hiStoreDescription;
-    }
-
-    public String getHiPrincipalName() {
-        return hiPrincipalName;
-    }
-
-    public void setHiPrincipalName(String hiPrincipalName) {
-        this.hiPrincipalName = hiPrincipalName;
-    }
-
-    public String getHiBoardName() {
-        return hiBoardName;
-    }
-
-    public void setHiBoardName(String hiBoardName) {
-        this.hiBoardName = hiBoardName;
+    public void setWqualification(String wqualification) {
+        this.wqualification = wqualification;
     }
 }

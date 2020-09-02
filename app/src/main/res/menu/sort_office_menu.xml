@@ -15,8 +15,7 @@
         android:title="@string/court"/>
     <item android:id="@+id/bdo_office"
         android:title="@string/bdo_office"/>
-    <item android:id="@+id/post_office"
-        android:title="@string/post_office"/>
+    <item android:title="@string/post_office"/>
     <item android:id="@+id/beo_office"
         android:title="@string/beo_office"/>
     <item android:id="@+id/deo_office"

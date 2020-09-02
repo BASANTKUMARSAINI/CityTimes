@@ -22,6 +22,7 @@ import seller.SetupProfileActivity;
 public class SetupProfileDialog extends Dialog {
   Context context;
   String CATEGORY,SUB_CATEGORY;
+    Button btnLetGo;
     public  SetupProfileDialog(Context context,String CATEGORY,String SUB_CATEGORY)
     {
         super(context);
@@ -37,7 +38,7 @@ public class SetupProfileDialog extends Dialog {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.setup_profile_layout);
         Log.v("TAG","inininin");
-        Button btnLetGo=findViewById(R.id.btn_lets_go);
+        btnLetGo=findViewById(R.id.btn_lets_go);
         btnLetGo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

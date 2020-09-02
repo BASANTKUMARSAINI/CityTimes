@@ -7,21 +7,19 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.Manifest;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.location.LocationManager;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
@@ -34,6 +32,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.mycity.NotificationActivity;
 import com.example.mycity.R;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.navigation.NavigationView;
@@ -45,51 +44,39 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QuerySnapshot;
-import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import adapter.SliderAdapterExample;
 import de.hdodenhof.circleimageview.CircleImageView;
 import dialog.AboutUsDialog;
 import dialog.CategorySearchDefine;
 import dialog.VersionDialog;
 import model.ApplicationClass;
-import model.LocationService;
+import services.LocationService;
 import model.Seller;
-import model.SliderItem;
 import model.User;
 import seller.RegisterStoreActivity;
 import seller.SetupProfileActivity;
 import seller.StoreActivity;
 import sell_and_buy.SellAndBuyActivity;
+import services.TrackingService;
 import update_dialog.UpdateShopStatus;
 import users.fragments.CategoryFragment;
 import users.fragments.GovernmentFragment;
 
-import static com.facebook.FacebookSdk.getApplicationContext;
-
 
 public class HomeActivity extends AppCompatActivity {
 
+    private static final int PERMISSIONS_REQUEST =1;
     TextView tvNavStoreName,tvCityName;
     CircleImageView imgNavUserImage;
 
     ImageView imgDrawerOpen;
-    String userCity="",userCountry="",userState="";
-
-    LocationManager locationManager;
-    private static final int REQUEST_LOCATION=1;
-
 
     Fragment fragment;
     FragmentTransaction transaction;
-    TextView tvAllServices,tvGovernment;
-    View allServicesView,governmentServices;
+    TextView tvAllServices;//,tvGovernment;
+    View allServicesView;//,governmentServices;
     SliderView sliderView,sliderViewBottom;
 
     DrawerLayout drawerLayout;
@@ -116,22 +103,9 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ApplicationClass.loadLocale(HomeActivity.this);
         setContentView(R.layout.activity_home);
-        locationManager=(LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        if(!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER))
-        {
-            onGps();
-        }
+        textFunction();
+        startService(new Intent(HomeActivity.this,TrackingService.class));
 
-
-        Intent intent=new Intent(this, LocationService.class);
-        startService(intent);
-
-        if(ActivityCompat.checkSelfPermission(HomeActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)!= PackageManager.PERMISSION_GRANTED&&
-                ActivityCompat.checkSelfPermission(HomeActivity.this,Manifest.permission.ACCESS_COARSE_LOCATION)!= PackageManager.PERMISSION_GRANTED)
-        {
-            ActivityCompat.requestPermissions(HomeActivity.this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION},REQUEST_LOCATION);
-
-        }
 
         tvCityName=findViewById(R.id.tv_city_name);
         imgDrawerOpen=findViewById(R.id.btn_three_line);
@@ -157,7 +131,8 @@ public class HomeActivity extends AppCompatActivity {
         mAuth=FirebaseAuth.getInstance();
         mDataRef= FirebaseDatabase.getInstance().getReference();
 
-        setUserDataInNavHeader();
+        //setUserDataInNavHeader();
+        Log.d("TAG","uid:"+mAuth.getUid());
         getUserDatas();
 
         shopStatusLayout.setOnClickListener(new View.OnClickListener() {
@@ -227,20 +202,26 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-
-        navigationView.getHeaderView(0).findViewById(R.id.header_view).setOnClickListener(new View.OnClickListener() {
+        LinearLayout navHeaderLayout=navigationView.getHeaderView(0).findViewById(R.id.nav_header_layout);
+        navHeaderLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TAG=true;
+                final ProgressDialog dialog=new ProgressDialog(HomeActivity.this);
+                dialog.setCancelable(false);
+                dialog.setMessage("Loading...");
+                dialog.show();
                 mDataRef.child("sellers").child(mAuth.getUid()).addValueEventListener(new ValueEventListener() {
                     @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {if(TAG) {
-                        TAG = false;
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+
 
                         if (snapshot.exists()) {
                             String category=snapshot.child("storeCategory").getValue(String.class);
+                            String subCategory=snapshot.child("storeSubCategory").getValue(String.class);
                             Intent intent = new Intent(HomeActivity.this, SetupProfileActivity.class);
                             intent.putExtra("category",category);
+                            intent.putExtra("subCategory",subCategory);
+                            dialog.dismiss();
                             startActivity(intent);
                         } else {
                             db.collection(ApplicationClass.LANGUAGE_MODE+"sellers").document(mAuth.getUid()).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
@@ -248,8 +229,10 @@ public class HomeActivity extends AppCompatActivity {
                                 public void onSuccess(DocumentSnapshot documentSnapshot) {
                                     if (documentSnapshot.exists()) {
                                         Intent intent = new Intent(HomeActivity.this, StoreActivity.class);
+                                        dialog.dismiss();
                                         startActivity(intent);
                                     } else {
+                                        dialog.dismiss();
                                         Intent intent = new Intent(HomeActivity.this, RegisterStoreActivity.class);
                                         startActivity(intent);
                                     }
@@ -257,11 +240,12 @@ public class HomeActivity extends AppCompatActivity {
                             });
 
                         }
-                    }
+
                     }
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
+                        dialog.dismiss();
 
                     }
                 });
@@ -270,34 +254,34 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         tvAllServices=findViewById(R.id.tv_all_services);
-        tvGovernment=findViewById(R.id.government);
+        //tvGovernment=findViewById(R.id.government);
         allServicesView=findViewById(R.id.all_services_view);
         sliderView= findViewById(R.id.imageSlider);
         sliderViewBottom=findViewById(R.id.image_slider_bottom);
 
         setSliderImage();
         setSliderImageBottom();
-        governmentServices=findViewById(R.id.government_view);
-
-        tvGovernment.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                allServicesView.setVisibility(View.GONE);
-                governmentServices.setVisibility(View.VISIBLE);
-                tvAllServices.setTextColor(getResources().getColor(R.color.text_light));
-                tvGovernment.setTextColor(getResources().getColor(R.color.text_dark));
-
-                setGovernmentServices();
-
-
-            }
-        });
+//        governmentServices=findViewById(R.id.government_view);
+//
+//        tvGovernment.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                allServicesView.setVisibility(View.GONE);
+//                governmentServices.setVisibility(View.VISIBLE);
+//                tvAllServices.setTextColor(getResources().getColor(R.color.text_light));
+//                tvGovernment.setTextColor(getResources().getColor(R.color.text_dark));
+//
+//                setGovernmentServices();
+//
+//
+//            }
+//        });
         tvAllServices.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 allServicesView.setVisibility(View.VISIBLE);
-                governmentServices.setVisibility(View.GONE);
-                tvGovernment.setTextColor(getResources().getColor(R.color.text_light));
+                //governmentServices.setVisibility(View.GONE);
+                //tvGovernment.setTextColor(getResources().getColor(R.color.text_light));
                 tvAllServices.setTextColor(getResources().getColor(R.color.text_dark));
                 setAllServics();
 
@@ -307,85 +291,44 @@ public class HomeActivity extends AppCompatActivity {
 
         //layout refresh
 
-
-
-
-
         transaction=getSupportFragmentManager().beginTransaction();
         fragment=new CategoryFragment();
         transaction.replace(R.id.fragment_category,fragment);
-        transaction.addToBackStack(null);
+        if(getSupportFragmentManager().getFragments().size()>1)
+        {
+            transaction.addToBackStack(null);
+        }
         transaction.commit();
 
     }
 
 
     private void changeShopStatus() {
+
         UpdateShopStatus dialog=new UpdateShopStatus(HomeActivity.this,SHOP_STATUS);
         dialog.setCancelable(false);
+        setShopStatus();
         dialog.show();
+        Log.d("TAG","change");
+
     }
 
     private void setSliderImageBottom() {
         ApplicationClass.setSliderImage(HomeActivity.this,sliderViewBottom,"general");
-//        db.collection("images").whereEqualTo("imageType","general").limit(5).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-//            @Override
-//            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-//                List<SliderItem> list=new ArrayList<>();
-//                for(DocumentSnapshot documentSnapshot:queryDocumentSnapshots)
-//                {
-//                    list.add(documentSnapshot.toObject(SliderItem.class));
-//                }
-//
-//                SliderAdapterExample adapter = new SliderAdapterExample(HomeActivity.this,list);
-//
-//                sliderViewBottom.setSliderAdapter(adapter);
-//
-//                //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
-//                sliderViewBottom.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
-//                sliderViewBottom.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
-//                sliderViewBottom.setIndicatorSelectedColor(Color.WHITE);
-//                sliderViewBottom.setIndicatorUnselectedColor(Color.GRAY);
-//                sliderViewBottom.setScrollTimeInSec(4); //set scroll delay in seconds :
-//                sliderViewBottom.startAutoCycle();
-//
-//            }
-//        });
+
     }
     private void setSliderImage() {
         ApplicationClass.setSliderImage(HomeActivity.this,sliderView,"general");
-//        db.collection("images").whereEqualTo("imageType","general").limit(5).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-//            @Override
-//            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-//                List<SliderItem> list=new ArrayList<>();
-//                for(DocumentSnapshot documentSnapshot:queryDocumentSnapshots)
-//                {
-//                    list.add(documentSnapshot.toObject(SliderItem.class));
-//                }
-//
-//                SliderAdapterExample adapter = new SliderAdapterExample(HomeActivity.this,list);
-//
-//                sliderView.setSliderAdapter(adapter);
-//
-//                //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
-//                sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
-//                sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
-//                sliderView.setIndicatorSelectedColor(Color.WHITE);
-//                sliderView.setIndicatorUnselectedColor(Color.GRAY);
-//                sliderView.setScrollTimeInSec(4); //set scroll delay in seconds :
-//                sliderView.startAutoCycle();
-//
-//            }
-//        });
-    }
-    private void setGovernmentServices() {
-        transaction=getSupportFragmentManager().beginTransaction();
-        fragment=new GovernmentFragment();
-        transaction.replace(R.id.fragment_category,fragment);
-        transaction.addToBackStack(null);
-        transaction.commit();
 
     }
+//    //private void setGovernmentServices() {
+//        transaction=getSupportFragmentManager().beginTransaction();
+//        fragment=new GovernmentFragment();
+//        transaction.replace(R.id.fragment_category,fragment);
+//        transaction.addToBackStack(null);
+//        transaction.commit();
+//
+//    }
     public void setAllServics()
     {
         transaction= getSupportFragmentManager().beginTransaction();
@@ -403,14 +346,9 @@ public class HomeActivity extends AppCompatActivity {
                 if(documentSnapshot.exists())
                 {
                     User user=documentSnapshot.toObject(User.class);
-//                    userCountry=user.getUcountry();
-//                    userState=user.getUstate();
-                  userCity=user.getUcity();
-                    Log.v("VIT",userCity);
-                    //ApplicationClass.setTranslatedText(tvCityName,userCity);
-                    tvCityName.setText(userCity);
+                    tvCityName.setText(user.getUcity());
                 }
-                Log.v("TTT","user city"+userCity);
+
             }
         });
     }
@@ -428,41 +366,7 @@ public class HomeActivity extends AppCompatActivity {
         }
     }
 
-    private void setUserDataInNavHeader() {
 
-        db.collection(ApplicationClass.LANGUAGE_MODE+"sellers").document(mAuth.getUid()).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-            @Override
-            public void onSuccess(DocumentSnapshot documentSnapshot) {
-                if(documentSnapshot.exists())
-                {
-                    Seller seller=documentSnapshot.toObject(Seller.class);
-                    if(seller.getOwnerImage()!=null)
-                        Picasso.get().load(seller.getOwnerImage()).into(imgNavUserImage);
-                    //ApplicationClass.setTranslatedText(tvNavStoreName,seller.getStoreName());
-                    tvNavStoreName.setText(seller.getStoreName());
-                    navigationView.getMenu().findItem(R.id.nav_store).setVisible(true);
-
-                    //shop status
-                    SHOP_STATUS=seller.isShopStatus();
-                    shopStatusLayout.setVisibility(View.VISIBLE);
-                    if(seller.isShopStatus())
-                    {
-                        tvShopStatus.setText(R.string.open);
-
-                        tvShopStatus.setTextColor(getResources().getColor(R.color.green));
-                        shopStatusImage.setImageResource(R.drawable.ic_right_green);
-                    }
-                    else
-                    {
-                        tvShopStatus.setText(R.string.close);
-                        tvShopStatus.setTextColor(getResources().getColor(R.color.red));
-                        shopStatusImage.setImageResource(R.drawable.ic_cross_red);
-                    }
-                }
-            }
-        });
-
-    }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(toggle.onOptionsItemSelected(item))
@@ -539,7 +443,112 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
-    public void openDrawer(View view) {
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("TAG","onStart");
+        setShopStatus();
     }
+
+    public void setShopStatus() {
+
+        db.collection(ApplicationClass.LANGUAGE_MODE+"sellers").document(mAuth.getUid()).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                if(documentSnapshot.exists())
+                {
+                    Seller seller=documentSnapshot.toObject(Seller.class);
+                    if(seller.getOwnerImage()!=null)
+                        Picasso.get().load(seller.getOwnerImage()).into(imgNavUserImage);
+                    //ApplicationClass.setTranslatedText(tvNavStoreName,seller.getStoreName());
+                    tvNavStoreName.setText(seller.getStoreName());
+                    navigationView.getMenu().findItem(R.id.nav_store).setVisible(true);
+
+                    //shop status
+                    SHOP_STATUS=seller.isShopStatus();
+
+                    if(!seller.getStoreSubCategory().equals("NGO")) {
+                        shopStatusLayout.setVisibility(View.VISIBLE);
+                        boolean freeBookedCondition=seller.getStoreCategory().equals("Travel")||seller.getStoreSubCategory().equals("Sound box(DJ)")
+                                ||seller.getStoreSubCategory().equals("JCB and Crane");
+                        boolean availableNotAvailableCondition=seller.getStoreCategory().equals("Rentals")||seller.getStoreSubCategory().equals("Thekedar");
+
+                        if(seller.isShopStatus())
+                        {
+                            shopStatusImage.setImageResource(R.drawable.ic_right_green);
+                            tvShopStatus.setText(R.string.open);
+
+                            if(freeBookedCondition)
+                            {
+                                tvShopStatus.setText(R.string.free);
+                            }
+                            else if(availableNotAvailableCondition)
+                            {
+                                tvShopStatus.setText(R.string.available);
+                            }
+
+                            tvShopStatus.setTextColor(getResources().getColor(R.color.green));
+                        }
+                        else
+                        {
+                            shopStatusImage.setImageResource(R.drawable.ic_cross_red);
+                            tvShopStatus.setText(R.string.close);
+                            if (freeBookedCondition)
+                            {
+                                tvShopStatus.setText(R.string.booked);
+                            }
+                            else if(availableNotAvailableCondition)
+                            {
+                                tvShopStatus.setText(R.string.not_available);
+                            }
+                            tvShopStatus.setTextColor(getResources().getColor(R.color.red));
+                        }
+
+
+                    }
+
+                }
+            }
+        });
+
+    }
+    private void textFunction() {
+        LocationManager lm = (LocationManager) getSystemService(LOCATION_SERVICE);
+        if (!lm.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+            Log.d("ADD","gps");
+
+        }
+        int permission = ContextCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_FINE_LOCATION);
+        if (permission == PackageManager.PERMISSION_GRANTED) {
+            Log.d("ADD","start service");
+            startTrackerService();
+        } else {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                    PERMISSIONS_REQUEST);
+        }
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[]
+            grantResults) {
+        if (requestCode == PERMISSIONS_REQUEST && grantResults.length == 1
+                && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            Log.d("ADD","permission");
+            startTrackerService();
+        } else {
+            onGps();
+            Toast.makeText(this, "Please enable location services to allow GPS tracking", Toast.LENGTH_SHORT).show();
+        }
+    }
+    private void startTrackerService() {
+        startService(new Intent(this, LocationService.class));
+
+        //Toast.makeText(this, "GPS tracking enabled", Toast.LENGTH_SHORT).show();
+    }
+    public void openNotification(View view)
+    {
+        startActivity(new Intent(HomeActivity.this, NotificationActivity.class));
+    }
+
 }

@@ -150,6 +150,7 @@ public class UpdateShopStatus extends Dialog {
                     @Override
                     public void onSuccess(Void aVoid) {
                         dialog.stopProgressBar();
+                        ((Activity) context).recreate();
                         dismiss();
                     }
                 }).addOnFailureListener(new OnFailureListener() {

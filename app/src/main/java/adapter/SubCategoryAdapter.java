@@ -19,7 +19,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.remoteconfig.proto.ConfigPersistence;
+//import com.google.firebase.remoteconfig.proto.ConfigPersistence;
 
 
 import java.util.Locale;

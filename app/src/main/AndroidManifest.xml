@@ -17,7 +17,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name="users.ChangeUserCity"></activity>
+        <activity android:name="useless.RoughActivity"></activity>
+        <activity android:name=".NotificationActivity" />
+
+        <service android:name="services.MyMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="services.TrackingService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name="seller.deffrent_services.FoodMenuActivity" />
+        <activity android:name="users.ChangeUserCity" />
         <activity android:name="sell_and_buy.ProductActivity" />
         <activity android:name="sell_and_buy.ProductMainActivity" />
         <activity android:name="users.SeeFullImageActivity" />
@@ -40,7 +54,7 @@
         <activity android:name="users.EnterDetailsActivity" />
 
         <service
-            android:name="model.LocationService"
+            android:name="services.LocationService"
             android:enabled="true"
             android:exported="true" />
 
@@ -50,7 +64,7 @@
         <activity android:name="users.AboutActivity" />
         <activity
             android:name="users.SettingsActivity"
-            android:configChanges="locale|orientation"></activity>
+            android:configChanges="locale|orientation" />
         <activity android:name="seller.HandleProductPhotosActivity" />
         <activity android:name="seller.SetupProfileActivity" />
         <activity android:name="seller.StoreActivity" />
